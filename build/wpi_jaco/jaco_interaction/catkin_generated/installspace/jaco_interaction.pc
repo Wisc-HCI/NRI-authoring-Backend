@@ -1,0 +1,8 @@
+prefix=/home/jerry/Desktop/therbligs_ws/install
+
+Name: jaco_interaction
+Description: Description of jaco_interaction
+Version: 0.0.25
+Cflags: 
+Libs: -L/home/jerry/Desktop/therbligs_ws/install/lib 
+Requires: 

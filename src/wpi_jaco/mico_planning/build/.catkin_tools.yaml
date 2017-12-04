@@ -1,0 +1,6 @@
+devel_space: /home/hcilab/Documents/jieru/therblig_ws/src/wpi_jaco/mico_planning/devel
+install: false
+install_space: /home/hcilab/Documents/jieru/therblig_ws/src/wpi_jaco/mico_planning/install
+profile: default
+source_space: /home/hcilab/Documents/jieru/therblig_ws/src/wpi_jaco/mico_planning/src
+workspace: /home/hcilab/Documents/jieru/therblig_ws/src/wpi_jaco/mico_planning

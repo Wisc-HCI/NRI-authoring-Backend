@@ -1,0 +1,8 @@
+prefix=/home/jerry/Desktop/therbligs_ws/devel
+
+Name: jaco_teleop
+Description: Description of jaco_teleop
+Version: 0.0.25
+Cflags: 
+Libs: -L/home/jerry/Desktop/therbligs_ws/devel/lib 
+Requires: 
