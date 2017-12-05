@@ -1,1 +1,1 @@
-This is a read me.
+This is the folder containing the source code of the project.
