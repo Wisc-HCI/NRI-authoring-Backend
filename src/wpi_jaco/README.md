@@ -1,3 +1,7 @@
+mico_planning: The package contains the all the code for implementing all therbligs motions.
+
+
+
 wpi_jaco  [![Build Status](https://api.travis-ci.org/RIVeR-Lab/wpi_jaco.png)](https://travis-ci.org/RIVeR-Lab/wpi_jaco)
 ========
 
@@ -27,3 +31,5 @@ For full terms and conditions, see the [LICENSE](LICENSE) file.
 
 ### Authors
 See the [AUTHORS](AUTHORS.md) file for a full list of contributors.
+
+
