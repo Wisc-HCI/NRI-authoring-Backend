@@ -16,4 +16,4 @@ Here is the documentation related to the implementation of the therbligs code.
   5. Read_Position: The planner calls get_current_pose().pose to get the current end-effector X,Y,Z position as well as the orientation. The position information is sent to the front-end through the mico master. 
   
 ## mico_master.py:
-  Mico master is the core of the backend. 
+  Mico master is the main thread of the backend part. The master listens for the connection from the front-end. Once it receives a json query from the client, master use mico_parse to parse the infomation from the json, executes the corresponding instruction, and construct a reply back to the front-end.
