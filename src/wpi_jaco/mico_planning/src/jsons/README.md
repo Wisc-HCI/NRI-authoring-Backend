@@ -8,5 +8,5 @@
 1. checkROSLiveReply: Replies true as well as the robot info.
 2. executeTherbligsReply: Returns true if the therbligs plan is executed; Returns false as well as failure reason
 if the therbligs plan is not executed.
-3. getPositionReply: 
-4. exitReply: 
+3. getPositionReply: Returns the current end effector position XYZ and the orientation.
+4. exitReply: Replies true to notify the ROS end is closed.
