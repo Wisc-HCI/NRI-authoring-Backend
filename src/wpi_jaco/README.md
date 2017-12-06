@@ -1,4 +1,4 @@
-mico_planning: The package contains the all the code for implementing all therbligs motions.
+# mico_planning: The package contains the all the code for implementing all therbligs motions.
 
 
 wpi_jaco  [![Build Status](https://api.travis-ci.org/RIVeR-Lab/wpi_jaco.png)](https://travis-ci.org/RIVeR-Lab/wpi_jaco)
