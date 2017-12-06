@@ -17,3 +17,6 @@ Here is the documentation related to the implementation of the therbligs code.
   
 ## mico_master.py:
   Mico master is the main thread of the backend part. The master listens for the connection from the front-end. Once it receives a json query from the client, master use mico_parse to parse the infomation from the json, executes the corresponding instruction, and construct a reply back to the front-end.
+
+$$ jsons/
+  The jsons folder contains a list of request and reply jsons that will get send back and forth between the front-end UI and backend ROS.
