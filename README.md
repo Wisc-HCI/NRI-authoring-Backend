@@ -2,8 +2,8 @@
 
 ** Work in Progress **
 
-Author: Jieru Hu 
-Contact: jhu76@wisc.edu
+## Author: Jieru Hu 
+## Contact: jhu76@wisc.edu
 
 The related frontend UI could be found at following link:
 https://github.com/abhay-venkatesh/NRI-authoring-UI
