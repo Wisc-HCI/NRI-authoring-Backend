@@ -2,7 +2,7 @@
 
 ** Work in Progress **
 
-Author: Jieru Hu 
+Author: Jieru Hu<br /> 
 Contact: jhu76@wisc.edu
 
 The related frontend UI could be found at following link:
