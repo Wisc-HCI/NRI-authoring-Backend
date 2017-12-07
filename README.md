@@ -2,7 +2,7 @@
 
 ** Work in Progress **
 
-The frontend UI could be found at following link:
+The related frontend UI could be found at following link:
 https://github.com/abhay-venkatesh/NRI-authoring-UI
 
 Steps to use:
