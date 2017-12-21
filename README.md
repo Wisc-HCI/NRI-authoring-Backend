@@ -13,6 +13,8 @@ https://drive.google.com/open?id=0B36yoeZ1l3zSQy1ZR3kybWg2UkU
 
 Steps to use:
 ```
-Instructions
-
+roslaunch wpi_jaco_wrapper arm.launch
+roslaunch mico_planning path_planning.launch
+rosrun mico_planning mico_master.py
+python mico_client.py
 ```
