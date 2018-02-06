@@ -93,6 +93,7 @@ jaco_manipulation_EXTERNAL_OBJECTS =
 /home/jerry/Desktop/therbligs_ws/devel/lib/wpi_jaco_wrapper/jaco_manipulation: /opt/ros/kinetic/lib/libactionlib.so
 /home/jerry/Desktop/therbligs_ws/devel/lib/wpi_jaco_wrapper/jaco_manipulation: /opt/ros/kinetic/lib/libcontroller_manager.so
 /home/jerry/Desktop/therbligs_ws/devel/lib/wpi_jaco_wrapper/jaco_manipulation: /opt/ros/kinetic/lib/librealtime_tools.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/wpi_jaco_wrapper/jaco_manipulation: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
 /home/jerry/Desktop/therbligs_ws/devel/lib/wpi_jaco_wrapper/jaco_manipulation: /opt/ros/kinetic/lib/libclass_loader.so
 /home/jerry/Desktop/therbligs_ws/devel/lib/wpi_jaco_wrapper/jaco_manipulation: /usr/lib/libPocoFoundation.so
 /home/jerry/Desktop/therbligs_ws/devel/lib/wpi_jaco_wrapper/jaco_manipulation: /usr/lib/x86_64-linux-gnu/libdl.so
@@ -110,8 +111,8 @@ jaco_manipulation_EXTERNAL_OBJECTS =
 /home/jerry/Desktop/therbligs_ws/devel/lib/wpi_jaco_wrapper/jaco_manipulation: /home/jerry/Desktop/therbligs_ws/devel/lib/libKinova.API.CommLayerUbuntu.so
 /home/jerry/Desktop/therbligs_ws/devel/lib/wpi_jaco_wrapper/jaco_manipulation: /home/jerry/Desktop/therbligs_ws/devel/lib/libKinova.API.USBCommandLayerUbuntu.so
 /home/jerry/Desktop/therbligs_ws/devel/lib/wpi_jaco_wrapper/jaco_manipulation: /opt/ros/kinetic/lib/libroscpp.so
-/home/jerry/Desktop/therbligs_ws/devel/lib/wpi_jaco_wrapper/jaco_manipulation: /usr/lib/x86_64-linux-gnu/libboost_signals.so
 /home/jerry/Desktop/therbligs_ws/devel/lib/wpi_jaco_wrapper/jaco_manipulation: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/wpi_jaco_wrapper/jaco_manipulation: /usr/lib/x86_64-linux-gnu/libboost_signals.so
 /home/jerry/Desktop/therbligs_ws/devel/lib/wpi_jaco_wrapper/jaco_manipulation: /opt/ros/kinetic/lib/librosconsole.so
 /home/jerry/Desktop/therbligs_ws/devel/lib/wpi_jaco_wrapper/jaco_manipulation: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
 /home/jerry/Desktop/therbligs_ws/devel/lib/wpi_jaco_wrapper/jaco_manipulation: /opt/ros/kinetic/lib/librosconsole_backend_interface.so

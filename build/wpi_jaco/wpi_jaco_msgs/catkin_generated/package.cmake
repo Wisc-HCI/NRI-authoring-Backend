@@ -10,4 +10,7 @@ set(wpi_jaco_msgs_EXEC_DEPENDS "actionlib_msgs" "geometry_msgs" "message_runtime
 set(wpi_jaco_msgs_RUN_DEPENDS "actionlib_msgs" "geometry_msgs" "message_runtime")
 set(wpi_jaco_msgs_TEST_DEPENDS )
 set(wpi_jaco_msgs_DOC_DEPENDS )
+set(wpi_jaco_msgs_URL_WEBSITE "http://ros.org/wiki/wpi_jaco_msgs")
+set(wpi_jaco_msgs_URL_BUGTRACKER "https://github.com/RIVeR-Lab/wpi_jaco/issues")
+set(wpi_jaco_msgs_URL_REPOSITORY "https://github.com/RIVeR-Lab/wpi_jaco")
 set(wpi_jaco_msgs_DEPRECATED "")

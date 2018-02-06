@@ -10,4 +10,7 @@ set(wpi_jaco_wrapper_EXEC_DEPENDS "controller_manager" "control_msgs" "ecl_geome
 set(wpi_jaco_wrapper_RUN_DEPENDS "controller_manager" "control_msgs" "ecl_geometry" "hardware_interface" "wpi_jaco_msgs" "jaco_sdk" "rail_manipulation_msgs" "roscpp" "actionlib" "sensor_msgs" "std_msgs" "std_srvs" "tf")
 set(wpi_jaco_wrapper_TEST_DEPENDS )
 set(wpi_jaco_wrapper_DOC_DEPENDS )
+set(wpi_jaco_wrapper_URL_WEBSITE "http://ros.org/wiki/wpi_jaco_wrapper")
+set(wpi_jaco_wrapper_URL_BUGTRACKER "https://github.com/RIVeR-Lab/wpi_jaco/issues")
+set(wpi_jaco_wrapper_URL_REPOSITORY "https://github.com/RIVeR-Lab/wpi_jaco")
 set(wpi_jaco_wrapper_DEPRECATED "")

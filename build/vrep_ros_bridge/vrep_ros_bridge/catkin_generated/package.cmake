@@ -10,4 +10,7 @@ set(vrep_ros_bridge_EXEC_DEPENDS "vrep_ros_plugin" "quadrotor_handler" "camera_h
 set(vrep_ros_bridge_RUN_DEPENDS "vrep_ros_plugin" "quadrotor_handler" "camera_handler" "imu_handler" "manipulator_handler" "rigid_body_handler" "force_sensor_handler" "contact_handler")
 set(vrep_ros_bridge_TEST_DEPENDS )
 set(vrep_ros_bridge_DOC_DEPENDS )
+set(vrep_ros_bridge_URL_WEBSITE "http://wiki.ros.org/vrep_ros_bridge")
+set(vrep_ros_bridge_URL_BUGTRACKER "")
+set(vrep_ros_bridge_URL_REPOSITORY "")
 set(vrep_ros_bridge_DEPRECATED "")

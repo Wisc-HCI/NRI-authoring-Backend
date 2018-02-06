@@ -10,4 +10,7 @@ set(wpi_jaco_EXEC_DEPENDS "jaco_description" "jaco_interaction" "jaco_moveit_con
 set(wpi_jaco_RUN_DEPENDS "jaco_description" "jaco_interaction" "jaco_moveit_config" "jaco_sdk" "jaco_teleop" "mico_description" "mico_moveit_config" "wpi_jaco_msgs" "wpi_jaco_wrapper")
 set(wpi_jaco_TEST_DEPENDS )
 set(wpi_jaco_DOC_DEPENDS )
+set(wpi_jaco_URL_WEBSITE "http://ros.org/wiki/wpi_jaco")
+set(wpi_jaco_URL_BUGTRACKER "https://github.com/RIVeR-Lab/wpi_jaco/issues")
+set(wpi_jaco_URL_REPOSITORY "https://github.com/RIVeR-Lab/wpi_jaco")
 set(wpi_jaco_DEPRECATED "")

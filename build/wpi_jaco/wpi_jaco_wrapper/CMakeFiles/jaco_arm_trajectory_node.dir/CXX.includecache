@@ -441,18 +441,20 @@ wpi_jaco_wrapper/jaco_arm_trajectory_node.h
 /opt/ros/kinetic/include/actionlib/action_definition.h
 
 /opt/ros/kinetic/include/actionlib/client/action_client.h
-boost/thread/condition.hpp
--
-ros/ros.h
-/opt/ros/kinetic/include/actionlib/client/ros/ros.h
-ros/callback_queue_interface.h
-/opt/ros/kinetic/include/actionlib/client/ros/callback_queue_interface.h
 actionlib/client/client_helpers.h
 -
 actionlib/client/connection_monitor.h
 -
 actionlib/destruction_guard.h
 -
+boost/thread/condition.hpp
+-
+string
+-
+ros/ros.h
+/opt/ros/kinetic/include/actionlib/client/ros/ros.h
+ros/callback_queue_interface.h
+/opt/ros/kinetic/include/actionlib/client/ros/callback_queue_interface.h
 
 /opt/ros/kinetic/include/actionlib/client/client_goal_handle_imp.h
 
@@ -464,6 +466,8 @@ boost/interprocess/sync/scoped_lock.hpp
 boost/shared_ptr.hpp
 -
 boost/weak_ptr.hpp
+-
+vector
 -
 actionlib/action_definition.h
 /opt/ros/kinetic/include/actionlib/client/actionlib/action_definition.h
@@ -497,21 +501,25 @@ ros/console.h
 /opt/ros/kinetic/include/actionlib/client/ros/console.h
 
 /opt/ros/kinetic/include/actionlib/client/comm_state_machine_imp.h
+vector
+-
 
 /opt/ros/kinetic/include/actionlib/client/connection_monitor.h
-boost/thread/condition.hpp
--
-boost/thread/recursive_mutex.hpp
--
 ros/ros.h
 -
 actionlib_msgs/GoalStatusArray.h
 -
+actionlib/decl.h
+-
+boost/thread/condition.hpp
+-
+boost/thread/recursive_mutex.hpp
+-
 set
 -
-map
+string
 -
-actionlib/decl.h
+map
 -
 
 /opt/ros/kinetic/include/actionlib/client/goal_manager_imp.h
@@ -524,6 +532,8 @@ boost/thread/mutex.hpp
 boost/scoped_ptr.hpp
 -
 boost/concept_check.hpp
+-
+string
 -
 ros/ros.h
 /opt/ros/kinetic/include/actionlib/client/ros/ros.h
@@ -539,6 +549,8 @@ actionlib/client/terminal_state.h
 /opt/ros/kinetic/include/actionlib/client/actionlib/client/terminal_state.h
 
 /opt/ros/kinetic/include/actionlib/client/simple_client_goal_state.h
+string
+-
 
 /opt/ros/kinetic/include/actionlib/client/simple_goal_state.h
 string
@@ -547,6 +559,8 @@ ros/console.h
 /opt/ros/kinetic/include/actionlib/client/ros/console.h
 
 /opt/ros/kinetic/include/actionlib/client/terminal_state.h
+string
+-
 
 /opt/ros/kinetic/include/actionlib/decl.h
 ros/macros.h
@@ -563,6 +577,8 @@ boost/shared_ptr.hpp
 -
 
 /opt/ros/kinetic/include/actionlib/goal_id_generator.h
+actionlib/decl.h
+-
 sstream
 -
 string
@@ -571,12 +587,10 @@ ros/time.h
 /opt/ros/kinetic/include/actionlib/ros/time.h
 actionlib_msgs/GoalID.h
 /opt/ros/kinetic/include/actionlib/actionlib_msgs/GoalID.h
-actionlib/decl.h
--
 
 /opt/ros/kinetic/include/actionlib/managed_list.h
-ros/console.h
-/opt/ros/kinetic/include/actionlib/ros/console.h
+actionlib/destruction_guard.h
+-
 boost/thread.hpp
 -
 boost/shared_ptr.hpp
@@ -585,13 +599,15 @@ boost/weak_ptr.hpp
 -
 list
 -
-actionlib/destruction_guard.h
--
+ros/console.h
+/opt/ros/kinetic/include/actionlib/ros/console.h
 
 /opt/ros/kinetic/include/actionlib/server/action_server.h
 ros/ros.h
 -
 boost/thread.hpp
+-
+boost/thread/reverse_lock.hpp
 -
 boost/shared_ptr.hpp
 -
@@ -618,6 +634,8 @@ actionlib/server/action_server_base.h
 actionlib/destruction_guard.h
 -
 list
+-
+string
 -
 actionlib/server/action_server_imp.h
 -
@@ -653,6 +671,10 @@ list
 -
 
 /opt/ros/kinetic/include/actionlib/server/action_server_imp.h
+list
+-
+string
+-
 
 /opt/ros/kinetic/include/actionlib/server/handle_tracker_deleter.h
 actionlib/action_definition.h
@@ -663,10 +685,14 @@ actionlib/destruction_guard.h
 -
 boost/shared_ptr.hpp
 -
+list
+-
 actionlib/server/handle_tracker_deleter_imp.h
 -
 
 /opt/ros/kinetic/include/actionlib/server/handle_tracker_deleter_imp.h
+list
+-
 
 /opt/ros/kinetic/include/actionlib/server/server_goal_handle.h
 actionlib_msgs/GoalID.h
@@ -681,10 +707,18 @@ actionlib/destruction_guard.h
 -
 boost/shared_ptr.hpp
 -
+list
+-
+string
+-
 actionlib/server/server_goal_handle_imp.h
 -
 
 /opt/ros/kinetic/include/actionlib/server/server_goal_handle_imp.h
+list
+-
+string
+-
 
 /opt/ros/kinetic/include/actionlib/server/simple_action_server.h
 boost/thread/condition.hpp
@@ -695,10 +729,14 @@ actionlib/server/action_server.h
 -
 actionlib/action_definition.h
 -
+string
+-
 actionlib/server/simple_action_server_imp.h
 -
 
 /opt/ros/kinetic/include/actionlib/server/simple_action_server_imp.h
+string
+-
 
 /opt/ros/kinetic/include/actionlib/server/status_tracker.h
 actionlib_msgs/GoalID.h

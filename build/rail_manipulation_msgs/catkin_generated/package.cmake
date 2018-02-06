@@ -10,4 +10,7 @@ set(rail_manipulation_msgs_EXEC_DEPENDS "actionlib_msgs" "geometry_msgs" "messag
 set(rail_manipulation_msgs_RUN_DEPENDS "actionlib_msgs" "geometry_msgs" "message_runtime" "sensor_msgs" "visualization_msgs")
 set(rail_manipulation_msgs_TEST_DEPENDS )
 set(rail_manipulation_msgs_DOC_DEPENDS )
+set(rail_manipulation_msgs_URL_WEBSITE "http://ros.org/wiki/rail_manipulation_msgs")
+set(rail_manipulation_msgs_URL_BUGTRACKER "https://github.com/GT-RAIL/rail_manipulation_msgs/issues")
+set(rail_manipulation_msgs_URL_REPOSITORY "https://github.com/GT-RAIL/rail_manipulation_msgs")
 set(rail_manipulation_msgs_DEPRECATED "")

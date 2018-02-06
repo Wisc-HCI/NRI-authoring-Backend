@@ -10,4 +10,7 @@ set(contact_handler_EXEC_DEPENDS "roscpp" "geometry_msgs" "vrep_ros_plugin" "gaz
 set(contact_handler_RUN_DEPENDS "roscpp" "geometry_msgs" "vrep_ros_plugin" "gazebo_msgs")
 set(contact_handler_TEST_DEPENDS )
 set(contact_handler_DOC_DEPENDS )
+set(contact_handler_URL_WEBSITE "")
+set(contact_handler_URL_BUGTRACKER "")
+set(contact_handler_URL_REPOSITORY "git://github.com/lagadic/vrep_ros_bridge.git")
 set(contact_handler_DEPRECATED "")

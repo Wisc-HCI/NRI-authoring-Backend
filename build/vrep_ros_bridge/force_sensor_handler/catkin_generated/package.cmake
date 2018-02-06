@@ -10,4 +10,7 @@ set(force_sensor_handler_EXEC_DEPENDS "roscpp" "geometry_msgs" "vrep_ros_plugin"
 set(force_sensor_handler_RUN_DEPENDS "roscpp" "geometry_msgs" "vrep_ros_plugin")
 set(force_sensor_handler_TEST_DEPENDS )
 set(force_sensor_handler_DOC_DEPENDS )
+set(force_sensor_handler_URL_WEBSITE "")
+set(force_sensor_handler_URL_BUGTRACKER "")
+set(force_sensor_handler_URL_REPOSITORY "git://github.com/lagadic/vrep_ros_bridge.git")
 set(force_sensor_handler_DEPRECATED "")

@@ -94,6 +94,7 @@ contact_handler_EXTERNAL_OBJECTS =
 /home/jerry/Desktop/therbligs_ws/devel/lib/libcontact_handler.so: /opt/ros/kinetic/lib/libroscpp.so
 /home/jerry/Desktop/therbligs_ws/devel/lib/libcontact_handler.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
 /home/jerry/Desktop/therbligs_ws/devel/lib/libcontact_handler.so: /opt/ros/kinetic/lib/libxmlrpcpp.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libcontact_handler.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
 /home/jerry/Desktop/therbligs_ws/devel/lib/libcontact_handler.so: /opt/ros/kinetic/lib/libclass_loader.so
 /home/jerry/Desktop/therbligs_ws/devel/lib/libcontact_handler.so: /usr/lib/libPocoFoundation.so
 /home/jerry/Desktop/therbligs_ws/devel/lib/libcontact_handler.so: /usr/lib/x86_64-linux-gnu/libdl.so

@@ -10,4 +10,7 @@ set(jaco_interaction_EXEC_DEPENDS "interactive_markers" "roscpp" "actionlib" "ra
 set(jaco_interaction_RUN_DEPENDS "interactive_markers" "roscpp" "actionlib" "rail_manipulation_msgs" "sensor_msgs" "std_srvs" "wpi_jaco_msgs")
 set(jaco_interaction_TEST_DEPENDS )
 set(jaco_interaction_DOC_DEPENDS )
+set(jaco_interaction_URL_WEBSITE "http://ros.org/wiki/jaco_interaction")
+set(jaco_interaction_URL_BUGTRACKER "https://github.com/RIVeR-Lab/wpi_jaco/issues")
+set(jaco_interaction_URL_REPOSITORY "https://github.com/RIVeR-Lab/wpi_jaco")
 set(jaco_interaction_DEPRECATED "")

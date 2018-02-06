@@ -10,4 +10,7 @@ set(jaco_description_EXEC_DEPENDS "xacro" "joint_state_publisher" "robot_state_p
 set(jaco_description_RUN_DEPENDS "xacro" "joint_state_publisher" "robot_state_publisher")
 set(jaco_description_TEST_DEPENDS )
 set(jaco_description_DOC_DEPENDS )
+set(jaco_description_URL_WEBSITE "http://ros.org/wiki/jaco_description")
+set(jaco_description_URL_BUGTRACKER "https://github.com/RIVeR-Lab/wpi_jaco/issues")
+set(jaco_description_URL_REPOSITORY "https://github.com/RIVeR-Lab/wpi_jaco")
 set(jaco_description_DEPRECATED "")

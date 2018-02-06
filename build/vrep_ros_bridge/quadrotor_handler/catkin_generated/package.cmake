@@ -10,4 +10,7 @@ set(quadrotor_handler_EXEC_DEPENDS "roscpp" "sensor_msgs" "geometry_msgs" "vrep_
 set(quadrotor_handler_RUN_DEPENDS "roscpp" "sensor_msgs" "geometry_msgs" "vrep_ros_plugin")
 set(quadrotor_handler_TEST_DEPENDS )
 set(quadrotor_handler_DOC_DEPENDS )
+set(quadrotor_handler_URL_WEBSITE "")
+set(quadrotor_handler_URL_BUGTRACKER "")
+set(quadrotor_handler_URL_REPOSITORY "git://github.com/lagadic/vrep_ros_bridge.git")
 set(quadrotor_handler_DEPRECATED "")

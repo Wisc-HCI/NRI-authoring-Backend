@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 import socket
 import struct
-#from mico_planner import ActionHandler
-#import rospy
-#from moveit_commander import RobotCommander, os, PlanningSceneInterface, roscpp_initialize, roscpp_shutdown
+from mico_planner import ActionHandler
+import rospy
+from moveit_commander import RobotCommander, os, PlanningSceneInterface, roscpp_initialize, roscpp_shutdown
 import sys
-#import geometry_msgs.msg
-#from moveit_msgs.msg import RobotTrajectory
-#from trajectory_msgs.msg import JointTrajectoryPoint
+import geometry_msgs.msg
+from moveit_msgs.msg import RobotTrajectory
+from trajectory_msgs.msg import JointTrajectoryPoint
 import json
 from mico_parser import ActionParser
 
@@ -88,8 +88,8 @@ def recvJson(socket):
 # After parsing the JSON object, the main loop interprets the therblig messages and 
 # translates them into plans to be run by the action handler.
 ###
-#def socket_loop(acHan):
-def socket_loop():
+def socket_loop(acHan):
+#def socket_loop():
     #create an INET, STREAMing socket
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     #bind the socket to a public host and a well-known port
@@ -122,7 +122,8 @@ def socket_loop():
             if actionType == 'CheckROSLive':
                 LOG.INFO("Checking ROS alive...\n")
                 checkROSLiveReply(c)
-
+                pose_target = createTarget("-0.13944,-0.25935,0.69044", "0.33707,-0.93151,-0.11101,0.07957")
+                acHan.Transport_Empty(4, pose_target)
             elif actionType == 'ExecutePlan':
                 LOG.INFO("Executing the therbligs plan...\n")
                 
@@ -136,8 +137,8 @@ def socket_loop():
                         if parser.getTherbligName(therblig) == "Transport Empty":
                             LOG.INFO("Object info: ", "XYZ-position:", parser.getXYZPosition(therblig), "Orientation:", parser.getOrientation(therblig))
                             # Call Transport Empty API from mico_planner
-                            #pose_target = createTarget(parser.getXYZPosition(therblig), parser.getOrientation(therblig))
-                            #acHan.Transport_Empty(4, pose_target)
+                            pose_target = createTarget(parser.getXYZPosition(therblig), parser.getOrientation(therblig))
+                            acHan.Transport_Empty(4, pose_target)
                         elif parser.getTherbligName(therblig) == "Grasp":
                             LOG.INFO("Grasping object: ", parser.getObjectName(therblig))
                             LOG.INFO("Grasp effort: ", parser.getGraspEffort(therblig))
@@ -158,19 +159,19 @@ def socket_loop():
 
             elif actionType == 'GetPosition':
                 LOG.INFO("Getting the position...\n")
-                #currPose = acHan.Read_Position()
+                currPose = acHan.Read_Position()
                 getPositionReply(c, "1 2 3")
-                #getPositionReply(c, unpackPosition(currPose))
+                getPositionReply(c, unpackPosition(currPose))
 
             elif actionType == 'Exit':
                 LOG.INFO("Exiting...\n")
                 exitReply(c)
+                loop = False
                 # kill ROS
                 #end()
             elif actionType == None:
                 LOG.INFO('USAGE ERROR: Invalid Action Type\n')
 
-            break
 
     s.close()
 
@@ -201,21 +202,21 @@ def unpackPosition(pose):
 ###
 # The standard script end calls used in all of our scripts.
 # This should be called last.
-'''
+
 def end():
     rospy.signal_shutdown("Done")
     os._exit(0)
     roscpp_shutdown()
-'''
+
 if __name__ == '__main__':
   
     # Build the action handler
-    #acHan = ActionHandler("mico_arm")
+    acHan = ActionHandler("mico_arm")
 
     # Start the socket
-    #socket_loop(acHan)
-    socket_loop()
+    socket_loop(acHan)
+    #socket_loop()
 
     # End this script
     
-    #end()
+    end()

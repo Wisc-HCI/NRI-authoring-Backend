@@ -10,4 +10,7 @@ set(mico_planning_EXEC_DEPENDS "pluginlib" "moveit_core" "moveit_fake_controller
 set(mico_planning_RUN_DEPENDS "pluginlib" "moveit_core" "moveit_fake_controller_manager" "moveit_ros_planning_interface" "moveit_ros_perception" "interactive_markers" "moveit_visual_tools")
 set(mico_planning_TEST_DEPENDS )
 set(mico_planning_DOC_DEPENDS )
+set(mico_planning_URL_WEBSITE "")
+set(mico_planning_URL_BUGTRACKER "")
+set(mico_planning_URL_REPOSITORY "")
 set(mico_planning_DEPRECATED "")

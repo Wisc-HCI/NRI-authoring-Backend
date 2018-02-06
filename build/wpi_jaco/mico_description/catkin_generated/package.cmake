@@ -10,4 +10,7 @@ set(mico_description_EXEC_DEPENDS "xacro" "joint_state_publisher" "robot_state_p
 set(mico_description_RUN_DEPENDS "xacro" "joint_state_publisher" "robot_state_publisher")
 set(mico_description_TEST_DEPENDS )
 set(mico_description_DOC_DEPENDS )
+set(mico_description_URL_WEBSITE "")
+set(mico_description_URL_BUGTRACKER "https://github.com/RIVeR-Lab/wpi_jaco/issues")
+set(mico_description_URL_REPOSITORY "https://github.com/RIVeR-Lab/wpi_jaco")
 set(mico_description_DEPRECATED "")

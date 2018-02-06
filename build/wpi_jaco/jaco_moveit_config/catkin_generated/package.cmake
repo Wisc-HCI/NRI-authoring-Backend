@@ -10,4 +10,7 @@ set(jaco_moveit_config_EXEC_DEPENDS "moveit_ros_move_group" "moveit_planners_omp
 set(jaco_moveit_config_RUN_DEPENDS "moveit_ros_move_group" "moveit_planners_ompl" "joint_state_publisher" "robot_state_publisher" "xacro" "jaco_description")
 set(jaco_moveit_config_TEST_DEPENDS )
 set(jaco_moveit_config_DOC_DEPENDS )
+set(jaco_moveit_config_URL_WEBSITE "http://ros.org/wiki/jaco_moveit_config")
+set(jaco_moveit_config_URL_BUGTRACKER "https://github.com/RIVeR-Lab/wpi_jaco/issues")
+set(jaco_moveit_config_URL_REPOSITORY "https://github.com/RIVeR-Lab/wpi_jaco")
 set(jaco_moveit_config_DEPRECATED "")

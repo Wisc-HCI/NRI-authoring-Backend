@@ -10,4 +10,7 @@ set(camera_handler_EXEC_DEPENDS "roscpp" "sensor_msgs" "image_transport" "vrep_r
 set(camera_handler_RUN_DEPENDS "roscpp" "sensor_msgs" "image_transport" "vrep_ros_plugin")
 set(camera_handler_TEST_DEPENDS )
 set(camera_handler_DOC_DEPENDS )
+set(camera_handler_URL_WEBSITE "http://wiki.ros.org/vrep_ros_bridge")
+set(camera_handler_URL_BUGTRACKER "")
+set(camera_handler_URL_REPOSITORY "")
 set(camera_handler_DEPRECATED "")

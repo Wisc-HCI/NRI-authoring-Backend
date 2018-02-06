@@ -10,4 +10,7 @@ set(drawing_handler_EXEC_DEPENDS "roscpp" "geometry_msgs" "shape_msgs" "vrep_ros
 set(drawing_handler_RUN_DEPENDS "roscpp" "geometry_msgs" "shape_msgs" "vrep_ros_plugin")
 set(drawing_handler_TEST_DEPENDS )
 set(drawing_handler_DOC_DEPENDS )
+set(drawing_handler_URL_WEBSITE "")
+set(drawing_handler_URL_BUGTRACKER "")
+set(drawing_handler_URL_REPOSITORY "git://github.com/lagadic/vrep_ros_bridge.git")
 set(drawing_handler_DEPRECATED "")
