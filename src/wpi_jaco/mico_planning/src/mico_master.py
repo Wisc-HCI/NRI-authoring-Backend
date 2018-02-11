@@ -211,7 +211,7 @@ def end():
 if __name__ == '__main__':
   
     # Build the action handler
-    acHan = ActionHandler("mico_arm")
+    acHan = ActionHandler("mico_arm", "mico_master")
 
     # Start the socket
     socket_loop(acHan)

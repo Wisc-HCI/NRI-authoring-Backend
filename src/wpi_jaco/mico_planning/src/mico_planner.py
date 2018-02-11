@@ -17,9 +17,9 @@ class ActionHandler:
 
     ################
     # Initializes the MoveGroupCommander, PlannerID, and EndEffector
-    def __init__(self, group_name):
+    def __init__(self, group_name, node_name):
 			moveit_commander.roscpp_initialize(sys.argv)
-  			rospy.init_node('mico_arm_planning', anonymous=True)
+  			rospy.init_node(node_name, anonymous=True)
 
   			## Instantiate a RobotCommander object.  This object is an interface to
   			## the robot as a whole.
@@ -180,12 +180,11 @@ class ActionHandler:
     # Arguments : arm (int) = id of the arm being used    
     # 
     # Return : A geometry_msgs pose contains the [XYZ position, xyzw orientation]
-    def Read_Position(self, arm):
+    def Read_Position(self):
         try:
-            if isinstance(arm, int):
-                return self.group.get_current_pose().pose
-            else:
-                print("USAGE ERROR : please specify which arm is being used (ex : mico => 4)")
+            return self.group.get_current_pose().pose
+            #else:
+                #print("USAGE ERROR : please specify which arm is being used (ex : mico => 4)")
 
         except Exception as e:
             print("*EXCEPTION OCCURRED* - attempted to move arm")
