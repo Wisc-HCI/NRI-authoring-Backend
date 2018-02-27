@@ -20,3 +20,10 @@ Here is the documentation related to the implementation of the therbligs code.
 
 ## jsons/
   The jsons folder contains a list of request and reply jsons that will get send back and forth between the front-end UI and backend ROS.
+
+## Ros-Bridge Part
+We want to get robot end-effector position in UI from ROS as quickly as possible. One approuch for front-end to communicate with ROS is to send Jsons from the NodeJS socket to the python socket in ROS(https://github.com/JerryHu1994/NRI-authoring-Backend/tree/master/src/wpi_jaco/mico_planning/src/jsons). Here we found another easier approuch to achieve the same goal by using Rosbridge package(http://wiki.ros.org/rosbridge_suite).
+
+As the ROSbridge provides an interface including a WebServer to interact with the ROS. In the front-end, we would just need listener to keep listening a certain topic named end_effector_position in ROS. In the back-end ROS, we would create a node and let it keep publishing robot end-effector position as a standard string to the ROS topic end_effector_position.
+
+A sample Rosbridge example could be found: http://wiki.ros.org/roslibjs/Tutorials/BasicRosFunctionality
