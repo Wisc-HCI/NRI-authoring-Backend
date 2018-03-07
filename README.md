@@ -58,6 +58,6 @@ This package is only tested with Ubuntu 16.04 with ROS Kinetic.
 # Potential Error in running the backend code
 For those who encounter the error when running the moveit_rviz_plugin: Error string: Could not load library (Poco exception = libopencv_imgproc3.so.3.2). Try to build the MoveIt package again, and come back to run the launchROS.sh.
 
-For any oother questions, feel free to contact me at jhu76@wisc.edu. 
+For any other questions, feel free to contact me at jhu76@wisc.edu. 
   
   
