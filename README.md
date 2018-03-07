@@ -48,7 +48,7 @@ This package is only tested with Ubuntu 16.04 with ROS Kinetic.
   ```
   ./launchROS.sh
   ```
-  This script will bring up 
+  This script will bring up the main backend master for executing the therbligs, rviz for viusalization the motion planning, and a robot position publisher node to the front-end through ROS-bridge.
 
 # Potential Error in the installation process
 1. Rail_manipulation-msgs missing in the build process:
