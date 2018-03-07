@@ -9,7 +9,7 @@ Contact: jhu76@wisc.edu
 
 This package is only tested with Ubuntu 16.04 with ROS Kinetic.
 
-Steps to use this package
+# Steps to install this package
 
 1. Install ROS Kinetic 
   Follow the instruction on the ROS Kinetic installation page at : http://wiki.ros.org/kinetic/Installation/Ubuntu
@@ -20,11 +20,42 @@ Steps to use this package
 3. Install NRI-authoring-Backend
   Navigate to a folder where you want to place the backend part:
   Clone the repository by:
-```
-git clone git@github.com:Wisc-HCI/NRI-authoring-Backend.git
-```
+  ```
+  git clone git@github.com:Wisc-HCI/NRI-authoring-Backend.git
+  ```
 
-Source the workspace (put this line in ~/.bachrc):
-```
-source PATH-TO-WORKSPACE/devel/setup.bash
-```
+  Source the workspace (put this line in ~/.bachrc):
+  ```
+  source PATH-TO-WORKSPACE/devel/setup.bash
+  ```
+  Make sure the build folder is clean:
+  ```
+  cd build
+  rm -rf *
+  ```
+  Let's build the workspace:
+  ```
+  catkin_make
+  ```
+4. Install rosbridge_suit
+  This is the part to allow communication between frontend and backend, or ROS from a different machine.
+  ```
+  roslaunch rosbridge_server rosbridge_websocket.launch
+  ```
+
+# Steps to use this package
+  Simple run:
+  ```
+  ./launchROS.sh
+  ```
+  This script will bring up 
+
+# Potential Error in the installation process
+1. Rail_manipulation-msgs missing in the build process:
+  Solution: cd into the src folder and clone the official rail_manipulation_msgs repo at (https://github.com/GT-RAIL/rail_manipulation_msgs). Then try catkin_make again.
+2. For any moveit package missing, make sure you have follow the installation instructions from the Moveit. 
+
+# Potential Error in running the backend code
+
+  
+  
