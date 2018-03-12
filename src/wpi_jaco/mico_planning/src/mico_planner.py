@@ -13,11 +13,14 @@ from sensor_msgs.msg import JointState
 
 from std_msgs.msg import String
 
+# include simulation here
+import mico_simulator
+
 class ActionHandler:
 
     ################
     # Initializes the MoveGroupCommander, PlannerID, and EndEffector
-    def __init__(self, group_name, node_name):
+    def __init__(self, group_name, node_name, sim_flag):
 			moveit_commander.roscpp_initialize(sys.argv)
   			rospy.init_node(node_name, anonymous=True)
 
@@ -34,16 +37,20 @@ class ActionHandler:
   			## arm.  This interface can be used to plan and execute motions on the left
   			## arm.
   			self.group = moveit_commander.MoveGroupCommander(group_name)#default : "mico_arm"
-         
+
 				## We create this DisplayTrajectory publisher which is used below to publish
   			## trajectories for RVIZ to visualize.
   			self.display_trajectory_publisher = rospy.Publisher(
                                       '/move_group/display_planned_path',
                                       moveit_msgs.msg.DisplayTrajectory,
                                       queue_size=20)
-            
+
 			self.joints = self.current_joints()
 			self.pose = self.current_pose()
+
+            # init for simulation
+            self.simulator = mico_simulator.mico_simulator('mico_sim') if sim_flag else None
+
 			print "starting state... ",self.current_joints()  
 			#self.group.set_start_state([0.0, 2.9, 1.3, 3.14, 1.4, 0.0])
 
@@ -57,7 +64,7 @@ class ActionHandler:
     # Return : Returns the current arm rpy
     def current_rpy(self):
         return self.group.get_current_rpy()
- 
+
     ################
     # Get the current arm pose 
     #

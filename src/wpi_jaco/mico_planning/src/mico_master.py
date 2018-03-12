@@ -69,7 +69,7 @@ def recvJson(socket):
         length_str += char
         char = socket.recv(1)
     total = int(length_str)
-    
+
     # use a memoryview to receive the data chunk by chunk efficiently
     view = memoryview(bytearray(total))
     next_offset = 0
@@ -94,7 +94,7 @@ def socket_loop(acHan):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     #bind the socket to a public host and a well-known port
     server_addr = (socket.gethostname(), 9999)
-    
+
     s.bind(server_addr)
     LOG.INFO('Server listening up on %s port %s' % server_addr)
     #become a server socket
@@ -116,7 +116,7 @@ def socket_loop(acHan):
             #print jsonData
             # initialize the parser with the json Data received from the socket
             parser = ActionParser(jsonData)
-            
+
             actionType = parser.getType()
 
             if actionType == 'CheckROSLive':
@@ -126,7 +126,9 @@ def socket_loop(acHan):
                 acHan.Transport_Empty(4, pose_target)
             elif actionType == 'ExecutePlan':
                 LOG.INFO("Executing the therbligs plan...\n")
+
                 
+
                 # iterate through different tasks
                 for i, task in enumerate(parser.getTasks()):
                     LOG.INFO("Starting to execute ", task['name'],'...')
@@ -144,7 +146,6 @@ def socket_loop(acHan):
                             LOG.INFO("Grasp effort: ", parser.getGraspEffort(therblig))
                             # Call grasp API from mico_planner
 
-                        
                         elif parser.getTherbligName(therblig) == "Transport Loaded":
                             LOG.INFO("Object info: ", "XYZ-position:", parser.getXYZPosition(therblig), "Orientation:", parser.getOrientation(therblig))
                             # Call Transport Loaded API from mico_planner
@@ -211,7 +212,7 @@ def end():
 if __name__ == '__main__':
   
     # Build the action handler
-    acHan = ActionHandler("mico_arm", "mico_master")
+    acHan = ActionHandler("mico_arm", "mico_master", True)
 
     # Start the socket
     socket_loop(acHan)

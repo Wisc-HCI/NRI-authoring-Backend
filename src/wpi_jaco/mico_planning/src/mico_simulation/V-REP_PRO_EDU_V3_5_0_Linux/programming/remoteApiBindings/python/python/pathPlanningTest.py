@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # This example illustrates how to use the path/motion
 # planning functionality from a remote API client.
 #
