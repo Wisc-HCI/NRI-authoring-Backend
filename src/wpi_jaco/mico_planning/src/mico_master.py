@@ -127,8 +127,7 @@ def socket_loop(acHan):
             elif actionType == 'ExecutePlan':
                 LOG.INFO("Executing the therbligs plan...\n")
 
-                
-
+                acHan.simulator.start_simulation()
                 # iterate through different tasks
                 for i, task in enumerate(parser.getTasks()):
                     LOG.INFO("Starting to execute ", task['name'],'...')
@@ -140,7 +139,10 @@ def socket_loop(acHan):
                             LOG.INFO("Object info: ", "XYZ-position:", parser.getXYZPosition(therblig), "Orientation:", parser.getOrientation(therblig))
                             # Call Transport Empty API from mico_planner
                             pose_target = createTarget(parser.getXYZPosition(therblig), parser.getOrientation(therblig))
-                            acHan.Transport_Empty(4, pose_target)
+                            posList = acHan.Transport_Empty(4, pose_target)
+                            for p in posList:
+                                print p
+                                acHan.simulator.move_arm(list(p))
                         elif parser.getTherbligName(therblig) == "Grasp":
                             LOG.INFO("Grasping object: ", parser.getObjectName(therblig))
                             LOG.INFO("Grasp effort: ", parser.getGraspEffort(therblig))
@@ -154,6 +156,7 @@ def socket_loop(acHan):
 
                         else:
                             LOG.INFO("Unknown therblig")
+                acHan.simulator.end_simulation()
 
                 # send the reply json
                 executePlanReply(c, True)

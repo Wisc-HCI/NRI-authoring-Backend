@@ -21,38 +21,35 @@ class ActionHandler:
     ################
     # Initializes the MoveGroupCommander, PlannerID, and EndEffector
     def __init__(self, group_name, node_name, sim_flag):
-			moveit_commander.roscpp_initialize(sys.argv)
-  			rospy.init_node(node_name, anonymous=True)
+		moveit_commander.roscpp_initialize(sys.argv)
+  		rospy.init_node(node_name, anonymous=True)
 
-  			## Instantiate a RobotCommander object.  This object is an interface to
-  			## the robot as a whole.
-  			self.robot = moveit_commander.RobotCommander()
+  		## Instantiate a RobotCommander object.  This object is an interface to
+  		## the robot as a whole.
+  		self.robot = moveit_commander.RobotCommander()
 
-  			## Instantiate a PlanningSceneInterface object.  This object is an interface
-  			## to the world surrounding the robot.
-  			self.scene = moveit_commander.PlanningSceneInterface()
+  		## Instantiate a PlanningSceneInterface object.  This object is an interface
+  		## to the world surrounding the robot.
+  		self.scene = moveit_commander.PlanningSceneInterface()
 
-  			## Instantiate a MoveGroupCommander object.  This object is an interface
-  			## to one group of joints.  In this case the group is the joints in the left
-  			## arm.  This interface can be used to plan and execute motions on the left
-  			## arm.
-  			self.group = moveit_commander.MoveGroupCommander(group_name)#default : "mico_arm"
+  		## Instantiate a MoveGroupCommander object.  This object is an interface
+  		## to one group of joints.  In this case the group is the joints in the left
+  		## arm.  This interface can be used to plan and execute motions on the left
+  		## arm.
+  		self.group = moveit_commander.MoveGroupCommander(group_name)#default : "mico_arm"
 
-				## We create this DisplayTrajectory publisher which is used below to publish
-  			## trajectories for RVIZ to visualize.
-  			self.display_trajectory_publisher = rospy.Publisher(
-                                      '/move_group/display_planned_path',
-                                      moveit_msgs.msg.DisplayTrajectory,
-                                      queue_size=20)
+		## We create this DisplayTrajectory publisher which is used below to publish
+  		## trajectories for RVIZ to visualize.
+  		self.display_trajectory_publisher = rospy.Publisher('/move_group/display_planned_path', moveit_msgs.msg.DisplayTrajectory, queue_size=20)
 
-			self.joints = self.current_joints()
-			self.pose = self.current_pose()
-
-            # init for simulation
-            self.simulator = mico_simulator.mico_simulator('mico_sim') if sim_flag else None
-
-			print "starting state... ",self.current_joints()  
-			#self.group.set_start_state([0.0, 2.9, 1.3, 3.14, 1.4, 0.0])
+		self.joints = self.current_joints()
+		self.pose = self.current_pose()
+		if (sim_flag):		
+			self.simulator = mico_simulator.mico_simulator('mico_sim')
+		else:
+			self.simulator = None
+		print "starting state... ",self.current_joints()
+		#self.group.set_start_state([3.14, 3.14, 3.14, 3.14, 3.14, 3.14])
 
 
 ####################
@@ -153,6 +150,7 @@ class ActionHandler:
     def Transport_Empty(self, arm, position):
         success = False
 
+        posList = []
         try:
             if isinstance(arm, int):
                 #print "starting state... ",self.group.get_current_state()                
@@ -162,10 +160,10 @@ class ActionHandler:
                 print "target: ", position
                 self.set_target_position(position)
                 plan = self.group.plan()
-                posList = []
+
                 for i in plan.joint_trajectory.points:
                     posList.append(i.positions)
-                print "Trajectory: ", posList
+                #print "Trajectory: ", posList
                 #print "Trajectory:", plan.joint_trajectory.points
                 self.group.go(wait=True)
                 self.execute_plan(plan)
@@ -179,7 +177,7 @@ class ActionHandler:
             print("*EXCEPTION OCCURRED* - attempted to move arm")
             print(e)
 
-        return success
+        return posList
       
     ################
     # Save the current XYZ position and orientation of the end-effector
