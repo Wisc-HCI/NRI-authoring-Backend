@@ -30,6 +30,7 @@ class mico_simulator:
         print ('Creating Simulator...')
         self.name = name
         self.handles = []
+        self.handname = "hand2"
         # connect to VREP
         vrep.simxFinish(-1) # just in case, close all opened connections
         self.clientID=vrep.simxStart('127.0.0.1',19999,True,True,5000,5) # Connect to V-REP
@@ -52,10 +53,6 @@ class mico_simulator:
         # set the velocity for each joint
         self.set_arm_velocity([0.2]*6)
 
-        # test the hand
-        ret = vrep.simxSetIntegerSignal(self.clientID, "hand2", 1, vrep.simx_opmode_oneshot_wait)
-        if ret != vrep.simx_return_ok:
-            print ("move arm failed")
     # set the velocity for each joint of the arm
     def set_arm_velocity(self, vel_vector):
         for ind, vel in enumerate(vel_vector):
@@ -70,6 +67,12 @@ class mico_simulator:
             ret = vrep.simxSetJointTargetPosition(self.clientID, self.handles[ind], pos, vrep.simx_opmode_oneshot_wait)
             if ret != vrep.simx_return_ok:
                 print ("Failed to move ", ind, " handle to ", "pos")
+
+    # set the hand openness to certain degree
+    def move_hand(self, degree):
+        ret = vrep.simxSetIntegerSignal(self.clientID, self.handname, 1, vrep.simx_opmode_oneshot_wait)
+        if ret != vrep.simx_return_ok:
+            print ("move arm failed")
 
     # end the vrep simulation, need to call this when exiting
     def end_simulation(self):

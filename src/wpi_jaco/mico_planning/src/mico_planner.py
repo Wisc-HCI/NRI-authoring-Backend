@@ -178,7 +178,47 @@ class ActionHandler:
             print(e)
 
         return posList
-      
+
+    ################
+    # Reaching for an object with an loaded hand
+    # Preperation for grasp
+    #
+    # Arguments : arm (int) = id of the arm being used
+    #             position (list) = goal position, either [xyz, xyzw] or JointState           
+    # 
+    # Return : True if the arm moved to the correct position
+    def Transport_Loaded(self, arm, position):
+        success = False
+
+        posList = []
+        try:
+            if isinstance(arm, int):
+                #print "starting state... ",self.group.get_current_state()                
+                #self.group.set_start_state()
+                self.group.set_start_state_to_current_state()
+                print "before",self.group.get_current_joint_values()
+                print "target: ", position
+                self.set_target_position(position)
+                plan = self.group.plan()
+
+                for i in plan.joint_trajectory.points:
+                    posList.append(i.positions)
+                #print "Trajectory: ", posList
+                #print "Trajectory:", plan.joint_trajectory.points
+                self.group.go(wait=True)
+                self.execute_plan(plan)
+                print "after",self.current_joints()
+                print "after end: ", self.current_pose().pose
+                success = True
+            else:
+                print("USAGE ERROR : please specify which arm is being used (ex : mico => 4)")
+
+        except Exception as e:
+            print("*EXCEPTION OCCURRED* - attempted to move arm")
+            print(e)
+
+        return posList
+
     ################
     # Save the current XYZ position and orientation of the end-effector
     #
@@ -194,5 +234,4 @@ class ActionHandler:
         except Exception as e:
             print("*EXCEPTION OCCURRED* - attempted to move arm")
             print(e)
-        
 
