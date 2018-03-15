@@ -70,7 +70,7 @@ class mico_simulator:
 
     # set the hand openness to certain degree
     def move_hand(self, degree):
-        ret = vrep.simxSetIntegerSignal(self.clientID, self.handname, 1, vrep.simx_opmode_oneshot_wait)
+        ret = vrep.simxSetIntegerSignal(self.clientID, self.handname, degree, vrep.simx_opmode_oneshot_wait)
         if ret != vrep.simx_return_ok:
             print ("move arm failed")
 

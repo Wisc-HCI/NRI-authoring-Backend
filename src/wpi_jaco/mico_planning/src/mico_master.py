@@ -128,7 +128,7 @@ def socket_loop(acHan):
                 LOG.INFO("Executing the therbligs plan...\n")
 
                 # start VREP simulation
-                if anHan.simulator != None:
+                if acHan.simulator != None:
                     acHan.simulator.start_simulation()
                 # iterate through different tasks
                 for i, task in enumerate(parser.getTasks()):
@@ -138,7 +138,7 @@ def socket_loop(acHan):
                         LOG.INFO("Next therblig: ", parser.getTherbligName(therblig))
 
                         if parser.getTherbligName(therblig) == "Transport Empty":
-                            LOG.INFO("THERBLIGS: [Transport empty] Object info: ", "XYZ-position:", parser.getXYZPosition(therblig), "Orientation:", parser.getOrientation(therblig))
+                            LOG.INFO("Object info: ", "XYZ-position:", parser.getXYZPosition(therblig), "Orientation:", parser.getOrientation(therblig))
                             # Call Transport Empty API from mico_planner
                             pose_target = createTarget(parser.getXYZPosition(therblig), parser.getOrientation(therblig))
                             posList = acHan.Transport_Empty(4, pose_target)
@@ -149,7 +149,7 @@ def socket_loop(acHan):
                                     acHan.simulator.move_arm(list(p))
                                 ###
                         elif parser.getTherbligName(therblig) == "Grasp":
-                            LOG.INFO("THERBLIGS: [Grasp] Grasping object: ", parser.getObjectName(therblig))
+                            LOG.INFO("Grasping object: ", parser.getObjectName(therblig))
                             LOG.INFO("Grasp effort: ", parser.getGraspEffort(therblig))
                             # Call grasp API from mico_planner
 
@@ -159,22 +159,22 @@ def socket_loop(acHan):
                             ###
 
                         elif parser.getTherbligName(therblig) == "Transport Loaded":
-                            LOG.INFO("THERBLIGS: [Transport Loaded] Object info: ", "XYZ-position:", parser.getXYZPosition(therblig), "Orientation:", parser.getOrientation(therblig))
+                            LOG.INFO("Object info: ", "XYZ-position:", parser.getXYZPosition(therblig), "Orientation:", parser.getOrientation(therblig))
                             # Call Transport Loaded API from mico_planner
                             pose_target = createTarget(parser.getXYZPosition(therblig), parser.getOrientation(therblig))
-                            posList = acHan.Transport_Loaded(4, pose)
+                            posList = acHan.Transport_Loaded(4, pose_target)
 
                             for p in posList:
                                 print p
                                 # for simulation
-                                if acHand.simulator != None:
-                                    acHand.simulator.move_arm(list(p))
+                                if acHan.simulator != None:
+                                    acHan.simulator.move_arm(list(p))
                                 #
 
                         elif parser.getTherbligName(therblig) == "Release Load":
-                            LOG.INFO("THERBLIGS: [RELEASE] Releasing object: ", parser.getObjectName(therblig))
+                            LOG.INFO("Releasing object: ", parser.getObjectName(therblig))
                             # for simulation
-                            if anHand.simulator != None:
+                            if acHan.simulator != None:
                                 acHan.simulator.move_hand(0)
                             ###
                         else:
