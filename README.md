@@ -9,8 +9,9 @@ Contact: jhu76@wisc.edu
 
 This package is only tested with Ubuntu 16.04 with ROS Kinetic.
 
-# Install KINOVA MICO SDK
-Go to http://www.kinovarobotics.com/innovation-robotics/support/?section=resources, open [KINOVA SDK MICO](https://drive.google.com/file/d/0B790iVm0vRTlUkV2ZnBDdGVuM2M/view). Download the SDK package, choose the right os platform and install it.
+# Install Kinova MICO SDK
+This step sets up physical connection with Mico arm.
+Go to http://www.kinovarobotics.com/innovation-robotics/support/?section=resources, open [KINOVA SDK MICO](https://drive.google.com/file/d/0B790iVm0vRTlUkV2ZnBDdGVuM2M/view). Download the SDK package, choose the right os platform and install the sdk following the instructions.
 
 # Steps to install this package
 
