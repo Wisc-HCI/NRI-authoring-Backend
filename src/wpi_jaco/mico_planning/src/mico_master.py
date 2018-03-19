@@ -231,9 +231,9 @@ if __name__ == '__main__':
     # check if simulation is enabled
     if len(sys.argv) < 2:
         print ("Usage: rosrun mico_planning mico_master -sim")
-    sim_flag = True if sys.argv[1] == "-sim" else False
+    sim_flag = True if sys.argv[1] == "sim" else False
     # Build the action handler
-    acHan = ActionHandler("mico_arm", "mico_master", sim_flag)
+    acHan = ActionHandler("mico_arm", "mico_master", 'RRTstarkConfigDefault', 'mico_link_endeffector', sim_flag)
 
     # Start the socket
     socket_loop(acHan)

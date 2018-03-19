@@ -20,7 +20,7 @@ class ActionHandler:
 
     ################
     # Initializes the MoveGroupCommander, PlannerID, and EndEffector
-    def __init__(self, group_name, node_name, sim_flag):
+    def __init__(self, group_name, node_name ,planner_name, ee_link, sim_flag):
 		moveit_commander.roscpp_initialize(sys.argv)
   		rospy.init_node(node_name, anonymous=True)
 
@@ -37,6 +37,8 @@ class ActionHandler:
   		## arm.  This interface can be used to plan and execute motions on the left
   		## arm.
   		self.group = moveit_commander.MoveGroupCommander(group_name)#default : "mico_arm"
+		self.group.set_planner_id(planner_name)
+		self.group.set_end_effector_link(ee_link)
 
 		## We create this DisplayTrajectory publisher which is used below to publish
   		## trajectories for RVIZ to visualize.
@@ -169,9 +171,9 @@ class ActionHandler:
                 print "after end: ", self.current_pose().pose
                 success = True
                 # for simulation
-                if acHan.simulator != None:
+                if self.simulator != None:
                     for p in posList:
-                        acHan.simulator.move_arm(list(p))
+                        self.simulator.move_arm(list(p))
                 ###
             else:
                 print("USAGE ERROR : please specify which arm is being used (ex : mico => 4)")
@@ -212,9 +214,9 @@ class ActionHandler:
                 self.execute_plan(plan)
 
                 # for simulation
-                if acHan.simulator != None:
+                if self.simulator != None:
                     for p in posList:
-                        acHan.simulator.move_arm(list(p))
+                        self.simulator.move_arm(list(p))
                 ###
                 print "after",self.current_joints()
                 print "after end: ", self.current_pose().pose
@@ -236,14 +238,14 @@ class ActionHandler:
     #             degree (float) = goal openness of the hand           
     # 
     # Return : True if the hand is opened to the correct position
-    def Set_Hand_Openness(self, arm, degree):
+    def Set_Hand_Openness(self, degree):
         if degree < 0 or degree >1:
             return False
         # actual code to control the robot
         ret = True
         # for simulation
-        if acHan.simulator != None:
-            acHan.simulator.move_hand(degree)
+        if self.simulator != None:
+            self.simulator.move_hand(degree)
         ###
         return ret
 
