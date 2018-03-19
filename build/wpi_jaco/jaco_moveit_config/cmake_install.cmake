@@ -1,8 +1,8 @@
-# Install script for directory: /home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_moveit_config
+# Install script for directory: /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_moveit_config
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/jerry/Desktop/therbligs_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/hcilab/Documents/jieru/NRI-authoring-Backend/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "RelWithDebInfo")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -33,25 +33,25 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jerry/Desktop/therbligs_ws/build/wpi_jaco/jaco_moveit_config/catkin_generated/installspace/jaco_moveit_config.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/jaco_moveit_config/catkin_generated/installspace/jaco_moveit_config.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_moveit_config/cmake" TYPE FILE FILES
-    "/home/jerry/Desktop/therbligs_ws/build/wpi_jaco/jaco_moveit_config/catkin_generated/installspace/jaco_moveit_configConfig.cmake"
-    "/home/jerry/Desktop/therbligs_ws/build/wpi_jaco/jaco_moveit_config/catkin_generated/installspace/jaco_moveit_configConfig-version.cmake"
+    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/jaco_moveit_config/catkin_generated/installspace/jaco_moveit_configConfig.cmake"
+    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/jaco_moveit_config/catkin_generated/installspace/jaco_moveit_configConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_moveit_config" TYPE FILE FILES "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_moveit_config/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_moveit_config" TYPE FILE FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_moveit_config/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_moveit_config/config" TYPE DIRECTORY FILES "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_moveit_config/config/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_moveit_config/config" TYPE DIRECTORY FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_moveit_config/config/")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_moveit_config/launch" TYPE DIRECTORY FILES "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_moveit_config/launch/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_moveit_config/launch" TYPE DIRECTORY FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_moveit_config/launch/")
 endif()
 

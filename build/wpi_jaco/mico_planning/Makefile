@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jerry/Desktop/therbligs_ws/src
+CMAKE_SOURCE_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jerry/Desktop/therbligs_ws/build
+CMAKE_BINARY_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -135,14 +135,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/jerry/Desktop/therbligs_ws/build/CMakeFiles /home/jerry/Desktop/therbligs_ws/build/wpi_jaco/mico_planning/CMakeFiles/progress.marks
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jerry/Desktop/therbligs_ws/build/CMakeFiles 0
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/mico_planning/CMakeFiles/progress.marks
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/clean
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/clean
 .PHONY : clean
 
 # The main clean target
@@ -152,22 +152,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/preinstall
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/preinstall
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_nodejs.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_nodejs.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -177,12 +177,12 @@ graph_msgs_generate_messages_nodejs: wpi_jaco/mico_planning/CMakeFiles/graph_msg
 
 # fast build rule for target.
 graph_msgs_generate_messages_nodejs/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_nodejs.dir/build.make wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_nodejs.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_nodejs.dir/build.make wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_nodejs.dir/build
 .PHONY : graph_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_lisp.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_lisp.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -192,12 +192,12 @@ graph_msgs_generate_messages_lisp: wpi_jaco/mico_planning/CMakeFiles/graph_msgs_
 
 # fast build rule for target.
 graph_msgs_generate_messages_lisp/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_lisp.dir/build.make wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_lisp.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_lisp.dir/build.make wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_lisp.dir/build
 .PHONY : graph_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/moveit_ros_manipulation_gencfg.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/moveit_ros_manipulation_gencfg.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/moveit_ros_manipulation_gencfg.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/moveit_ros_manipulation_gencfg.dir/rule
 
 # Convenience name for target.
@@ -207,12 +207,12 @@ moveit_ros_manipulation_gencfg: wpi_jaco/mico_planning/CMakeFiles/moveit_ros_man
 
 # fast build rule for target.
 moveit_ros_manipulation_gencfg/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/moveit_ros_manipulation_gencfg.dir/build.make wpi_jaco/mico_planning/CMakeFiles/moveit_ros_manipulation_gencfg.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/moveit_ros_manipulation_gencfg.dir/build.make wpi_jaco/mico_planning/CMakeFiles/moveit_ros_manipulation_gencfg.dir/build
 .PHONY : moveit_ros_manipulation_gencfg/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/moveit_ros_planning_gencfg.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/moveit_ros_planning_gencfg.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/moveit_ros_planning_gencfg.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/moveit_ros_planning_gencfg.dir/rule
 
 # Convenience name for target.
@@ -222,12 +222,12 @@ moveit_ros_planning_gencfg: wpi_jaco/mico_planning/CMakeFiles/moveit_ros_plannin
 
 # fast build rule for target.
 moveit_ros_planning_gencfg/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/moveit_ros_planning_gencfg.dir/build.make wpi_jaco/mico_planning/CMakeFiles/moveit_ros_planning_gencfg.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/moveit_ros_planning_gencfg.dir/build.make wpi_jaco/mico_planning/CMakeFiles/moveit_ros_planning_gencfg.dir/build
 .PHONY : moveit_ros_planning_gencfg/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -237,12 +237,12 @@ octomap_msgs_generate_messages_nodejs: wpi_jaco/mico_planning/CMakeFiles/octomap
 
 # fast build rule for target.
 octomap_msgs_generate_messages_nodejs/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/build.make wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/build.make wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/build
 .PHONY : octomap_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -252,12 +252,12 @@ moveit_msgs_generate_messages_nodejs: wpi_jaco/mico_planning/CMakeFiles/moveit_m
 
 # fast build rule for target.
 moveit_msgs_generate_messages_nodejs/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/build.make wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/build.make wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/build
 .PHONY : moveit_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_py.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_py.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_py.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -267,12 +267,12 @@ shape_msgs_generate_messages_py: wpi_jaco/mico_planning/CMakeFiles/shape_msgs_ge
 
 # fast build rule for target.
 shape_msgs_generate_messages_py/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_py.dir/build.make wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_py.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_py.dir/build.make wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_py.dir/build
 .PHONY : shape_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_py.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_py.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_py.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -282,12 +282,12 @@ octomap_msgs_generate_messages_py: wpi_jaco/mico_planning/CMakeFiles/octomap_msg
 
 # fast build rule for target.
 octomap_msgs_generate_messages_py/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_py.dir/build.make wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_py.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_py.dir/build.make wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_py.dir/build
 .PHONY : octomap_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -297,12 +297,12 @@ moveit_msgs_generate_messages_lisp: wpi_jaco/mico_planning/CMakeFiles/moveit_msg
 
 # fast build rule for target.
 moveit_msgs_generate_messages_lisp/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/build.make wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/build.make wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/build
 .PHONY : moveit_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_eus.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_eus.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_eus.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -312,12 +312,12 @@ graph_msgs_generate_messages_eus: wpi_jaco/mico_planning/CMakeFiles/graph_msgs_g
 
 # fast build rule for target.
 graph_msgs_generate_messages_eus/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_eus.dir/build.make wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_eus.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_eus.dir/build.make wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_eus.dir/build
 .PHONY : graph_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -327,12 +327,12 @@ octomap_msgs_generate_messages_lisp: wpi_jaco/mico_planning/CMakeFiles/octomap_m
 
 # fast build rule for target.
 octomap_msgs_generate_messages_lisp/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/build.make wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/build.make wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/build
 .PHONY : octomap_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_py.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_py.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_py.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -342,12 +342,12 @@ moveit_msgs_generate_messages_py: wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_
 
 # fast build rule for target.
 moveit_msgs_generate_messages_py/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_py.dir/build.make wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_py.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_py.dir/build.make wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_py.dir/build
 .PHONY : moveit_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_eus.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_eus.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_eus.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -357,12 +357,12 @@ shape_msgs_generate_messages_eus: wpi_jaco/mico_planning/CMakeFiles/shape_msgs_g
 
 # fast build rule for target.
 shape_msgs_generate_messages_eus/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_eus.dir/build.make wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_eus.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_eus.dir/build.make wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_eus.dir/build
 .PHONY : shape_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_eus.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_eus.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_eus.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -372,12 +372,12 @@ octomap_msgs_generate_messages_eus: wpi_jaco/mico_planning/CMakeFiles/octomap_ms
 
 # fast build rule for target.
 octomap_msgs_generate_messages_eus/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_eus.dir/build.make wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_eus.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_eus.dir/build.make wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_eus.dir/build
 .PHONY : octomap_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_eus.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_eus.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_eus.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -387,12 +387,12 @@ moveit_msgs_generate_messages_eus: wpi_jaco/mico_planning/CMakeFiles/moveit_msgs
 
 # fast build rule for target.
 moveit_msgs_generate_messages_eus/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_eus.dir/build.make wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_eus.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_eus.dir/build.make wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_eus.dir/build
 .PHONY : moveit_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -402,12 +402,12 @@ object_recognition_msgs_generate_messages_eus: wpi_jaco/mico_planning/CMakeFiles
 
 # fast build rule for target.
 object_recognition_msgs_generate_messages_eus/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/build.make wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/build.make wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/build
 .PHONY : object_recognition_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_cpp.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_cpp.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -417,12 +417,12 @@ graph_msgs_generate_messages_cpp: wpi_jaco/mico_planning/CMakeFiles/graph_msgs_g
 
 # fast build rule for target.
 graph_msgs_generate_messages_cpp/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_cpp.dir/build.make wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_cpp.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_cpp.dir/build.make wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_cpp.dir/build
 .PHONY : graph_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -432,12 +432,12 @@ moveit_msgs_generate_messages_cpp: wpi_jaco/mico_planning/CMakeFiles/moveit_msgs
 
 # fast build rule for target.
 moveit_msgs_generate_messages_cpp/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/build.make wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/build.make wpi_jaco/mico_planning/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/build
 .PHONY : moveit_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -447,12 +447,12 @@ trajectory_msgs_generate_messages_py: wpi_jaco/mico_planning/CMakeFiles/trajecto
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_py/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
 .PHONY : trajectory_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -462,12 +462,12 @@ object_recognition_msgs_generate_messages_cpp: wpi_jaco/mico_planning/CMakeFiles
 
 # fast build rule for target.
 object_recognition_msgs_generate_messages_cpp/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/build.make wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/build.make wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/build
 .PHONY : object_recognition_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_py.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_py.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_py.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -477,12 +477,12 @@ graph_msgs_generate_messages_py: wpi_jaco/mico_planning/CMakeFiles/graph_msgs_ge
 
 # fast build rule for target.
 graph_msgs_generate_messages_py/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_py.dir/build.make wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_py.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_py.dir/build.make wpi_jaco/mico_planning/CMakeFiles/graph_msgs_generate_messages_py.dir/build
 .PHONY : graph_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_cpp.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_cpp.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_cpp.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -492,12 +492,12 @@ shape_msgs_generate_messages_cpp: wpi_jaco/mico_planning/CMakeFiles/shape_msgs_g
 
 # fast build rule for target.
 shape_msgs_generate_messages_cpp/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_cpp.dir/build.make wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_cpp.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_cpp.dir/build.make wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_cpp.dir/build
 .PHONY : shape_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_lisp.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_lisp.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_lisp.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -507,12 +507,12 @@ shape_msgs_generate_messages_lisp: wpi_jaco/mico_planning/CMakeFiles/shape_msgs_
 
 # fast build rule for target.
 shape_msgs_generate_messages_lisp/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_lisp.dir/build.make wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_lisp.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_lisp.dir/build.make wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_lisp.dir/build
 .PHONY : shape_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -522,12 +522,12 @@ shape_msgs_generate_messages_nodejs: wpi_jaco/mico_planning/CMakeFiles/shape_msg
 
 # fast build rule for target.
 shape_msgs_generate_messages_nodejs/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/build.make wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/build.make wpi_jaco/mico_planning/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/build
 .PHONY : shape_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -537,12 +537,12 @@ object_recognition_msgs_generate_messages_py: wpi_jaco/mico_planning/CMakeFiles/
 
 # fast build rule for target.
 object_recognition_msgs_generate_messages_py/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/build.make wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/build.make wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/build
 .PHONY : object_recognition_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -552,12 +552,12 @@ trajectory_msgs_generate_messages_cpp: wpi_jaco/mico_planning/CMakeFiles/traject
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_cpp/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
 .PHONY : trajectory_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -567,12 +567,12 @@ object_recognition_msgs_generate_messages_lisp: wpi_jaco/mico_planning/CMakeFile
 
 # fast build rule for target.
 object_recognition_msgs_generate_messages_lisp/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/build.make wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/build.make wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/build
 .PHONY : object_recognition_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -582,12 +582,12 @@ trajectory_msgs_generate_messages_eus: wpi_jaco/mico_planning/CMakeFiles/traject
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_eus/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build.make wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/build
 .PHONY : trajectory_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -597,12 +597,12 @@ trajectory_msgs_generate_messages_nodejs: wpi_jaco/mico_planning/CMakeFiles/traj
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_nodejs/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build.make wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build.make wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build
 .PHONY : trajectory_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -612,12 +612,12 @@ trajectory_msgs_generate_messages_lisp: wpi_jaco/mico_planning/CMakeFiles/trajec
 
 # fast build rule for target.
 trajectory_msgs_generate_messages_lisp/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build.make wpi_jaco/mico_planning/CMakeFiles/trajectory_msgs_generate_messages_lisp.dir/build
 .PHONY : trajectory_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -627,12 +627,12 @@ object_recognition_msgs_generate_messages_nodejs: wpi_jaco/mico_planning/CMakeFi
 
 # fast build rule for target.
 object_recognition_msgs_generate_messages_nodejs/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/build.make wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/build.make wpi_jaco/mico_planning/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/build
 .PHONY : object_recognition_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/rule
 .PHONY : wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -642,7 +642,7 @@ octomap_msgs_generate_messages_cpp: wpi_jaco/mico_planning/CMakeFiles/octomap_ms
 
 # fast build rule for target.
 octomap_msgs_generate_messages_cpp/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/build.make wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/build.make wpi_jaco/mico_planning/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/build
 .PHONY : octomap_msgs_generate_messages_cpp/fast
 
 # Help Target
@@ -701,6 +701,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

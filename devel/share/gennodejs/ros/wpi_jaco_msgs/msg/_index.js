@@ -1,26 +1,26 @@
 
 "use strict";
 
-let CartesianCommand = require('./CartesianCommand.js');
 let AngularCommand = require('./AngularCommand.js');
 let JacoFingerVel = require('./JacoFingerVel.js');
+let CartesianCommand = require('./CartesianCommand.js');
+let HomeArmResult = require('./HomeArmResult.js');
+let HomeArmAction = require('./HomeArmAction.js');
 let HomeArmActionResult = require('./HomeArmActionResult.js');
 let HomeArmGoal = require('./HomeArmGoal.js');
-let HomeArmAction = require('./HomeArmAction.js');
-let HomeArmFeedback = require('./HomeArmFeedback.js');
-let HomeArmResult = require('./HomeArmResult.js');
-let HomeArmActionGoal = require('./HomeArmActionGoal.js');
 let HomeArmActionFeedback = require('./HomeArmActionFeedback.js');
+let HomeArmFeedback = require('./HomeArmFeedback.js');
+let HomeArmActionGoal = require('./HomeArmActionGoal.js');
 
 module.exports = {
-  CartesianCommand: CartesianCommand,
   AngularCommand: AngularCommand,
   JacoFingerVel: JacoFingerVel,
+  CartesianCommand: CartesianCommand,
+  HomeArmResult: HomeArmResult,
+  HomeArmAction: HomeArmAction,
   HomeArmActionResult: HomeArmActionResult,
   HomeArmGoal: HomeArmGoal,
-  HomeArmAction: HomeArmAction,
-  HomeArmFeedback: HomeArmFeedback,
-  HomeArmResult: HomeArmResult,
-  HomeArmActionGoal: HomeArmActionGoal,
   HomeArmActionFeedback: HomeArmActionFeedback,
+  HomeArmFeedback: HomeArmFeedback,
+  HomeArmActionGoal: HomeArmActionGoal,
 };

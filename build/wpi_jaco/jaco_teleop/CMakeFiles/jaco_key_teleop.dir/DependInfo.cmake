@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_teleop/src/jaco_key_teleop.cpp" "/home/jerry/Desktop/therbligs_ws/build/wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.o"
+  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_teleop/src/jaco_key_teleop.cpp" "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,8 +17,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_teleop/include"
-  "/home/jerry/Desktop/therbligs_ws/devel/include"
+  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_teleop/include"
+  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/include"
   "/opt/ros/kinetic/include"
   "/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

@@ -1,8 +1,8 @@
-# Install script for directory: /home/jerry/Desktop/therbligs_ws/src/wpi_jaco/mico_planning
+# Install script for directory: /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/mico_planning
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/jerry/Desktop/therbligs_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/hcilab/Documents/jieru/NRI-authoring-Backend/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "RelWithDebInfo")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jerry/Desktop/therbligs_ws/build/wpi_jaco/mico_planning/catkin_generated/installspace/mico_planning.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/mico_planning/catkin_generated/installspace/mico_planning.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mico_planning/cmake" TYPE FILE FILES
-    "/home/jerry/Desktop/therbligs_ws/build/wpi_jaco/mico_planning/catkin_generated/installspace/mico_planningConfig.cmake"
-    "/home/jerry/Desktop/therbligs_ws/build/wpi_jaco/mico_planning/catkin_generated/installspace/mico_planningConfig-version.cmake"
+    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/mico_planning/catkin_generated/installspace/mico_planningConfig.cmake"
+    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/mico_planning/catkin_generated/installspace/mico_planningConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mico_planning" TYPE FILE FILES "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/mico_planning/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mico_planning" TYPE FILE FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/mico_planning/package.xml")
 endif()
 

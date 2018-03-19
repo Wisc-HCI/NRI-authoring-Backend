@@ -67,14 +67,14 @@ set(jaco_sdk_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(jaco_sdk_SOURCE_PREFIX /home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_sdk)
-  set(jaco_sdk_DEVEL_PREFIX /home/jerry/Desktop/therbligs_ws/devel)
+  set(jaco_sdk_SOURCE_PREFIX /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_sdk)
+  set(jaco_sdk_DEVEL_PREFIX /home/hcilab/Documents/jieru/NRI-authoring-Backend/devel)
   set(jaco_sdk_INSTALL_PREFIX "")
   set(jaco_sdk_PREFIX ${jaco_sdk_DEVEL_PREFIX})
 else()
   set(jaco_sdk_SOURCE_PREFIX "")
   set(jaco_sdk_DEVEL_PREFIX "")
-  set(jaco_sdk_INSTALL_PREFIX /home/jerry/Desktop/therbligs_ws/install)
+  set(jaco_sdk_INSTALL_PREFIX /home/hcilab/Documents/jieru/NRI-authoring-Backend/install)
   set(jaco_sdk_PREFIX ${jaco_sdk_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(jaco_sdk_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_sdk/include " STREQUAL " ")
+if(NOT "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_sdk/include " STREQUAL " ")
   set(jaco_sdk_INCLUDE_DIRS "")
-  set(_include_dirs "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_sdk/include")
+  set(_include_dirs "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_sdk/include")
   if(NOT "https://github.com/RIVeR-Lab/wpi_jaco/issues " STREQUAL " ")
     set(_report "Check the issue tracker 'https://github.com/RIVeR-Lab/wpi_jaco/issues' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://ros.org/wiki/jaco_sdk " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_sdk/include " STREQUA
         message(FATAL_ERROR "Project 'jaco_sdk' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'jaco_sdk' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_sdk/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'jaco_sdk' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_sdk/${idir}'.  ${_report}")
     endif()
     _list_append_unique(jaco_sdk_INCLUDE_DIRS ${include})
   endforeach()
@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/jerry/Desktop/therbligs_ws/devel/lib;/home/jerry/Desktop/therbligs_ws/devel/lib;/home/jerry/ws_moveit/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib;/home/hcilab/ws_moveit/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

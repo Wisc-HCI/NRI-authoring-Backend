@@ -1,2 +1,2 @@
-wpi_jaco/jaco_description:wpi_jaco/jaco_interaction:wpi_jaco/jaco_moveit_config:wpi_jaco/jaco_sdk:wpi_jaco/jaco_teleop:wpi_jaco/mico_description:wpi_jaco/mico_moveit_config:wpi_jaco/mico_planning:wpi_jaco/wpi_jaco:wpi_jaco/wpi_jaco_msgs:wpi_jaco/wpi_jaco_wrapper
--DCATKIN_DEVEL_PREFIX=/home/jerry/Desktop/therbligs_ws/devel -DCMAKE_INSTALL_PREFIX=/home/jerry/Desktop/therbligs_ws/install -G Unix Makefiles
+rail_manipulation_msgs:wpi_jaco/jaco_description:wpi_jaco/jaco_interaction:wpi_jaco/jaco_moveit_config:wpi_jaco/jaco_sdk:wpi_jaco/jaco_teleop:wpi_jaco/mico_description:wpi_jaco/mico_moveit_config:wpi_jaco/mico_planning:wpi_jaco/wpi_jaco:wpi_jaco/wpi_jaco_msgs:wpi_jaco/wpi_jaco_wrapper
+-DCATKIN_DEVEL_PREFIX=/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel -DCMAKE_INSTALL_PREFIX=/home/hcilab/Documents/jieru/NRI-authoring-Backend/install -G Unix Makefiles

@@ -1,8 +1,0 @@
-prefix=/home/jerry/Desktop/therbligs_ws/install
-
-Name: rigid_body_handler
-Description: Description of rigid_body_handler
-Version: 1.0.0
-Cflags: -I/home/jerry/Desktop/therbligs_ws/install/include
-Libs: -L/home/jerry/Desktop/therbligs_ws/install/lib -lrigid_body_handler
-Requires: roscpp geometry_msgs vrep_ros_plugin

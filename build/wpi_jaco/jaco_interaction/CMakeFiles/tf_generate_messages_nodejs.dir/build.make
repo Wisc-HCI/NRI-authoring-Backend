@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jerry/Desktop/therbligs_ws/src
+CMAKE_SOURCE_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jerry/Desktop/therbligs_ws/build
+CMAKE_BINARY_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/build
 
 # Utility rule file for tf_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_nodejs.dir/build: tf_g
 .PHONY : wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_nodejs.dir/build
 
 wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_nodejs.dir/clean:
-	cd /home/jerry/Desktop/therbligs_ws/build/wpi_jaco/jaco_interaction && $(CMAKE_COMMAND) -P CMakeFiles/tf_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/jaco_interaction && $(CMAKE_COMMAND) -P CMakeFiles/tf_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_nodejs.dir/clean
 
 wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_nodejs.dir/depend:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jerry/Desktop/therbligs_ws/src /home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_interaction /home/jerry/Desktop/therbligs_ws/build /home/jerry/Desktop/therbligs_ws/build/wpi_jaco/jaco_interaction /home/jerry/Desktop/therbligs_ws/build/wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hcilab/Documents/jieru/NRI-authoring-Backend/src /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_interaction /home/hcilab/Documents/jieru/NRI-authoring-Backend/build /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/jaco_interaction /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_nodejs.dir/depend
 

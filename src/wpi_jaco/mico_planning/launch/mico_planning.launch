@@ -1,0 +1,54 @@
+<launch>
+  
+  <!-- By default, we do not start a database (it can be large) -->
+  <arg name="db" default="false" />
+
+  <!-- By default, we are not in debug mode -->
+  <arg name="debug" default="false" />
+  
+  <!-- Joint state publisher gui -->
+  <arg name="gui" default="false" />
+  
+  <include file="$(find wpi_jaco_wrapper)/launch/arm.launch"> 
+    <arg name="arm_name" value="mico"/>
+  </include>
+  
+  <!-- Load the URDF file -->
+  <arg name="urdf_file" default="$(find xacro)/xacro.py '$(find mico_description)/robots/standalone_arm.urdf.xacro'" />
+  <param name="robot_description" command="$(arg urdf_file)" />
+  
+  <!-- Robot State publishers -->
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="50" />
+  </node>
+  
+  <!-- Joint State publishers -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="use_gui" value="$(arg gui)" />
+    <rosparam param="source_list">[mico_arm/joint_states]</rosparam>
+  </node>
+  
+  <!-- Load the URDF, SRDF and other .yaml configuration files on the param server -->
+  <include file="$(find mico_moveit_config)/launch/planning_context.launch">
+    <arg name="load_robot_description" value="true"/>
+  </include>
+
+<!-- Run the main MoveIt executable without trajectory execution (we do not have controllers configured by default) -->
+  <include file="$(find mico_moveit_config)/launch/move_group.launch">
+    <arg name="allow_trajectory_execution" value="true"/>  
+    <arg name="fake_execution" value="false"/>
+    <arg name="info" value="true"/>
+    <arg name="debug" value="$(arg debug)"/>
+  </include>
+
+  <!-- Run Rviz and load the default config to see the state of the move_group node -->
+  <include file="$(find mico_moveit_config)/launch/moveit_rviz.launch">
+    <arg name="config" value="true"/>
+    <arg name="debug" value="$(arg debug)"/>
+  </include>
+  
+  <!-- If database loading was enabled, start mongodb as well -->
+  <include file="$(find mico_moveit_config)/launch/default_warehouse_db.launch" if="$(arg db)"/>
+  
+</launch>
+  

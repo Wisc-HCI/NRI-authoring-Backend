@@ -1,8 +1,8 @@
-prefix=/home/jerry/Desktop/therbligs_ws/install
+prefix=/home/hcilab/Documents/jieru/NRI-authoring-Backend/install
 
 Name: mico_planning
 Description: Description of mico_planning
 Version: 0.1.0
 Cflags: -I/usr/include/eigen3
-Libs: -L/home/jerry/Desktop/therbligs_ws/install/lib 
+Libs: -L/home/hcilab/Documents/jieru/NRI-authoring-Backend/install/lib 
 Requires: moveit_core moveit_ros_planning_interface interactive_markers

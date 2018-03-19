@@ -1,8 +1,8 @@
-# Install script for directory: /home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_interaction
+# Install script for directory: /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_interaction
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/jerry/Desktop/therbligs_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/hcilab/Documents/jieru/NRI-authoring-Backend/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "RelWithDebInfo")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -33,18 +33,18 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jerry/Desktop/therbligs_ws/build/wpi_jaco/jaco_interaction/catkin_generated/installspace/jaco_interaction.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/jaco_interaction/catkin_generated/installspace/jaco_interaction.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_interaction/cmake" TYPE FILE FILES
-    "/home/jerry/Desktop/therbligs_ws/build/wpi_jaco/jaco_interaction/catkin_generated/installspace/jaco_interactionConfig.cmake"
-    "/home/jerry/Desktop/therbligs_ws/build/wpi_jaco/jaco_interaction/catkin_generated/installspace/jaco_interactionConfig-version.cmake"
+    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/jaco_interaction/catkin_generated/installspace/jaco_interactionConfig.cmake"
+    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/jaco_interaction/catkin_generated/installspace/jaco_interactionConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_interaction" TYPE FILE FILES "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_interaction/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_interaction" TYPE FILE FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_interaction/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -54,7 +54,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/jaco_interaction/jaco_interactive_manipulation"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/jaco_interaction" TYPE EXECUTABLE FILES "/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_interaction/jaco_interactive_manipulation")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/jaco_interaction" TYPE EXECUTABLE FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_interaction/jaco_interactive_manipulation")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/jaco_interaction/jaco_interactive_manipulation" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/jaco_interaction/jaco_interactive_manipulation")
     file(RPATH_CHANGE
@@ -68,14 +68,14 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/jaco_interaction" TYPE DIRECTORY FILES "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_interaction/include/jaco_interaction/" FILES_MATCHING REGEX "/[^/]*\\.hpp$" REGEX "/[^/]*\\.h$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/jaco_interaction" TYPE DIRECTORY FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_interaction/include/jaco_interaction/" FILES_MATCHING REGEX "/[^/]*\\.hpp$" REGEX "/[^/]*\\.h$")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_interaction/launch" TYPE DIRECTORY FILES "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_interaction/launch/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_interaction/launch" TYPE DIRECTORY FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_interaction/launch/")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_interaction/rviz" TYPE DIRECTORY FILES "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_interaction/rviz")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_interaction/rviz" TYPE DIRECTORY FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_interaction/rviz")
 endif()
 

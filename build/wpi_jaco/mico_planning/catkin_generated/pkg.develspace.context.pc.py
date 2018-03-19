@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/usr/include/eigen3".split(';') if "/usr/incl
 PROJECT_CATKIN_DEPENDS = "moveit_core;moveit_ros_planning_interface;interactive_markers".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "mico_planning"
-PROJECT_SPACE_DIR = "/home/jerry/Desktop/therbligs_ws/devel"
+PROJECT_SPACE_DIR = "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel"
 PROJECT_VERSION = "0.1.0"

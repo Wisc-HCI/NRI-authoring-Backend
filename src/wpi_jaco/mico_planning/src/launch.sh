@@ -4,7 +4,7 @@ gnome-terminal -e "bash -c 'roslaunch wpi_jaco_wrapper arm.launch;exec $SHELL'"
 #sleep 5
 gnome-terminal -e "bash -c 'roslaunch mico_planning path_planning.launch;exec $SHELL'"
 sleep 10
-gnome-terminal -e "bash -c 'rosrun mico_planning mico_master.py sim;exec $SHELL'"
+gnome-terminal -e "bash -c 'rosrun mico_planning mico_master.py nosim;exec $SHELL'"
 #sleep 5
 #gnome-terminal -e "bash -c 'rosrun mico_planning mico_positionpublisher.py;exec $SHELL'"
 #sleep 5

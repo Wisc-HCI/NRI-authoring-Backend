@@ -1,8 +1,8 @@
-# Install script for directory: /home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_description
+# Install script for directory: /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/jerry/Desktop/therbligs_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/hcilab/Documents/jieru/NRI-authoring-Backend/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "RelWithDebInfo")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -33,37 +33,37 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jerry/Desktop/therbligs_ws/build/wpi_jaco/jaco_description/catkin_generated/installspace/jaco_description.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/jaco_description/catkin_generated/installspace/jaco_description.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_description/cmake" TYPE FILE FILES
-    "/home/jerry/Desktop/therbligs_ws/build/wpi_jaco/jaco_description/catkin_generated/installspace/jaco_descriptionConfig.cmake"
-    "/home/jerry/Desktop/therbligs_ws/build/wpi_jaco/jaco_description/catkin_generated/installspace/jaco_descriptionConfig-version.cmake"
+    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/jaco_description/catkin_generated/installspace/jaco_descriptionConfig.cmake"
+    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/jaco_description/catkin_generated/installspace/jaco_descriptionConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_description" TYPE FILE FILES "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_description/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_description" TYPE FILE FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_description/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_description/launch" TYPE DIRECTORY FILES "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_description/launch/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_description/launch" TYPE DIRECTORY FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_description/launch/")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_description/meshes" TYPE DIRECTORY FILES "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_description/meshes/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_description/meshes" TYPE DIRECTORY FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_description/meshes/")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_description/urdf" TYPE DIRECTORY FILES "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_description/urdf/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_description/urdf" TYPE DIRECTORY FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_description/urdf/")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_description/robots" TYPE DIRECTORY FILES "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_description/robots/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_description/robots" TYPE DIRECTORY FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_description/robots/")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_description/rviz" TYPE DIRECTORY FILES "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_description/rviz/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_description/rviz" TYPE DIRECTORY FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_description/rviz/")
 endif()
 

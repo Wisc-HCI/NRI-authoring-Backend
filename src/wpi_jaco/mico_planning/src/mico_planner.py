@@ -20,7 +20,7 @@ class ActionHandler:
 
     ################
     # Initializes the MoveGroupCommander, PlannerID, and EndEffector
-    def __init__(self, group_name, node_name ,planner_name, ee_link, sim_flag):
+    def __init__(self, group_name, node_name ,planner_name, sim_flag):
 		moveit_commander.roscpp_initialize(sys.argv)
   		rospy.init_node(node_name, anonymous=True)
 
@@ -37,8 +37,7 @@ class ActionHandler:
   		## arm.  This interface can be used to plan and execute motions on the left
   		## arm.
   		self.group = moveit_commander.MoveGroupCommander(group_name)#default : "mico_arm"
-		self.group.set_planner_id(planner_name)
-		self.group.set_end_effector_link(ee_link)
+		  #self.group.set_planner_id(planner_name)
 
 		## We create this DisplayTrajectory publisher which is used below to publish
   		## trajectories for RVIZ to visualize.
@@ -165,7 +164,7 @@ class ActionHandler:
 
                 for i in plan.joint_trajectory.points:
                     posList.append(i.positions)
-                self.group.go(wait=True)
+                #self.group.go(wait=True)
                 self.execute_plan(plan)
                 print "after",self.current_joints()
                 print "after end: ", self.current_pose().pose
@@ -210,7 +209,7 @@ class ActionHandler:
                     posList.append(i.positions)
                 #print "Trajectory: ", posList
                 #print "Trajectory:", plan.joint_trajectory.points
-                self.group.go(wait=True)
+                #self.group.go(wait=True)
                 self.execute_plan(plan)
 
                 # for simulation

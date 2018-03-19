@@ -1,16 +1,16 @@
 
 "use strict";
 
-let PrepareGrasp = require('./PrepareGrasp.js')
-let CallIK = require('./CallIK.js')
 let PairwiseRank = require('./PairwiseRank.js')
 let CartesianPath = require('./CartesianPath.js')
+let PrepareGrasp = require('./PrepareGrasp.js')
 let SuggestGrasps = require('./SuggestGrasps.js')
+let CallIK = require('./CallIK.js')
 
 module.exports = {
-  PrepareGrasp: PrepareGrasp,
-  CallIK: CallIK,
   PairwiseRank: PairwiseRank,
   CartesianPath: CartesianPath,
+  PrepareGrasp: PrepareGrasp,
   SuggestGrasps: SuggestGrasps,
+  CallIK: CallIK,
 };

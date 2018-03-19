@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jerry/Desktop/therbligs_ws/src
+CMAKE_SOURCE_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jerry/Desktop/therbligs_ws/build
+CMAKE_BINARY_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/build
 
 # Include any dependencies generated for this target.
 include wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/depend.make
@@ -58,17 +58,17 @@ include wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/progress.make
 include wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/flags.make
 
 wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.o: wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/flags.make
-wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.o: /home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_teleop/src/jaco_key_teleop.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jerry/Desktop/therbligs_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.o"
-	cd /home/jerry/Desktop/therbligs_ws/build/wpi_jaco/jaco_teleop && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.o -c /home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_teleop/src/jaco_key_teleop.cpp
+wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.o: /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_teleop/src/jaco_key_teleop.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.o"
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/jaco_teleop && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.o -c /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_teleop/src/jaco_key_teleop.cpp
 
 wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.i"
-	cd /home/jerry/Desktop/therbligs_ws/build/wpi_jaco/jaco_teleop && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_teleop/src/jaco_key_teleop.cpp > CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.i
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/jaco_teleop && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_teleop/src/jaco_key_teleop.cpp > CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.i
 
 wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.s"
-	cd /home/jerry/Desktop/therbligs_ws/build/wpi_jaco/jaco_teleop && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_teleop/src/jaco_key_teleop.cpp -o CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.s
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/jaco_teleop && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_teleop/src/jaco_key_teleop.cpp -o CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.s
 
 wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.o.requires:
 
@@ -88,33 +88,33 @@ jaco_key_teleop_OBJECTS = \
 # External object files for target jaco_key_teleop
 jaco_key_teleop_EXTERNAL_OBJECTS =
 
-/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop: wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.o
-/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop: wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/build.make
-/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop: /opt/ros/kinetic/lib/libroscpp.so
-/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop: /opt/ros/kinetic/lib/librosconsole.so
-/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
-/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
-/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop: /opt/ros/kinetic/lib/libxmlrpcpp.so
-/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop: /opt/ros/kinetic/lib/libroscpp_serialization.so
-/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop: /opt/ros/kinetic/lib/librostime.so
-/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop: /opt/ros/kinetic/lib/libcpp_common.so
-/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
-/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop: wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jerry/Desktop/therbligs_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop"
-	cd /home/jerry/Desktop/therbligs_ws/build/wpi_jaco/jaco_teleop && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/jaco_key_teleop.dir/link.txt --verbose=$(VERBOSE)
+/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop: wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.o
+/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop: wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/build.make
+/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop: /opt/ros/kinetic/lib/libroscpp.so
+/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop: /opt/ros/kinetic/lib/librosconsole.so
+/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
+/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
+/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop: /opt/ros/kinetic/lib/libxmlrpcpp.so
+/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop: /opt/ros/kinetic/lib/libroscpp_serialization.so
+/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop: /opt/ros/kinetic/lib/librostime.so
+/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop: /opt/ros/kinetic/lib/libcpp_common.so
+/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop: wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop"
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/jaco_teleop && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/jaco_key_teleop.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/build: /home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop
+wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/build: /home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop
 
 .PHONY : wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/build
 
@@ -123,10 +123,10 @@ wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/requires: wpi_jaco/jaco_tele
 .PHONY : wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/requires
 
 wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/clean:
-	cd /home/jerry/Desktop/therbligs_ws/build/wpi_jaco/jaco_teleop && $(CMAKE_COMMAND) -P CMakeFiles/jaco_key_teleop.dir/cmake_clean.cmake
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/jaco_teleop && $(CMAKE_COMMAND) -P CMakeFiles/jaco_key_teleop.dir/cmake_clean.cmake
 .PHONY : wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/clean
 
 wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/depend:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jerry/Desktop/therbligs_ws/src /home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_teleop /home/jerry/Desktop/therbligs_ws/build /home/jerry/Desktop/therbligs_ws/build/wpi_jaco/jaco_teleop /home/jerry/Desktop/therbligs_ws/build/wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hcilab/Documents/jieru/NRI-authoring-Backend/src /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_teleop /home/hcilab/Documents/jieru/NRI-authoring-Backend/build /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/jaco_teleop /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/depend
 

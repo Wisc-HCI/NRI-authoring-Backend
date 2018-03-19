@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/jerry/Desktop/therbligs_ws/devel/lib/libKinova.API.USBCommandLayerUbuntu.pdb"
-  "/home/jerry/Desktop/therbligs_ws/devel/lib/libKinova.API.USBCommandLayerUbuntu.so"
+  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libKinova.API.USBCommandLayerUbuntu.pdb"
+  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libKinova.API.USBCommandLayerUbuntu.so"
 )
 
 # Per-language clean rules from dependency scanning.
