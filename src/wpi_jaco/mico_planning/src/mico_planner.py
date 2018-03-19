@@ -163,13 +163,16 @@ class ActionHandler:
 
                 for i in plan.joint_trajectory.points:
                     posList.append(i.positions)
-                #print "Trajectory: ", posList
-                #print "Trajectory:", plan.joint_trajectory.points
                 self.group.go(wait=True)
                 self.execute_plan(plan)
                 print "after",self.current_joints()
                 print "after end: ", self.current_pose().pose
                 success = True
+                # for simulation
+                if acHan.simulator != None:
+                    for p in posList:
+                        acHan.simulator.move_arm(list(p))
+                ###
             else:
                 print("USAGE ERROR : please specify which arm is being used (ex : mico => 4)")
 
@@ -177,7 +180,7 @@ class ActionHandler:
             print("*EXCEPTION OCCURRED* - attempted to move arm")
             print(e)
 
-        return posList
+        return success
 
     ################
     # Reaching for an object with an loaded hand
@@ -207,6 +210,12 @@ class ActionHandler:
                 #print "Trajectory:", plan.joint_trajectory.points
                 self.group.go(wait=True)
                 self.execute_plan(plan)
+
+                # for simulation
+                if acHan.simulator != None:
+                    for p in posList:
+                        acHan.simulator.move_arm(list(p))
+                ###
                 print "after",self.current_joints()
                 print "after end: ", self.current_pose().pose
                 success = True
@@ -217,7 +226,26 @@ class ActionHandler:
             print("*EXCEPTION OCCURRED* - attempted to move arm")
             print(e)
 
-        return posList
+        return success
+
+    ################
+    # Set the degree of the hand openness
+    # Grasp or release and object
+    #
+    # Arguments : arm (int) = id of the arm being used
+    #             degree (float) = goal openness of the hand           
+    # 
+    # Return : True if the hand is opened to the correct position
+    def Set_Hand_Openness(self, arm, degree):
+        if degree < 0 or degree >1:
+            return False
+        # actual code to control the robot
+        ret = True
+        # for simulation
+        if acHan.simulator != None:
+            acHan.simulator.move_hand(degree)
+        ###
+        return ret
 
     ################
     # Save the current XYZ position and orientation of the end-effector

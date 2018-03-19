@@ -77,21 +77,3 @@ class mico_simulator:
     # end the vrep simulation, need to call this when exiting
     def end_simulation(self):
         vrep.simxFinish(self.clientID)
-'''
-    # Now try to retrieve data in a blocking fashion (i.e. a service call):
-    res,objs=vrep.simxGetObjects(clientID,vrep.sim_handle_all,vrep.simx_opmode_blocking)
-    if res==vrep.simx_return_ok:
-        print ('Number of objects in the scene: ',len(objs))
-    else:
-        print ('Remote API function call returned with error code: ',res)
-'''
-'''
-    res1,j1 = vrep.simxGetObjectHandle(clientID,'Mico_joint1#', vrep.simx_opmode_oneshot_wait)
-    res2,j2 = vrep.simxGetObjectHandle(clientID,'Mico_joint2#', vrep.simx_opmode_oneshot_wait)
-    res3,j3 = vrep.simxGetObjectHandle(clientID,'Mico_joint3#', vrep.simx_opmode_oneshot_wait)
-    res4,j4 = vrep.simxGetObjectHandle(clientID,'Mico_joint4#', vrep.simx_opmode_oneshot_wait)
-    res5,j5 = vrep.simxGetObjectHandle(clientID,'Mico_joint5#', vrep.simx_opmode_oneshot_wait)
-    res6,j6 = vrep.simxGetObjectHandle(clientID,'Mico_joint6#', vrep.simx_opmode_oneshot_wait)
-    if res==-1:
-        print "failed"
-'''
