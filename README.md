@@ -76,10 +76,10 @@ For those who encounter the error when running the moveit_rviz_plugin: Error str
 
 
 ## Author
-[Jieru Hu] (https://github.com/JerryHu1994)<br/>
-Undergraduate student in University of Wisconsin Madison<br/>
-Contact: jhu76@wisc.edu<br/>
-For any other questions, feel free to contact me at jhu76@wisc.edu.
+- [Jieru Hu] (https://github.com/JerryHu1994)<br/>
+- Undergraduate student in University of Wisconsin Madison<br/>
+- Contact: jhu76@wisc.edu<br/>
+- For any other questions, feel free to contact me at jhu76@wisc.edu.
 
 ## License
 The is project is developed for research use in Wisconsin Human-Computer Interaction Laboratory.
