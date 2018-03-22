@@ -71,7 +71,7 @@ Go to http://www.kinovarobotics.com/innovation-robotics/support/?section=resourc
 
 
 ### Potential Error in running the backend code
-For those who encounter the error when running the moveit_rviz_plugin: Error string: Could not load library (Poco exception = libopencv_imgproc3.so.3.2). Try to build the MoveIt package again, and come back to run the launchROS.sh.
+For those who encounter the error when running the moveit_rviz_plugin: Error string: Could not load library (Poco exception = libopencv_imgproc3.so.3.2). Try to build the MoveIt package again, and come back to run the launch_with_robot.sh or launch_no_robot.sh.
 
 
 
