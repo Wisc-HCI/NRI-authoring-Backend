@@ -1,10 +1,15 @@
-#!/usr/bin/python           # This is client.py file
-
-import socket               # Import socket module
+#!/usr/bin/env python
+##################################
+# University of Wisconsin-Madison
+# Author: Jieru Hu
+##################################
+# The scripts creates a local socket get connected to the mico master, sends over a mocked therbligs json
+# for execution.This file is only used for testing purpose on the backend.
+##################################
+import socket
 import sys
 import time
 import json
-
 
 def sendJson(socket, data):
     try:

@@ -1,6 +1,13 @@
 #!/usr/bin/env python
-## To use the python interface to move_group, import the moveit_commander
-## module.  We also import rospy and some messages that we will use.
+##################################
+# University of Wisconsin-Madison
+# Author: Jieru Hu
+##################################
+# The mico planner is the class representing the Kinova mico_arm. Mico_planner connects with MoveIt package
+# to generate trajectory(joint positions) for the mico arm. Mico_planner connects with the
+# robotiq_85_gripper module to control the gripper installed on the mico_hand. Mico_planner is also
+# responsible for handling the simulation in VREP.
+##################################
 import sys
 import copy
 import rospy

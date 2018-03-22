@@ -3,7 +3,7 @@ NRI-Authoring enviroment. The following is a list of documentation on each file.
 
 ## mico_client.py:
     The scripts creates a local socket get connected to the mico master, sends over a mocked therbligs json for execution.
-This file is only used for testing purpose on the backend.
+    This file is only used for testing purpose on the backend.
 
 ## mico_parser.py:
     The class is used by the mico master parse the json-format message sent from the front-end or mico_client.

@@ -1,4 +1,8 @@
 #!/usr/bin/env python
+##################################
+# University of Wisconsin-Madison
+# Author: Jieru Hu
+##################################
 
 # Log the regular message
 def INFO(*info):

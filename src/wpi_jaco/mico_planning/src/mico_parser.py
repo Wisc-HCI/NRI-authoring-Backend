@@ -1,4 +1,12 @@
-#!/usr/bin/python
+#!/usr/bin/env python
+##################################
+# University of Wisconsin-Madison
+# Author: Jieru Hu
+##################################
+# The class is used by the mico master parse the json-format message sent from the front-end or mico_client.
+# The exact json format is defined by the front-end.
+##################################
+
 import json
 
 class ActionParser:

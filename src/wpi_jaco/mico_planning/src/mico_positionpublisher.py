@@ -1,5 +1,11 @@
 #!/usr/bin/env python
-
+##################################
+# University of Wisconsin-Madison
+# Author: Jieru Hu
+##################################
+# Mico_positionpublisher publishes a geometry_msg to the rostopic named "end_effector_position", so that
+# the front-end could directly fetch the end_effector_position through ROS-bridge.
+##################################
 from mico_planner import ActionHandler
 import rospy
 from std_msgs.msg import String

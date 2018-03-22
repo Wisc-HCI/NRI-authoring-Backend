@@ -1,4 +1,12 @@
 #!/usr/bin/env python
+##################################
+# University of Wisconsin-Madison
+# Author: Jieru Hu
+##################################
+# Mico master is the main thread running as the backend part. The master initializes the mico_planner, listens for the connection from the front-end.
+# Once it receives a json query from the client, mico_master use mico_parser to parse the infomation from the json,
+# executes the corresponding instruction, and construct a reply json back to the front-end port.
+##################################
 import socket
 import sys
 from mico_planner import ActionHandler

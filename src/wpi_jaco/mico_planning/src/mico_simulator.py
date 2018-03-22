@@ -1,4 +1,11 @@
 #!/usr/bin/env python
+##################################
+# University of Wisconsin-Madison
+# Author: Jieru Hu
+##################################
+# Mico_simulator connects to the VREP through remoteAPI call. The main two simulation it provides is to
+# move the mico_arm and mico_hand.
+##################################
 # Make sure to have the server side running in V-REP: 
 # in a child script of a V-REP scene, add following command
 # to be executed just once, at simulation start:
@@ -9,7 +16,7 @@
 #
 # IMPORTANT: for each successful call to simxStart, there
 # should be a corresponding call to simxFinish at the end!
-
+#################################
 try:
     import vrep
 except:
