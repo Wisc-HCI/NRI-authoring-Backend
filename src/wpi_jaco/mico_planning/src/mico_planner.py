@@ -17,7 +17,7 @@ import geometry_msgs.msg
 import time
 from sensor_msgs.msg import JointState
 #from mico_gripperControl import MicoGripperControl
-
+import mico_gripper
 from std_msgs.msg import String
 
 # include simulation here
@@ -27,7 +27,7 @@ class ActionHandler:
 
     ################
     # Initializes the MoveGroupCommander, PlannerID, and EndEffector
-    def __init__(self, group_name, node_name ,planner_name, sim_flag):
+    def __init__(self, group_name, node_name, planner_name, sim_flag):
 		moveit_commander.roscpp_initialize(sys.argv)
   		rospy.init_node(node_name, anonymous=True)
 
@@ -44,7 +44,7 @@ class ActionHandler:
   		## arm.  This interface can be used to plan and execute motions on the left
   		## arm.
   		self.group = moveit_commander.MoveGroupCommander(group_name)#default : "mico_arm"
-		  #self.group.set_planner_id(planner_name)
+		#self.group.set_planner_id(planner_name)
 
 		## We create this DisplayTrajectory publisher which is used below to publish
   		## trajectories for RVIZ to visualize.
@@ -52,6 +52,9 @@ class ActionHandler:
 
 		self.joints = self.current_joints()
 		self.pose = self.current_pose()
+        # initialize the robotiq 85 gripper on mico hand
+        self.gripper = mico_gripper()
+
 		if (sim_flag):		
 			self.simulator = mico_simulator.mico_simulator('mico_sim')
 		else:
@@ -93,7 +96,7 @@ class ActionHandler:
         js.name = ['mico_joint_1','mico_joint_2','mico_joint_3','mico_joint_4','mico_joint_5','mico_joint_6']
         js.position = self.current_joints() + self.current_rpy()
         return js
- 
+
 		################
     # Get the current planning frame
     #
@@ -113,15 +116,6 @@ class ActionHandler:
     # Return : True if the plan was executed
     def execute_plan(self, plan):
         return self.group.execute(plan)
-
-    ################
-    # Executes the plan of the real arm, allows for the plan to be stopped by stop()
-    #
-    # Arguments : plan (plan pbject) = the plan to execute
-    #
-    # Return : True if the plan was executed
-    def async_execute_plan(self, plan):
-        return self.group.execute(plan, False)
 
     ###############
     # Plan motion based on a set of end-effector positions
@@ -151,84 +145,63 @@ class ActionHandler:
     # Reaching for an object with an empty hand
     # Preperation for grasp
     #
-    # Arguments : arm (int) = id of the arm being used
-    #             position (list) = goal position, either [xyz, xyzw] or JointState           
-    # 
+    # Arguments :position (list) = goal position, either [xyz, xyzw] or JointState           
+    #
     # Return : True if the arm moved to the correct position
-    def Transport_Empty(self, arm, position):
+    def Transport_Empty(self, position):
         success = False
 
-        posList = []
+        pos_list = []
         try:
-            if isinstance(arm, int):
-                #print "starting state... ",self.group.get_current_state()                
-                #self.group.set_start_state()
-                self.group.set_start_state_to_current_state()
-                print "before",self.group.get_current_joint_values()
-                print "target: ", position
-                self.set_target_position(position)
-                plan = self.group.plan()
+            # use MoveIt for motion planning to target position
+            self.group.set_start_state_to_current_state()
+            self.set_target_position(position)
+            plan = self.group.plan()
 
-                for i in plan.joint_trajectory.points:
-                    posList.append(i.positions)
-                #self.group.go(wait=True)
-                self.execute_plan(plan)
-                print "after",self.current_joints()
-                print "after end: ", self.current_pose().pose
-                success = True
-                # for simulation
-                if self.simulator != None:
-                    for p in posList:
-                        self.simulator.move_arm(list(p))
-                ###
-            else:
-                print("USAGE ERROR : please specify which arm is being used (ex : mico => 4)")
+            for i in plan.joint_trajectory.points:
+                pos_list.append(i.positions)
+            #self.group.go(wait=True)
+            self.execute_plan(plan)
+            success = True
 
+            # for simulation
+            if self.simulator != None:
+                for p in pos_list:
+                    self.simulator.move_arm(list(p))
+            ###
         except Exception as e:
             print("*EXCEPTION OCCURRED* - attempted to move arm")
             print(e)
-
         return success
 
     ################
     # Reaching for an object with an loaded hand
     # Preperation for grasp
     #
-    # Arguments : arm (int) = id of the arm being used
-    #             position (list) = goal position, either [xyz, xyzw] or JointState           
-    # 
+    # Arguments : position (list) = goal position, either [xyz, xyzw] or JointState 
+    #
     # Return : True if the arm moved to the correct position
-    def Transport_Loaded(self, arm, position):
+    def Transport_Loaded(self, position):
         success = False
+        pos_list = []
 
-        posList = []
         try:
-            if isinstance(arm, int):
-                #print "starting state... ",self.group.get_current_state()                
-                #self.group.set_start_state()
-                self.group.set_start_state_to_current_state()
-                print "before",self.group.get_current_joint_values()
-                print "target: ", position
-                self.set_target_position(position)
-                plan = self.group.plan()
+            # use MoveIt for motion planning to target position
+            self.group.set_start_state_to_current_state()
+            self.set_target_position(position)
+            plan = self.group.plan()
 
-                for i in plan.joint_trajectory.points:
-                    posList.append(i.positions)
-                #print "Trajectory: ", posList
-                #print "Trajectory:", plan.joint_trajectory.points
-                #self.group.go(wait=True)
-                self.execute_plan(plan)
+            for i in plan.joint_trajectory.points:
+                pos_list.append(i.positions)
+            #self.group.go(wait=True)
+            self.execute_plan(plan)
 
-                # for simulation
-                if self.simulator != None:
-                    for p in posList:
-                        self.simulator.move_arm(list(p))
-                ###
-                print "after",self.current_joints()
-                print "after end: ", self.current_pose().pose
-                success = True
-            else:
-                print("USAGE ERROR : please specify which arm is being used (ex : mico => 4)")
+            # for simulation
+            if self.simulator != None:
+                for p in posList:
+                    self.simulator.move_arm(list(p))
+            ###
+            success = True
 
         except Exception as e:
             print("*EXCEPTION OCCURRED* - attempted to move arm")
@@ -240,34 +213,37 @@ class ActionHandler:
     # Set the degree of the hand openness
     # Grasp or release and object
     #
-    # Arguments : arm (int) = id of the arm being used
-    #             degree (float) = goal openness of the hand           
+    # Arguments : degree (float) = goal openness of the hand
     # 
     # Return : True if the hand is opened to the correct position
     def Set_Hand_Openness(self, degree):
         if degree < 0 or degree >1:
             return False
-        # actual code to control the robot
-        ret = True
-        # for simulation
-        if self.simulator != None:
-            self.simulator.move_hand(degree)
-        ###
-        return ret
+        success = False
+        try:
+            # actual code to control the robot
+            self.gripper_publisher.publish(self.gripper_cmd)
+            # for simulation
+            if self.simulator != None:
+                self.simulator.move_hand(degree)
+            ###
+            success = True
+        except Exception as e:
+            print("*EXCEPTION OCCURRED* - attempted to move hand")
+            print(e)
+        return success
 
     ################
     # Save the current XYZ position and orientation of the end-effector
     #
-    # Arguments : arm (int) = id of the arm being used    
+    # Arguments : None
     # 
     # Return : A geometry_msgs pose contains the [XYZ position, xyzw orientation]
     def Read_Position(self):
         try:
             return self.group.get_current_pose().pose
-            #else:
-                #print("USAGE ERROR : please specify which arm is being used (ex : mico => 4)")
 
         except Exception as e:
-            print("*EXCEPTION OCCURRED* - attempted to move arm")
+            print("*EXCEPTION OCCURRED* - attempted to read end-effector position")
             print(e)
 

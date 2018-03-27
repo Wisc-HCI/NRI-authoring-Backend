@@ -73,6 +73,9 @@ def recvJson(socket):
     # read the length of the data, letter by letter until we reach EOL
     length_str = ''
     char = socket.recv(1)
+    # return None if nothing received
+    if not char:
+        return None
     while char != '\n':
         length_str += char
         char = socket.recv(1)
@@ -91,7 +94,6 @@ def recvJson(socket):
         raise Exception('Data received was not in JSON format')
     return deserialized
 
-
 ###
 # Create a target pose for contains the XYZPosition and orientation of the object
 ###
@@ -102,11 +104,11 @@ def createTarget(XYZPosition, orientation):
     pose_target.position.x = xyzPos[0]
     pose_target.position.y = xyzPos[1]
     pose_target.position.z = xyzPos[2]
-    pose_target.orientation.x = orientaionPos[0]                 
+    pose_target.orientation.x = orientaionPos[0]
     pose_target.orientation.y = orientaionPos[1]
     pose_target.orientation.z = orientaionPos[2]
     pose_target.orientation.w = orientaionPos[3]
-    
+
     return pose_target
 
 ###
@@ -130,7 +132,6 @@ def end():
 # translates them into plans to be run by the action handler.
 ###
 def socket_loop(acHan):
-#def socket_loop():
     #create an INET, STREAMing socket
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     #bind the socket to a public host and a well-known port
@@ -154,6 +155,8 @@ def socket_loop(acHan):
 
             # receive the entire json from the client call
             jsonData = recvJson(c)
+            if jsonData == None:
+                continue
             #print jsonData
             # initialize the parser with the json Data received from the socket
             parser = ActionParser(jsonData)
@@ -187,7 +190,6 @@ def socket_loop(acHan):
                                 LOG.ERROR("Transport Empty failed")
                         elif parser.getTherbligName(therblig) == "Grasp":
                             LOG.INFO("Grasping object: ", parser.getObjectName(therblig))
-                            LOG.INFO("Grasp effort: ", parser.getGraspEffort(therblig))
                             # Call grasp API from mico_planner
                             ret = acHan.Set_Hand_Openness(1)
                             if not ret:
@@ -228,7 +230,6 @@ def socket_loop(acHan):
             elif actionType == None:
                 LOG.INFO('USAGE ERROR: Invalid Action Type\n')
 
-
     s.close()
 
 ###
@@ -246,5 +247,5 @@ if __name__ == '__main__':
     # Start the socket
     socket_loop(acHan)
     #socket_loop()
-    
+
     end()
