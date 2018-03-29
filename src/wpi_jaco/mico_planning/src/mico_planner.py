@@ -17,7 +17,7 @@ import geometry_msgs.msg
 import time
 from sensor_msgs.msg import JointState
 #from mico_gripperControl import MicoGripperControl
-import mico_gripper
+from mico_gripper import mico_gripper
 from std_msgs.msg import String
 
 # include simulation here
@@ -44,23 +44,21 @@ class ActionHandler:
   		## arm.  This interface can be used to plan and execute motions on the left
   		## arm.
   		self.group = moveit_commander.MoveGroupCommander(group_name)#default : "mico_arm"
-		#self.group.set_planner_id(planner_name)
+		  #self.group.set_planner_id(planner_name)
 
-		## We create this DisplayTrajectory publisher which is used below to publish
+		  ## We create this DisplayTrajectory publisher which is used below to publish
   		## trajectories for RVIZ to visualize.
   		self.display_trajectory_publisher = rospy.Publisher('/move_group/display_planned_path', moveit_msgs.msg.DisplayTrajectory, queue_size=20)
-
-		self.joints = self.current_joints()
-		self.pose = self.current_pose()
-        # initialize the robotiq 85 gripper on mico hand
-        self.gripper = mico_gripper()
-
-		if (sim_flag):		
-			self.simulator = mico_simulator.mico_simulator('mico_sim')
-		else:
-			self.simulator = None
-		print "starting state... ",self.current_joints()
-		#self.group.set_start_state([3.14, 3.14, 3.14, 3.14, 3.14, 3.14])
+  		self.joints = self.current_joints()
+  		self.pose = self.current_pose()
+  		# initialize the robotiq 85 gripper on mico hand
+  		self.gripper = mico_gripper()
+  		if (sim_flag):
+  		  self.simulator = mico_simulator.mico_simulator('mico_sim')
+  		else:
+  		  self.simulator = None
+  		print "starting state... ",self.current_joints()
+		  #self.group.set_start_state([3.14, 3.14, 3.14, 3.14, 3.14, 3.14])
 
 
 ####################
@@ -222,7 +220,7 @@ class ActionHandler:
         success = False
         try:
             # actual code to control the robot
-            self.gripper_publisher.publish(self.gripper_cmd)
+            self.gripper.set_gripper_position(degree)
             # for simulation
             if self.simulator != None:
                 self.simulator.move_hand(degree)

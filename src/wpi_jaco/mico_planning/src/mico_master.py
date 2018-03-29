@@ -139,37 +139,42 @@ def socket_loop(acHan):
 
     s.bind(server_addr)
     LOG.INFO('Server listening up on %s port %s' % server_addr)
-    #become a server socket
-    s.listen(5)
-    #accept connections from outside
-    (c, address) = s.accept()
-    if c < 0:
-        LOG.INFO("Connection Failed.\n"); 
-        sys.exit(0)
-    else:
-        LOG.INFO("Connected to " + str(address))
+    
+    ##LISTENING LOOP
+    loop = True
+    while(loop):
+    	#become a server socket
+    	s.listen(5)
+    	#accept connections from outside
+    	(c, address) = s.accept()
+    	if c < 0:
+    		LOG.INFO("Connection Failed.\n"); 
+        	sys.exit(0)
+      	else:
+        	LOG.INFO("Connected to " + str(address))
 
-        ##LISTENING LOOP
-        loop = True
-        while(loop):
+        
 
-            # receive the entire json from the client call
-            jsonData = recvJson(c)
-            if jsonData == None:
-                continue
-            #print jsonData
-            # initialize the parser with the json Data received from the socket
-            parser = ActionParser(jsonData)
+      	# receive the entire json from the client call
+      	jsonData = recvJson(c)
+      	if jsonData == None:
+      		continue
+      	#print jsonData
+      	# initialize the parser with the json Data received from the socket
+      	parser = ActionParser(jsonData)
 
-            actionType = parser.getType()
-
-            if actionType == 'CheckROSLive':
-                LOG.INFO("Checking ROS alive...\n")
-                checkROSLiveReply(c)
-                pose_target = createTarget("-0.13944,-0.25935,0.69044", "0.33707,-0.93151,-0.11101,0.07957")
-                acHan.Transport_Empty(4, pose_target)
-            elif actionType == 'ExecutePlan':
-                LOG.INFO("Executing the therbligs plan...\n")
+      	actionType = parser.getType()
+      	ret = acHan.Set_Hand_Openness(1)
+      	if not ret:
+          LOG.ERROR("Release object failed")
+'''
+      if actionType == 'CheckROSLive':
+      	LOG.INFO("Checking ROS alive...\n")
+        checkROSLiveReply(c)
+        pose_target = createTarget("-0.13944,-0.25935,0.69044", "0.33707,-0.93151,-0.11101,0.07957")
+        acHan.Transport_Empty(4, pose_target)
+      elif actionType == 'ExecutePlan':
+        LOG.INFO("Executing the therbligs plan...\n")
 
                 # start VREP simulation
                 if acHan.simulator != None:
@@ -185,7 +190,7 @@ def socket_loop(acHan):
                             LOG.INFO("Object info: ", "XYZ-position:", parser.getXYZPosition(therblig), "Orientation:", parser.getOrientation(therblig))
                             # Call Transport Empty API from mico_planner
                             pose_target = createTarget(parser.getXYZPosition(therblig), parser.getOrientation(therblig))
-                            ret = acHan.Transport_Empty(4, pose_target)
+                            ret = acHan.Transport_Empty(pose_target)
                             if not ret:
                                 LOG.ERROR("Transport Empty failed")
                         elif parser.getTherbligName(therblig) == "Grasp":
@@ -198,7 +203,7 @@ def socket_loop(acHan):
                             LOG.INFO("Object info: ", "XYZ-position:", parser.getXYZPosition(therblig), "Orientation:", parser.getOrientation(therblig))
                             # Call Transport Loaded API from mico_planner
                             pose_target = createTarget(parser.getXYZPosition(therblig), parser.getOrientation(therblig))
-                            ret = acHan.Transport_Loaded(4, pose_target)
+                            ret = acHan.Transport_Loaded(pose_target)
                             if not ret:
                                 LOG.ERROR("Transport Loaded failed")
                         elif parser.getTherbligName(therblig) == "Release Load":
@@ -229,8 +234,8 @@ def socket_loop(acHan):
                 end()
             elif actionType == None:
                 LOG.INFO('USAGE ERROR: Invalid Action Type\n')
-
-    s.close()
+'''
+   # s.close()
 
 ###
 # Main method

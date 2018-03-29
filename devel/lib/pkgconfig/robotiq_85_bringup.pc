@@ -1,0 +1,8 @@
+prefix=/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel
+
+Name: robotiq_85_bringup
+Description: Description of robotiq_85_bringup
+Version: 0.0.1
+Cflags: 
+Libs: -L/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib 
+Requires: 

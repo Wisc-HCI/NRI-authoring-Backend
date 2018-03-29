@@ -1,0 +1,8 @@
+prefix=/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel
+
+Name: robotiq_85_driver
+Description: Description of robotiq_85_driver
+Version: 0.0.1
+Cflags: 
+Libs: -L/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib 
+Requires: 

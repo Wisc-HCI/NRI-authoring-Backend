@@ -17,7 +17,7 @@ class mico_gripper:
             return
         else:
             LOG.INFO("Correct number of gripper detected.")
-        rospy.Subscriber("/gripper/stat", GripperStat, self.update_gripper_state, queue_size=10)
+        rospy.Subscriber("/gripper/stat", GripperStat, self.update_gripper_stat, queue_size=10)
         self.gripper_publisher = rospy.Publisher('/gripper/cmd', GripperCmd, queue_size=10)
         self.gripper_stat = GripperStat()
         self.gripper_cmd = GripperCmd()
@@ -29,21 +29,21 @@ class mico_gripper:
         self.gripper_stat = stat
 
     def set_gripper_force(self, force):
-        if not self.gripper_stat.is_ready():
+        if self.gripper_stat.is_ready:
             LOG.ERROR("The gripper is not ready.")
             return
         self.gripper_cmd.force = force
         self.gripper_publisher.publish(self.gripper_cmd)
 
     def set_gripper_speed(self, speed):
-        if not self.gripper_stat.is_ready():
+        if self.gripper_stat.is_ready:
             LOG.ERROR("The gripper is not ready.")
             return
         self.gripper_cmd.speed = speed
         self.gripper_publisher.publish(self.gripper_cmd)
 
     def set_gripper_position(self, position):
-        if not self.gripper_stat.is_ready():
+        if self.gripper_stat.is_ready:
             LOG.ERROR("The gripper is not ready.")
             return False
         self.gripper_cmd.position = position
