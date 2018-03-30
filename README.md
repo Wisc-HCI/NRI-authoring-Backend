@@ -12,9 +12,14 @@ This step sets up physical connection with Mico arm.
 Go to http://www.kinovarobotics.com/innovation-robotics/support/?section=resources, open [KINOVA SDK MICO](https://drive.google.com/file/d/0B790iVm0vRTlUkV2ZnBDdGVuM2M/view). Download the SDK package, choose the right os platform and install the sdk following the instructions.
 
 ### Install dependency for robotiq_85_gripper
-The robotiq_85_gripper module could be found at https://github.com/waypointrobotics/robotiq_85_gripper. Connect the waypoint USB cable to the USB port. Verify the connection by doing a:
+The robotiq_85_gripper module could be found at https://github.com/waypointrobotics/robotiq_85_gripper. Connect the waypoint USB cable to the USB port. Verify the connection by doing:
 ```
-ls -la /dev
+ls -la /dev/ttyUSB0
+```
+Make sure the correct ttyUSB exists. For port permission denied problem, try:
+```
+sudo adduser <your_username> dialout
+sudo reboot
 ```
 
 ### Steps to install this package
