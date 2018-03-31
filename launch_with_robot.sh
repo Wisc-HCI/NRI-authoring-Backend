@@ -6,6 +6,9 @@ echo "Launching backend ROS with real robot..."
 # launch all ROS nodes associated with the KINOVA MICO and connect to the robot
 gnome-terminal -e "bash -c 'roslaunch mico_planning mico_planning_with_robot.launch;exec $SHELL'"
 
+# launch the ROS launch file for robotiq_85_gripper
+gnome-terminal -e "bash -c 'roslaunch robotiq_85_bringup robotiq_85.launch run_test:=false;exec $SHELL'"
+
 sleep 10
 # start the backend mico_master, litern for the connection from the from end
 gnome-terminal -e "bash -c 'rosrun mico_planning mico_master.py nosim;exec $SHELL'"

@@ -139,7 +139,7 @@ def socket_loop(acHan):
 
     s.bind(server_addr)
     LOG.INFO('Server listening up on %s port %s' % server_addr)
-    
+
     ##LISTENING LOOP
     loop = True
     while(loop):
@@ -153,7 +153,6 @@ def socket_loop(acHan):
       	else:
         	LOG.INFO("Connected to " + str(address))
 
-        
 
       	# receive the entire json from the client call
       	jsonData = recvJson(c)
@@ -164,78 +163,74 @@ def socket_loop(acHan):
       	parser = ActionParser(jsonData)
 
       	actionType = parser.getType()
-      	ret = acHan.Set_Hand_Openness(1)
-      	if not ret:
-          LOG.ERROR("Release object failed")
-'''
-      if actionType == 'CheckROSLive':
-      	LOG.INFO("Checking ROS alive...\n")
-        checkROSLiveReply(c)
-        pose_target = createTarget("-0.13944,-0.25935,0.69044", "0.33707,-0.93151,-0.11101,0.07957")
-        acHan.Transport_Empty(4, pose_target)
-      elif actionType == 'ExecutePlan':
-        LOG.INFO("Executing the therbligs plan...\n")
 
-                # start VREP simulation
-                if acHan.simulator != None:
-                    acHan.simulator.start_simulation()
-                # iterate through different tasks
-                for i, task in enumerate(parser.getTasks()):
-                    LOG.INFO("Starting to execute ", task['name'],'...')
-                    # iterate list of therbligs in the current task
-                    for j, therblig in enumerate(parser.getTherbligs(i)):
-                        LOG.INFO("Next therblig: ", parser.getTherbligName(therblig))
+        if actionType == 'CheckROSLive':
+      	    LOG.INFO("Checking ROS alive...\n")
+            checkROSLiveReply(c)
+            pose_target = createTarget("-0.13944,-0.25935,0.69044", "0.33707,-0.93151,-0.11101,0.07957")
+            acHan.Transport_Empty(4, pose_target)
+        elif actionType == 'ExecutePlan':
+            LOG.INFO("Executing the therbligs plan...\n")
+            # start VREP simulation
+            if acHan.simulator != None:
+                acHan.simulator.start_simulation()
+            # iterate through different tasks
+            for i, task in enumerate(parser.getTasks()):
+                LOG.INFO("Starting to execute ", task['name'],'...')
+                # iterate list of therbligs in the current task
+                for j, therblig in enumerate(parser.getTherbligs(i)):
+                    LOG.INFO("Next therblig: ", parser.getTherbligName(therblig))
 
-                        if parser.getTherbligName(therblig) == "Transport Empty":
-                            LOG.INFO("Object info: ", "XYZ-position:", parser.getXYZPosition(therblig), "Orientation:", parser.getOrientation(therblig))
-                            # Call Transport Empty API from mico_planner
-                            pose_target = createTarget(parser.getXYZPosition(therblig), parser.getOrientation(therblig))
-                            ret = acHan.Transport_Empty(pose_target)
-                            if not ret:
-                                LOG.ERROR("Transport Empty failed")
-                        elif parser.getTherbligName(therblig) == "Grasp":
-                            LOG.INFO("Grasping object: ", parser.getObjectName(therblig))
-                            # Call grasp API from mico_planner
-                            ret = acHan.Set_Hand_Openness(1)
-                            if not ret:
-                                LOG.ERROR("Grasp object failed")
-                        elif parser.getTherbligName(therblig) == "Transport Loaded":
-                            LOG.INFO("Object info: ", "XYZ-position:", parser.getXYZPosition(therblig), "Orientation:", parser.getOrientation(therblig))
-                            # Call Transport Loaded API from mico_planner
-                            pose_target = createTarget(parser.getXYZPosition(therblig), parser.getOrientation(therblig))
-                            ret = acHan.Transport_Loaded(pose_target)
-                            if not ret:
-                                LOG.ERROR("Transport Loaded failed")
-                        elif parser.getTherbligName(therblig) == "Release Load":
-                            LOG.INFO("Releasing object: ", parser.getObjectName(therblig))
-                            ret = acHan.Set_Hand_Openness(0)
-                            if not ret:
-                                LOG.ERROR("Release object failed")
+                    if parser.getTherbligName(therblig) == "Transport Empty":
+                        LOG.INFO("Object info: ", "XYZ-position:", parser.getXYZPosition(therblig), "Orientation:", parser.getOrientation(therblig))
+                        # Call Transport Empty API from mico_planner
+                        pose_target = createTarget(parser.getXYZPosition(therblig), parser.getOrientation(therblig))
+                        ret = acHan.Transport_Empty(pose_target)
+                        if not ret:
+                            LOG.ERROR("Transport Empty failed")
+                    elif parser.getTherbligName(therblig) == "Grasp":
+                        LOG.INFO("Grasping object: ", parser.getObjectName(therblig))
+                        # Call grasp API from mico_planner
+                        ret = acHan.Set_Hand_Openness(1)
+                        if not ret:
+                            LOG.ERROR("Grasp object failed")
+                    elif parser.getTherbligName(therblig) == "Transport Loaded":
+                        LOG.INFO("Object info: ", "XYZ-position:", parser.getXYZPosition(therblig), "Orientation:", parser.getOrientation(therblig))
+                        # Call Transport Loaded API from mico_planner
+                        pose_target = createTarget(parser.getXYZPosition(therblig), parser.getOrientation(therblig))
+                        ret = acHan.Transport_Loaded(pose_target)
+                        if not ret:
+                            LOG.ERROR("Transport Loaded failed")
+                    elif parser.getTherbligName(therblig) == "Release Load":
+                        LOG.INFO("Releasing object: ", parser.getObjectName(therblig))
+                        ret = acHan.Set_Hand_Openness(0)
+                        if not ret:
+                            LOG.ERROR("Release object failed")
                         else:
                             LOG.INFO("Unknown therblig")
 
-                # end VREP simulation
-                if acHan.simulator != None:
-                    acHan.simulator.end_simulation()
+            # end VREP simulation
+            if acHan.simulator != None:
+                acHan.simulator.end_simulation()
 
-                # send the reply json
-                executePlanReply(c, True)
+            # send the reply json
+            executePlanReply(c, True)
 
-            elif actionType == 'GetPosition':
-                LOG.INFO("Getting the position...\n")
-                currPose = acHan.Read_Position()
-                getPositionReply(c, "1 2 3")
-                getPositionReply(c, unpackPosition(currPose))
+        elif actionType == 'GetPosition':
+            LOG.INFO("Getting the position...\n")
+            currPose = acHan.Read_Position()
+            getPositionReply(c, "1 2 3")
+            getPositionReply(c, unpackPosition(currPose))
 
-            elif actionType == 'Exit':
-                LOG.INFO("Exiting...\n")
-                exitReply(c)
-                loop = False
-                end()
-            elif actionType == None:
-                LOG.INFO('USAGE ERROR: Invalid Action Type\n')
-'''
-   # s.close()
+        elif actionType == 'Exit':
+            LOG.INFO("Exiting...\n")
+            exitReply(c)
+            loop = False
+            end()
+        elif actionType == None:
+            LOG.INFO('USAGE ERROR: Invalid Action Type\n')
+
+    s.close()
 
 ###
 # Main method

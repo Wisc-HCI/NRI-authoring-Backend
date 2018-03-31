@@ -27,11 +27,6 @@ s.connect(server_address)
 print 'connecting up on %s port %s' % server_address
 time.sleep(2)
 
-# Uncomment to Test checkROSLive
-# sendJson(s, {"Action":"CheckROSLive"})
-
-# Uncomment to Test execute Therbligs 
-
 sendJson(s,{
 	"Action":"ExecutePlan",
 
@@ -155,12 +150,6 @@ sendJson(s,{
    }
 ]})
 
-
-# Uncomment to Test getPosition
-# sendJson(s,{"Action":"GetPosition"})
-
-# Uncomment to Test exit
-# sendJson(s, {"Action":"Exit"})
 
 time.sleep(2)
 
