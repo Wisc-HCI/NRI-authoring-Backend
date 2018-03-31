@@ -191,7 +191,7 @@ def socket_loop(acHan):
                     elif parser.getTherbligName(therblig) == "Grasp":
                         LOG.INFO("Grasping object: ", parser.getObjectName(therblig))
                         # Call grasp API from mico_planner
-                        ret = acHan.Set_Hand_Openness(1)
+                        ret = acHan.Set_Hand_Openness(0.850)
                         if not ret:
                             LOG.ERROR("Grasp object failed")
                     elif parser.getTherbligName(therblig) == "Transport Loaded":
@@ -203,7 +203,7 @@ def socket_loop(acHan):
                             LOG.ERROR("Transport Loaded failed")
                     elif parser.getTherbligName(therblig) == "Release Load":
                         LOG.INFO("Releasing object: ", parser.getObjectName(therblig))
-                        ret = acHan.Set_Hand_Openness(0)
+                        ret = acHan.Set_Hand_Openness(0.010)
                         if not ret:
                             LOG.ERROR("Release object failed")
                         else:

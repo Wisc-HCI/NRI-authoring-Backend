@@ -94,7 +94,7 @@ sendJson(s,{
                {
                   "name":"Position Y",
                   "type":"position",
-                  "val":"-0.1544, -0.2035,0.65044",
+                  "val":"0.13944, 0.25935,0.69044",
                   "$$hashKey":"object:114"
                },
                {

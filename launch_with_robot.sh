@@ -23,4 +23,4 @@ gnome-terminal -e "bash -c 'rosrun mico_planning mico_master.py nosim;exec $SHEL
 
 sleep 10
 # create a python client and send some mocked therbligs in json
-gnome-terminal -e "bash -c 'cd ./src/wpi_jaco/mico_planning/src;python mico_client.py;exec $SHELL'"
+#gnome-terminal -e "bash -c 'cd ./src/wpi_jaco/mico_planning/src;python mico_client.py;exec $SHELL'"
