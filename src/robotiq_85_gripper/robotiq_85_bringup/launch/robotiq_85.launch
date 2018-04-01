@@ -15,6 +15,8 @@
     <!-- Gripper specific robot state publisher and parameters -->
     <include file="$(find robotiq_85_description)/launch/upload_robotiq_85_gripper.launch"/>
 
+
+    <!-- Somehow we need to comment out these two nodes, otherwise MoveIt on Kinova runs into problem -->
     <!--<node name="gripper_robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" >
         <param name="robot_description" value="robot_description"/>
         <param name="publish_frequency" type="double" value="100.0" />
