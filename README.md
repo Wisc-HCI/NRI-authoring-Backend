@@ -52,7 +52,11 @@ sudo reboot
   ```
   catkin_make
   ```
-4. Install rosbridge_suit
+4. Install rosbridge_suit by
+  ```
+  sudo apt-get install ros-kinetic-rosbridge-suite
+  ```
+
   This is the part to allow communication between frontend and backend, or ROS from a different machine.
   ```
   roslaunch rosbridge_server rosbridge_websocket.launch
