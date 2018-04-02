@@ -192,9 +192,11 @@ def socket_loop(acHan):
                         LOG.INFO("Grasping object: ", parser.getObjectName(therblig))
                         # Call grasp API from mico_planner
                         # open the gripper
-                        ret = acHan.Set_Hand_Openness(0.900)
+                        ret = acHan.Set_Hand_Openness(0.085)
+                        if not ret:
+                            LOG.ERROR("Grasp object failed")
                         # close the gripper
-                        ret = acHan.Set_Hand_Openness(0.100)
+                        ret = acHan.Set_Hand_Openness(0.025)
                         if not ret:
                             LOG.ERROR("Grasp object failed")
                     elif parser.getTherbligName(therblig) == "Transport Loaded":
@@ -207,7 +209,7 @@ def socket_loop(acHan):
                     elif parser.getTherbligName(therblig) == "Release Load":
                         LOG.INFO("Releasing object: ", parser.getObjectName(therblig))
                         # release the object
-                        ret = acHan.Set_Hand_Openness(0.900)
+                        ret = acHan.Set_Hand_Openness(0.085)
                         if not ret:
                             LOG.ERROR("Release object failed")
                         else:
@@ -246,7 +248,7 @@ if __name__ == '__main__':
         print ("Usage: rosrun mico_planning mico_master -sim")
     sim_flag = True if sys.argv[1] == "sim" else False
     # Build the action handler
-    acHan = ActionHandler("mico_arm", "mico_master", 'RRTstarkConfigDefault', sim_flag)
+    acHan = ActionHandler("mico_arm", "mico_master", sim_flag)
 
     # Start the socket
     socket_loop(acHan)

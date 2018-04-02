@@ -31,7 +31,7 @@ def pubEndEffectorPosition(acHander):
 if __name__ == '__main__':
   
     # Build the action handler
-    acHan = ActionHandler("mico_arm", "position_publisher")
+    acHan = ActionHandler("mico_arm", "position_publisher", False)
     try:
 		pubEndEffectorPosition(acHan)
     except rospy.ROSInterruptException:
