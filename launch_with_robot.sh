@@ -14,7 +14,7 @@ sleep 10
 
 # start the backend mico_master, litern for the connection from the from end
 gnome-terminal -e "bash -c 'rosrun mico_planning mico_master.py nosim;exec $SHELL'"
-sleep 5
+sleep 10
 
 # uncomment the following if want to call Get Position from frontend via rosbridge
 # launch the rosbridge server
@@ -26,4 +26,4 @@ gnome-terminal -e "bash -c 'rosrun mico_planning mico_positionpublisher.py;exec 
 sleep 5
 
 # create a python client and send some mocked therbligs in json
-gnome-terminal -e "bash -c 'cd ./src/wpi_jaco/mico_planning/src/test;python mico_client_ExecutePlan2.py;exec $SHELL'"
+gnome-terminal -e "bash -c 'cd ./src/wpi_jaco/mico_planning/src/test;python mico_client_ExecutePlan.py;exec $SHELL'"
