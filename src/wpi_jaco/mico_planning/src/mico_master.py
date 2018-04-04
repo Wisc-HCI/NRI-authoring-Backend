@@ -9,16 +9,22 @@
 ##################################
 import socket
 import sys
+import os
+import sys
+import json
+
+import log as LOG
+'''
 from mico_planner import ActionHandler
+from mico_parser import ActionParser
+
 import rospy
 from moveit_commander import RobotCommander, os, PlanningSceneInterface, roscpp_initialize, roscpp_shutdown
-import sys
 import geometry_msgs.msg
 from moveit_msgs.msg import RobotTrajectory
 from trajectory_msgs.msg import JointTrajectoryPoint
-import json
-from mico_parser import ActionParser
-import log as LOG
+'''
+
 
 ###
 # A method for serializing and sending json over the socket
@@ -131,35 +137,17 @@ def end():
 # After parsing the JSON object, the main loop interprets the therblig messages and 
 # translates them into plans to be run by the action handler.
 ###
-def socket_loop(acHan):
-    #create an INET, STREAMing socket
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    #bind the socket to a public host and a well-known port
-    server_addr = (socket.gethostname(), 9999)
-
-    s.bind(server_addr)
-    LOG.INFO('Server listening up on %s port %s' % server_addr)
-
-    ##LISTENING LOOP
-    loop = True
-    while(loop):
-    	#become a server socket
-    	s.listen(5)
-    	#accept connections from outside
-    	(c, address) = s.accept()
-    	if c < 0:
-    		LOG.INFO("Connection Failed.\n"); 
-        	sys.exit(0)
-      	else:
-        	LOG.INFO("Connected to " + str(address))
-
-
-      	# receive the entire json from the client call
-      	jsonData = recvJson(c)
-      	if jsonData == None:
-      		continue
-      	#print jsonData
-      	# initialize the parser with the json Data received from the socket
+def execute_plan(acHan, json_plan_file="plan.json"):
+    
+    if os.path.exists(json_plan_file):
+        with open(json_plan_file, "r") as f:
+            plan_json = json.load(f)
+    else:
+        LOG.info("Json plan file does not exists")
+    
+    print plan_json
+    '''
+        # initialize the parser with the json Data received from the socket
       	parser = ActionParser(jsonData)
 
       	actionType = parser.getType()
@@ -236,22 +224,22 @@ def socket_loop(acHan):
         elif actionType == None:
             LOG.INFO('USAGE ERROR: Invalid Action Type\n')
 
-    s.close()
+    '''
+
+def main():
+    # check if simulation is enabled
+    if len(sys.argv) < 3:
+        print ("Usage: python mico_master.py jsonfile sim")
+
+    sim_flag = True if sys.argv[2] == "sim" else False
+    json_plan_file = sys.argv[1]
+    # Build the action handler
+    acHan = None#ActionHandler("mico_arm", "mico_master", sim_flag)
+
+    execute_plan(acHan, json_plan_file)
 
 ###
 # Main method
 ###
 if __name__ == '__main__':
-  
-    # check if simulation is enabled
-    if len(sys.argv) < 2:
-        print ("Usage: rosrun mico_planning mico_master -sim")
-    sim_flag = True if sys.argv[1] == "sim" else False
-    # Build the action handler
-    acHan = ActionHandler("mico_arm", "mico_master", sim_flag)
-
-    # Start the socket
-    socket_loop(acHan)
-    #socket_loop()
-
-    end()
+    main()
