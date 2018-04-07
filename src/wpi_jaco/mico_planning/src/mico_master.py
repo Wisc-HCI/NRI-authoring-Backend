@@ -14,91 +14,23 @@ import sys
 import json
 
 import log as LOG
-'''
-from mico_planner import ActionHandler
 from mico_parser import ActionParser
-
+from mico_planner import ActionHandler
 import rospy
 from moveit_commander import RobotCommander, os, PlanningSceneInterface, roscpp_initialize, roscpp_shutdown
 import geometry_msgs.msg
 from moveit_msgs.msg import RobotTrajectory
 from trajectory_msgs.msg import JointTrajectoryPoint
-'''
-
 
 ###
-# A method for serializing and sending json over the socket
+# Save the mico_server HTTP reply string to reply.txt
 ###
-def sendJson(socket, data):
-    try:
-        serialized = json.dumps(data)
-    except (TypeError, ValueError), e:
-        raise Exception('You can only send JSON-serializable data')
-    # send the length of the serialized data first
-    socket.send('%d\n' % len(serialized))
-    # send the serialized data
-    socket.sendall(serialized)
-
-###
-# Contruct and send a Json reply for checkROSLive Request
-###
-def checkROSLiveReply(connect):
-    replyData = {"status" : "live", "robotName" : "mico"}
-    sendJson(connect, replyData)
-
-###
-# Contruct and send a Json reply for executePlan Request
-###
-def executePlanReply(connect, success):
-    replyData = {'ActionReply': 'ExecutePlan', 'Status' : None}
-    if success:
-        replyData['Status'] = 'success'
-    else:
-        replyData['Status'] = 'failure'
-    sendJson(connect, replyData)
-
-###
-# Contruct and send a Json reply for getPosition Request
-###
-def getPositionReply(connect, objectPosition):
-    replyData = {"ActionReply":"GetPosition", "End-effector Position":objectPosition}
-    sendJson(connect, replyData)
-
-###
-# Contruct and send a Json reply for exit Request
-###
-def exitReply(connect):
-    replyData = {"ActionReply" : "Exit", "ExitStatus" : "Success"}
-    sendJson(connect, replyData)
-
-###
-# Receive data from a socket, and returns a deserilized json object. 
-# The function is tested with receiving very huge data over the socket.
-###
-def recvJson(socket):
-    # read the length of the data, letter by letter until we reach EOL
-    length_str = ''
-    char = socket.recv(1)
-    # return None if nothing received
-    if not char:
-        return None
-    while char != '\n':
-        length_str += char
-        char = socket.recv(1)
-    total = int(length_str)
-
-    # use a memoryview to receive the data chunk by chunk efficiently
-    view = memoryview(bytearray(total))
-    next_offset = 0
-    while total - next_offset > 0:
-        recv_size = socket.recv_into(view[next_offset:], total - next_offset)
-        next_offset += recv_size
-    try:
-        LOG.INFO(view.tobytes())
-        deserialized = json.loads(view.tobytes())
-    except (TypeError, ValueError), e:
-        raise Exception('Data received was not in JSON format')
-    return deserialized
+def save_reply(actionType, success):
+    # send the reply string
+    success_flag = "success" if success else "failed"
+    reply_str = "Action: {}; Status: {}".format(actionType, success_flag)
+    with open("reply.txt", "w") as reply:
+        reply.write(reply_str)
 
 ###
 # Create a target pose for contains the XYZPosition and orientation of the object
@@ -138,30 +70,26 @@ def end():
 # translates them into plans to be run by the action handler.
 ###
 def execute_plan(acHan, json_plan_file="plan.json"):
-    
+
     if os.path.exists(json_plan_file):
         with open(json_plan_file, "r") as f:
             plan_json = json.load(f)
-    else:
-        LOG.info("Json plan file does not exists")
-    
-    print plan_json
-    '''
+
         # initialize the parser with the json Data received from the socket
-      	parser = ActionParser(jsonData)
+      	parser = ActionParser(plan_json)
 
       	actionType = parser.getType()
 
+        # check ROS alive
         if actionType == 'CheckROSLive':
       	    LOG.INFO("Checking ROS alive...\n")
-            checkROSLiveReply(c)
-            pose_target = createTarget("-0.13944,-0.25935,0.69044", "0.33707,-0.93151,-0.11101,0.07957")
-            acHan.Transport_Empty(4, pose_target)
+            save_reply(actionType, True)
+        # execute a plan
         elif actionType == 'ExecutePlan':
             LOG.INFO("Executing the therbligs plan...\n")
             # start VREP simulation
-            if acHan.simulator != None:
-                acHan.simulator.start_simulation()
+            #if acHan.simulator != None:
+             #   acHan.simulator.start_simulation()
             # iterate through different tasks
             for i, task in enumerate(parser.getTasks()):
                 LOG.INFO("Starting to execute ", task['name'],'...')
@@ -206,25 +134,25 @@ def execute_plan(acHan, json_plan_file="plan.json"):
             # end VREP simulation
             if acHan.simulator != None:
                 acHan.simulator.end_simulation()
+            save_reply(actionType, True)
 
-            # send the reply json
-            executePlanReply(c, True)
-
+        # get position
         elif actionType == 'GetPosition':
             LOG.INFO("Getting the position...\n")
             currPose = acHan.Read_Position()
-            getPositionReply(c, "1 2 3")
-            getPositionReply(c, unpackPosition(currPose))
-
+            save_reply(actionType, True)
+        # exit ros
         elif actionType == 'Exit':
             LOG.INFO("Exiting...\n")
-            exitReply(c)
+            save_reply(actionType, True)
             loop = False
             end()
         elif actionType == None:
             LOG.INFO('USAGE ERROR: Invalid Action Type\n')
+    else:
+        LOG.ERROR("Thebligs json does not exists")
 
-    '''
+
 
 def main():
     # check if simulation is enabled
@@ -234,7 +162,7 @@ def main():
     sim_flag = True if sys.argv[2] == "sim" else False
     json_plan_file = sys.argv[1]
     # Build the action handler
-    acHan = None#ActionHandler("mico_arm", "mico_master", sim_flag)
+    acHan = ActionHandler("mico_arm", "mico_master", sim_flag)
 
     execute_plan(acHan, json_plan_file)
 

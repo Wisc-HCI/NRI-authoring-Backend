@@ -29,13 +29,18 @@ class mico_server_handler(BaseHTTPRequestHandler):
 
         with open("plan.json", "w") as outfile:
             json.dump(jsonData, outfile)
-        self._set_response()
-        self.wfile.write("POST request for {}".format(self.path).encode('utf-8'))
+
         # execute python master script
         sim = False
         sim_flag = "sim" if sim else "nosim"
-        subprocess.Popen('python mico_master.py plan.json {}'.format(sim_flag), shell=True)
-
+        #launcher the mico master for execution
+        mico_process = subprocess.Popen('python mico_master.py plan.json {}'.format(sim_flag), shell=True)
+        mico_process.wait()
+        with open("reply.txt", "r") as reply:
+            reply_text = reply.read()
+        # reply to the front-end
+        self._set_response()
+        self.wfile.write(reply_text)
 
 def main(port=9999, sim_flag=False):
     address = ("", port)
