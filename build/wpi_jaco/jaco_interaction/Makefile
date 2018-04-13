@@ -66,28 +66,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -98,17 +76,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target install
 install: preinstall
@@ -132,6 +99,39 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,6 +166,111 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+.PHONY : wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_lisp: wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_lisp
+
+# fast build rule for target.
+tf2_msgs_generate_messages_lisp/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
+.PHONY : tf2_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+wpi_jaco/jaco_interaction/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_interaction/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+.PHONY : wpi_jaco/jaco_interaction/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_lisp: wpi_jaco/jaco_interaction/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+
+.PHONY : std_srvs_generate_messages_lisp
+
+# fast build rule for target.
+std_srvs_generate_messages_lisp/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
+.PHONY : std_srvs_generate_messages_lisp/fast
+
+# Convenience name for target.
+wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+.PHONY : wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_cpp: wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_cpp
+
+# fast build rule for target.
+tf2_msgs_generate_messages_cpp/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
+.PHONY : tf2_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_cpp.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_cpp.dir/rule
+.PHONY : wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_cpp: wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_cpp.dir/rule
+
+.PHONY : tf_generate_messages_cpp
+
+# fast build rule for target.
+tf_generate_messages_cpp/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_cpp.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_cpp.dir/build
+.PHONY : tf_generate_messages_cpp/fast
+
+# Convenience name for target.
+wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_py.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_py.dir/rule
+.PHONY : wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_py.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_py: wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_py.dir/rule
+
+.PHONY : tf_generate_messages_py
+
+# fast build rule for target.
+tf_generate_messages_py/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_py.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_py.dir/build
+.PHONY : tf_generate_messages_py/fast
+
+# Convenience name for target.
+wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+.PHONY : wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_py: wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_py
+
+# fast build rule for target.
+tf2_msgs_generate_messages_py/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
+.PHONY : tf2_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+.PHONY : wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_eus: wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_eus
+
+# fast build rule for target.
+tf2_msgs_generate_messages_eus/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
+.PHONY : tf2_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
 wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_nodejs.dir/rule:
 	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_nodejs.dir/rule
 .PHONY : wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_nodejs.dir/rule
@@ -194,216 +299,6 @@ jaco_interactive_manipulation: wpi_jaco/jaco_interaction/CMakeFiles/jaco_interac
 jaco_interactive_manipulation/fast:
 	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/jaco_interactive_manipulation.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/jaco_interactive_manipulation.dir/build
 .PHONY : jaco_interactive_manipulation/fast
-
-# Convenience name for target.
-wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_py.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_py.dir/rule
-.PHONY : wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_py.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_py: wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_py.dir/rule
-
-.PHONY : tf_generate_messages_py
-
-# fast build rule for target.
-tf_generate_messages_py/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_py.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_py.dir/build
-.PHONY : tf_generate_messages_py/fast
-
-# Convenience name for target.
-wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
-.PHONY : wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_nodejs: wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
-
-.PHONY : actionlib_generate_messages_nodejs
-
-# fast build rule for target.
-actionlib_generate_messages_nodejs/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
-.PHONY : actionlib_generate_messages_nodejs/fast
-
-# Convenience name for target.
-wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_py.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_py.dir/rule
-.PHONY : wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_py.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_py: wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_py.dir/rule
-
-.PHONY : actionlib_generate_messages_py
-
-# fast build rule for target.
-actionlib_generate_messages_py/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_py.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_py.dir/build
-.PHONY : actionlib_generate_messages_py/fast
-
-# Convenience name for target.
-wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-.PHONY : wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_cpp: wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-
-.PHONY : actionlib_generate_messages_cpp
-
-# fast build rule for target.
-actionlib_generate_messages_cpp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_cpp.dir/build
-.PHONY : actionlib_generate_messages_cpp/fast
-
-# Convenience name for target.
-wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_cpp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_cpp.dir/rule
-.PHONY : wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_cpp: wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_cpp.dir/rule
-
-.PHONY : tf_generate_messages_cpp
-
-# fast build rule for target.
-tf_generate_messages_cpp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_cpp.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_cpp.dir/build
-.PHONY : tf_generate_messages_cpp/fast
-
-# Convenience name for target.
-wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_eus.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_eus.dir/rule
-.PHONY : wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_eus: wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_eus.dir/rule
-
-.PHONY : actionlib_generate_messages_eus
-
-# fast build rule for target.
-actionlib_generate_messages_eus/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_eus.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_eus.dir/build
-.PHONY : actionlib_generate_messages_eus/fast
-
-# Convenience name for target.
-wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
-.PHONY : wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_lisp: wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
-
-.PHONY : actionlib_generate_messages_lisp
-
-# fast build rule for target.
-actionlib_generate_messages_lisp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/actionlib_generate_messages_lisp.dir/build
-.PHONY : actionlib_generate_messages_lisp/fast
-
-# Convenience name for target.
-wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
-.PHONY : wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_cpp: wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : tf2_msgs_generate_messages_cpp
-
-# fast build rule for target.
-tf2_msgs_generate_messages_cpp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
-.PHONY : tf2_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-wpi_jaco/jaco_interaction/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_interaction/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
-.PHONY : wpi_jaco/jaco_interaction/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_lisp: wpi_jaco/jaco_interaction/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
-
-.PHONY : std_srvs_generate_messages_lisp
-
-# fast build rule for target.
-std_srvs_generate_messages_lisp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
-.PHONY : std_srvs_generate_messages_lisp/fast
-
-# Convenience name for target.
-wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
-.PHONY : wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_lisp: wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : tf2_msgs_generate_messages_lisp
-
-# fast build rule for target.
-tf2_msgs_generate_messages_lisp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
-.PHONY : tf2_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_lisp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_lisp.dir/rule
-.PHONY : wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_lisp: wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_lisp.dir/rule
-
-.PHONY : tf_generate_messages_lisp
-
-# fast build rule for target.
-tf_generate_messages_lisp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_lisp.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_lisp.dir/build
-.PHONY : tf_generate_messages_lisp/fast
-
-# Convenience name for target.
-wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
-.PHONY : wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_nodejs: wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : tf2_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-tf2_msgs_generate_messages_nodejs/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
-.PHONY : tf2_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
-.PHONY : wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_eus: wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
-
-.PHONY : tf2_msgs_generate_messages_eus
-
-# fast build rule for target.
-tf2_msgs_generate_messages_eus/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
-.PHONY : tf2_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
-.PHONY : wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_py: wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
-
-.PHONY : tf2_msgs_generate_messages_py
-
-# fast build rule for target.
-tf2_msgs_generate_messages_py/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
-.PHONY : tf2_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_eus.dir/rule:
@@ -480,6 +375,36 @@ std_srvs_generate_messages_py/fast:
 	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/std_srvs_generate_messages_py.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/std_srvs_generate_messages_py.dir/build
 .PHONY : std_srvs_generate_messages_py/fast
 
+# Convenience name for target.
+wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+.PHONY : wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_nodejs: wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+tf2_msgs_generate_messages_nodejs/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
+.PHONY : tf2_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_lisp.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_lisp.dir/rule
+.PHONY : wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_lisp: wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_lisp.dir/rule
+
+.PHONY : tf_generate_messages_lisp
+
+# fast build rule for target.
+tf_generate_messages_lisp/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_lisp.dir/build.make wpi_jaco/jaco_interaction/CMakeFiles/tf_generate_messages_lisp.dir/build
+.PHONY : tf_generate_messages_lisp/fast
+
 src/jaco_interactive_manipulation.o: src/jaco_interactive_manipulation.cpp.o
 
 .PHONY : src/jaco_interactive_manipulation.o
@@ -514,33 +439,28 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... list_install_components"
-	@echo "... test"
-	@echo "... install/local"
+	@echo "... rebuild_cache"
+	@echo "... tf2_msgs_generate_messages_lisp"
+	@echo "... std_srvs_generate_messages_lisp"
+	@echo "... tf2_msgs_generate_messages_cpp"
+	@echo "... tf_generate_messages_cpp"
+	@echo "... tf_generate_messages_py"
+	@echo "... tf2_msgs_generate_messages_py"
+	@echo "... tf2_msgs_generate_messages_eus"
+	@echo "... install"
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... jaco_interactive_manipulation"
-	@echo "... tf_generate_messages_py"
-	@echo "... rebuild_cache"
-	@echo "... actionlib_generate_messages_nodejs"
-	@echo "... actionlib_generate_messages_py"
-	@echo "... actionlib_generate_messages_cpp"
-	@echo "... tf_generate_messages_cpp"
-	@echo "... actionlib_generate_messages_eus"
-	@echo "... actionlib_generate_messages_lisp"
-	@echo "... tf2_msgs_generate_messages_cpp"
-	@echo "... std_srvs_generate_messages_lisp"
-	@echo "... tf2_msgs_generate_messages_lisp"
-	@echo "... edit_cache"
-	@echo "... tf_generate_messages_lisp"
-	@echo "... tf2_msgs_generate_messages_nodejs"
-	@echo "... install"
-	@echo "... tf2_msgs_generate_messages_eus"
-	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... tf_generate_messages_eus"
 	@echo "... std_srvs_generate_messages_cpp"
 	@echo "... install/strip"
 	@echo "... std_srvs_generate_messages_eus"
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... std_srvs_generate_messages_py"
+	@echo "... test"
+	@echo "... install/local"
+	@echo "... tf2_msgs_generate_messages_nodejs"
+	@echo "... tf_generate_messages_lisp"
+	@echo "... edit_cache"
 	@echo "... src/jaco_interactive_manipulation.o"
 	@echo "... src/jaco_interactive_manipulation.i"
 	@echo "... src/jaco_interactive_manipulation.s"

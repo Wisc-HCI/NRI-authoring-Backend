@@ -1,0 +1,8 @@
+prefix=/home/hcilab/Documents/jieru/NRI-authoring-Backend/install
+
+Name: kinova_arm_moveit_demo
+Description: Description of kinova_arm_moveit_demo
+Version: 0.6.3
+Cflags: -I/home/hcilab/Documents/jieru/NRI-authoring-Backend/install/include
+Libs: -L/home/hcilab/Documents/jieru/NRI-authoring-Backend/install/lib 
+Requires: moveit_core moveit_ros_planning_interface interactive_markers

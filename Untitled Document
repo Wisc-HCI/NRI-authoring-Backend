@@ -1,0 +1,9 @@
+roslaunch kinova_bringup kinova_robot.launch kinova_robotType:=m1n6s200 use_urdf:=true
+
+
+rosservice call /'m1n6s200_driver'/in/start_force_control
+
+rosservice call /'m1n6s200_driver'/in/stop_force_control
+
+roslaunch rosbridge_server rosbridge_websocket.launch
+

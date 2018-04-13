@@ -1,0 +1,8 @@
+prefix=/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel
+
+Name: kinova_msgs
+Description: Description of kinova_msgs
+Version: 0.0.1
+Cflags: -I/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/include
+Libs: -L/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib 
+Requires: actionlib_msgs geometry_msgs message_runtime

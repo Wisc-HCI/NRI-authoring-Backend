@@ -158,6 +158,7 @@ def main():
     # check if simulation is enabled
     if len(sys.argv) < 3:
         print ("Usage: python mico_master.py jsonfile sim")
+        exit(1)
 
     sim_flag = True if sys.argv[2] == "sim" else False
     json_plan_file = sys.argv[1]

@@ -12,12 +12,12 @@ import std_msgs.msg
 def main():
     # start ROS node
     node_name = "mico_force_control"
-    roscpp_initialize(sys.argv)
+    #roscpp_initialize(sys.argv)
     rospy.init_node(node_name, anonymous=True)
 
     rospy.sleep(3)
 
-    force_control_publisher = rospy.publisher('mico_arm/Forcecontrol', std_msgs.msg.Bool, queue_size=10)
+    force_control_publisher = rospy.Publisher('mico_arm/Forcecontrol', std_msgs.msg.Bool, queue_size=10)
     rospy.sleep(1)
 
     switch = True
