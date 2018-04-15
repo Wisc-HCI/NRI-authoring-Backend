@@ -93,11 +93,11 @@ sudo reboot
   The forcecontrol switch is already been implemented by Kinova-ros.
   Start force-control by:
   ```
-  rosservice call /'m1n6s200_driver'/in/start_force_control
+  rosservice call /'m1n6s300_driver'/in/start_force_control
   ```
   Stop the force-control by:
   ```
-  rosservice call /'m1n6s200_driver'/in/stop_force_control
+  rosservice call /'m1n6s300_driver'/in/stop_force_control
   ```
   Our frontend UI has already integrate these commands with Roslibjs, so that users could easily switch on/off the force-control in the frondend.
 
