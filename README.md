@@ -64,8 +64,12 @@ sudo reboot
   ```
 
 ### Potential Error in the installation process
-1. Rail_manipulation-msgs missing in the build process:
-  Solution: cd into the src folder and clone the official rail_manipulation_msgs repo at (https://github.com/GT-RAIL/rail_manipulation_msgs). Then try catkin_make again.
+1. Rail_manipulation-msgs missing in the build process, solve it by:
+  ```
+  cd ./src
+  git clone git@github.com:GT-RAIL/rail_manipulation_msgs.git
+  ```
+  Then try catkin_make again.
 2. For any moveit package missing, make sure you have follow the installation instructions from the Moveit. 
 
 ## Steps to use this package
