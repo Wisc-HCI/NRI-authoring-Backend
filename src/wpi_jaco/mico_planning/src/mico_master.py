@@ -163,7 +163,7 @@ def main():
     sim_flag = True if sys.argv[2] == "sim" else False
     json_plan_file = sys.argv[1]
     # Build the action handler
-    acHan = ActionHandler("mico_arm", "mico_master", sim_flag)
+    acHan = ActionHandler("arm", "mico_master", sim_flag)
 
     execute_plan(acHan, json_plan_file)
 

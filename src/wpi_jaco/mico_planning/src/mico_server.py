@@ -36,9 +36,12 @@ class mico_server_handler(BaseHTTPRequestHandler):
         #launcher the mico master for execution
         mico_process = subprocess.Popen('python mico_master.py plan.json {}'.format(sim_flag), shell=True)
         mico_process.wait()
-        with open("reply.txt", "r") as reply:
-            reply_text = reply.read()
-        # reply to the front-end
+        try:
+            with open("reply.txt", "r") as reply:
+                reply_text = reply.read()
+        except IOError as err:
+			print "IO Error"        
+		# reply to the front-end
         self._set_response()
         self.wfile.write(reply_text)
 
