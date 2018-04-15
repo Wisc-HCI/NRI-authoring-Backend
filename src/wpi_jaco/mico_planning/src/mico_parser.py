@@ -25,17 +25,17 @@ class ActionParser:
     # Returns the content of the Execute plan
     def getTasks(self):
         return self.content
-        
+
     # Returns the therbligs list for the ith task
     def getTherbligs(self, i):
     	assert(self.type == 'ExecutePlan')
         return self.content[i]['therbligList']
-        
+
     # Returns the therbligs name
     def getTherbligName(self, therblig):
     	assert(self.type == 'ExecutePlan')
         return therblig['name']
-    
+
     # Returns the object position string
     def getXYZPosition(self, therblig):
     	assert(self.type == 'ExecutePlan')
@@ -43,7 +43,7 @@ class ActionParser:
             print "USAGE ERROR: Expect a Transport Therblig\n"
             return
         return therblig['parameters'][0]['val']
-        
+
     # Returns the object orientation string
     def getOrientation(self, therblig):
     	assert(self.type == 'ExecutePlan')
@@ -51,7 +51,7 @@ class ActionParser:
             print "USAGE ERROR: Expect a Transport Therblig\n"
             return
         return therblig['parameters'][1]['val']
-        
+
     # Return the grasp effort of the end-effector
     def getGraspEffort(self, therblig):
     	assert(self.type == 'ExecutePlan')

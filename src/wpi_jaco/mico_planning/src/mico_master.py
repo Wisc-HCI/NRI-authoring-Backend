@@ -32,12 +32,20 @@ def save_reply(actionType, success):
     with open("reply.txt", "w") as reply:
         reply.write(reply_str)
 
+
+
 ###
 # Create a target pose for contains the XYZPosition and orientation of the object
 ###
 def createTarget(XYZPosition, orientation):
     xyzPos = list(map(float, [pos.strip() for pos in XYZPosition.split(',')]))
     orientaionPos = list(map(float, [pos.strip() for pos in orientation.split(',')]))
+    if (len(xyzPos) != 3):
+        LOG.ERROR("Input target XYZ position should have a length of 3.\n")
+        return None
+    if (len(orientaionPos) != 3):
+        LOG.ERROR("Input target orientaion position should have a length of 3.")
+        return None
     pose_target = geometry_msgs.msg.Pose()
     pose_target.position.x = xyzPos[0]
     pose_target.position.y = xyzPos[1]
@@ -98,9 +106,11 @@ def execute_plan(acHan, json_plan_file="plan.json"):
                     LOG.INFO("Next therblig: ", parser.getTherbligName(therblig))
 
                     if parser.getTherbligName(therblig) == "Transport Empty":
-                        LOG.INFO("Object info: ", "XYZ-position:", parser.getXYZPosition(therblig), "Orientation:", parser.getOrientation(therblig))
+                        LOG.INFO("Object info: ", "XYZ-position:", parser.getXYZPosition(therblig), "\nOrientation:", parser.getOrientation(therblig))
                         # Call Transport Empty API from mico_planner
                         pose_target = createTarget(parser.getXYZPosition(therblig), parser.getOrientation(therblig))
+                        if pose_target == None:
+                            continue
                         ret = acHan.Transport_Empty(pose_target)
                         if not ret:
                             LOG.ERROR("Transport Empty failed")
@@ -116,9 +126,11 @@ def execute_plan(acHan, json_plan_file="plan.json"):
                         if not ret:
                             LOG.ERROR("Grasp object failed")
                     elif parser.getTherbligName(therblig) == "Transport Loaded":
-                        LOG.INFO("Object info: ", "XYZ-position:", parser.getXYZPosition(therblig), "Orientation:", parser.getOrientation(therblig))
+                        LOG.INFO("Object info: ", "XYZ-position:", parser.getXYZPosition(therblig), "\nOrientation:", parser.getOrientation(therblig))
                         # Call Transport Loaded API from mico_planner
                         pose_target = createTarget(parser.getXYZPosition(therblig), parser.getOrientation(therblig))
+                        if pose_target == None:
+                            continue
                         ret = acHan.Transport_Loaded(pose_target)
                         if not ret:
                             LOG.ERROR("Transport Loaded failed")
