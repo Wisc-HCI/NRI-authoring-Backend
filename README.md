@@ -2,7 +2,7 @@
 
 ** Work in Progress **
 
-This is the github repository of the backend part of the NRI-Authoring Environment, developed in Wisconsin HCI lab from UW-Madison. The backend part is integrated with [Kinova-ros package](https://github.com/Kinovarobotics/kinova-ros). Kinova-ros is the official ROS package for robot control. It launches ROS nodes to communicate with Kinova's MICO arm and also provides config files for MICO arm to do motion planning with Moveit Framework in ROS. Our team also created a front-end Web UI to interact with this backend code. The related frontend UI could be found 9here](https://github.com/Wisc-HCI/nri-authoring-environment). Our entire authoring system diagram could be found at [here](https://drive.google.com/file/d/1kFAraRG7uNckDeX9NCUA1vOekMJZl78d/view?usp=sharing) 
+This is the github repository of the backend part of the NRI-Authoring Environment, developed in Wisconsin HCI lab from UW-Madison. The backend part is integrated with [Kinova-ros package](https://github.com/Kinovarobotics/kinova-ros). Kinova-ros is the official ROS package for robot control. It launches ROS nodes to communicate with Kinova's MICO arm and also provides config files for MICO arm to do motion planning with Moveit Framework in ROS. Our team also created a front-end Web UI to interact with this backend code. The related frontend UI could be found [here](https://github.com/Wisc-HCI/nri-authoring-environment). Our entire authoring system diagram could be found at [here](https://drive.google.com/file/d/1kFAraRG7uNckDeX9NCUA1vOekMJZl78d/view?usp=sharing) 
 
 ## Getting Started
 This package is only tested with Ubuntu 16.04 with ROS Kinetic. Follow the instructions to install the repository to your local machine. For problems encountered, fell free to contact [me](#author).
@@ -95,7 +95,7 @@ sudo reboot
   ```
   rosservice call /'m1n6s200_driver'/in/stop_force_control
   ```
-  Our frontend UI has already integrate this commands with Roslibjs, so that users could easily switch on/off the force-control in the frondend.
+  Our frontend UI has already integrate these commands with Roslibjs, so that users could easily switch on/off the force-control in the frondend.
 
 ### Potential Error in running the backend code
 1. For those who encounter the error when running the moveit_rviz_plugin:
