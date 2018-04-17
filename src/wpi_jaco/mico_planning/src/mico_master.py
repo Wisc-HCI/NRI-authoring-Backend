@@ -12,6 +12,7 @@ import sys
 import os
 import sys
 import json
+import tf
 
 import log as LOG
 from mico_parser import ActionParser
@@ -38,22 +39,27 @@ def save_reply(actionType, success):
 # Create a target pose for contains the XYZPosition and orientation of the object
 ###
 def createTarget(XYZPosition, orientation):
-    xyzPos = list(map(float, [pos.strip() for pos in XYZPosition.split(',')]))
-    orientaionPos = list(map(float, [pos.strip() for pos in orientation.split(',')]))
+    
+    xyzPos = map(float, [pos.strip() for pos in XYZPosition.split(',')])
+    print (orientation, type(orientation))
+    orientaionPos = map(float, [pos.strip() for pos in orientation.split(',')])
+    quaternion = tf.tranformations.quaternion_from_euler(float(orientaionPos[0]), float(orientaionPos[1]), float(orientaionPos[2]))
+    '''
     if (len(xyzPos) != 3):
         LOG.ERROR("Input target XYZ position should have a length of 3.\n")
         return None
     if (len(orientaionPos) != 3):
         LOG.ERROR("Input target orientaion position should have a length of 3.")
         return None
+    '''
     pose_target = geometry_msgs.msg.Pose()
     pose_target.position.x = xyzPos[0]
     pose_target.position.y = xyzPos[1]
     pose_target.position.z = xyzPos[2]
-    pose_target.orientation.x = orientaionPos[0]
-    pose_target.orientation.y = orientaionPos[1]
-    pose_target.orientation.z = orientaionPos[2]
-    pose_target.orientation.w = orientaionPos[3]
+    pose_target.orientation.x = quaternion[0]
+    pose_target.orientation.y = quaternion[1]
+    pose_target.orientation.z = quaternion[2]
+    pose_target.orientation.w = quaternion[3]
 
     return pose_target
 
