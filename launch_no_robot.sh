@@ -11,7 +11,7 @@ sleep 10
 
 
 # start the backend mico_master, litern for the connection from the from end
-gnome-terminal -e "bash -c 'rosrun mico_planning mico_master.py nosim;exec $SHELL'"
+gnome-terminal -e "bash -c 'cd ./src/wpi_jaco/mico_planning/src;python mico_server.py 9999;exec $SHELL'"
 sleep 10
 
 # launch the VREP with a preset scene
