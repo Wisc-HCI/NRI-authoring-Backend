@@ -25,3 +25,5 @@ sleep 10
 # launch the rosbridge server
 gnome-terminal -e "bash -c 'roslaunch rosbridge_server rosbridge_websocket.launch;exec $SHELL'"
 sleep 5
+gnome-terminal -e "bash -c 'cd src/wpi_jaco/mico_planning/src;rosrun mico_planning mico_positionpublisher;exec $SHELL'"
+sleep 5
