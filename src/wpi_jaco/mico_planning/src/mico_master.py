@@ -43,7 +43,7 @@ def createTarget(XYZPosition, orientation):
     xyzPos = map(float, [pos.strip() for pos in XYZPosition.split(',')])
     print (orientation, type(orientation))
     orientaionPos = map(float, [pos.strip() for pos in orientation.split(',')])
-    quaternion = tf.tranformations.quaternion_from_euler(float(orientaionPos[0]), float(orientaionPos[1]), float(orientaionPos[2]))
+    quaternion = tf.transformations.quaternion_from_euler(float(orientaionPos[0]), float(orientaionPos[1]), float(orientaionPos[2]))
     '''
     if (len(xyzPos) != 3):
         LOG.ERROR("Input target XYZ position should have a length of 3.\n")
@@ -108,6 +108,7 @@ def execute_plan(acHan, json_plan_file="plan.json"):
             for i, task in enumerate(parser.getTasks()):
                 LOG.INFO("Starting to execute ", task['name'],'...')
                 # iterate list of therbligs in the current task
+                print ("sizesizesize",len(parser.getTherbligs(i)))
                 for j, therblig in enumerate(parser.getTherbligs(i)):
                     LOG.INFO("Next therblig: ", parser.getTherbligName(therblig))
 
@@ -146,8 +147,15 @@ def execute_plan(acHan, json_plan_file="plan.json"):
                         ret = acHan.Set_Hand_Openness(0.085)
                         if not ret:
                             LOG.ERROR("Release object failed")
-                        else:
-                            LOG.INFO("Unknown therblig")
+                    elif parser.getTherbligName(therblig) == "Rest":
+                        LOG.INFO("Object info: ", "XYZ-position:", parser.getXYZPosition(therblig), "\nOrientation:", parser.getOrientation(therblig))
+                        # Call Rest API from mico_planner
+                        pose_target = createTarget(parser.getXYZPosition(therblig), parser.getOrientation(therblig))
+                        if pose_target == None:
+                            continue
+                        ret = acHan.Rest(pose_target)
+                        if not ret:
+                            LOG.ERROR("Rest failed")
 
             # end VREP simulation
             if acHan.simulator != None:

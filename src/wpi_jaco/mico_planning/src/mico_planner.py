@@ -205,6 +205,38 @@ class ActionHandler:
 
         return success
 
+    ###############
+    # Move the arm to a position and rest there.
+    # Arguments : position = goal position
+    #
+    # Returns : True if the arm is move to the correct location and rest
+    def Rest(self, position):
+        success = False
+        pos_list = []
+
+        try:
+            # use MoveIt for motion planning to target position
+            self.group.set_start_state_to_current_state()
+            self.set_target_position(position)
+            plan = self.group.plan()
+
+            for i in plan.joint_trajectory.points:
+                pos_list.append(i.positions)
+            #self.group.go(wait=True)
+            self.execute_plan(plan)
+
+            # for simulation
+            if self.simulator != None:
+                for p in posList:
+                    self.simulator.move_arm(list(p))
+            ###
+            success = True
+
+        except Exception as e:
+            print("*EXCEPTION OCCURRED* - attempted to move arm")
+            print(e)
+
+        return success
     ################
     # Set the degree of the hand openness
     # Grasp or release and object

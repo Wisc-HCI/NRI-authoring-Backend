@@ -39,17 +39,11 @@ class ActionParser:
     # Returns the object position string
     def getXYZPosition(self, therblig):
     	assert(self.type == 'ExecutePlan')
-        if not (self.getTherbligName(therblig) == "Transport Empty" or self.getTherbligName(therblig) == "Transport Loaded"):
-            print "USAGE ERROR: Expect a Transport Therblig\n"
-            return
         return therblig['parameters'][0]['val']
 
     # Returns the object orientation string
     def getOrientation(self, therblig):
     	assert(self.type == 'ExecutePlan')
-        if not (self.getTherbligName(therblig) == "Transport Empty" or self.getTherbligName(therblig) == "Transport Loaded"):
-            print "USAGE ERROR: Expect a Transport Therblig\n"
-            return
         return therblig['parameters'][1]['val']
 
     # Return the grasp effort of the end-effector
