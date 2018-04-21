@@ -48,13 +48,23 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/src
+CMAKE_SOURCE_DIR = /home/jerry/Desktop/therbligs_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/build
+CMAKE_BINARY_DIR = /home/jerry/Desktop/therbligs_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -67,16 +77,16 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
+# Special rule for the target test
+test/fast: test
 
-.PHONY : edit_cache/fast
+.PHONY : test/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -88,6 +98,28 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target install
 install: preinstall
@@ -101,48 +133,16 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # The main all target
 all: cmake_check_build_system
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver/CMakeFiles/progress.marks
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles 0
+	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/jerry/Desktop/therbligs_ws/build/CMakeFiles /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver/CMakeFiles/progress.marks
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jerry/Desktop/therbligs_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/clean
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/clean
 .PHONY : clean
 
 # The main clean target
@@ -152,187 +152,52 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/preinstall
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/preinstall
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/rule
-.PHONY : kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/rule
+kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_nodejs.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_nodejs.dir/rule
+.PHONY : kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-kinova_interactive_control: kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/rule
+tf_generate_messages_nodejs: kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_nodejs.dir/rule
 
-.PHONY : kinova_interactive_control
+.PHONY : tf_generate_messages_nodejs
 
 # fast build rule for target.
-kinova_interactive_control/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/build
-.PHONY : kinova_interactive_control/fast
+tf_generate_messages_nodejs/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_nodejs.dir/build.make kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_nodejs.dir/build
+.PHONY : tf_generate_messages_nodejs/fast
 
 # Convenience name for target.
-kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-.PHONY : kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_eus.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_eus.dir/rule
+.PHONY : kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-dynamic_reconfigure_generate_messages_lisp: kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+tf_generate_messages_eus: kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_eus.dir/rule
 
-.PHONY : dynamic_reconfigure_generate_messages_lisp
+.PHONY : tf_generate_messages_eus
 
 # fast build rule for target.
-dynamic_reconfigure_generate_messages_lisp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
-
-# Convenience name for target.
-kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-.PHONY : kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_eus: kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_eus
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_eus/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_eus/fast
-
-# Convenience name for target.
-kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-.PHONY : kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_nodejs: kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_nodejs
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_nodejs/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
-
-# Convenience name for target.
-kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-.PHONY : kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_cpp: kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_cpp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_cpp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
-
-# Convenience name for target.
-kinova-ros/kinova_driver/CMakeFiles/joint_trajectory_action_server.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/joint_trajectory_action_server.dir/rule
-.PHONY : kinova-ros/kinova_driver/CMakeFiles/joint_trajectory_action_server.dir/rule
-
-# Convenience name for target.
-joint_trajectory_action_server: kinova-ros/kinova_driver/CMakeFiles/joint_trajectory_action_server.dir/rule
-
-.PHONY : joint_trajectory_action_server
-
-# fast build rule for target.
-joint_trajectory_action_server/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/joint_trajectory_action_server.dir/build.make kinova-ros/kinova_driver/CMakeFiles/joint_trajectory_action_server.dir/build
-.PHONY : joint_trajectory_action_server/fast
-
-# Convenience name for target.
-kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/rule
-.PHONY : kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/rule
-
-# Convenience name for target.
-gripper_command_action_server: kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/rule
-
-.PHONY : gripper_command_action_server
-
-# fast build rule for target.
-gripper_command_action_server/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/build.make kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/build
-.PHONY : gripper_command_action_server/fast
-
-# Convenience name for target.
-kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-.PHONY : kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_py: kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_py
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_py/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_py/fast
-
-# Convenience name for target.
-kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-.PHONY : kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_gencfg: kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-
-.PHONY : dynamic_reconfigure_gencfg
-
-# fast build rule for target.
-dynamic_reconfigure_gencfg/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
-.PHONY : dynamic_reconfigure_gencfg/fast
-
-# Convenience name for target.
-kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/rule
-.PHONY : kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/rule
-
-# Convenience name for target.
-kinova_tf_updater: kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/rule
-
-.PHONY : kinova_tf_updater
-
-# fast build rule for target.
-kinova_tf_updater/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/build
-.PHONY : kinova_tf_updater/fast
-
-# Convenience name for target.
-kinova-ros/kinova_driver/CMakeFiles/kinova_driver_gencfg.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/kinova_driver_gencfg.dir/rule
-.PHONY : kinova-ros/kinova_driver/CMakeFiles/kinova_driver_gencfg.dir/rule
-
-# Convenience name for target.
-kinova_driver_gencfg: kinova-ros/kinova_driver/CMakeFiles/kinova_driver_gencfg.dir/rule
-
-.PHONY : kinova_driver_gencfg
-
-# fast build rule for target.
-kinova_driver_gencfg/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver_gencfg.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver_gencfg.dir/build
-.PHONY : kinova_driver_gencfg/fast
+tf_generate_messages_eus/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_eus.dir/build.make kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_eus.dir/build
+.PHONY : tf_generate_messages_eus/fast
 
 # Convenience name for target.
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/rule
 .PHONY : kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/rule
 
 # Convenience name for target.
@@ -342,12 +207,12 @@ kinova_driver: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/rule
 
 # fast build rule for target.
 kinova_driver/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build
 .PHONY : kinova_driver/fast
 
 # Convenience name for target.
 kinova-ros/kinova_driver/CMakeFiles/kinova_arm_driver.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/kinova_arm_driver.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/kinova_arm_driver.dir/rule
 .PHONY : kinova-ros/kinova_driver/CMakeFiles/kinova_arm_driver.dir/rule
 
 # Convenience name for target.
@@ -357,8 +222,293 @@ kinova_arm_driver: kinova-ros/kinova_driver/CMakeFiles/kinova_arm_driver.dir/rul
 
 # fast build rule for target.
 kinova_arm_driver/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_arm_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_arm_driver.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_arm_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_arm_driver.dir/build
 .PHONY : kinova_arm_driver/fast
+
+# Convenience name for target.
+kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+.PHONY : kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_cpp: kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_cpp
+
+# fast build rule for target.
+tf2_msgs_generate_messages_cpp/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
+.PHONY : tf2_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+.PHONY : kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_cpp: kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_cpp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_cpp/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
+
+# Convenience name for target.
+kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/rule
+.PHONY : kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/rule
+
+# Convenience name for target.
+kinova_interactive_control: kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/rule
+
+.PHONY : kinova_interactive_control
+
+# fast build rule for target.
+kinova_interactive_control/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/build
+.PHONY : kinova_interactive_control/fast
+
+# Convenience name for target.
+kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+.PHONY : kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_nodejs: kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_nodejs
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_nodejs/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
+
+# Convenience name for target.
+kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+.PHONY : kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_eus: kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_eus
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_eus/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_eus/fast
+
+# Convenience name for target.
+kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+.PHONY : kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_lisp: kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_lisp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_lisp/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
+
+# Convenience name for target.
+kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_py.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_py.dir/rule
+.PHONY : kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_py.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_py: kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_py.dir/rule
+
+.PHONY : tf_generate_messages_py
+
+# fast build rule for target.
+tf_generate_messages_py/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_py.dir/build.make kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_py.dir/build
+.PHONY : tf_generate_messages_py/fast
+
+# Convenience name for target.
+kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_cpp.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_cpp.dir/rule
+.PHONY : kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_cpp: kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_cpp.dir/rule
+
+.PHONY : tf_generate_messages_cpp
+
+# fast build rule for target.
+tf_generate_messages_cpp/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_cpp.dir/build.make kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_cpp.dir/build
+.PHONY : tf_generate_messages_cpp/fast
+
+# Convenience name for target.
+kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+.PHONY : kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_py: kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_py
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_py/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_py/fast
+
+# Convenience name for target.
+kinova-ros/kinova_driver/CMakeFiles/joint_trajectory_action_server.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/joint_trajectory_action_server.dir/rule
+.PHONY : kinova-ros/kinova_driver/CMakeFiles/joint_trajectory_action_server.dir/rule
+
+# Convenience name for target.
+joint_trajectory_action_server: kinova-ros/kinova_driver/CMakeFiles/joint_trajectory_action_server.dir/rule
+
+.PHONY : joint_trajectory_action_server
+
+# fast build rule for target.
+joint_trajectory_action_server/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/joint_trajectory_action_server.dir/build.make kinova-ros/kinova_driver/CMakeFiles/joint_trajectory_action_server.dir/build
+.PHONY : joint_trajectory_action_server/fast
+
+# Convenience name for target.
+kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/rule
+.PHONY : kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/rule
+
+# Convenience name for target.
+gripper_command_action_server: kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/rule
+
+.PHONY : gripper_command_action_server
+
+# fast build rule for target.
+gripper_command_action_server/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/build.make kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/build
+.PHONY : gripper_command_action_server/fast
+
+# Convenience name for target.
+kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+.PHONY : kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_lisp: kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_lisp
+
+# fast build rule for target.
+tf2_msgs_generate_messages_lisp/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
+.PHONY : tf2_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+.PHONY : kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_gencfg: kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+
+.PHONY : dynamic_reconfigure_gencfg
+
+# fast build rule for target.
+dynamic_reconfigure_gencfg/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make kinova-ros/kinova_driver/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
+.PHONY : dynamic_reconfigure_gencfg/fast
+
+# Convenience name for target.
+kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_lisp.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_lisp.dir/rule
+.PHONY : kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_lisp: kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_lisp.dir/rule
+
+.PHONY : tf_generate_messages_lisp
+
+# fast build rule for target.
+tf_generate_messages_lisp/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_lisp.dir/build.make kinova-ros/kinova_driver/CMakeFiles/tf_generate_messages_lisp.dir/build
+.PHONY : tf_generate_messages_lisp/fast
+
+# Convenience name for target.
+kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+.PHONY : kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_nodejs: kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+tf2_msgs_generate_messages_nodejs/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
+.PHONY : tf2_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+.PHONY : kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_eus: kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_eus
+
+# fast build rule for target.
+tf2_msgs_generate_messages_eus/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
+.PHONY : tf2_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+.PHONY : kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_py: kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_py
+
+# fast build rule for target.
+tf2_msgs_generate_messages_py/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make kinova-ros/kinova_driver/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
+.PHONY : tf2_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+kinova-ros/kinova_driver/CMakeFiles/kinova_driver_gencfg.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/kinova_driver_gencfg.dir/rule
+.PHONY : kinova-ros/kinova_driver/CMakeFiles/kinova_driver_gencfg.dir/rule
+
+# Convenience name for target.
+kinova_driver_gencfg: kinova-ros/kinova_driver/CMakeFiles/kinova_driver_gencfg.dir/rule
+
+.PHONY : kinova_driver_gencfg
+
+# fast build rule for target.
+kinova_driver_gencfg/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver_gencfg.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver_gencfg.dir/build
+.PHONY : kinova_driver_gencfg/fast
+
+# Convenience name for target.
+kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/rule
+.PHONY : kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/rule
+
+# Convenience name for target.
+kinova_tf_updater: kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/rule
+
+.PHONY : kinova_tf_updater
+
+# fast build rule for target.
+kinova_tf_updater/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/build
+.PHONY : kinova_tf_updater/fast
 
 src/joint_trajectory_action/gripper_command_action_server.o: src/joint_trajectory_action/gripper_command_action_server.cpp.o
 
@@ -366,7 +516,7 @@ src/joint_trajectory_action/gripper_command_action_server.o: src/joint_trajector
 
 # target to build an object file
 src/joint_trajectory_action/gripper_command_action_server.cpp.o:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/build.make kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/src/joint_trajectory_action/gripper_command_action_server.cpp.o
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/build.make kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/src/joint_trajectory_action/gripper_command_action_server.cpp.o
 .PHONY : src/joint_trajectory_action/gripper_command_action_server.cpp.o
 
 src/joint_trajectory_action/gripper_command_action_server.i: src/joint_trajectory_action/gripper_command_action_server.cpp.i
@@ -375,7 +525,7 @@ src/joint_trajectory_action/gripper_command_action_server.i: src/joint_trajector
 
 # target to preprocess a source file
 src/joint_trajectory_action/gripper_command_action_server.cpp.i:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/build.make kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/src/joint_trajectory_action/gripper_command_action_server.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/build.make kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/src/joint_trajectory_action/gripper_command_action_server.cpp.i
 .PHONY : src/joint_trajectory_action/gripper_command_action_server.cpp.i
 
 src/joint_trajectory_action/gripper_command_action_server.s: src/joint_trajectory_action/gripper_command_action_server.cpp.s
@@ -384,7 +534,7 @@ src/joint_trajectory_action/gripper_command_action_server.s: src/joint_trajector
 
 # target to generate assembly for a file
 src/joint_trajectory_action/gripper_command_action_server.cpp.s:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/build.make kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/src/joint_trajectory_action/gripper_command_action_server.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/build.make kinova-ros/kinova_driver/CMakeFiles/gripper_command_action_server.dir/src/joint_trajectory_action/gripper_command_action_server.cpp.s
 .PHONY : src/joint_trajectory_action/gripper_command_action_server.cpp.s
 
 src/joint_trajectory_action/joint_trajectory_action_server.o: src/joint_trajectory_action/joint_trajectory_action_server.cpp.o
@@ -393,7 +543,7 @@ src/joint_trajectory_action/joint_trajectory_action_server.o: src/joint_trajecto
 
 # target to build an object file
 src/joint_trajectory_action/joint_trajectory_action_server.cpp.o:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/joint_trajectory_action_server.dir/build.make kinova-ros/kinova_driver/CMakeFiles/joint_trajectory_action_server.dir/src/joint_trajectory_action/joint_trajectory_action_server.cpp.o
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/joint_trajectory_action_server.dir/build.make kinova-ros/kinova_driver/CMakeFiles/joint_trajectory_action_server.dir/src/joint_trajectory_action/joint_trajectory_action_server.cpp.o
 .PHONY : src/joint_trajectory_action/joint_trajectory_action_server.cpp.o
 
 src/joint_trajectory_action/joint_trajectory_action_server.i: src/joint_trajectory_action/joint_trajectory_action_server.cpp.i
@@ -402,7 +552,7 @@ src/joint_trajectory_action/joint_trajectory_action_server.i: src/joint_trajecto
 
 # target to preprocess a source file
 src/joint_trajectory_action/joint_trajectory_action_server.cpp.i:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/joint_trajectory_action_server.dir/build.make kinova-ros/kinova_driver/CMakeFiles/joint_trajectory_action_server.dir/src/joint_trajectory_action/joint_trajectory_action_server.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/joint_trajectory_action_server.dir/build.make kinova-ros/kinova_driver/CMakeFiles/joint_trajectory_action_server.dir/src/joint_trajectory_action/joint_trajectory_action_server.cpp.i
 .PHONY : src/joint_trajectory_action/joint_trajectory_action_server.cpp.i
 
 src/joint_trajectory_action/joint_trajectory_action_server.s: src/joint_trajectory_action/joint_trajectory_action_server.cpp.s
@@ -411,7 +561,7 @@ src/joint_trajectory_action/joint_trajectory_action_server.s: src/joint_trajecto
 
 # target to generate assembly for a file
 src/joint_trajectory_action/joint_trajectory_action_server.cpp.s:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/joint_trajectory_action_server.dir/build.make kinova-ros/kinova_driver/CMakeFiles/joint_trajectory_action_server.dir/src/joint_trajectory_action/joint_trajectory_action_server.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/joint_trajectory_action_server.dir/build.make kinova-ros/kinova_driver/CMakeFiles/joint_trajectory_action_server.dir/src/joint_trajectory_action/joint_trajectory_action_server.cpp.s
 .PHONY : src/joint_trajectory_action/joint_trajectory_action_server.cpp.s
 
 src/kinova_api.o: src/kinova_api.cpp.o
@@ -420,7 +570,7 @@ src/kinova_api.o: src/kinova_api.cpp.o
 
 # target to build an object file
 src/kinova_api.cpp.o:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.o
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.o
 .PHONY : src/kinova_api.cpp.o
 
 src/kinova_api.i: src/kinova_api.cpp.i
@@ -429,7 +579,7 @@ src/kinova_api.i: src/kinova_api.cpp.i
 
 # target to preprocess a source file
 src/kinova_api.cpp.i:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.i
 .PHONY : src/kinova_api.cpp.i
 
 src/kinova_api.s: src/kinova_api.cpp.s
@@ -438,7 +588,7 @@ src/kinova_api.s: src/kinova_api.cpp.s
 
 # target to generate assembly for a file
 src/kinova_api.cpp.s:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.s
 .PHONY : src/kinova_api.cpp.s
 
 src/kinova_arm.o: src/kinova_arm.cpp.o
@@ -447,7 +597,7 @@ src/kinova_arm.o: src/kinova_arm.cpp.o
 
 # target to build an object file
 src/kinova_arm.cpp.o:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.o
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.o
 .PHONY : src/kinova_arm.cpp.o
 
 src/kinova_arm.i: src/kinova_arm.cpp.i
@@ -456,7 +606,7 @@ src/kinova_arm.i: src/kinova_arm.cpp.i
 
 # target to preprocess a source file
 src/kinova_arm.cpp.i:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.i
 .PHONY : src/kinova_arm.cpp.i
 
 src/kinova_arm.s: src/kinova_arm.cpp.s
@@ -465,7 +615,7 @@ src/kinova_arm.s: src/kinova_arm.cpp.s
 
 # target to generate assembly for a file
 src/kinova_arm.cpp.s:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.s
 .PHONY : src/kinova_arm.cpp.s
 
 src/kinova_arm_kinematics.o: src/kinova_arm_kinematics.cpp.o
@@ -474,7 +624,7 @@ src/kinova_arm_kinematics.o: src/kinova_arm_kinematics.cpp.o
 
 # target to build an object file
 src/kinova_arm_kinematics.cpp.o:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/src/kinova_arm_kinematics.cpp.o
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/src/kinova_arm_kinematics.cpp.o
 .PHONY : src/kinova_arm_kinematics.cpp.o
 
 src/kinova_arm_kinematics.i: src/kinova_arm_kinematics.cpp.i
@@ -483,7 +633,7 @@ src/kinova_arm_kinematics.i: src/kinova_arm_kinematics.cpp.i
 
 # target to preprocess a source file
 src/kinova_arm_kinematics.cpp.i:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/src/kinova_arm_kinematics.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/src/kinova_arm_kinematics.cpp.i
 .PHONY : src/kinova_arm_kinematics.cpp.i
 
 src/kinova_arm_kinematics.s: src/kinova_arm_kinematics.cpp.s
@@ -492,7 +642,7 @@ src/kinova_arm_kinematics.s: src/kinova_arm_kinematics.cpp.s
 
 # target to generate assembly for a file
 src/kinova_arm_kinematics.cpp.s:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/src/kinova_arm_kinematics.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/src/kinova_arm_kinematics.cpp.s
 .PHONY : src/kinova_arm_kinematics.cpp.s
 
 src/kinova_comm.o: src/kinova_comm.cpp.o
@@ -501,7 +651,7 @@ src/kinova_comm.o: src/kinova_comm.cpp.o
 
 # target to build an object file
 src/kinova_comm.cpp.o:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.o
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.o
 .PHONY : src/kinova_comm.cpp.o
 
 src/kinova_comm.i: src/kinova_comm.cpp.i
@@ -510,7 +660,7 @@ src/kinova_comm.i: src/kinova_comm.cpp.i
 
 # target to preprocess a source file
 src/kinova_comm.cpp.i:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.i
 .PHONY : src/kinova_comm.cpp.i
 
 src/kinova_comm.s: src/kinova_comm.cpp.s
@@ -519,7 +669,7 @@ src/kinova_comm.s: src/kinova_comm.cpp.s
 
 # target to generate assembly for a file
 src/kinova_comm.cpp.s:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.s
 .PHONY : src/kinova_comm.cpp.s
 
 src/kinova_fingers_action.o: src/kinova_fingers_action.cpp.o
@@ -528,7 +678,7 @@ src/kinova_fingers_action.o: src/kinova_fingers_action.cpp.o
 
 # target to build an object file
 src/kinova_fingers_action.cpp.o:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.o
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.o
 .PHONY : src/kinova_fingers_action.cpp.o
 
 src/kinova_fingers_action.i: src/kinova_fingers_action.cpp.i
@@ -537,7 +687,7 @@ src/kinova_fingers_action.i: src/kinova_fingers_action.cpp.i
 
 # target to preprocess a source file
 src/kinova_fingers_action.cpp.i:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.i
 .PHONY : src/kinova_fingers_action.cpp.i
 
 src/kinova_fingers_action.s: src/kinova_fingers_action.cpp.s
@@ -546,7 +696,7 @@ src/kinova_fingers_action.s: src/kinova_fingers_action.cpp.s
 
 # target to generate assembly for a file
 src/kinova_fingers_action.cpp.s:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.s
 .PHONY : src/kinova_fingers_action.cpp.s
 
 src/kinova_joint_angles_action.o: src/kinova_joint_angles_action.cpp.o
@@ -555,7 +705,7 @@ src/kinova_joint_angles_action.o: src/kinova_joint_angles_action.cpp.o
 
 # target to build an object file
 src/kinova_joint_angles_action.cpp.o:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_action.cpp.o
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_action.cpp.o
 .PHONY : src/kinova_joint_angles_action.cpp.o
 
 src/kinova_joint_angles_action.i: src/kinova_joint_angles_action.cpp.i
@@ -564,7 +714,7 @@ src/kinova_joint_angles_action.i: src/kinova_joint_angles_action.cpp.i
 
 # target to preprocess a source file
 src/kinova_joint_angles_action.cpp.i:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_action.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_action.cpp.i
 .PHONY : src/kinova_joint_angles_action.cpp.i
 
 src/kinova_joint_angles_action.s: src/kinova_joint_angles_action.cpp.s
@@ -573,7 +723,7 @@ src/kinova_joint_angles_action.s: src/kinova_joint_angles_action.cpp.s
 
 # target to generate assembly for a file
 src/kinova_joint_angles_action.cpp.s:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_action.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_action.cpp.s
 .PHONY : src/kinova_joint_angles_action.cpp.s
 
 src/kinova_joint_trajectory_controller.o: src/kinova_joint_trajectory_controller.cpp.o
@@ -582,7 +732,7 @@ src/kinova_joint_trajectory_controller.o: src/kinova_joint_trajectory_controller
 
 # target to build an object file
 src/kinova_joint_trajectory_controller.cpp.o:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.o
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.o
 .PHONY : src/kinova_joint_trajectory_controller.cpp.o
 
 src/kinova_joint_trajectory_controller.i: src/kinova_joint_trajectory_controller.cpp.i
@@ -591,7 +741,7 @@ src/kinova_joint_trajectory_controller.i: src/kinova_joint_trajectory_controller
 
 # target to preprocess a source file
 src/kinova_joint_trajectory_controller.cpp.i:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.i
 .PHONY : src/kinova_joint_trajectory_controller.cpp.i
 
 src/kinova_joint_trajectory_controller.s: src/kinova_joint_trajectory_controller.cpp.s
@@ -600,7 +750,7 @@ src/kinova_joint_trajectory_controller.s: src/kinova_joint_trajectory_controller
 
 # target to generate assembly for a file
 src/kinova_joint_trajectory_controller.cpp.s:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.s
 .PHONY : src/kinova_joint_trajectory_controller.cpp.s
 
 src/kinova_ros_types.o: src/kinova_ros_types.cpp.o
@@ -609,8 +759,8 @@ src/kinova_ros_types.o: src/kinova_ros_types.cpp.o
 
 # target to build an object file
 src/kinova_ros_types.cpp.o:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/src/kinova_ros_types.cpp.o
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.o
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.o
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/src/kinova_ros_types.cpp.o
 .PHONY : src/kinova_ros_types.cpp.o
 
 src/kinova_ros_types.i: src/kinova_ros_types.cpp.i
@@ -619,8 +769,8 @@ src/kinova_ros_types.i: src/kinova_ros_types.cpp.i
 
 # target to preprocess a source file
 src/kinova_ros_types.cpp.i:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/src/kinova_ros_types.cpp.i
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/src/kinova_ros_types.cpp.i
 .PHONY : src/kinova_ros_types.cpp.i
 
 src/kinova_ros_types.s: src/kinova_ros_types.cpp.s
@@ -629,8 +779,8 @@ src/kinova_ros_types.s: src/kinova_ros_types.cpp.s
 
 # target to generate assembly for a file
 src/kinova_ros_types.cpp.s:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/src/kinova_ros_types.cpp.s
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/src/kinova_ros_types.cpp.s
 .PHONY : src/kinova_ros_types.cpp.s
 
 src/kinova_tool_pose_action.o: src/kinova_tool_pose_action.cpp.o
@@ -639,7 +789,7 @@ src/kinova_tool_pose_action.o: src/kinova_tool_pose_action.cpp.o
 
 # target to build an object file
 src/kinova_tool_pose_action.cpp.o:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_action.cpp.o
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_action.cpp.o
 .PHONY : src/kinova_tool_pose_action.cpp.o
 
 src/kinova_tool_pose_action.i: src/kinova_tool_pose_action.cpp.i
@@ -648,7 +798,7 @@ src/kinova_tool_pose_action.i: src/kinova_tool_pose_action.cpp.i
 
 # target to preprocess a source file
 src/kinova_tool_pose_action.cpp.i:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_action.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_action.cpp.i
 .PHONY : src/kinova_tool_pose_action.cpp.i
 
 src/kinova_tool_pose_action.s: src/kinova_tool_pose_action.cpp.s
@@ -657,7 +807,7 @@ src/kinova_tool_pose_action.s: src/kinova_tool_pose_action.cpp.s
 
 # target to generate assembly for a file
 src/kinova_tool_pose_action.cpp.s:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_action.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_action.cpp.s
 .PHONY : src/kinova_tool_pose_action.cpp.s
 
 src/nodes/kinova_arm_driver.o: src/nodes/kinova_arm_driver.cpp.o
@@ -666,7 +816,7 @@ src/nodes/kinova_arm_driver.o: src/nodes/kinova_arm_driver.cpp.o
 
 # target to build an object file
 src/nodes/kinova_arm_driver.cpp.o:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_arm_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_arm_driver.dir/src/nodes/kinova_arm_driver.cpp.o
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_arm_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_arm_driver.dir/src/nodes/kinova_arm_driver.cpp.o
 .PHONY : src/nodes/kinova_arm_driver.cpp.o
 
 src/nodes/kinova_arm_driver.i: src/nodes/kinova_arm_driver.cpp.i
@@ -675,7 +825,7 @@ src/nodes/kinova_arm_driver.i: src/nodes/kinova_arm_driver.cpp.i
 
 # target to preprocess a source file
 src/nodes/kinova_arm_driver.cpp.i:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_arm_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_arm_driver.dir/src/nodes/kinova_arm_driver.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_arm_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_arm_driver.dir/src/nodes/kinova_arm_driver.cpp.i
 .PHONY : src/nodes/kinova_arm_driver.cpp.i
 
 src/nodes/kinova_arm_driver.s: src/nodes/kinova_arm_driver.cpp.s
@@ -684,7 +834,7 @@ src/nodes/kinova_arm_driver.s: src/nodes/kinova_arm_driver.cpp.s
 
 # target to generate assembly for a file
 src/nodes/kinova_arm_driver.cpp.s:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_arm_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_arm_driver.dir/src/nodes/kinova_arm_driver.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_arm_driver.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_arm_driver.dir/src/nodes/kinova_arm_driver.cpp.s
 .PHONY : src/nodes/kinova_arm_driver.cpp.s
 
 src/nodes/kinova_interactive_control.o: src/nodes/kinova_interactive_control.cpp.o
@@ -693,7 +843,7 @@ src/nodes/kinova_interactive_control.o: src/nodes/kinova_interactive_control.cpp
 
 # target to build an object file
 src/nodes/kinova_interactive_control.cpp.o:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.o
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.o
 .PHONY : src/nodes/kinova_interactive_control.cpp.o
 
 src/nodes/kinova_interactive_control.i: src/nodes/kinova_interactive_control.cpp.i
@@ -702,7 +852,7 @@ src/nodes/kinova_interactive_control.i: src/nodes/kinova_interactive_control.cpp
 
 # target to preprocess a source file
 src/nodes/kinova_interactive_control.cpp.i:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.i
 .PHONY : src/nodes/kinova_interactive_control.cpp.i
 
 src/nodes/kinova_interactive_control.s: src/nodes/kinova_interactive_control.cpp.s
@@ -711,7 +861,7 @@ src/nodes/kinova_interactive_control.s: src/nodes/kinova_interactive_control.cpp
 
 # target to generate assembly for a file
 src/nodes/kinova_interactive_control.cpp.s:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.s
 .PHONY : src/nodes/kinova_interactive_control.cpp.s
 
 src/nodes/kinova_tf_updater.o: src/nodes/kinova_tf_updater.cpp.o
@@ -720,7 +870,7 @@ src/nodes/kinova_tf_updater.o: src/nodes/kinova_tf_updater.cpp.o
 
 # target to build an object file
 src/nodes/kinova_tf_updater.cpp.o:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/src/nodes/kinova_tf_updater.cpp.o
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/src/nodes/kinova_tf_updater.cpp.o
 .PHONY : src/nodes/kinova_tf_updater.cpp.o
 
 src/nodes/kinova_tf_updater.i: src/nodes/kinova_tf_updater.cpp.i
@@ -729,7 +879,7 @@ src/nodes/kinova_tf_updater.i: src/nodes/kinova_tf_updater.cpp.i
 
 # target to preprocess a source file
 src/nodes/kinova_tf_updater.cpp.i:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/src/nodes/kinova_tf_updater.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/src/nodes/kinova_tf_updater.cpp.i
 .PHONY : src/nodes/kinova_tf_updater.cpp.i
 
 src/nodes/kinova_tf_updater.s: src/nodes/kinova_tf_updater.cpp.s
@@ -738,7 +888,7 @@ src/nodes/kinova_tf_updater.s: src/nodes/kinova_tf_updater.cpp.s
 
 # target to generate assembly for a file
 src/nodes/kinova_tf_updater.cpp.s:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/src/nodes/kinova_tf_updater.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/build.make kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/src/nodes/kinova_tf_updater.cpp.s
 .PHONY : src/nodes/kinova_tf_updater.cpp.s
 
 # Help Target
@@ -747,26 +897,36 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... install/local"
-	@echo "... install"
-	@echo "... kinova_interactive_control"
-	@echo "... dynamic_reconfigure_generate_messages_lisp"
-	@echo "... dynamic_reconfigure_generate_messages_eus"
-	@echo "... test"
-	@echo "... dynamic_reconfigure_generate_messages_nodejs"
 	@echo "... list_install_components"
-	@echo "... install/strip"
-	@echo "... dynamic_reconfigure_generate_messages_cpp"
-	@echo "... joint_trajectory_action_server"
-	@echo "... gripper_command_action_server"
-	@echo "... dynamic_reconfigure_generate_messages_py"
-	@echo "... dynamic_reconfigure_gencfg"
-	@echo "... kinova_tf_updater"
-	@echo "... kinova_driver_gencfg"
+	@echo "... rebuild_cache"
+	@echo "... test"
+	@echo "... install/local"
+	@echo "... tf_generate_messages_nodejs"
+	@echo "... tf_generate_messages_eus"
 	@echo "... kinova_driver"
 	@echo "... kinova_arm_driver"
+	@echo "... tf2_msgs_generate_messages_cpp"
+	@echo "... dynamic_reconfigure_generate_messages_cpp"
+	@echo "... kinova_interactive_control"
+	@echo "... dynamic_reconfigure_generate_messages_nodejs"
+	@echo "... install/strip"
+	@echo "... dynamic_reconfigure_generate_messages_eus"
+	@echo "... dynamic_reconfigure_generate_messages_lisp"
+	@echo "... tf_generate_messages_py"
+	@echo "... tf_generate_messages_cpp"
+	@echo "... dynamic_reconfigure_generate_messages_py"
+	@echo "... joint_trajectory_action_server"
+	@echo "... gripper_command_action_server"
+	@echo "... tf2_msgs_generate_messages_lisp"
+	@echo "... edit_cache"
+	@echo "... dynamic_reconfigure_gencfg"
+	@echo "... tf_generate_messages_lisp"
+	@echo "... tf2_msgs_generate_messages_nodejs"
+	@echo "... install"
+	@echo "... tf2_msgs_generate_messages_eus"
+	@echo "... tf2_msgs_generate_messages_py"
+	@echo "... kinova_driver_gencfg"
+	@echo "... kinova_tf_updater"
 	@echo "... src/joint_trajectory_action/gripper_command_action_server.o"
 	@echo "... src/joint_trajectory_action/gripper_command_action_server.i"
 	@echo "... src/joint_trajectory_action/gripper_command_action_server.s"
@@ -820,6 +980,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

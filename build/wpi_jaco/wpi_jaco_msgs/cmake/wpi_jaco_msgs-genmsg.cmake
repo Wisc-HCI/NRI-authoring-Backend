@@ -2,7 +2,7 @@
 
 message(STATUS "wpi_jaco_msgs: 10 messages, 6 services")
 
-set(MSG_I_FLAGS "-Iwpi_jaco_msgs:/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg;-Iwpi_jaco_msgs:/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg;-Iactionlib_msgs:/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Iwpi_jaco_msgs:/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg;-Iwpi_jaco_msgs:/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg;-Iactionlib_msgs:/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,84 +17,84 @@ add_custom_target(wpi_jaco_msgs_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/JacoFK.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg" NAME_WE)
 add_custom_target(_wpi_jaco_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/JacoFK.srv" "geometry_msgs/Quaternion:geometry_msgs/PoseStamped:geometry_msgs/Pose:std_msgs/Header:geometry_msgs/Point"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg" ""
 )
 
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/EStop.srv" NAME_WE)
 add_custom_target(_wpi_jaco_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg" "wpi_jaco_msgs/HomeArmResult:actionlib_msgs/GoalID:std_msgs/Header:actionlib_msgs/GoalStatus"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/EStop.srv" ""
 )
 
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/EulerToQuaternion.srv" NAME_WE)
 add_custom_target(_wpi_jaco_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg" "wpi_jaco_msgs/AngularCommand:actionlib_msgs/GoalID:std_msgs/Header:wpi_jaco_msgs/HomeArmGoal"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/EulerToQuaternion.srv" "geometry_msgs/Quaternion"
 )
 
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/EulerToQuaternion.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmAction.msg" NAME_WE)
 add_custom_target(_wpi_jaco_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/EulerToQuaternion.srv" "geometry_msgs/Quaternion"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmAction.msg" "wpi_jaco_msgs/HomeArmActionGoal:std_msgs/Header:wpi_jaco_msgs/HomeArmFeedback:wpi_jaco_msgs/HomeArmActionResult:wpi_jaco_msgs/HomeArmGoal:wpi_jaco_msgs/AngularCommand:wpi_jaco_msgs/HomeArmActionFeedback:actionlib_msgs/GoalID:wpi_jaco_msgs/HomeArmResult:actionlib_msgs/GoalStatus"
 )
 
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/JacoFingerVel.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg" NAME_WE)
 add_custom_target(_wpi_jaco_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/JacoFingerVel.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg" "wpi_jaco_msgs/AngularCommand"
 )
 
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg" NAME_WE)
 add_custom_target(_wpi_jaco_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg" "wpi_jaco_msgs/HomeArmGoal:actionlib_msgs/GoalID:wpi_jaco_msgs/AngularCommand:std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmAction.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/QuaternionToEuler.srv" NAME_WE)
 add_custom_target(_wpi_jaco_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmAction.msg" "wpi_jaco_msgs/HomeArmResult:std_msgs/Header:wpi_jaco_msgs/HomeArmActionResult:wpi_jaco_msgs/HomeArmFeedback:wpi_jaco_msgs/HomeArmActionGoal:wpi_jaco_msgs/HomeArmGoal:wpi_jaco_msgs/HomeArmActionFeedback:wpi_jaco_msgs/AngularCommand:actionlib_msgs/GoalID:actionlib_msgs/GoalStatus"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/QuaternionToEuler.srv" "geometry_msgs/Quaternion"
 )
 
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/CartesianCommand.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/JacoFingerVel.msg" NAME_WE)
 add_custom_target(_wpi_jaco_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/CartesianCommand.msg" "geometry_msgs/Twist:geometry_msgs/Vector3"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/JacoFingerVel.msg" ""
 )
 
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/EStop.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/GetAngularPosition.srv" NAME_WE)
 add_custom_target(_wpi_jaco_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/EStop.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/GetAngularPosition.srv" ""
 )
 
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/GetCartesianPosition.srv" NAME_WE)
 add_custom_target(_wpi_jaco_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg" "wpi_jaco_msgs/AngularCommand"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/GetCartesianPosition.srv" "geometry_msgs/Twist:geometry_msgs/Vector3"
 )
 
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/CartesianCommand.msg" NAME_WE)
 add_custom_target(_wpi_jaco_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg" "actionlib_msgs/GoalID:std_msgs/Header:wpi_jaco_msgs/HomeArmFeedback:actionlib_msgs/GoalStatus"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/CartesianCommand.msg" "geometry_msgs/Twist:geometry_msgs/Vector3"
 )
 
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/JacoFK.srv" NAME_WE)
 add_custom_target(_wpi_jaco_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/JacoFK.srv" "geometry_msgs/Quaternion:geometry_msgs/PoseStamped:geometry_msgs/Pose:std_msgs/Header:geometry_msgs/Point"
 )
 
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/QuaternionToEuler.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg" NAME_WE)
 add_custom_target(_wpi_jaco_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/QuaternionToEuler.srv" "geometry_msgs/Quaternion"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg" "wpi_jaco_msgs/HomeArmFeedback:actionlib_msgs/GoalID:std_msgs/Header:actionlib_msgs/GoalStatus"
 )
 
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/GetCartesianPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg" NAME_WE)
 add_custom_target(_wpi_jaco_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/GetCartesianPosition.srv" "geometry_msgs/Twist:geometry_msgs/Vector3"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg" ""
 )
 
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg" NAME_WE)
 add_custom_target(_wpi_jaco_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg" "actionlib_msgs/GoalID:std_msgs/Header:wpi_jaco_msgs/HomeArmResult:actionlib_msgs/GoalStatus"
 )
 
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/GetAngularPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg" NAME_WE)
 add_custom_target(_wpi_jaco_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/GetAngularPosition.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "wpi_jaco_msgs" "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg" ""
 )
 
 #
@@ -104,101 +104,101 @@ add_custom_target(_wpi_jaco_msgs_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_cpp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg;/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_cpp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/JacoFingerVel.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg"
+  "${MSG_I_FLAGS}"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/wpi_jaco_msgs
+)
+_generate_msg_cpp(wpi_jaco_msgs
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg"
+  "${MSG_I_FLAGS}"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/wpi_jaco_msgs
+)
+_generate_msg_cpp(wpi_jaco_msgs
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/JacoFingerVel.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_cpp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/wpi_jaco_msgs
-)
-_generate_msg_cpp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmAction.msg"
-  "${MSG_I_FLAGS}"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/wpi_jaco_msgs
-)
-_generate_msg_cpp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/CartesianCommand.msg"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/CartesianCommand.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_cpp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_cpp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg"
-  "${MSG_I_FLAGS}"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/wpi_jaco_msgs
-)
-_generate_msg_cpp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_cpp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/wpi_jaco_msgs
+)
+_generate_msg_cpp(wpi_jaco_msgs
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg"
+  "${MSG_I_FLAGS}"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/wpi_jaco_msgs
 )
 
 ### Generating Services
 _generate_srv_cpp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/EStop.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/EStop.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_srv_cpp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/EulerToQuaternion.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/EulerToQuaternion.srv"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_srv_cpp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/QuaternionToEuler.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/GetAngularPosition.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/wpi_jaco_msgs
+)
+_generate_srv_cpp(wpi_jaco_msgs
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/QuaternionToEuler.srv"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_srv_cpp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/JacoFK.srv"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/wpi_jaco_msgs
-)
-_generate_srv_cpp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/GetCartesianPosition.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/GetCartesianPosition.srv"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_srv_cpp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/GetAngularPosition.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/JacoFK.srv"
   "${MSG_I_FLAGS}"
-  ""
+  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/wpi_jaco_msgs
 )
 
@@ -214,37 +214,37 @@ add_custom_target(wpi_jaco_msgs_generate_messages_cpp
 add_dependencies(wpi_jaco_msgs_generate_messages wpi_jaco_msgs_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/JacoFK.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_cpp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/EStop.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_cpp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/EulerToQuaternion.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_cpp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/EulerToQuaternion.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmAction.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_cpp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/JacoFingerVel.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_cpp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_cpp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmAction.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/QuaternionToEuler.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_cpp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/CartesianCommand.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/JacoFingerVel.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_cpp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/EStop.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/GetAngularPosition.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_cpp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/GetCartesianPosition.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_cpp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/CartesianCommand.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_cpp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/JacoFK.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_cpp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/QuaternionToEuler.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_cpp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/GetCartesianPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_cpp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_cpp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/GetAngularPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_cpp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -257,101 +257,101 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS wpi_jaco_msgs_generate_messages_cpp
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_eus(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg;/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_eus(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/JacoFingerVel.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg"
+  "${MSG_I_FLAGS}"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/wpi_jaco_msgs
+)
+_generate_msg_eus(wpi_jaco_msgs
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg"
+  "${MSG_I_FLAGS}"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/wpi_jaco_msgs
+)
+_generate_msg_eus(wpi_jaco_msgs
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/JacoFingerVel.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_eus(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/wpi_jaco_msgs
-)
-_generate_msg_eus(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmAction.msg"
-  "${MSG_I_FLAGS}"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/wpi_jaco_msgs
-)
-_generate_msg_eus(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/CartesianCommand.msg"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/CartesianCommand.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_eus(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_eus(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg"
-  "${MSG_I_FLAGS}"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg"
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/wpi_jaco_msgs
-)
-_generate_msg_eus(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_eus(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/wpi_jaco_msgs
+)
+_generate_msg_eus(wpi_jaco_msgs
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg"
+  "${MSG_I_FLAGS}"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/wpi_jaco_msgs
 )
 
 ### Generating Services
 _generate_srv_eus(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/EStop.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/EStop.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_srv_eus(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/EulerToQuaternion.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/EulerToQuaternion.srv"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_srv_eus(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/QuaternionToEuler.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/GetAngularPosition.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/wpi_jaco_msgs
+)
+_generate_srv_eus(wpi_jaco_msgs
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/QuaternionToEuler.srv"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_srv_eus(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/JacoFK.srv"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/wpi_jaco_msgs
-)
-_generate_srv_eus(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/GetCartesianPosition.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/GetCartesianPosition.srv"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_srv_eus(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/GetAngularPosition.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/JacoFK.srv"
   "${MSG_I_FLAGS}"
-  ""
+  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/wpi_jaco_msgs
 )
 
@@ -367,37 +367,37 @@ add_custom_target(wpi_jaco_msgs_generate_messages_eus
 add_dependencies(wpi_jaco_msgs_generate_messages wpi_jaco_msgs_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/JacoFK.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_eus _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/EStop.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_eus _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/EulerToQuaternion.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_eus _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/EulerToQuaternion.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmAction.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_eus _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/JacoFingerVel.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_eus _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_eus _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmAction.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/QuaternionToEuler.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_eus _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/CartesianCommand.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/JacoFingerVel.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_eus _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/EStop.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/GetAngularPosition.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_eus _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/GetCartesianPosition.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_eus _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/CartesianCommand.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_eus _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/JacoFK.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_eus _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/QuaternionToEuler.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_eus _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/GetCartesianPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_eus _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_eus _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/GetAngularPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_eus _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -410,101 +410,101 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS wpi_jaco_msgs_generate_messages_eus
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_lisp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg;/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_lisp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/JacoFingerVel.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg"
+  "${MSG_I_FLAGS}"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/wpi_jaco_msgs
+)
+_generate_msg_lisp(wpi_jaco_msgs
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg"
+  "${MSG_I_FLAGS}"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/wpi_jaco_msgs
+)
+_generate_msg_lisp(wpi_jaco_msgs
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/JacoFingerVel.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_lisp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/wpi_jaco_msgs
-)
-_generate_msg_lisp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmAction.msg"
-  "${MSG_I_FLAGS}"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/wpi_jaco_msgs
-)
-_generate_msg_lisp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/CartesianCommand.msg"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/CartesianCommand.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_lisp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_lisp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg"
-  "${MSG_I_FLAGS}"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/wpi_jaco_msgs
-)
-_generate_msg_lisp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_lisp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/wpi_jaco_msgs
+)
+_generate_msg_lisp(wpi_jaco_msgs
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg"
+  "${MSG_I_FLAGS}"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/wpi_jaco_msgs
 )
 
 ### Generating Services
 _generate_srv_lisp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/EStop.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/EStop.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_srv_lisp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/EulerToQuaternion.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/EulerToQuaternion.srv"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_srv_lisp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/QuaternionToEuler.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/GetAngularPosition.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/wpi_jaco_msgs
+)
+_generate_srv_lisp(wpi_jaco_msgs
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/QuaternionToEuler.srv"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_srv_lisp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/JacoFK.srv"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/wpi_jaco_msgs
-)
-_generate_srv_lisp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/GetCartesianPosition.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/GetCartesianPosition.srv"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_srv_lisp(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/GetAngularPosition.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/JacoFK.srv"
   "${MSG_I_FLAGS}"
-  ""
+  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/wpi_jaco_msgs
 )
 
@@ -520,37 +520,37 @@ add_custom_target(wpi_jaco_msgs_generate_messages_lisp
 add_dependencies(wpi_jaco_msgs_generate_messages wpi_jaco_msgs_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/JacoFK.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_lisp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/EStop.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_lisp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/EulerToQuaternion.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_lisp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/EulerToQuaternion.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmAction.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_lisp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/JacoFingerVel.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_lisp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_lisp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmAction.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/QuaternionToEuler.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_lisp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/CartesianCommand.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/JacoFingerVel.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_lisp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/EStop.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/GetAngularPosition.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_lisp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/GetCartesianPosition.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_lisp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/CartesianCommand.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_lisp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/JacoFK.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_lisp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/QuaternionToEuler.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_lisp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/GetCartesianPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_lisp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_lisp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/GetAngularPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_lisp _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -563,101 +563,101 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS wpi_jaco_msgs_generate_messages_lis
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_nodejs(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg;/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_nodejs(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/JacoFingerVel.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg"
+  "${MSG_I_FLAGS}"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/wpi_jaco_msgs
+)
+_generate_msg_nodejs(wpi_jaco_msgs
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg"
+  "${MSG_I_FLAGS}"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/wpi_jaco_msgs
+)
+_generate_msg_nodejs(wpi_jaco_msgs
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/JacoFingerVel.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_nodejs(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/wpi_jaco_msgs
-)
-_generate_msg_nodejs(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmAction.msg"
-  "${MSG_I_FLAGS}"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/wpi_jaco_msgs
-)
-_generate_msg_nodejs(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/CartesianCommand.msg"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/CartesianCommand.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_nodejs(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_nodejs(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg"
-  "${MSG_I_FLAGS}"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/wpi_jaco_msgs
-)
-_generate_msg_nodejs(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_nodejs(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/wpi_jaco_msgs
+)
+_generate_msg_nodejs(wpi_jaco_msgs
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg"
+  "${MSG_I_FLAGS}"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/wpi_jaco_msgs
 )
 
 ### Generating Services
 _generate_srv_nodejs(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/EStop.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/EStop.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_srv_nodejs(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/EulerToQuaternion.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/EulerToQuaternion.srv"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_srv_nodejs(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/QuaternionToEuler.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/GetAngularPosition.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/wpi_jaco_msgs
+)
+_generate_srv_nodejs(wpi_jaco_msgs
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/QuaternionToEuler.srv"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_srv_nodejs(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/JacoFK.srv"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/wpi_jaco_msgs
-)
-_generate_srv_nodejs(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/GetCartesianPosition.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/GetCartesianPosition.srv"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_srv_nodejs(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/GetAngularPosition.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/JacoFK.srv"
   "${MSG_I_FLAGS}"
-  ""
+  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/wpi_jaco_msgs
 )
 
@@ -673,37 +673,37 @@ add_custom_target(wpi_jaco_msgs_generate_messages_nodejs
 add_dependencies(wpi_jaco_msgs_generate_messages wpi_jaco_msgs_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/JacoFK.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_nodejs _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/EStop.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_nodejs _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/EulerToQuaternion.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_nodejs _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/EulerToQuaternion.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmAction.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_nodejs _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/JacoFingerVel.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_nodejs _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_nodejs _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmAction.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/QuaternionToEuler.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_nodejs _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/CartesianCommand.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/JacoFingerVel.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_nodejs _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/EStop.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/GetAngularPosition.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_nodejs _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/GetCartesianPosition.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_nodejs _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/CartesianCommand.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_nodejs _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/JacoFK.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_nodejs _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/QuaternionToEuler.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_nodejs _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/GetCartesianPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_nodejs _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_nodejs _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/GetAngularPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_nodejs _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -716,101 +716,101 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS wpi_jaco_msgs_generate_messages_nod
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_py(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg;/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_py(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/JacoFingerVel.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg"
+  "${MSG_I_FLAGS}"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/wpi_jaco_msgs
+)
+_generate_msg_py(wpi_jaco_msgs
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg"
+  "${MSG_I_FLAGS}"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/wpi_jaco_msgs
+)
+_generate_msg_py(wpi_jaco_msgs
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/JacoFingerVel.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_py(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/wpi_jaco_msgs
-)
-_generate_msg_py(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmAction.msg"
-  "${MSG_I_FLAGS}"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/wpi_jaco_msgs
-)
-_generate_msg_py(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/CartesianCommand.msg"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/CartesianCommand.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_py(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_py(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg"
-  "${MSG_I_FLAGS}"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/wpi_jaco_msgs
-)
-_generate_msg_py(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_msg_py(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg"
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg;/opt/ros/kinetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/wpi_jaco_msgs
+)
+_generate_msg_py(wpi_jaco_msgs
+  "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg"
+  "${MSG_I_FLAGS}"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/wpi_jaco_msgs
 )
 
 ### Generating Services
 _generate_srv_py(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/EStop.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/EStop.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_srv_py(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/EulerToQuaternion.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/EulerToQuaternion.srv"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_srv_py(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/QuaternionToEuler.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/GetAngularPosition.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/wpi_jaco_msgs
+)
+_generate_srv_py(wpi_jaco_msgs
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/QuaternionToEuler.srv"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_srv_py(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/JacoFK.srv"
-  "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/wpi_jaco_msgs
-)
-_generate_srv_py(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/GetCartesianPosition.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/GetCartesianPosition.srv"
   "${MSG_I_FLAGS}"
   "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/wpi_jaco_msgs
 )
 _generate_srv_py(wpi_jaco_msgs
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/GetAngularPosition.srv"
+  "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/JacoFK.srv"
   "${MSG_I_FLAGS}"
-  ""
+  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/wpi_jaco_msgs
 )
 
@@ -826,37 +826,37 @@ add_custom_target(wpi_jaco_msgs_generate_messages_py
 add_dependencies(wpi_jaco_msgs_generate_messages wpi_jaco_msgs_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/JacoFK.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_py _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/EStop.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_py _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/EulerToQuaternion.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_py _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/EulerToQuaternion.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmAction.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_py _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/JacoFingerVel.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_py _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmResult.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionGoal.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_py _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmAction.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/QuaternionToEuler.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_py _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/CartesianCommand.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/JacoFingerVel.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_py _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/EStop.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/GetAngularPosition.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_py _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmGoal.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/GetCartesianPosition.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_py _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/CartesianCommand.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_py _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/srv/JacoFK.srv" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_py _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/QuaternionToEuler.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionFeedback.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_py _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/GetCartesianPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/wpi_jaco_msgs/msg/AngularCommand.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_py _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmActionResult.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_py _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/wpi_jaco_msgs/srv/GetAngularPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/jerry/Desktop/therbligs_ws/devel/share/wpi_jaco_msgs/msg/HomeArmFeedback.msg" NAME_WE)
 add_dependencies(wpi_jaco_msgs_generate_messages_py _wpi_jaco_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

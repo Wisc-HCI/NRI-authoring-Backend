@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/src
+CMAKE_SOURCE_DIR = /home/jerry/Desktop/therbligs_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/build
+CMAKE_BINARY_DIR = /home/jerry/Desktop/therbligs_ws/build
 
 # Utility rule file for clean_test_results_robotiq_85_bringup.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/build
 include robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/clean_test_results_robotiq_85_bringup.dir/progress.make
 
 robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/clean_test_results_robotiq_85_bringup:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/robotiq_85_gripper/robotiq_85_bringup && /usr/bin/python /opt/ros/kinetic/share/catkin/cmake/test/remove_test_results.py /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/test_results/robotiq_85_bringup
+	cd /home/jerry/Desktop/therbligs_ws/build/robotiq_85_gripper/robotiq_85_bringup && /usr/bin/python /opt/ros/kinetic/share/catkin/cmake/test/remove_test_results.py /home/jerry/Desktop/therbligs_ws/build/test_results/robotiq_85_bringup
 
 clean_test_results_robotiq_85_bringup: robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/clean_test_results_robotiq_85_bringup
 clean_test_results_robotiq_85_bringup: robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/clean_test_results_robotiq_85_bringup.dir/build.make
@@ -67,10 +67,10 @@ robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/clean_test_results_robotiq_85_b
 .PHONY : robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/clean_test_results_robotiq_85_bringup.dir/build
 
 robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/clean_test_results_robotiq_85_bringup.dir/clean:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/robotiq_85_gripper/robotiq_85_bringup && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_robotiq_85_bringup.dir/cmake_clean.cmake
+	cd /home/jerry/Desktop/therbligs_ws/build/robotiq_85_gripper/robotiq_85_bringup && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_robotiq_85_bringup.dir/cmake_clean.cmake
 .PHONY : robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/clean_test_results_robotiq_85_bringup.dir/clean
 
 robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/clean_test_results_robotiq_85_bringup.dir/depend:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hcilab/Documents/jieru/NRI-authoring-Backend/src /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/robotiq_85_gripper/robotiq_85_bringup /home/hcilab/Documents/jieru/NRI-authoring-Backend/build /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/robotiq_85_gripper/robotiq_85_bringup /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/clean_test_results_robotiq_85_bringup.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jerry/Desktop/therbligs_ws/src /home/jerry/Desktop/therbligs_ws/src/robotiq_85_gripper/robotiq_85_bringup /home/jerry/Desktop/therbligs_ws/build /home/jerry/Desktop/therbligs_ws/build/robotiq_85_gripper/robotiq_85_bringup /home/jerry/Desktop/therbligs_ws/build/robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/clean_test_results_robotiq_85_bringup.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : robotiq_85_gripper/robotiq_85_bringup/CMakeFiles/clean_test_results_robotiq_85_bringup.dir/depend
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/robotiq_85_gripper/robotiq_85_driver
+# Install script for directory: /home/jerry/Desktop/therbligs_ws/src/robotiq_85_gripper/robotiq_85_driver
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/hcilab/Documents/jieru/NRI-authoring-Backend/install")
+  set(CMAKE_INSTALL_PREFIX "/home/jerry/Desktop/therbligs_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,29 +33,29 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  include("/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/robotiq_85_gripper/robotiq_85_driver/catkin_generated/safe_execute_install.cmake")
+  include("/home/jerry/Desktop/therbligs_ws/build/robotiq_85_gripper/robotiq_85_driver/catkin_generated/safe_execute_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/robotiq_85_gripper/robotiq_85_driver/catkin_generated/installspace/robotiq_85_driver.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jerry/Desktop/therbligs_ws/build/robotiq_85_gripper/robotiq_85_driver/catkin_generated/installspace/robotiq_85_driver.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robotiq_85_driver/cmake" TYPE FILE FILES
-    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/robotiq_85_gripper/robotiq_85_driver/catkin_generated/installspace/robotiq_85_driverConfig.cmake"
-    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/robotiq_85_gripper/robotiq_85_driver/catkin_generated/installspace/robotiq_85_driverConfig-version.cmake"
+    "/home/jerry/Desktop/therbligs_ws/build/robotiq_85_gripper/robotiq_85_driver/catkin_generated/installspace/robotiq_85_driverConfig.cmake"
+    "/home/jerry/Desktop/therbligs_ws/build/robotiq_85_gripper/robotiq_85_driver/catkin_generated/installspace/robotiq_85_driverConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robotiq_85_driver" TYPE FILE FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/robotiq_85_gripper/robotiq_85_driver/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/robotiq_85_driver" TYPE FILE FILES "/home/jerry/Desktop/therbligs_ws/src/robotiq_85_gripper/robotiq_85_driver/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robotiq_85_driver" TYPE PROGRAM FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/robotiq_85_gripper/robotiq_85_driver/catkin_generated/installspace/robotiq_85_driver")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robotiq_85_driver" TYPE PROGRAM FILES "/home/jerry/Desktop/therbligs_ws/build/robotiq_85_gripper/robotiq_85_driver/catkin_generated/installspace/robotiq_85_driver")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robotiq_85_driver" TYPE PROGRAM FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/robotiq_85_gripper/robotiq_85_driver/catkin_generated/installspace/robotiq_85_test")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/robotiq_85_driver" TYPE PROGRAM FILES "/home/jerry/Desktop/therbligs_ws/build/robotiq_85_gripper/robotiq_85_driver/catkin_generated/installspace/robotiq_85_test")
 endif()
 

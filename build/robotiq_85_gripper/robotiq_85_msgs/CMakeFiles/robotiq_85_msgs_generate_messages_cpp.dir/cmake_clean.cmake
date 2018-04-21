@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/robotiq_85_msgs_generate_messages_cpp"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/include/robotiq_85_msgs/GripperStat.h"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/include/robotiq_85_msgs/GripperCmd.h"
+  "/home/jerry/Desktop/therbligs_ws/devel/include/robotiq_85_msgs/GripperCmd.h"
+  "/home/jerry/Desktop/therbligs_ws/devel/include/robotiq_85_msgs/GripperStat.h"
 )
 
 # Per-language clean rules from dependency scanning.

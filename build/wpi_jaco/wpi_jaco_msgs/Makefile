@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/src
+CMAKE_SOURCE_DIR = /home/jerry/Desktop/therbligs_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/build
+CMAKE_BINARY_DIR = /home/jerry/Desktop/therbligs_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -135,14 +135,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/wpi_jaco_msgs/CMakeFiles/progress.marks
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles 0
+	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/jerry/Desktop/therbligs_ws/build/CMakeFiles /home/jerry/Desktop/therbligs_ws/build/wpi_jaco/wpi_jaco_msgs/CMakeFiles/progress.marks
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jerry/Desktop/therbligs_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/clean
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/clean
 .PHONY : clean
 
 # The main clean target
@@ -152,22 +152,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/preinstall
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/preinstall
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_genpy.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_genpy.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_genpy.dir/rule
 .PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_genpy.dir/rule
 
 # Convenience name for target.
@@ -177,12 +177,12 @@ wpi_jaco_msgs_genpy: wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_genpy.dir/r
 
 # fast build rule for target.
 wpi_jaco_msgs_genpy/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_genpy.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_genpy.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_genpy.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_genpy.dir/build
 .PHONY : wpi_jaco_msgs_genpy/fast
 
 # Convenience name for target.
 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_py.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_py.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_py.dir/rule
 .PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -192,12 +192,12 @@ wpi_jaco_msgs_generate_messages_py: wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_m
 
 # fast build rule for target.
 wpi_jaco_msgs_generate_messages_py/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_py.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_py.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_py.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_py.dir/build
 .PHONY : wpi_jaco_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_nodejs.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_nodejs.dir/rule
 .PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -207,12 +207,12 @@ wpi_jaco_msgs_generate_messages_nodejs: wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_ja
 
 # fast build rule for target.
 wpi_jaco_msgs_generate_messages_nodejs/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_nodejs.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_nodejs.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_nodejs.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_nodejs.dir/build
 .PHONY : wpi_jaco_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_genlisp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_genlisp.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_genlisp.dir/rule
 .PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_genlisp.dir/rule
 
 # Convenience name for target.
@@ -222,72 +222,12 @@ wpi_jaco_msgs_genlisp: wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_genlisp.d
 
 # fast build rule for target.
 wpi_jaco_msgs_genlisp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_genlisp.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_genlisp.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_genlisp.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_genlisp.dir/build
 .PHONY : wpi_jaco_msgs_genlisp/fast
 
 # Convenience name for target.
-wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_EStop.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_EStop.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_EStop.dir/rule
-
-# Convenience name for target.
-_wpi_jaco_msgs_generate_messages_check_deps_EStop: wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_EStop.dir/rule
-
-.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_EStop
-
-# fast build rule for target.
-_wpi_jaco_msgs_generate_messages_check_deps_EStop/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_EStop.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_EStop.dir/build
-.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_EStop/fast
-
-# Convenience name for target.
-wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionFeedback.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionFeedback.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionFeedback.dir/rule
-
-# Convenience name for target.
-_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionFeedback: wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionFeedback.dir/rule
-
-.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionFeedback
-
-# fast build rule for target.
-_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionFeedback/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionFeedback.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionFeedback.dir/build
-.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionFeedback/fast
-
-# Convenience name for target.
-wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmAction.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmAction.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmAction.dir/rule
-
-# Convenience name for target.
-_wpi_jaco_msgs_generate_messages_check_deps_HomeArmAction: wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmAction.dir/rule
-
-.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_HomeArmAction
-
-# fast build rule for target.
-_wpi_jaco_msgs_generate_messages_check_deps_HomeArmAction/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmAction.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmAction.dir/build
-.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_HomeArmAction/fast
-
-# Convenience name for target.
-wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmFeedback.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmFeedback.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmFeedback.dir/rule
-
-# Convenience name for target.
-_wpi_jaco_msgs_generate_messages_check_deps_HomeArmFeedback: wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmFeedback.dir/rule
-
-.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_HomeArmFeedback
-
-# fast build rule for target.
-_wpi_jaco_msgs_generate_messages_check_deps_HomeArmFeedback/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmFeedback.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmFeedback.dir/build
-.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_HomeArmFeedback/fast
-
-# Convenience name for target.
 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_JacoFingerVel.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_JacoFingerVel.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_JacoFingerVel.dir/rule
 .PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_JacoFingerVel.dir/rule
 
 # Convenience name for target.
@@ -297,12 +237,12 @@ _wpi_jaco_msgs_generate_messages_check_deps_JacoFingerVel: wpi_jaco/wpi_jaco_msg
 
 # fast build rule for target.
 _wpi_jaco_msgs_generate_messages_check_deps_JacoFingerVel/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_JacoFingerVel.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_JacoFingerVel.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_JacoFingerVel.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_JacoFingerVel.dir/build
 .PHONY : _wpi_jaco_msgs_generate_messages_check_deps_JacoFingerVel/fast
 
 # Convenience name for target.
 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmResult.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmResult.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmResult.dir/rule
 .PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmResult.dir/rule
 
 # Convenience name for target.
@@ -312,12 +252,12 @@ _wpi_jaco_msgs_generate_messages_check_deps_HomeArmResult: wpi_jaco/wpi_jaco_msg
 
 # fast build rule for target.
 _wpi_jaco_msgs_generate_messages_check_deps_HomeArmResult/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmResult.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmResult.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmResult.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmResult.dir/build
 .PHONY : _wpi_jaco_msgs_generate_messages_check_deps_HomeArmResult/fast
 
 # Convenience name for target.
 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_EulerToQuaternion.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_EulerToQuaternion.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_EulerToQuaternion.dir/rule
 .PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_EulerToQuaternion.dir/rule
 
 # Convenience name for target.
@@ -327,102 +267,12 @@ _wpi_jaco_msgs_generate_messages_check_deps_EulerToQuaternion: wpi_jaco/wpi_jaco
 
 # fast build rule for target.
 _wpi_jaco_msgs_generate_messages_check_deps_EulerToQuaternion/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_EulerToQuaternion.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_EulerToQuaternion.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_EulerToQuaternion.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_EulerToQuaternion.dir/build
 .PHONY : _wpi_jaco_msgs_generate_messages_check_deps_EulerToQuaternion/fast
 
 # Convenience name for target.
-wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages.dir/rule
-
-# Convenience name for target.
-wpi_jaco_msgs_generate_messages: wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages.dir/rule
-
-.PHONY : wpi_jaco_msgs_generate_messages
-
-# fast build rule for target.
-wpi_jaco_msgs_generate_messages/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages.dir/build
-.PHONY : wpi_jaco_msgs_generate_messages/fast
-
-# Convenience name for target.
-wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_gennodejs.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_gennodejs.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_gennodejs.dir/rule
-
-# Convenience name for target.
-wpi_jaco_msgs_gennodejs: wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_gennodejs.dir/rule
-
-.PHONY : wpi_jaco_msgs_gennodejs
-
-# fast build rule for target.
-wpi_jaco_msgs_gennodejs/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_gennodejs.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_gennodejs.dir/build
-.PHONY : wpi_jaco_msgs_gennodejs/fast
-
-# Convenience name for target.
-wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_AngularCommand.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_AngularCommand.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_AngularCommand.dir/rule
-
-# Convenience name for target.
-_wpi_jaco_msgs_generate_messages_check_deps_AngularCommand: wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_AngularCommand.dir/rule
-
-.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_AngularCommand
-
-# fast build rule for target.
-_wpi_jaco_msgs_generate_messages_check_deps_AngularCommand/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_AngularCommand.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_AngularCommand.dir/build
-.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_AngularCommand/fast
-
-# Convenience name for target.
-wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionGoal.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionGoal.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionGoal.dir/rule
-
-# Convenience name for target.
-_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionGoal: wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionGoal.dir/rule
-
-.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionGoal
-
-# fast build rule for target.
-_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionGoal/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionGoal.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionGoal.dir/build
-.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionGoal/fast
-
-# Convenience name for target.
-wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_gencpp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_gencpp.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_gencpp.dir/rule
-
-# Convenience name for target.
-wpi_jaco_msgs_gencpp: wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_gencpp.dir/rule
-
-.PHONY : wpi_jaco_msgs_gencpp
-
-# fast build rule for target.
-wpi_jaco_msgs_gencpp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_gencpp.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_gencpp.dir/build
-.PHONY : wpi_jaco_msgs_gencpp/fast
-
-# Convenience name for target.
-wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_JacoFK.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_JacoFK.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_JacoFK.dir/rule
-
-# Convenience name for target.
-_wpi_jaco_msgs_generate_messages_check_deps_JacoFK: wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_JacoFK.dir/rule
-
-.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_JacoFK
-
-# fast build rule for target.
-_wpi_jaco_msgs_generate_messages_check_deps_JacoFK/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_JacoFK.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_JacoFK.dir/build
-.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_JacoFK/fast
-
-# Convenience name for target.
 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmGoal.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmGoal.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmGoal.dir/rule
 .PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmGoal.dir/rule
 
 # Convenience name for target.
@@ -432,12 +282,147 @@ _wpi_jaco_msgs_generate_messages_check_deps_HomeArmGoal: wpi_jaco/wpi_jaco_msgs/
 
 # fast build rule for target.
 _wpi_jaco_msgs_generate_messages_check_deps_HomeArmGoal/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmGoal.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmGoal.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmGoal.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmGoal.dir/build
 .PHONY : _wpi_jaco_msgs_generate_messages_check_deps_HomeArmGoal/fast
 
 # Convenience name for target.
+wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmAction.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmAction.dir/rule
+.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmAction.dir/rule
+
+# Convenience name for target.
+_wpi_jaco_msgs_generate_messages_check_deps_HomeArmAction: wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmAction.dir/rule
+
+.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_HomeArmAction
+
+# fast build rule for target.
+_wpi_jaco_msgs_generate_messages_check_deps_HomeArmAction/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmAction.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmAction.dir/build
+.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_HomeArmAction/fast
+
+# Convenience name for target.
+wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmFeedback.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmFeedback.dir/rule
+.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmFeedback.dir/rule
+
+# Convenience name for target.
+_wpi_jaco_msgs_generate_messages_check_deps_HomeArmFeedback: wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmFeedback.dir/rule
+
+.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_HomeArmFeedback
+
+# fast build rule for target.
+_wpi_jaco_msgs_generate_messages_check_deps_HomeArmFeedback/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmFeedback.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmFeedback.dir/build
+.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_HomeArmFeedback/fast
+
+# Convenience name for target.
+wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_EStop.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_EStop.dir/rule
+.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_EStop.dir/rule
+
+# Convenience name for target.
+_wpi_jaco_msgs_generate_messages_check_deps_EStop: wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_EStop.dir/rule
+
+.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_EStop
+
+# fast build rule for target.
+_wpi_jaco_msgs_generate_messages_check_deps_EStop/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_EStop.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_EStop.dir/build
+.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_EStop/fast
+
+# Convenience name for target.
+wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionFeedback.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionFeedback.dir/rule
+.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionFeedback.dir/rule
+
+# Convenience name for target.
+_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionFeedback: wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionFeedback.dir/rule
+
+.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionFeedback
+
+# fast build rule for target.
+_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionFeedback/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionFeedback.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionFeedback.dir/build
+.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionFeedback/fast
+
+# Convenience name for target.
+wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages.dir/rule
+.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages.dir/rule
+
+# Convenience name for target.
+wpi_jaco_msgs_generate_messages: wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages.dir/rule
+
+.PHONY : wpi_jaco_msgs_generate_messages
+
+# fast build rule for target.
+wpi_jaco_msgs_generate_messages/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages.dir/build
+.PHONY : wpi_jaco_msgs_generate_messages/fast
+
+# Convenience name for target.
+wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_gennodejs.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_gennodejs.dir/rule
+.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_gennodejs.dir/rule
+
+# Convenience name for target.
+wpi_jaco_msgs_gennodejs: wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_gennodejs.dir/rule
+
+.PHONY : wpi_jaco_msgs_gennodejs
+
+# fast build rule for target.
+wpi_jaco_msgs_gennodejs/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_gennodejs.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_gennodejs.dir/build
+.PHONY : wpi_jaco_msgs_gennodejs/fast
+
+# Convenience name for target.
+wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_AngularCommand.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_AngularCommand.dir/rule
+.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_AngularCommand.dir/rule
+
+# Convenience name for target.
+_wpi_jaco_msgs_generate_messages_check_deps_AngularCommand: wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_AngularCommand.dir/rule
+
+.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_AngularCommand
+
+# fast build rule for target.
+_wpi_jaco_msgs_generate_messages_check_deps_AngularCommand/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_AngularCommand.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_AngularCommand.dir/build
+.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_AngularCommand/fast
+
+# Convenience name for target.
+wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionGoal.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionGoal.dir/rule
+.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionGoal.dir/rule
+
+# Convenience name for target.
+_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionGoal: wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionGoal.dir/rule
+
+.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionGoal
+
+# fast build rule for target.
+_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionGoal/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionGoal.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionGoal.dir/build
+.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionGoal/fast
+
+# Convenience name for target.
+wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_gencpp.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_gencpp.dir/rule
+.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_gencpp.dir/rule
+
+# Convenience name for target.
+wpi_jaco_msgs_gencpp: wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_gencpp.dir/rule
+
+.PHONY : wpi_jaco_msgs_gencpp
+
+# fast build rule for target.
+wpi_jaco_msgs_gencpp/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_gencpp.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_gencpp.dir/build
+.PHONY : wpi_jaco_msgs_gencpp/fast
+
+# Convenience name for target.
 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_QuaternionToEuler.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_QuaternionToEuler.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_QuaternionToEuler.dir/rule
 .PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_QuaternionToEuler.dir/rule
 
 # Convenience name for target.
@@ -447,72 +432,12 @@ _wpi_jaco_msgs_generate_messages_check_deps_QuaternionToEuler: wpi_jaco/wpi_jaco
 
 # fast build rule for target.
 _wpi_jaco_msgs_generate_messages_check_deps_QuaternionToEuler/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_QuaternionToEuler.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_QuaternionToEuler.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_QuaternionToEuler.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_QuaternionToEuler.dir/build
 .PHONY : _wpi_jaco_msgs_generate_messages_check_deps_QuaternionToEuler/fast
 
 # Convenience name for target.
-wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionResult.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionResult.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionResult.dir/rule
-
-# Convenience name for target.
-_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionResult: wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionResult.dir/rule
-
-.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionResult
-
-# fast build rule for target.
-_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionResult/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionResult.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionResult.dir/build
-.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionResult/fast
-
-# Convenience name for target.
-wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_lisp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_lisp.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-wpi_jaco_msgs_generate_messages_lisp: wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : wpi_jaco_msgs_generate_messages_lisp
-
-# fast build rule for target.
-wpi_jaco_msgs_generate_messages_lisp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_lisp.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_lisp.dir/build
-.PHONY : wpi_jaco_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_GetCartesianPosition.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_GetCartesianPosition.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_GetCartesianPosition.dir/rule
-
-# Convenience name for target.
-_wpi_jaco_msgs_generate_messages_check_deps_GetCartesianPosition: wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_GetCartesianPosition.dir/rule
-
-.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_GetCartesianPosition
-
-# fast build rule for target.
-_wpi_jaco_msgs_generate_messages_check_deps_GetCartesianPosition/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_GetCartesianPosition.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_GetCartesianPosition.dir/build
-.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_GetCartesianPosition/fast
-
-# Convenience name for target.
-wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_CartesianCommand.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_CartesianCommand.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_CartesianCommand.dir/rule
-
-# Convenience name for target.
-_wpi_jaco_msgs_generate_messages_check_deps_CartesianCommand: wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_CartesianCommand.dir/rule
-
-.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_CartesianCommand
-
-# fast build rule for target.
-_wpi_jaco_msgs_generate_messages_check_deps_CartesianCommand/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_CartesianCommand.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_CartesianCommand.dir/build
-.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_CartesianCommand/fast
-
-# Convenience name for target.
 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_GetAngularPosition.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_GetAngularPosition.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_GetAngularPosition.dir/rule
 .PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_GetAngularPosition.dir/rule
 
 # Convenience name for target.
@@ -522,12 +447,87 @@ _wpi_jaco_msgs_generate_messages_check_deps_GetAngularPosition: wpi_jaco/wpi_jac
 
 # fast build rule for target.
 _wpi_jaco_msgs_generate_messages_check_deps_GetAngularPosition/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_GetAngularPosition.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_GetAngularPosition.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_GetAngularPosition.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_GetAngularPosition.dir/build
 .PHONY : _wpi_jaco_msgs_generate_messages_check_deps_GetAngularPosition/fast
 
 # Convenience name for target.
+wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_CartesianCommand.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_CartesianCommand.dir/rule
+.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_CartesianCommand.dir/rule
+
+# Convenience name for target.
+_wpi_jaco_msgs_generate_messages_check_deps_CartesianCommand: wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_CartesianCommand.dir/rule
+
+.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_CartesianCommand
+
+# fast build rule for target.
+_wpi_jaco_msgs_generate_messages_check_deps_CartesianCommand/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_CartesianCommand.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_CartesianCommand.dir/build
+.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_CartesianCommand/fast
+
+# Convenience name for target.
+wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_JacoFK.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_JacoFK.dir/rule
+.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_JacoFK.dir/rule
+
+# Convenience name for target.
+_wpi_jaco_msgs_generate_messages_check_deps_JacoFK: wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_JacoFK.dir/rule
+
+.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_JacoFK
+
+# fast build rule for target.
+_wpi_jaco_msgs_generate_messages_check_deps_JacoFK/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_JacoFK.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_JacoFK.dir/build
+.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_JacoFK/fast
+
+# Convenience name for target.
+wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionResult.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionResult.dir/rule
+.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionResult.dir/rule
+
+# Convenience name for target.
+_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionResult: wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionResult.dir/rule
+
+.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionResult
+
+# fast build rule for target.
+_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionResult/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionResult.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionResult.dir/build
+.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionResult/fast
+
+# Convenience name for target.
+wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_GetCartesianPosition.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_GetCartesianPosition.dir/rule
+.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_GetCartesianPosition.dir/rule
+
+# Convenience name for target.
+_wpi_jaco_msgs_generate_messages_check_deps_GetCartesianPosition: wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_GetCartesianPosition.dir/rule
+
+.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_GetCartesianPosition
+
+# fast build rule for target.
+_wpi_jaco_msgs_generate_messages_check_deps_GetCartesianPosition/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_GetCartesianPosition.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/_wpi_jaco_msgs_generate_messages_check_deps_GetCartesianPosition.dir/build
+.PHONY : _wpi_jaco_msgs_generate_messages_check_deps_GetCartesianPosition/fast
+
+# Convenience name for target.
+wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_lisp.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_lisp.dir/rule
+.PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+wpi_jaco_msgs_generate_messages_lisp: wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : wpi_jaco_msgs_generate_messages_lisp
+
+# fast build rule for target.
+wpi_jaco_msgs_generate_messages_lisp/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_lisp.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_lisp.dir/build
+.PHONY : wpi_jaco_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_cpp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_cpp.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_cpp.dir/rule
 .PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -537,12 +537,12 @@ wpi_jaco_msgs_generate_messages_cpp: wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_
 
 # fast build rule for target.
 wpi_jaco_msgs_generate_messages_cpp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_cpp.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_cpp.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_cpp.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_cpp.dir/build
 .PHONY : wpi_jaco_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_eus.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_eus.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_eus.dir/rule
 .PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -552,12 +552,12 @@ wpi_jaco_msgs_generate_messages_eus: wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_
 
 # fast build rule for target.
 wpi_jaco_msgs_generate_messages_eus/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_eus.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_eus.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_eus.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_generate_messages_eus.dir/build
 .PHONY : wpi_jaco_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_geneus.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_geneus.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_geneus.dir/rule
 .PHONY : wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_geneus.dir/rule
 
 # Convenience name for target.
@@ -567,7 +567,7 @@ wpi_jaco_msgs_geneus: wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_geneus.dir
 
 # fast build rule for target.
 wpi_jaco_msgs_geneus/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_geneus.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_geneus.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_geneus.dir/build.make wpi_jaco/wpi_jaco_msgs/CMakeFiles/wpi_jaco_msgs_geneus.dir/build
 .PHONY : wpi_jaco_msgs_geneus/fast
 
 # Help Target
@@ -586,27 +586,27 @@ help:
 	@echo "... wpi_jaco_msgs_generate_messages_nodejs"
 	@echo "... list_install_components"
 	@echo "... wpi_jaco_msgs_genlisp"
-	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_EStop"
-	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionFeedback"
-	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_HomeArmAction"
-	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_HomeArmFeedback"
 	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_JacoFingerVel"
 	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_HomeArmResult"
 	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_EulerToQuaternion"
+	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_HomeArmGoal"
+	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_HomeArmAction"
+	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_HomeArmFeedback"
+	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_EStop"
+	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionFeedback"
 	@echo "... rebuild_cache"
 	@echo "... wpi_jaco_msgs_generate_messages"
 	@echo "... wpi_jaco_msgs_gennodejs"
 	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_AngularCommand"
 	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionGoal"
 	@echo "... wpi_jaco_msgs_gencpp"
-	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_JacoFK"
-	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_HomeArmGoal"
 	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_QuaternionToEuler"
-	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionResult"
-	@echo "... wpi_jaco_msgs_generate_messages_lisp"
-	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_GetCartesianPosition"
-	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_CartesianCommand"
 	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_GetAngularPosition"
+	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_CartesianCommand"
+	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_JacoFK"
+	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_HomeArmActionResult"
+	@echo "... _wpi_jaco_msgs_generate_messages_check_deps_GetCartesianPosition"
+	@echo "... wpi_jaco_msgs_generate_messages_lisp"
 	@echo "... wpi_jaco_msgs_generate_messages_cpp"
 	@echo "... wpi_jaco_msgs_generate_messages_eus"
 	@echo "... wpi_jaco_msgs_geneus"
@@ -621,6 +621,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

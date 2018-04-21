@@ -67,14 +67,14 @@ set(kinova_driver_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(kinova_driver_SOURCE_PREFIX /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver)
-  set(kinova_driver_DEVEL_PREFIX /home/hcilab/Documents/jieru/NRI-authoring-Backend/devel)
+  set(kinova_driver_SOURCE_PREFIX /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver)
+  set(kinova_driver_DEVEL_PREFIX /home/jerry/Desktop/therbligs_ws/devel)
   set(kinova_driver_INSTALL_PREFIX "")
   set(kinova_driver_PREFIX ${kinova_driver_DEVEL_PREFIX})
 else()
   set(kinova_driver_SOURCE_PREFIX "")
   set(kinova_driver_DEVEL_PREFIX "")
-  set(kinova_driver_INSTALL_PREFIX /home/hcilab/Documents/jieru/NRI-authoring-Backend/install)
+  set(kinova_driver_INSTALL_PREFIX /home/jerry/Desktop/therbligs_ws/install)
   set(kinova_driver_PREFIX ${kinova_driver_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(kinova_driver_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/include;/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/include " STREQUAL " ")
+if(NOT "/home/jerry/Desktop/therbligs_ws/devel/include;/home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/include " STREQUAL " ")
   set(kinova_driver_INCLUDE_DIRS "")
-  set(_include_dirs "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/include;/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/include")
+  set(_include_dirs "/home/jerry/Desktop/therbligs_ws/devel/include;/home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://wiki.ros.org/kinova_driver " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/include;/home/h
         message(FATAL_ERROR "Project 'kinova_driver' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'kinova_driver' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'kinova_driver' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/${idir}'.  ${_report}")
     endif()
     _list_append_unique(kinova_driver_INCLUDE_DIRS ${include})
   endforeach()
@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib;/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib;/home/hcilab/ws_moveit/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/jerry/Desktop/therbligs_ws/devel/lib;/home/jerry/Desktop/therbligs_ws/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

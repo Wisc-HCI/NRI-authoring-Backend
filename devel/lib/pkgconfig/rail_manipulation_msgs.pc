@@ -1,8 +1,8 @@
-prefix=/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel
+prefix=/home/jerry/Desktop/therbligs_ws/devel
 
 Name: rail_manipulation_msgs
 Description: Description of rail_manipulation_msgs
 Version: 0.0.11
-Cflags: -I/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/include
-Libs: -L/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib 
+Cflags: -I/home/jerry/Desktop/therbligs_ws/devel/include
+Libs: -L/home/jerry/Desktop/therbligs_ws/devel/lib 
 Requires: actionlib_msgs geometry_msgs sensor_msgs visualization_msgs

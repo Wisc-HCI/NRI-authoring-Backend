@@ -1,8 +1,8 @@
-# Install script for directory: /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_demo
+# Install script for directory: /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_demo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/hcilab/Documents/jieru/NRI-authoring-Backend/install")
+  set(CMAKE_INSTALL_PREFIX "/home/jerry/Desktop/therbligs_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,32 +33,32 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  include("/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_demo/catkin_generated/safe_execute_install.cmake")
+  include("/home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_demo/catkin_generated/safe_execute_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_demo/catkin_generated/installspace/kinova_demo.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_demo/catkin_generated/installspace/kinova_demo.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_demo/cmake" TYPE FILE FILES
-    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_demo/catkin_generated/installspace/kinova_demoConfig.cmake"
-    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_demo/catkin_generated/installspace/kinova_demoConfig-version.cmake"
+    "/home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_demo/catkin_generated/installspace/kinova_demoConfig.cmake"
+    "/home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_demo/catkin_generated/installspace/kinova_demoConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_demo" TYPE FILE FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_demo/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_demo" TYPE FILE FILES "/home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_demo/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/kinova_demo" TYPE PROGRAM FILES
-    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_demo/nodes/kinova_demo/pose_action_client.py"
-    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_demo/nodes/kinova_demo/fingers_action_client.py"
-    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_demo/nodes/kinova_demo/joints_action_client.py"
-    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_demo/nodes/kinova_demo/testActionSvr.py"
-    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_demo/nodes/kinova_demo/gravity_compensated_mode.py"
-    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_demo/nodes/kinova_demo/run_COMParameters_estimation.py"
+    "/home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_demo/nodes/kinova_demo/pose_action_client.py"
+    "/home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_demo/nodes/kinova_demo/fingers_action_client.py"
+    "/home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_demo/nodes/kinova_demo/joints_action_client.py"
+    "/home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_demo/nodes/kinova_demo/testActionSvr.py"
+    "/home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_demo/nodes/kinova_demo/gravity_compensated_mode.py"
+    "/home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_demo/nodes/kinova_demo/run_COMParameters_estimation.py"
     )
 endif()
 

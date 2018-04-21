@@ -7,8 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.o"
   "CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.o"
   "CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.o"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.pdb"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so"
+  "/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.pdb"
+  "/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so"
 )
 
 # Per-language clean rules from dependency scanning.

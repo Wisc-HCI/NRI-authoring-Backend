@@ -1,1 +1,1 @@
-set(ORDERED_PATHS "/home/hcilab/ws_moveit/devel/.private/moveit_core/lib;/home/hcilab/ws_moveit/devel/.private/geometric_shapes/lib;/home/hcilab/ws_moveit/devel/.private/srdfdom/lib;/opt/ros/kinetic/lib")
+set(ORDERED_PATHS "/opt/ros/kinetic/lib")

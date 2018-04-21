@@ -1,0 +1,8 @@
+prefix=/home/jerry/Desktop/therbligs_ws/install
+
+Name: mico_therbligs
+Description: Description of mico_therbligs
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/jerry/Desktop/therbligs_ws/install/lib 
+Requires: 

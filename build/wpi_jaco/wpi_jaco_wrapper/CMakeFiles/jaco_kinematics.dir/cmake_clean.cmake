@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/jaco_kinematics.dir/src/jaco_kinematics.cpp.o"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/wpi_jaco_wrapper/jaco_kinematics.pdb"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/wpi_jaco_wrapper/jaco_kinematics"
+  "/home/jerry/Desktop/therbligs_ws/devel/lib/wpi_jaco_wrapper/jaco_kinematics.pdb"
+  "/home/jerry/Desktop/therbligs_ws/devel/lib/wpi_jaco_wrapper/jaco_kinematics"
 )
 
 # Per-language clean rules from dependency scanning.

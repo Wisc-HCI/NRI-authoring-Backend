@@ -1,8 +1,8 @@
-prefix=/home/hcilab/Documents/jieru/NRI-authoring-Backend/install
+prefix=/home/jerry/Desktop/therbligs_ws/install
 
 Name: si_utils
 Description: Description of si_utils
 Version: 0.0.1
 Cflags: 
-Libs: -L/home/hcilab/Documents/jieru/NRI-authoring-Backend/install/lib 
+Libs: -L/home/jerry/Desktop/therbligs_ws/install/lib 
 Requires: 

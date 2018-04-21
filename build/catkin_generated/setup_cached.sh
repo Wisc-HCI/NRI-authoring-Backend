@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/home/hcilab/Documents/jieru/NRI-authoring-Backend/build"
+export PWD="/home/jerry/Desktop/therbligs_ws/build"

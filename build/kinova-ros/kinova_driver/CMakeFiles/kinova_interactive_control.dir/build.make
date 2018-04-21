@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/src
+CMAKE_SOURCE_DIR = /home/jerry/Desktop/therbligs_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/build
+CMAKE_BINARY_DIR = /home/jerry/Desktop/therbligs_ws/build
 
 # Include any dependencies generated for this target.
 include kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/depend.make
@@ -58,17 +58,17 @@ include kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/progr
 include kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/flags.make
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.o: kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/flags.make
-kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.o: /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/nodes/kinova_interactive_control.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.o"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.o -c /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/nodes/kinova_interactive_control.cpp
+kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.o: /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/nodes/kinova_interactive_control.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jerry/Desktop/therbligs_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.o"
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.o -c /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/nodes/kinova_interactive_control.cpp
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.i"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/nodes/kinova_interactive_control.cpp > CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/nodes/kinova_interactive_control.cpp > CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.i
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.s"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/nodes/kinova_interactive_control.cpp -o CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/nodes/kinova_interactive_control.cpp -o CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.s
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.o.requires:
 
@@ -88,67 +88,67 @@ kinova_interactive_control_OBJECTS = \
 # External object files for target kinova_interactive_control
 kinova_interactive_control_EXTERNAL_OBJECTS =
 
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.o
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/build.make
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libinteractive_markers.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libtf.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libtf2_ros.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libactionlib.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libmessage_filters.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libroscpp.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libxmlrpcpp.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libtf2.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/librosconsole.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libroscpp_serialization.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/librostime.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libcpp_common.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libinteractive_markers.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libtf.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libtf2_ros.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libactionlib.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libmessage_filters.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libroscpp.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libxmlrpcpp.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libtf2.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/librosconsole.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libroscpp_serialization.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/librostime.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libcpp_common.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control: kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/kinova_interactive_control.dir/link.txt --verbose=$(VERBOSE)
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.o
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/build.make
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libinteractive_markers.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libtf.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libtf2_ros.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libactionlib.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libmessage_filters.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libroscpp.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libxmlrpcpp.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libtf2.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/librosconsole.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libroscpp_serialization.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/librostime.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libcpp_common.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libinteractive_markers.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libtf.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libtf2_ros.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libactionlib.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libmessage_filters.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libroscpp.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libxmlrpcpp.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libtf2.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/librosconsole.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libroscpp_serialization.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/librostime.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /opt/ros/kinetic/lib/libcpp_common.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control: kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jerry/Desktop/therbligs_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control"
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/kinova_interactive_control.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/build: /home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control
+kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/build: /home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control
 
 .PHONY : kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/build
 
@@ -157,10 +157,10 @@ kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/requires: kin
 .PHONY : kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/requires
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/clean:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && $(CMAKE_COMMAND) -P CMakeFiles/kinova_interactive_control.dir/cmake_clean.cmake
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && $(CMAKE_COMMAND) -P CMakeFiles/kinova_interactive_control.dir/cmake_clean.cmake
 .PHONY : kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/clean
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/depend:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hcilab/Documents/jieru/NRI-authoring-Backend/src /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver /home/hcilab/Documents/jieru/NRI-authoring-Backend/build /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jerry/Desktop/therbligs_ws/src /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver /home/jerry/Desktop/therbligs_ws/build /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : kinova-ros/kinova_driver/CMakeFiles/kinova_interactive_control.dir/depend
 

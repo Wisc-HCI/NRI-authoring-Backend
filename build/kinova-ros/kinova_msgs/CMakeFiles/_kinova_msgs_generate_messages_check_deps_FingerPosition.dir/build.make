@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/src
+CMAKE_SOURCE_DIR = /home/jerry/Desktop/therbligs_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/build
+CMAKE_BINARY_DIR = /home/jerry/Desktop/therbligs_ws/build
 
 # Utility rule file for _kinova_msgs_generate_messages_check_deps_FingerPosition.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/build
 include kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition.dir/progress.make
 
 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py kinova_msgs /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_msgs/msg/FingerPosition.msg 
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py kinova_msgs /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_msgs/msg/FingerPosition.msg 
 
 _kinova_msgs_generate_messages_check_deps_FingerPosition: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition
 _kinova_msgs_generate_messages_check_deps_FingerPosition: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition.dir/build.make
@@ -67,10 +67,10 @@ kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Fing
 .PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition.dir/build
 
 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition.dir/clean:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_msgs && $(CMAKE_COMMAND) -P CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition.dir/cmake_clean.cmake
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_msgs && $(CMAKE_COMMAND) -P CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition.dir/cmake_clean.cmake
 .PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition.dir/clean
 
 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition.dir/depend:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hcilab/Documents/jieru/NRI-authoring-Backend/src /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_msgs /home/hcilab/Documents/jieru/NRI-authoring-Backend/build /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_msgs /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jerry/Desktop/therbligs_ws/src /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_msgs /home/jerry/Desktop/therbligs_ws/build /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_msgs /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition.dir/depend
 

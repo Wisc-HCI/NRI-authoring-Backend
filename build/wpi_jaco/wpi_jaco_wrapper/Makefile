@@ -48,13 +48,25 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/src
+CMAKE_SOURCE_DIR = /home/jerry/Desktop/therbligs_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/build
+CMAKE_BINARY_DIR = /home/jerry/Desktop/therbligs_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -67,6 +79,17 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -77,6 +100,17 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -99,50 +133,16 @@ install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # The main all target
 all: cmake_check_build_system
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/wpi_jaco_wrapper/CMakeFiles/progress.marks
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles 0
+	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/jerry/Desktop/therbligs_ws/build/CMakeFiles /home/jerry/Desktop/therbligs_ws/build/wpi_jaco/wpi_jaco_wrapper/CMakeFiles/progress.marks
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jerry/Desktop/therbligs_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/clean
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/clean
 .PHONY : clean
 
 # The main clean target
@@ -152,172 +152,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/preinstall
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/preinstall
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_conversions.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_conversions.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_conversions.dir/rule
-
-# Convenience name for target.
-jaco_conversions: wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_conversions.dir/rule
-
-.PHONY : jaco_conversions
-
-# fast build rule for target.
-jaco_conversions/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_conversions.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_conversions.dir/build
-.PHONY : jaco_conversions/fast
-
-# Convenience name for target.
-wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_manipulation.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_manipulation.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_manipulation.dir/rule
-
-# Convenience name for target.
-jaco_manipulation: wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_manipulation.dir/rule
-
-.PHONY : jaco_manipulation
-
-# fast build rule for target.
-jaco_manipulation/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_manipulation.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_manipulation.dir/build
-.PHONY : jaco_manipulation/fast
-
-# Convenience name for target.
-wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_arm_trajectory_node.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_arm_trajectory_node.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_arm_trajectory_node.dir/rule
-
-# Convenience name for target.
-jaco_arm_trajectory_node: wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_arm_trajectory_node.dir/rule
-
-.PHONY : jaco_arm_trajectory_node
-
-# fast build rule for target.
-jaco_arm_trajectory_node/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_arm_trajectory_node.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_arm_trajectory_node.dir/build
-.PHONY : jaco_arm_trajectory_node/fast
-
-# Convenience name for target.
-wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-controller_manager_msgs_generate_messages_py: wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
-
-.PHONY : controller_manager_msgs_generate_messages_py
-
-# fast build rule for target.
-controller_manager_msgs_generate_messages_py/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/build
-.PHONY : controller_manager_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-controller_manager_msgs_generate_messages_lisp: wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : controller_manager_msgs_generate_messages_lisp
-
-# fast build rule for target.
-controller_manager_msgs_generate_messages_lisp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/build
-.PHONY : controller_manager_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-control_msgs_generate_messages_cpp: wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : control_msgs_generate_messages_cpp
-
-# fast build rule for target.
-control_msgs_generate_messages_cpp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_cpp.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_cpp.dir/build
-.PHONY : control_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_nodejs.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-control_msgs_generate_messages_nodejs: wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : control_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-control_msgs_generate_messages_nodejs/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_nodejs.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_nodejs.dir/build
-.PHONY : control_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_kinematics.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_kinematics.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_kinematics.dir/rule
-
-# Convenience name for target.
-jaco_kinematics: wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_kinematics.dir/rule
-
-.PHONY : jaco_kinematics
-
-# fast build rule for target.
-jaco_kinematics/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_kinematics.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_kinematics.dir/build
-.PHONY : jaco_kinematics/fast
-
-# Convenience name for target.
-wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-controller_manager_msgs_generate_messages_cpp: wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : controller_manager_msgs_generate_messages_cpp
-
-# fast build rule for target.
-controller_manager_msgs_generate_messages_cpp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/build
-.PHONY : controller_manager_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_eus.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_eus.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-control_msgs_generate_messages_eus: wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_eus.dir/rule
-
-.PHONY : control_msgs_generate_messages_eus
-
-# fast build rule for target.
-control_msgs_generate_messages_eus/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_eus.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_eus.dir/build
-.PHONY : control_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule
 .PHONY : wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -327,27 +177,27 @@ controller_manager_msgs_generate_messages_eus: wpi_jaco/wpi_jaco_wrapper/CMakeFi
 
 # fast build rule for target.
 controller_manager_msgs_generate_messages_eus/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/build
 .PHONY : controller_manager_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_lisp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_lisp.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_lisp.dir/rule
+wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
+.PHONY : wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-control_msgs_generate_messages_lisp: wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_lisp.dir/rule
+controller_manager_msgs_generate_messages_py: wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
 
-.PHONY : control_msgs_generate_messages_lisp
+.PHONY : controller_manager_msgs_generate_messages_py
 
 # fast build rule for target.
-control_msgs_generate_messages_lisp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_lisp.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_lisp.dir/build
-.PHONY : control_msgs_generate_messages_lisp/fast
+controller_manager_msgs_generate_messages_py/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/build
+.PHONY : controller_manager_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
 .PHONY : wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -357,23 +207,98 @@ controller_manager_msgs_generate_messages_nodejs: wpi_jaco/wpi_jaco_wrapper/CMak
 
 # fast build rule for target.
 controller_manager_msgs_generate_messages_nodejs/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/build
 .PHONY : controller_manager_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_py.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_py.dir/rule
-.PHONY : wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_py.dir/rule
+wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
+.PHONY : wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-control_msgs_generate_messages_py: wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_py.dir/rule
+controller_manager_msgs_generate_messages_lisp: wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : control_msgs_generate_messages_py
+.PHONY : controller_manager_msgs_generate_messages_lisp
 
 # fast build rule for target.
-control_msgs_generate_messages_py/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_py.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/control_msgs_generate_messages_py.dir/build
-.PHONY : control_msgs_generate_messages_py/fast
+controller_manager_msgs_generate_messages_lisp/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_lisp.dir/build
+.PHONY : controller_manager_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_manipulation.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_manipulation.dir/rule
+.PHONY : wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_manipulation.dir/rule
+
+# Convenience name for target.
+jaco_manipulation: wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_manipulation.dir/rule
+
+.PHONY : jaco_manipulation
+
+# fast build rule for target.
+jaco_manipulation/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_manipulation.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_manipulation.dir/build
+.PHONY : jaco_manipulation/fast
+
+# Convenience name for target.
+wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_arm_trajectory_node.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_arm_trajectory_node.dir/rule
+.PHONY : wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_arm_trajectory_node.dir/rule
+
+# Convenience name for target.
+jaco_arm_trajectory_node: wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_arm_trajectory_node.dir/rule
+
+.PHONY : jaco_arm_trajectory_node
+
+# fast build rule for target.
+jaco_arm_trajectory_node/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_arm_trajectory_node.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_arm_trajectory_node.dir/build
+.PHONY : jaco_arm_trajectory_node/fast
+
+# Convenience name for target.
+wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/rule
+.PHONY : wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+controller_manager_msgs_generate_messages_cpp: wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : controller_manager_msgs_generate_messages_cpp
+
+# fast build rule for target.
+controller_manager_msgs_generate_messages_cpp/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/build
+.PHONY : controller_manager_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_kinematics.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_kinematics.dir/rule
+.PHONY : wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_kinematics.dir/rule
+
+# Convenience name for target.
+jaco_kinematics: wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_kinematics.dir/rule
+
+.PHONY : jaco_kinematics
+
+# fast build rule for target.
+jaco_kinematics/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_kinematics.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_kinematics.dir/build
+.PHONY : jaco_kinematics/fast
+
+# Convenience name for target.
+wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_conversions.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_conversions.dir/rule
+.PHONY : wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_conversions.dir/rule
+
+# Convenience name for target.
+jaco_conversions: wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_conversions.dir/rule
+
+.PHONY : jaco_conversions
+
+# fast build rule for target.
+jaco_conversions/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_conversions.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_conversions.dir/build
+.PHONY : jaco_conversions/fast
 
 src/jaco_arm_trajectory_node.o: src/jaco_arm_trajectory_node.cpp.o
 
@@ -381,7 +306,7 @@ src/jaco_arm_trajectory_node.o: src/jaco_arm_trajectory_node.cpp.o
 
 # target to build an object file
 src/jaco_arm_trajectory_node.cpp.o:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_arm_trajectory_node.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_arm_trajectory_node.dir/src/jaco_arm_trajectory_node.cpp.o
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_arm_trajectory_node.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_arm_trajectory_node.dir/src/jaco_arm_trajectory_node.cpp.o
 .PHONY : src/jaco_arm_trajectory_node.cpp.o
 
 src/jaco_arm_trajectory_node.i: src/jaco_arm_trajectory_node.cpp.i
@@ -390,7 +315,7 @@ src/jaco_arm_trajectory_node.i: src/jaco_arm_trajectory_node.cpp.i
 
 # target to preprocess a source file
 src/jaco_arm_trajectory_node.cpp.i:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_arm_trajectory_node.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_arm_trajectory_node.dir/src/jaco_arm_trajectory_node.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_arm_trajectory_node.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_arm_trajectory_node.dir/src/jaco_arm_trajectory_node.cpp.i
 .PHONY : src/jaco_arm_trajectory_node.cpp.i
 
 src/jaco_arm_trajectory_node.s: src/jaco_arm_trajectory_node.cpp.s
@@ -399,7 +324,7 @@ src/jaco_arm_trajectory_node.s: src/jaco_arm_trajectory_node.cpp.s
 
 # target to generate assembly for a file
 src/jaco_arm_trajectory_node.cpp.s:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_arm_trajectory_node.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_arm_trajectory_node.dir/src/jaco_arm_trajectory_node.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_arm_trajectory_node.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_arm_trajectory_node.dir/src/jaco_arm_trajectory_node.cpp.s
 .PHONY : src/jaco_arm_trajectory_node.cpp.s
 
 src/jaco_conversions.o: src/jaco_conversions.cpp.o
@@ -408,7 +333,7 @@ src/jaco_conversions.o: src/jaco_conversions.cpp.o
 
 # target to build an object file
 src/jaco_conversions.cpp.o:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_conversions.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_conversions.dir/src/jaco_conversions.cpp.o
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_conversions.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_conversions.dir/src/jaco_conversions.cpp.o
 .PHONY : src/jaco_conversions.cpp.o
 
 src/jaco_conversions.i: src/jaco_conversions.cpp.i
@@ -417,7 +342,7 @@ src/jaco_conversions.i: src/jaco_conversions.cpp.i
 
 # target to preprocess a source file
 src/jaco_conversions.cpp.i:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_conversions.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_conversions.dir/src/jaco_conversions.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_conversions.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_conversions.dir/src/jaco_conversions.cpp.i
 .PHONY : src/jaco_conversions.cpp.i
 
 src/jaco_conversions.s: src/jaco_conversions.cpp.s
@@ -426,7 +351,7 @@ src/jaco_conversions.s: src/jaco_conversions.cpp.s
 
 # target to generate assembly for a file
 src/jaco_conversions.cpp.s:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_conversions.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_conversions.dir/src/jaco_conversions.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_conversions.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_conversions.dir/src/jaco_conversions.cpp.s
 .PHONY : src/jaco_conversions.cpp.s
 
 src/jaco_kinematics.o: src/jaco_kinematics.cpp.o
@@ -435,7 +360,7 @@ src/jaco_kinematics.o: src/jaco_kinematics.cpp.o
 
 # target to build an object file
 src/jaco_kinematics.cpp.o:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_kinematics.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_kinematics.dir/src/jaco_kinematics.cpp.o
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_kinematics.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_kinematics.dir/src/jaco_kinematics.cpp.o
 .PHONY : src/jaco_kinematics.cpp.o
 
 src/jaco_kinematics.i: src/jaco_kinematics.cpp.i
@@ -444,7 +369,7 @@ src/jaco_kinematics.i: src/jaco_kinematics.cpp.i
 
 # target to preprocess a source file
 src/jaco_kinematics.cpp.i:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_kinematics.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_kinematics.dir/src/jaco_kinematics.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_kinematics.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_kinematics.dir/src/jaco_kinematics.cpp.i
 .PHONY : src/jaco_kinematics.cpp.i
 
 src/jaco_kinematics.s: src/jaco_kinematics.cpp.s
@@ -453,7 +378,7 @@ src/jaco_kinematics.s: src/jaco_kinematics.cpp.s
 
 # target to generate assembly for a file
 src/jaco_kinematics.cpp.s:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_kinematics.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_kinematics.dir/src/jaco_kinematics.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_kinematics.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_kinematics.dir/src/jaco_kinematics.cpp.s
 .PHONY : src/jaco_kinematics.cpp.s
 
 src/jaco_manipulation.o: src/jaco_manipulation.cpp.o
@@ -462,7 +387,7 @@ src/jaco_manipulation.o: src/jaco_manipulation.cpp.o
 
 # target to build an object file
 src/jaco_manipulation.cpp.o:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_manipulation.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_manipulation.dir/src/jaco_manipulation.cpp.o
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_manipulation.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_manipulation.dir/src/jaco_manipulation.cpp.o
 .PHONY : src/jaco_manipulation.cpp.o
 
 src/jaco_manipulation.i: src/jaco_manipulation.cpp.i
@@ -471,7 +396,7 @@ src/jaco_manipulation.i: src/jaco_manipulation.cpp.i
 
 # target to preprocess a source file
 src/jaco_manipulation.cpp.i:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_manipulation.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_manipulation.dir/src/jaco_manipulation.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_manipulation.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_manipulation.dir/src/jaco_manipulation.cpp.i
 .PHONY : src/jaco_manipulation.cpp.i
 
 src/jaco_manipulation.s: src/jaco_manipulation.cpp.s
@@ -480,7 +405,7 @@ src/jaco_manipulation.s: src/jaco_manipulation.cpp.s
 
 # target to generate assembly for a file
 src/jaco_manipulation.cpp.s:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_manipulation.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_manipulation.dir/src/jaco_manipulation.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_manipulation.dir/build.make wpi_jaco/wpi_jaco_wrapper/CMakeFiles/jaco_manipulation.dir/src/jaco_manipulation.cpp.s
 .PHONY : src/jaco_manipulation.cpp.s
 
 # Help Target
@@ -489,27 +414,22 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... install/local"
-	@echo "... list_install_components"
-	@echo "... install/strip"
-	@echo "... jaco_conversions"
-	@echo "... jaco_manipulation"
-	@echo "... jaco_arm_trajectory_node"
+	@echo "... controller_manager_msgs_generate_messages_eus"
 	@echo "... test"
 	@echo "... controller_manager_msgs_generate_messages_py"
-	@echo "... controller_manager_msgs_generate_messages_lisp"
-	@echo "... edit_cache"
-	@echo "... control_msgs_generate_messages_cpp"
-	@echo "... install"
-	@echo "... control_msgs_generate_messages_nodejs"
-	@echo "... jaco_kinematics"
-	@echo "... controller_manager_msgs_generate_messages_cpp"
-	@echo "... control_msgs_generate_messages_eus"
-	@echo "... controller_manager_msgs_generate_messages_eus"
-	@echo "... control_msgs_generate_messages_lisp"
 	@echo "... controller_manager_msgs_generate_messages_nodejs"
-	@echo "... control_msgs_generate_messages_py"
+	@echo "... controller_manager_msgs_generate_messages_lisp"
+	@echo "... jaco_manipulation"
+	@echo "... jaco_arm_trajectory_node"
+	@echo "... controller_manager_msgs_generate_messages_cpp"
+	@echo "... jaco_kinematics"
+	@echo "... jaco_conversions"
+	@echo "... list_install_components"
+	@echo "... install/strip"
 	@echo "... src/jaco_arm_trajectory_node.o"
 	@echo "... src/jaco_arm_trajectory_node.i"
 	@echo "... src/jaco_arm_trajectory_node.s"
@@ -533,6 +453,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

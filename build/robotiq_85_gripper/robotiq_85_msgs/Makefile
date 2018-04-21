@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/src
+CMAKE_SOURCE_DIR = /home/jerry/Desktop/therbligs_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/build
+CMAKE_BINARY_DIR = /home/jerry/Desktop/therbligs_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -135,14 +135,14 @@ install/strip/fast: install/strip
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/progress.marks
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles 0
+	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/jerry/Desktop/therbligs_ws/build/CMakeFiles /home/jerry/Desktop/therbligs_ws/build/robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/progress.marks
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jerry/Desktop/therbligs_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/clean
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/clean
 .PHONY : clean
 
 # The main clean target
@@ -152,22 +152,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/preinstall
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/preinstall
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_genpy.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_genpy.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_genpy.dir/rule
 .PHONY : robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_genpy.dir/rule
 
 # Convenience name for target.
@@ -177,27 +177,12 @@ robotiq_85_msgs_genpy: robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_
 
 # fast build rule for target.
 robotiq_85_msgs_genpy/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_genpy.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_genpy.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_genpy.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_genpy.dir/build
 .PHONY : robotiq_85_msgs_genpy/fast
 
 # Convenience name for target.
-robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperCmd.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperCmd.dir/rule
-.PHONY : robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperCmd.dir/rule
-
-# Convenience name for target.
-_robotiq_85_msgs_generate_messages_check_deps_GripperCmd: robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperCmd.dir/rule
-
-.PHONY : _robotiq_85_msgs_generate_messages_check_deps_GripperCmd
-
-# fast build rule for target.
-_robotiq_85_msgs_generate_messages_check_deps_GripperCmd/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperCmd.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperCmd.dir/build
-.PHONY : _robotiq_85_msgs_generate_messages_check_deps_GripperCmd/fast
-
-# Convenience name for target.
 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_py.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_py.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_py.dir/rule
 .PHONY : robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -207,12 +192,12 @@ robotiq_85_msgs_generate_messages_py: robotiq_85_gripper/robotiq_85_msgs/CMakeFi
 
 # fast build rule for target.
 robotiq_85_msgs_generate_messages_py/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_py.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_py.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_py.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_py.dir/build
 .PHONY : robotiq_85_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_genlisp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_genlisp.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_genlisp.dir/rule
 .PHONY : robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_genlisp.dir/rule
 
 # Convenience name for target.
@@ -222,12 +207,12 @@ robotiq_85_msgs_genlisp: robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_8
 
 # fast build rule for target.
 robotiq_85_msgs_genlisp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_genlisp.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_genlisp.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_genlisp.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_genlisp.dir/build
 .PHONY : robotiq_85_msgs_genlisp/fast
 
 # Convenience name for target.
 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperStat.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperStat.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperStat.dir/rule
 .PHONY : robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperStat.dir/rule
 
 # Convenience name for target.
@@ -237,12 +222,27 @@ _robotiq_85_msgs_generate_messages_check_deps_GripperStat: robotiq_85_gripper/ro
 
 # fast build rule for target.
 _robotiq_85_msgs_generate_messages_check_deps_GripperStat/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperStat.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperStat.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperStat.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperStat.dir/build
 .PHONY : _robotiq_85_msgs_generate_messages_check_deps_GripperStat/fast
 
 # Convenience name for target.
+robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperCmd.dir/rule:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperCmd.dir/rule
+.PHONY : robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperCmd.dir/rule
+
+# Convenience name for target.
+_robotiq_85_msgs_generate_messages_check_deps_GripperCmd: robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperCmd.dir/rule
+
+.PHONY : _robotiq_85_msgs_generate_messages_check_deps_GripperCmd
+
+# fast build rule for target.
+_robotiq_85_msgs_generate_messages_check_deps_GripperCmd/fast:
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperCmd.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/_robotiq_85_msgs_generate_messages_check_deps_GripperCmd.dir/build
+.PHONY : _robotiq_85_msgs_generate_messages_check_deps_GripperCmd/fast
+
+# Convenience name for target.
 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages.dir/rule
 .PHONY : robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -252,12 +252,12 @@ robotiq_85_msgs_generate_messages: robotiq_85_gripper/robotiq_85_msgs/CMakeFiles
 
 # fast build rule for target.
 robotiq_85_msgs_generate_messages/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages.dir/build
 .PHONY : robotiq_85_msgs_generate_messages/fast
 
 # Convenience name for target.
 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_geneus.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_geneus.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_geneus.dir/rule
 .PHONY : robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_geneus.dir/rule
 
 # Convenience name for target.
@@ -267,12 +267,12 @@ robotiq_85_msgs_geneus: robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85
 
 # fast build rule for target.
 robotiq_85_msgs_geneus/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_geneus.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_geneus.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_geneus.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_geneus.dir/build
 .PHONY : robotiq_85_msgs_geneus/fast
 
 # Convenience name for target.
 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_cpp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_cpp.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_cpp.dir/rule
 .PHONY : robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -282,12 +282,12 @@ robotiq_85_msgs_generate_messages_cpp: robotiq_85_gripper/robotiq_85_msgs/CMakeF
 
 # fast build rule for target.
 robotiq_85_msgs_generate_messages_cpp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_cpp.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_cpp.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_cpp.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_cpp.dir/build
 .PHONY : robotiq_85_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gencpp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gencpp.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gencpp.dir/rule
 .PHONY : robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gencpp.dir/rule
 
 # Convenience name for target.
@@ -297,12 +297,12 @@ robotiq_85_msgs_gencpp: robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85
 
 # fast build rule for target.
 robotiq_85_msgs_gencpp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gencpp.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gencpp.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gencpp.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gencpp.dir/build
 .PHONY : robotiq_85_msgs_gencpp/fast
 
 # Convenience name for target.
 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_eus.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_eus.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_eus.dir/rule
 .PHONY : robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -312,12 +312,12 @@ robotiq_85_msgs_generate_messages_eus: robotiq_85_gripper/robotiq_85_msgs/CMakeF
 
 # fast build rule for target.
 robotiq_85_msgs_generate_messages_eus/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_eus.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_eus.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_eus.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_eus.dir/build
 .PHONY : robotiq_85_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gennodejs.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gennodejs.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gennodejs.dir/rule
 .PHONY : robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gennodejs.dir/rule
 
 # Convenience name for target.
@@ -327,12 +327,12 @@ robotiq_85_msgs_gennodejs: robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq
 
 # fast build rule for target.
 robotiq_85_msgs_gennodejs/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gennodejs.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gennodejs.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gennodejs.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_gennodejs.dir/build
 .PHONY : robotiq_85_msgs_gennodejs/fast
 
 # Convenience name for target.
 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_lisp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_lisp.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_lisp.dir/rule
 .PHONY : robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -342,12 +342,12 @@ robotiq_85_msgs_generate_messages_lisp: robotiq_85_gripper/robotiq_85_msgs/CMake
 
 # fast build rule for target.
 robotiq_85_msgs_generate_messages_lisp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_lisp.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_lisp.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_lisp.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_lisp.dir/build
 .PHONY : robotiq_85_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_nodejs.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_nodejs.dir/rule
 .PHONY : robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -357,7 +357,7 @@ robotiq_85_msgs_generate_messages_nodejs: robotiq_85_gripper/robotiq_85_msgs/CMa
 
 # fast build rule for target.
 robotiq_85_msgs_generate_messages_nodejs/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_nodejs.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_nodejs.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_nodejs.dir/build.make robotiq_85_gripper/robotiq_85_msgs/CMakeFiles/robotiq_85_msgs_generate_messages_nodejs.dir/build
 .PHONY : robotiq_85_msgs_generate_messages_nodejs/fast
 
 # Help Target
@@ -372,10 +372,10 @@ help:
 	@echo "... install/local"
 	@echo "... rebuild_cache"
 	@echo "... robotiq_85_msgs_genpy"
-	@echo "... _robotiq_85_msgs_generate_messages_check_deps_GripperCmd"
 	@echo "... robotiq_85_msgs_generate_messages_py"
 	@echo "... robotiq_85_msgs_genlisp"
 	@echo "... _robotiq_85_msgs_generate_messages_check_deps_GripperStat"
+	@echo "... _robotiq_85_msgs_generate_messages_check_deps_GripperCmd"
 	@echo "... robotiq_85_msgs_generate_messages"
 	@echo "... robotiq_85_msgs_geneus"
 	@echo "... robotiq_85_msgs_generate_messages_cpp"
@@ -397,6 +397,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

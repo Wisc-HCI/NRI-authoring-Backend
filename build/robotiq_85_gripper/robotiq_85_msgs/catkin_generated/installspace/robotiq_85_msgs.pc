@@ -1,8 +1,8 @@
-prefix=/home/hcilab/Documents/jieru/NRI-authoring-Backend/install
+prefix=/home/jerry/Desktop/therbligs_ws/install
 
 Name: robotiq_85_msgs
 Description: Description of robotiq_85_msgs
 Version: 0.0.1
-Cflags: -I/home/hcilab/Documents/jieru/NRI-authoring-Backend/install/include
-Libs: -L/home/hcilab/Documents/jieru/NRI-authoring-Backend/install/lib 
+Cflags: -I/home/jerry/Desktop/therbligs_ws/install/include
+Libs: -L/home/jerry/Desktop/therbligs_ws/install/lib 
 Requires: message_runtime std_msgs

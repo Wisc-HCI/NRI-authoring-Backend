@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/kinova_interactive_control.dir/src/nodes/kinova_interactive_control.cpp.o"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control.pdb"
-  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/kinova_driver/kinova_interactive_control"
+  "/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control.pdb"
+  "/home/jerry/Desktop/therbligs_ws/devel/lib/kinova_driver/kinova_interactive_control"
 )
 
 # Per-language clean rules from dependency scanning.

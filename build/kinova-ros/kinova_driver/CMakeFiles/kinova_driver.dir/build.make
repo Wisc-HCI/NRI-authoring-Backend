@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/src
+CMAKE_SOURCE_DIR = /home/jerry/Desktop/therbligs_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/build
+CMAKE_BINARY_DIR = /home/jerry/Desktop/therbligs_ws/build
 
 # Include any dependencies generated for this target.
 include kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/depend.make
@@ -58,17 +58,17 @@ include kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/progress.make
 include kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/flags.make
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.o: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/flags.make
-kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.o: /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_api.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.o"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.o -c /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_api.cpp
+kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.o: /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_api.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jerry/Desktop/therbligs_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.o"
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.o -c /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_api.cpp
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.i"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_api.cpp > CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_api.cpp > CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.i
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.s"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_api.cpp -o CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_api.cpp -o CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.s
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.o.requires:
 
@@ -82,17 +82,17 @@ kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.o.provi
 
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.o: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/flags.make
-kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.o: /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_arm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.o"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.o -c /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_arm.cpp
+kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.o: /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_arm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jerry/Desktop/therbligs_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.o"
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.o -c /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_arm.cpp
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.i"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_arm.cpp > CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_arm.cpp > CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.i
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.s"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_arm.cpp -o CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_arm.cpp -o CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.s
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.o.requires:
 
@@ -106,17 +106,17 @@ kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.o.provi
 
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.o: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/flags.make
-kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.o: /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_comm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.o"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.o -c /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_comm.cpp
+kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.o: /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_comm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jerry/Desktop/therbligs_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.o"
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.o -c /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_comm.cpp
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.i"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_comm.cpp > CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_comm.cpp > CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.i
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.s"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_comm.cpp -o CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_comm.cpp -o CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.s
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.o.requires:
 
@@ -130,17 +130,17 @@ kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.o.prov
 
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_action.cpp.o: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/flags.make
-kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_action.cpp.o: /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_tool_pose_action.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_action.cpp.o"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_action.cpp.o -c /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_tool_pose_action.cpp
+kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_action.cpp.o: /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_tool_pose_action.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jerry/Desktop/therbligs_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_action.cpp.o"
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_action.cpp.o -c /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_tool_pose_action.cpp
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_action.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_action.cpp.i"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_tool_pose_action.cpp > CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_action.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_tool_pose_action.cpp > CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_action.cpp.i
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_action.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_action.cpp.s"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_tool_pose_action.cpp -o CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_action.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_tool_pose_action.cpp -o CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_action.cpp.s
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_action.cpp.o.requires:
 
@@ -154,17 +154,17 @@ kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_actio
 
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_action.cpp.o: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/flags.make
-kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_action.cpp.o: /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_joint_angles_action.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_action.cpp.o"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_action.cpp.o -c /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_joint_angles_action.cpp
+kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_action.cpp.o: /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_joint_angles_action.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jerry/Desktop/therbligs_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_action.cpp.o"
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_action.cpp.o -c /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_joint_angles_action.cpp
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_action.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_action.cpp.i"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_joint_angles_action.cpp > CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_action.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_joint_angles_action.cpp > CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_action.cpp.i
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_action.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_action.cpp.s"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_joint_angles_action.cpp -o CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_action.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_joint_angles_action.cpp -o CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_action.cpp.s
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_action.cpp.o.requires:
 
@@ -178,17 +178,17 @@ kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_ac
 
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.o: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/flags.make
-kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.o: /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_fingers_action.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.o"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.o -c /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_fingers_action.cpp
+kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.o: /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_fingers_action.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jerry/Desktop/therbligs_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.o"
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.o -c /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_fingers_action.cpp
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.i"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_fingers_action.cpp > CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_fingers_action.cpp > CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.i
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.s"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_fingers_action.cpp -o CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_fingers_action.cpp -o CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.s
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.o.requires:
 
@@ -202,17 +202,17 @@ kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.
 
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.o: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/flags.make
-kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.o: /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_ros_types.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.o"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.o -c /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_ros_types.cpp
+kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.o: /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_ros_types.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jerry/Desktop/therbligs_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.o"
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.o -c /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_ros_types.cpp
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.i"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_ros_types.cpp > CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_ros_types.cpp > CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.i
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.s"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_ros_types.cpp -o CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_ros_types.cpp -o CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.s
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.o.requires:
 
@@ -226,17 +226,17 @@ kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.o
 
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.o: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/flags.make
-kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.o: /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_joint_trajectory_controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.o"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.o -c /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_joint_trajectory_controller.cpp
+kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.o: /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_joint_trajectory_controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jerry/Desktop/therbligs_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.o"
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.o -c /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_joint_trajectory_controller.cpp
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.i"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_joint_trajectory_controller.cpp > CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_joint_trajectory_controller.cpp > CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.i
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.s"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_joint_trajectory_controller.cpp -o CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_joint_trajectory_controller.cpp -o CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.s
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.o.requires:
 
@@ -263,47 +263,47 @@ kinova_driver_OBJECTS = \
 # External object files for target kinova_driver
 kinova_driver_EXTERNAL_OBJECTS =
 
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.o
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.o
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.o
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_action.cpp.o
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_action.cpp.o
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.o
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.o
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.o
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/libinteractive_markers.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/libtf.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/libtf2_ros.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/libactionlib.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/libmessage_filters.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/libroscpp.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/libxmlrpcpp.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/libtf2.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/librosconsole.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/libroscpp_serialization.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/librostime.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/libcpp_common.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
-/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX shared library /home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so"
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/kinova_driver.dir/link.txt --verbose=$(VERBOSE)
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_api.cpp.o
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_arm.cpp.o
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_comm.cpp.o
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_tool_pose_action.cpp.o
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_angles_action.cpp.o
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_fingers_action.cpp.o
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_ros_types.cpp.o
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/src/kinova_joint_trajectory_controller.cpp.o
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build.make
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/libinteractive_markers.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/libtf.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/libtf2_ros.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/libactionlib.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/libmessage_filters.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/libroscpp.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/libxmlrpcpp.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/libtf2.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/librosconsole.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/libroscpp_serialization.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/librostime.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /opt/ros/kinetic/lib/libcpp_common.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+/home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so: kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jerry/Desktop/therbligs_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX shared library /home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so"
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/kinova_driver.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build: /home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libkinova_driver.so
+kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build: /home/jerry/Desktop/therbligs_ws/devel/lib/libkinova_driver.so
 
 .PHONY : kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/build
 
@@ -319,10 +319,10 @@ kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/requires: kinova-ros/kinov
 .PHONY : kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/requires
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/clean:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver && $(CMAKE_COMMAND) -P CMakeFiles/kinova_driver.dir/cmake_clean.cmake
+	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver && $(CMAKE_COMMAND) -P CMakeFiles/kinova_driver.dir/cmake_clean.cmake
 .PHONY : kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/clean
 
 kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/depend:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hcilab/Documents/jieru/NRI-authoring-Backend/src /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver /home/hcilab/Documents/jieru/NRI-authoring-Backend/build /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jerry/Desktop/therbligs_ws/src /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver /home/jerry/Desktop/therbligs_ws/build /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : kinova-ros/kinova_driver/CMakeFiles/kinova_driver.dir/depend
 

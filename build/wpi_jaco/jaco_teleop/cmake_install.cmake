@@ -1,8 +1,8 @@
-# Install script for directory: /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_teleop
+# Install script for directory: /home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_teleop
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/hcilab/Documents/jieru/NRI-authoring-Backend/install")
+  set(CMAKE_INSTALL_PREFIX "/home/jerry/Desktop/therbligs_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,18 +33,18 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/jaco_teleop/catkin_generated/installspace/jaco_teleop.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jerry/Desktop/therbligs_ws/build/wpi_jaco/jaco_teleop/catkin_generated/installspace/jaco_teleop.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_teleop/cmake" TYPE FILE FILES
-    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/jaco_teleop/catkin_generated/installspace/jaco_teleopConfig.cmake"
-    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/jaco_teleop/catkin_generated/installspace/jaco_teleopConfig-version.cmake"
+    "/home/jerry/Desktop/therbligs_ws/build/wpi_jaco/jaco_teleop/catkin_generated/installspace/jaco_teleopConfig.cmake"
+    "/home/jerry/Desktop/therbligs_ws/build/wpi_jaco/jaco_teleop/catkin_generated/installspace/jaco_teleopConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_teleop" TYPE FILE FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_teleop/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_teleop" TYPE FILE FILES "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_teleop/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -54,7 +54,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/jaco_teleop/jaco_joy_teleop"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/jaco_teleop" TYPE EXECUTABLE FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_joy_teleop")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/jaco_teleop" TYPE EXECUTABLE FILES "/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_joy_teleop")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/jaco_teleop/jaco_joy_teleop" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/jaco_teleop/jaco_joy_teleop")
     file(RPATH_CHANGE
@@ -74,7 +74,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/jaco_teleop/jaco_key_teleop"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/jaco_teleop" TYPE EXECUTABLE FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/jaco_teleop/jaco_key_teleop")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/jaco_teleop" TYPE EXECUTABLE FILES "/home/jerry/Desktop/therbligs_ws/devel/lib/jaco_teleop/jaco_key_teleop")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/jaco_teleop/jaco_key_teleop" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/jaco_teleop/jaco_key_teleop")
     file(RPATH_CHANGE
@@ -88,10 +88,10 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/jaco_teleop" TYPE DIRECTORY FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_teleop/include/jaco_teleop/" FILES_MATCHING REGEX "/[^/]*\\.hpp$" REGEX "/[^/]*\\.h$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/jaco_teleop" TYPE DIRECTORY FILES "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_teleop/include/jaco_teleop/" FILES_MATCHING REGEX "/[^/]*\\.hpp$" REGEX "/[^/]*\\.h$")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_teleop/launch" TYPE DIRECTORY FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/wpi_jaco/jaco_teleop/launch/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jaco_teleop/launch" TYPE DIRECTORY FILES "/home/jerry/Desktop/therbligs_ws/src/wpi_jaco/jaco_teleop/launch/")
 endif()
 

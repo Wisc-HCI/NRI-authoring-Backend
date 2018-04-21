@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/src
+CMAKE_SOURCE_DIR = /home/jerry/Desktop/therbligs_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/build
+CMAKE_BINARY_DIR = /home/jerry/Desktop/therbligs_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -135,14 +135,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/wpi_jaco/jaco_teleop/CMakeFiles/progress.marks
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles 0
+	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/jerry/Desktop/therbligs_ws/build/CMakeFiles /home/jerry/Desktop/therbligs_ws/build/wpi_jaco/jaco_teleop/CMakeFiles/progress.marks
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jerry/Desktop/therbligs_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/clean
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/clean
 .PHONY : clean
 
 # The main clean target
@@ -152,22 +152,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/preinstall
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/preinstall
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/rule
 .PHONY : wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/rule
 
 # Convenience name for target.
@@ -177,12 +177,12 @@ jaco_key_teleop: wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/rule
 
 # fast build rule for target.
 jaco_key_teleop/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/build
 .PHONY : jaco_key_teleop/fast
 
 # Convenience name for target.
 wpi_jaco/jaco_teleop/CMakeFiles/jaco_joy_teleop.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/CMakeFiles/jaco_joy_teleop.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/CMakeFiles/jaco_joy_teleop.dir/rule
 .PHONY : wpi_jaco/jaco_teleop/CMakeFiles/jaco_joy_teleop.dir/rule
 
 # Convenience name for target.
@@ -192,12 +192,12 @@ jaco_joy_teleop: wpi_jaco/jaco_teleop/CMakeFiles/jaco_joy_teleop.dir/rule
 
 # fast build rule for target.
 jaco_joy_teleop/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/jaco_joy_teleop.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/jaco_joy_teleop.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/jaco_joy_teleop.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/jaco_joy_teleop.dir/build
 .PHONY : jaco_joy_teleop/fast
 
 # Convenience name for target.
 wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 .PHONY : wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -207,12 +207,12 @@ roscpp_generate_messages_lisp: wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_m
 
 # fast build rule for target.
 roscpp_generate_messages_lisp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 .PHONY : roscpp_generate_messages_lisp/fast
 
 # Convenience name for target.
 wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 .PHONY : wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -222,12 +222,12 @@ roscpp_generate_messages_nodejs: wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate
 
 # fast build rule for target.
 roscpp_generate_messages_nodejs/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 # Convenience name for target.
 wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 .PHONY : wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -237,12 +237,12 @@ roscpp_generate_messages_eus: wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_me
 
 # fast build rule for target.
 roscpp_generate_messages_eus/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_eus.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_eus.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_eus.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_eus.dir/build
 .PHONY : roscpp_generate_messages_eus/fast
 
 # Convenience name for target.
 wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 .PHONY : wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -252,12 +252,12 @@ roscpp_generate_messages_cpp: wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_me
 
 # fast build rule for target.
 roscpp_generate_messages_cpp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 .PHONY : roscpp_generate_messages_cpp/fast
 
 # Convenience name for target.
 wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 .PHONY : wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -267,12 +267,12 @@ rosgraph_msgs_generate_messages_nodejs: wpi_jaco/jaco_teleop/CMakeFiles/rosgraph
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_nodejs/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 .PHONY : wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -282,12 +282,12 @@ rosgraph_msgs_generate_messages_eus: wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_ms
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_eus/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_py.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -297,12 +297,12 @@ roscpp_generate_messages_py: wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_mes
 
 # fast build rule for target.
 roscpp_generate_messages_py/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_py.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_py.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_py.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/roscpp_generate_messages_py.dir/build
 .PHONY : roscpp_generate_messages_py/fast
 
 # Convenience name for target.
 wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 .PHONY : wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -312,12 +312,12 @@ rosgraph_msgs_generate_messages_cpp: wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_ms
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 .PHONY : wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -327,12 +327,12 @@ rosgraph_msgs_generate_messages_lisp: wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_m
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 .PHONY : wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -342,7 +342,7 @@ rosgraph_msgs_generate_messages_py: wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msg
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_py/fast:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 src/jaco_joy_teleop.o: src/jaco_joy_teleop.cpp.o
@@ -351,7 +351,7 @@ src/jaco_joy_teleop.o: src/jaco_joy_teleop.cpp.o
 
 # target to build an object file
 src/jaco_joy_teleop.cpp.o:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/jaco_joy_teleop.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/jaco_joy_teleop.dir/src/jaco_joy_teleop.cpp.o
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/jaco_joy_teleop.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/jaco_joy_teleop.dir/src/jaco_joy_teleop.cpp.o
 .PHONY : src/jaco_joy_teleop.cpp.o
 
 src/jaco_joy_teleop.i: src/jaco_joy_teleop.cpp.i
@@ -360,7 +360,7 @@ src/jaco_joy_teleop.i: src/jaco_joy_teleop.cpp.i
 
 # target to preprocess a source file
 src/jaco_joy_teleop.cpp.i:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/jaco_joy_teleop.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/jaco_joy_teleop.dir/src/jaco_joy_teleop.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/jaco_joy_teleop.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/jaco_joy_teleop.dir/src/jaco_joy_teleop.cpp.i
 .PHONY : src/jaco_joy_teleop.cpp.i
 
 src/jaco_joy_teleop.s: src/jaco_joy_teleop.cpp.s
@@ -369,7 +369,7 @@ src/jaco_joy_teleop.s: src/jaco_joy_teleop.cpp.s
 
 # target to generate assembly for a file
 src/jaco_joy_teleop.cpp.s:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/jaco_joy_teleop.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/jaco_joy_teleop.dir/src/jaco_joy_teleop.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/jaco_joy_teleop.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/jaco_joy_teleop.dir/src/jaco_joy_teleop.cpp.s
 .PHONY : src/jaco_joy_teleop.cpp.s
 
 src/jaco_key_teleop.o: src/jaco_key_teleop.cpp.o
@@ -378,7 +378,7 @@ src/jaco_key_teleop.o: src/jaco_key_teleop.cpp.o
 
 # target to build an object file
 src/jaco_key_teleop.cpp.o:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.o
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.o
 .PHONY : src/jaco_key_teleop.cpp.o
 
 src/jaco_key_teleop.i: src/jaco_key_teleop.cpp.i
@@ -387,7 +387,7 @@ src/jaco_key_teleop.i: src/jaco_key_teleop.cpp.i
 
 # target to preprocess a source file
 src/jaco_key_teleop.cpp.i:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.i
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.i
 .PHONY : src/jaco_key_teleop.cpp.i
 
 src/jaco_key_teleop.s: src/jaco_key_teleop.cpp.s
@@ -396,7 +396,7 @@ src/jaco_key_teleop.s: src/jaco_key_teleop.cpp.s
 
 # target to generate assembly for a file
 src/jaco_key_teleop.cpp.s:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.s
+	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/build.make wpi_jaco/jaco_teleop/CMakeFiles/jaco_key_teleop.dir/src/jaco_key_teleop.cpp.s
 .PHONY : src/jaco_key_teleop.cpp.s
 
 # Help Target
@@ -441,6 +441,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

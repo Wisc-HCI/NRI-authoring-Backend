@@ -1,8 +1,8 @@
-prefix=/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel
+prefix=/home/jerry/Desktop/therbligs_ws/devel
 
 Name: mico_description
 Description: Description of mico_description
 Version: 0.0.25
 Cflags: 
-Libs: -L/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib 
+Libs: -L/home/jerry/Desktop/therbligs_ws/devel/lib 
 Requires: 
