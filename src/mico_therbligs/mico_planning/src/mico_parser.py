@@ -58,4 +58,9 @@ class ActionParser:
     def getObjectName(self, therblig):
     	assert(self.type == 'ExecutePlan')
     	return therblig['thing']['name']
-        
+
+    # Returns the hold duration
+    def getHoldDuration(self, therblig):
+        assert(self.type == 'ExecutePlan')
+        return therblig['parameters'][0]['val']
+

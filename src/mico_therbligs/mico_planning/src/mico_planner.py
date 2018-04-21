@@ -237,6 +237,22 @@ class ActionHandler:
             print(e)
 
         return success
+
+    ################
+    # Hold the arm position for seconds.
+    # Arguments : None
+    #
+    # Returns : True if the arm rests
+    def Hold(self, nseconds):
+        if nseconds <= 0:
+            return False
+        try:
+            rospy.sleep(nseconds)
+        except Exception as e:
+            print("*EXCEPTION OCCURRED* - attempted to rest the arm")
+            print(e)
+        return True
+
     ################
     # Set the degree of the hand openness
     # Grasp or release and object

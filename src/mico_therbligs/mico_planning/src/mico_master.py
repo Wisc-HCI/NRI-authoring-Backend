@@ -13,8 +13,8 @@ import os
 import sys
 import json
 import tf
-
 import log as LOG
+
 from mico_parser import ActionParser
 from mico_planner import ActionHandler
 import rospy
@@ -37,21 +37,26 @@ def save_reply(actionType, success):
 
 ###
 # Create a target pose for contains the XYZPosition and orientation of the object
+# If the orientation is empty, we keep the orientation of the current pose, and
+# set it as the target pose.
 ###
 def createTarget(XYZPosition, orientation):
-    
+
     xyzPos = map(float, [pos.strip() for pos in XYZPosition.split(',')])
-    print (orientation, type(orientation))
-    orientaionPos = map(float, [pos.strip() for pos in orientation.split(',')])
-    quaternion = tf.transformations.quaternion_from_euler(float(orientaionPos[0]), float(orientaionPos[1]), float(orientaionPos[2]))
-    '''
-    if (len(xyzPos) != 3):
-        LOG.ERROR("Input target XYZ position should have a length of 3.\n")
-        return None
-    if (len(orientaionPos) != 3):
-        LOG.ERROR("Input target orientaion position should have a length of 3.")
-        return None
-    '''
+    if (len(orientation) == 0):
+        # there is not orientation specified
+        #current_pose = rospy.wait_for_message('/m1n6s300_driver/out/cartesian_command',kinova_msgs/KinovaPose)
+        #orientationPos = [(float)current_pose.ThetaX, (float)current_pose.ThetaY, (float)current_pose.ThetaZ]
+        print ("hello")
+    else:
+        orientationPos = map(float, [pos.strip() for pos in orientation.split(',')])
+        '''        
+        if (len(orientaionPos) != 3):
+            LOG.ERROR("Input target orientaion position should have a length of 3.")
+            return None
+           '''
+    # convert three euler angles to four quaternions for MoveIt
+    quaternion = tf.transformations.quaternion_from_euler(float(orientationPos[0]), float(orientationPos[1]), float(orientationPos[2]))
     pose_target = geometry_msgs.msg.Pose()
     pose_target.position.x = xyzPos[0]
     pose_target.position.y = xyzPos[1]
@@ -97,6 +102,9 @@ def execute_plan(acHan, json_plan_file="plan.json"):
         # check ROS alive
         if actionType == 'CheckROSLive':
       	    LOG.INFO("Checking ROS alive...\n")
+            save_reply(actionType, True)
+        elif actionType == 'launchROS':
+            LOG.INFO("Launch ROS scripts...\n")
             save_reply(actionType, True)
         # execute a plan
         elif actionType == 'ExecutePlan':
@@ -156,6 +164,13 @@ def execute_plan(acHan, json_plan_file="plan.json"):
                         ret = acHan.Rest(pose_target)
                         if not ret:
                             LOG.ERROR("Rest failed")
+                    elif parser.getTherbligName(therblig) == "Hold":
+                        duration = (int)(parser.getHoldDuration(therblig))
+                        LOG.INFO("Hold for {} seconds".format(duration))
+                        # Call Hold API from mico_planner
+                        ret = acHan.Hold(pose_target)
+                        if not ret:
+                            LOG.ERROR("Hold failed")
 
             # end VREP simulation
             if acHan.simulator != None:
