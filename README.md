@@ -70,7 +70,12 @@ sudo reboot
   git clone git@github.com:GT-RAIL/rail_manipulation_msgs.git
   ```
   Then try catkin_make again.
-2. For any moveit package missing, make sure you have follow the installation instructions from the Moveit. 
+  
+2. For "moveit_visual_tools" missing, install the dependency by:
+  ```
+  sudo apt-get install ros-kinetic-moveit-visual-tools
+  ```
+3. For any moveit package missing, make sure you have follow the installation instructions from the Moveit. 
 
 ## Steps to use this package
 
