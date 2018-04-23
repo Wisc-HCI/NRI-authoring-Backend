@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_arm_kinematics.cpp" "/home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/src/kinova_arm_kinematics.cpp.o"
-  "/home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/kinova_ros_types.cpp" "/home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/src/kinova_ros_types.cpp.o"
-  "/home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/src/nodes/kinova_tf_updater.cpp" "/home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/src/nodes/kinova_tf_updater.cpp.o"
+  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_arm_kinematics.cpp" "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/src/kinova_arm_kinematics.cpp.o"
+  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/kinova_ros_types.cpp" "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/src/kinova_ros_types.cpp.o"
+  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/src/nodes/kinova_tf_updater.cpp" "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_driver/CMakeFiles/kinova_tf_updater.dir/src/nodes/kinova_tf_updater.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -19,8 +19,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/jerry/Desktop/therbligs_ws/devel/include"
-  "/home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_driver/include"
+  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/include"
+  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_driver/include"
   "/opt/ros/kinetic/include"
   "/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

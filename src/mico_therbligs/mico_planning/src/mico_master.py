@@ -22,6 +22,8 @@ from moveit_commander import RobotCommander, os, PlanningSceneInterface, roscpp_
 import geometry_msgs.msg
 from moveit_msgs.msg import RobotTrajectory
 from trajectory_msgs.msg import JointTrajectoryPoint
+from kinova_msgs.msg import KinovaPose
+
 
 ###
 # Save the mico_server HTTP reply string to reply.txt
@@ -43,11 +45,13 @@ def save_reply(actionType, success):
 def createTarget(XYZPosition, orientation):
 
     xyzPos = map(float, [pos.strip() for pos in XYZPosition.split(',')])
+    LOG.INFO("orientation : ", orientation)
     if (len(orientation) == 0):
         # there is not orientation specified
-        #current_pose = rospy.wait_for_message('/m1n6s300_driver/out/cartesian_command',kinova_msgs/KinovaPose)
-        #orientationPos = [(float)current_pose.ThetaX, (float)current_pose.ThetaY, (float)current_pose.ThetaZ]
-        print ("hello")
+        current_pose = rospy.wait_for_message('/m1n6s300_driver/out/cartesian_command',KinovaPose)
+        
+        orientationPos = [(float)(current_pose.ThetaX), (float)(current_pose.ThetaY), (float)(current_pose.ThetaZ)]
+        LOG.INFO("No orientation found. Using the current pose for target orientation.")
     else:
         orientationPos = map(float, [pos.strip() for pos in orientation.split(',')])
         '''        

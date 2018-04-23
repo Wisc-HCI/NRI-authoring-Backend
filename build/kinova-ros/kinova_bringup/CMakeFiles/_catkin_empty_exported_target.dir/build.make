@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jerry/Desktop/therbligs_ws/src
+CMAKE_SOURCE_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jerry/Desktop/therbligs_ws/build
+CMAKE_BINARY_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -63,10 +63,10 @@ kinova-ros/kinova_bringup/CMakeFiles/_catkin_empty_exported_target.dir/build: _c
 .PHONY : kinova-ros/kinova_bringup/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 kinova-ros/kinova_bringup/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_bringup && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_bringup && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : kinova-ros/kinova_bringup/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 kinova-ros/kinova_bringup/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jerry/Desktop/therbligs_ws/src /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_bringup /home/jerry/Desktop/therbligs_ws/build /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_bringup /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_bringup/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hcilab/Documents/jieru/NRI-authoring-Backend/src /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_bringup /home/hcilab/Documents/jieru/NRI-authoring-Backend/build /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_bringup /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_bringup/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : kinova-ros/kinova_bringup/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_control
+# Install script for directory: /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_control
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/jerry/Desktop/therbligs_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/hcilab/Documents/jieru/NRI-authoring-Backend/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,29 +33,29 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_control/catkin_generated/installspace/kinova_control.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_control/catkin_generated/installspace/kinova_control.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_control/cmake" TYPE FILE FILES
-    "/home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_control/catkin_generated/installspace/kinova_controlConfig.cmake"
-    "/home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_control/catkin_generated/installspace/kinova_controlConfig-version.cmake"
+    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_control/catkin_generated/installspace/kinova_controlConfig.cmake"
+    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_control/catkin_generated/installspace/kinova_controlConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_control" TYPE FILE FILES "/home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_control/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_control" TYPE FILE FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_control/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_control" TYPE DIRECTORY FILES "/home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_control/config")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_control" TYPE DIRECTORY FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_control/config")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_control" TYPE DIRECTORY FILES "/home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_control/launch")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_control" TYPE DIRECTORY FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_control/launch")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/kinova_control" TYPE PROGRAM FILES "/home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_control/src/move_robot.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/kinova_control" TYPE PROGRAM FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_control/src/move_robot.py")
 endif()
 

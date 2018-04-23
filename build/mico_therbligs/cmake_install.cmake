@@ -1,8 +1,8 @@
-# Install script for directory: /home/jerry/Desktop/therbligs_ws/src/mico_therbligs
+# Install script for directory: /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/mico_therbligs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/jerry/Desktop/therbligs_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/hcilab/Documents/jieru/NRI-authoring-Backend/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jerry/Desktop/therbligs_ws/build/mico_therbligs/catkin_generated/installspace/mico_therbligs.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/mico_therbligs/catkin_generated/installspace/mico_therbligs.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mico_therbligs/cmake" TYPE FILE FILES
-    "/home/jerry/Desktop/therbligs_ws/build/mico_therbligs/catkin_generated/installspace/mico_therbligsConfig.cmake"
-    "/home/jerry/Desktop/therbligs_ws/build/mico_therbligs/catkin_generated/installspace/mico_therbligsConfig-version.cmake"
+    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/mico_therbligs/catkin_generated/installspace/mico_therbligsConfig.cmake"
+    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/mico_therbligs/catkin_generated/installspace/mico_therbligsConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mico_therbligs" TYPE FILE FILES "/home/jerry/Desktop/therbligs_ws/src/mico_therbligs/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mico_therbligs" TYPE FILE FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/mico_therbligs/package.xml")
 endif()
 

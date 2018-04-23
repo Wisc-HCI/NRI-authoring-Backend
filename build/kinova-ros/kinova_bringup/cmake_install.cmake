@@ -1,8 +1,8 @@
-# Install script for directory: /home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_bringup
+# Install script for directory: /home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_bringup
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/jerry/Desktop/therbligs_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/hcilab/Documents/jieru/NRI-authoring-Backend/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,21 +33,21 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_bringup/catkin_generated/installspace/kinova_bringup.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_bringup/catkin_generated/installspace/kinova_bringup.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_bringup/cmake" TYPE FILE FILES
-    "/home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_bringup/catkin_generated/installspace/kinova_bringupConfig.cmake"
-    "/home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_bringup/catkin_generated/installspace/kinova_bringupConfig-version.cmake"
+    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_bringup/catkin_generated/installspace/kinova_bringupConfig.cmake"
+    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_bringup/catkin_generated/installspace/kinova_bringupConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_bringup" TYPE FILE FILES "/home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_bringup/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_bringup" TYPE FILE FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_bringup/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_bringup" TYPE FILE FILES "/home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_bringup/launch/kinova_robot.launch")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/kinova_bringup" TYPE FILE FILES "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_bringup/launch/kinova_robot.launch")
 endif()
 

@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/jerry/Desktop/therbligs_ws/src
-# Build directory: /home/jerry/Desktop/therbligs_ws/build
+# Source directory: /home/hcilab/Documents/jieru/NRI-authoring-Backend/src
+# Build directory: /home/hcilab/Documents/jieru/NRI-authoring-Backend/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
@@ -9,19 +9,10 @@ subdirs(kinova-ros/kinova_bringup)
 subdirs(kinova-ros/kinova_control)
 subdirs(kinova-ros/kinova_gazebo)
 subdirs(mico_therbligs)
-subdirs(robotiq_85_gripper/robotiq_85_driver)
-subdirs(robotiq_85_gripper/robotiq_85_simulation/robotiq_85_gazebo)
-subdirs(robotiq_85_gripper/robotiq_85_gripper)
-subdirs(robotiq_85_gripper/robotiq_85_simulation/robotiq_85_simulation)
 subdirs(rail_manipulation_msgs)
-subdirs(robotiq_85_gripper/robotiq_85_bringup)
-subdirs(robotiq_85_gripper/robotiq_85_description)
-subdirs(robotiq_85_gripper/robotiq_85_msgs)
-subdirs(robotiq_85_gripper/si_utils)
 subdirs(kinova-ros/kinova_msgs)
 subdirs(kinova-ros/kinova_driver)
 subdirs(kinova-ros/kinova_demo)
-subdirs(robotiq_85_gripper/robotiq_85_simulation/roboticsgroup_gazebo_plugins)
 subdirs(kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2n6s300_ikfast)
 subdirs(kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/j2s7s300_ikfast)
 subdirs(kinova-ros/kinova_moveit/inverse_kinematics_plugins/ikfast/m1n6s300_ikfast)
@@ -30,4 +21,3 @@ subdirs(kinova-ros/kinova_description)
 subdirs(kinova-ros/kinova_moveit/robot_configs/j2n6s300_moveit_config)
 subdirs(kinova-ros/kinova_moveit/robot_configs/j2s7s300_moveit_config)
 subdirs(kinova-ros/kinova_moveit/robot_configs/m1n6s300_moveit_config)
-subdirs(robotiq_85_gripper/robotiq_85_moveit_config)

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jerry/Desktop/therbligs_ws/src
+CMAKE_SOURCE_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jerry/Desktop/therbligs_ws/build
+CMAKE_BINARY_DIR = /home/hcilab/Documents/jieru/NRI-authoring-Backend/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -101,17 +101,6 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -122,6 +111,17 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -135,14 +135,14 @@ list_install_components/fast: list_install_components
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/jerry/Desktop/therbligs_ws/build/CMakeFiles /home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_msgs/CMakeFiles/progress.marks
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jerry/Desktop/therbligs_ws/build/CMakeFiles 0
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_msgs/CMakeFiles/progress.marks
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hcilab/Documents/jieru/NRI-authoring-Backend/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/clean
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/clean
 .PHONY : clean
 
 # The main clean target
@@ -152,22 +152,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/preinstall
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/preinstall
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_genpy.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_genpy.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_genpy.dir/rule
 .PHONY : kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_genpy.dir/rule
 
 # Convenience name for target.
@@ -177,12 +177,12 @@ kinova_msgs_genpy: kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_genpy.dir/rule
 
 # fast build rule for target.
 kinova_msgs_genpy/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_genpy.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_genpy.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_genpy.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_genpy.dir/build
 .PHONY : kinova_msgs_genpy/fast
 
 # Convenience name for target.
 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_py.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_py.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_py.dir/rule
 .PHONY : kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -192,12 +192,12 @@ kinova_msgs_generate_messages_py: kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_
 
 # fast build rule for target.
 kinova_msgs_generate_messages_py/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_py.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_py.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_py.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_py.dir/build
 .PHONY : kinova_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_gennodejs.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_gennodejs.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_gennodejs.dir/rule
 .PHONY : kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_gennodejs.dir/rule
 
 # Convenience name for target.
@@ -207,12 +207,12 @@ kinova_msgs_gennodejs: kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_gennodejs.d
 
 # fast build rule for target.
 kinova_msgs_gennodejs/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_gennodejs.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_gennodejs.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_gennodejs.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_gennodejs.dir/build
 .PHONY : kinova_msgs_gennodejs/fast
 
 # Convenience name for target.
 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_genlisp.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_genlisp.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_genlisp.dir/rule
 .PHONY : kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_genlisp.dir/rule
 
 # Convenience name for target.
@@ -222,12 +222,12 @@ kinova_msgs_genlisp: kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_genlisp.dir/r
 
 # fast build rule for target.
 kinova_msgs_genlisp/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_genlisp.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_genlisp.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_genlisp.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_genlisp.dir/build
 .PHONY : kinova_msgs_genlisp/fast
 
 # Convenience name for target.
 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_lisp.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_lisp.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_lisp.dir/rule
 .PHONY : kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -237,792 +237,12 @@ kinova_msgs_generate_messages_lisp: kinova-ros/kinova_msgs/CMakeFiles/kinova_msg
 
 # fast build rule for target.
 kinova_msgs_generate_messages_lisp/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_lisp.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_lisp.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_lisp.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_lisp.dir/build
 .PHONY : kinova_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_PoseVelocity.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_PoseVelocity.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_PoseVelocity.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_PoseVelocity: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_PoseVelocity.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_PoseVelocity
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_PoseVelocity/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_PoseVelocity.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_PoseVelocity.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_PoseVelocity/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionGoal.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionGoal.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionGoal.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_ArmPoseActionGoal: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionGoal.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseActionGoal
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_ArmPoseActionGoal/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionGoal.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionGoal.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseActionGoal/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointAngles.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointAngles.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointAngles.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_JointAngles: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointAngles.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_JointAngles
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_JointAngles/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointAngles.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointAngles.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_JointAngles/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseFeedback.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseFeedback.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseFeedback.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_ArmPoseFeedback: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseFeedback.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseFeedback
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_ArmPoseFeedback/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseFeedback.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseFeedback.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseFeedback/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_FingerPosition: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_FingerPosition
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_FingerPosition/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_FingerPosition/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionResult.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionResult.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionResult.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionResult: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionResult.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionActionResult
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionResult/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionResult.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionResult.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionActionResult/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_geneus.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_geneus.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_geneus.dir/rule
-
-# Convenience name for target.
-kinova_msgs_geneus: kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_geneus.dir/rule
-
-.PHONY : kinova_msgs_geneus
-
-# fast build rule for target.
-kinova_msgs_geneus/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_geneus.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_geneus.dir/build
-.PHONY : kinova_msgs_geneus/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseGoal.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseGoal.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseGoal.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseGoal: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseGoal.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseGoal
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseGoal/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseGoal.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseGoal.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseGoal/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionResult.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionResult.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionResult.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionResult: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionResult.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionResult
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionResult/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionResult.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionResult.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionResult/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionResult.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionResult.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionResult.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionResult: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionResult.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionResult
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionResult/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionResult.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionResult.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionResult/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Start.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Start.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Start.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_Start: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Start.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_Start
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_Start/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Start.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Start.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_Start/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseAction.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseAction.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseAction.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseAction: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseAction.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseAction
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseAction/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseAction.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseAction.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseAction/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesResult.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesResult.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesResult.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_ArmJointAnglesResult: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesResult.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesResult
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_ArmJointAnglesResult/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesResult.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesResult.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesResult/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetTorqueControlParameters.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetTorqueControlParameters.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetTorqueControlParameters.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_SetTorqueControlParameters: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetTorqueControlParameters.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_SetTorqueControlParameters
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_SetTorqueControlParameters/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetTorqueControlParameters.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetTorqueControlParameters.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_SetTorqueControlParameters/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_eus.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_eus.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-kinova_msgs_generate_messages_eus: kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_eus.dir/rule
-
-.PHONY : kinova_msgs_generate_messages_eus
-
-# fast build rule for target.
-kinova_msgs_generate_messages_eus/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_eus.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_eus.dir/build
-.PHONY : kinova_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionResult.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionResult.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionResult.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_SetFingersPositionResult: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionResult.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionResult
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_SetFingersPositionResult/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionResult.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionResult.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionResult/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesAction.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesAction.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesAction.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_ArmJointAnglesAction: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesAction.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesAction
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_ArmJointAnglesAction/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesAction.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesAction.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesAction/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_nodejs: kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_nodejs/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_RunCOMParametersEstimation.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_RunCOMParametersEstimation.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_RunCOMParametersEstimation.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_RunCOMParametersEstimation: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_RunCOMParametersEstimation.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_RunCOMParametersEstimation
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_RunCOMParametersEstimation/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_RunCOMParametersEstimation.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_RunCOMParametersEstimation.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_RunCOMParametersEstimation/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_nodejs: kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-.PHONY : roscpp_generate_messages_nodejs
-
-# fast build rule for target.
-roscpp_generate_messages_nodejs/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages.dir/rule
-
-# Convenience name for target.
-kinova_msgs_generate_messages: kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages.dir/rule
-
-.PHONY : kinova_msgs_generate_messages
-
-# fast build rule for target.
-kinova_msgs_generate_messages/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages.dir/build
-.PHONY : kinova_msgs_generate_messages/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesGoal.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesGoal.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesGoal.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_ArmJointAnglesGoal: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesGoal.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesGoal
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_ArmJointAnglesGoal/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesGoal.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesGoal.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesGoal/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_CartesianForce.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_CartesianForce.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_CartesianForce.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_CartesianForce: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_CartesianForce.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_CartesianForce
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_CartesianForce/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_CartesianForce.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_CartesianForce.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_CartesianForce/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_nodejs: kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
-
-.PHONY : actionlib_generate_messages_nodejs
-
-# fast build rule for target.
-actionlib_generate_messages_nodejs/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
-.PHONY : actionlib_generate_messages_nodejs/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionGoal.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionGoal.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionGoal.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionGoal: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionGoal.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionGoal
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionGoal/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionGoal.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionGoal.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionGoal/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseFeedback.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseFeedback.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseFeedback.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseFeedback: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseFeedback.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseFeedback
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseFeedback/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseFeedback.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseFeedback.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseFeedback/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesFeedback.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesFeedback.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesFeedback.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_ArmJointAnglesFeedback: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesFeedback.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesFeedback
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_ArmJointAnglesFeedback/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesFeedback.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesFeedback.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesFeedback/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_lisp: kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
-
-.PHONY : actionlib_generate_messages_lisp
-
-# fast build rule for target.
-actionlib_generate_messages_lisp/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_lisp.dir/build
-.PHONY : actionlib_generate_messages_lisp/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_eus.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_eus.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_eus: kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_eus.dir/rule
-
-.PHONY : actionlib_generate_messages_eus
-
-# fast build rule for target.
-actionlib_generate_messages_eus/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_eus.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_eus.dir/build
-.PHONY : actionlib_generate_messages_eus/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionGoal.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionGoal.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionGoal.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionGoal: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionGoal.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionGoal
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionGoal/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionGoal.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionGoal.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionGoal/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointTorque.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointTorque.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointTorque.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_JointTorque: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointTorque.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_JointTorque
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_JointTorque/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointTorque.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointTorque.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_JointTorque/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_py.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_cpp.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_cpp.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-kinova_msgs_generate_messages_cpp: kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : kinova_msgs_generate_messages_cpp
-
-# fast build rule for target.
-kinova_msgs_generate_messages_cpp/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_cpp.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_cpp.dir/build
-.PHONY : kinova_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionFeedback.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionFeedback.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionFeedback.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionFeedback: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionFeedback.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionActionFeedback
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionFeedback/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionFeedback.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionFeedback.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionActionFeedback/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_cpp: kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-
-.PHONY : actionlib_generate_messages_cpp
-
-# fast build rule for target.
-actionlib_generate_messages_cpp/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_cpp.dir/build
-.PHONY : actionlib_generate_messages_cpp/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionFeedback.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionFeedback.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionFeedback.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionFeedback: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionFeedback.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionFeedback
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionFeedback/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionFeedback.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionFeedback.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionFeedback/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_HomeArm.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_HomeArm.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_HomeArm.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_HomeArm: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_HomeArm.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_HomeArm
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_HomeArm/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_HomeArm.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_HomeArm.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_HomeArm/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_eus: kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-.PHONY : roscpp_generate_messages_eus
-
-# fast build rule for target.
-roscpp_generate_messages_eus/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_eus.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_eus.dir/build
-.PHONY : roscpp_generate_messages_eus/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionGoal.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionGoal.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionGoal.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionGoal: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionGoal.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionActionGoal
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionGoal/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionGoal.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionGoal.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionActionGoal/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_gencpp.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_gencpp.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_gencpp.dir/rule
-
-# Convenience name for target.
-kinova_msgs_gencpp: kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_gencpp.dir/rule
-
-.PHONY : kinova_msgs_gencpp
-
-# fast build rule for target.
-kinova_msgs_gencpp/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_gencpp.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_gencpp.dir/build
-.PHONY : kinova_msgs_gencpp/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetNullSpaceModeState.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetNullSpaceModeState.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetNullSpaceModeState.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_SetNullSpaceModeState: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetNullSpaceModeState.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_SetNullSpaceModeState
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_SetNullSpaceModeState/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetNullSpaceModeState.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetNullSpaceModeState.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_SetNullSpaceModeState/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_nodejs.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-kinova_msgs_generate_messages_nodejs: kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : kinova_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-kinova_msgs_generate_messages_nodejs/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_nodejs.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_nodejs.dir/build
-.PHONY : kinova_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_py.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_py.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_py.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_py: kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_py.dir/rule
-
-.PHONY : actionlib_generate_messages_py
-
-# fast build rule for target.
-actionlib_generate_messages_py/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_py.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_py.dir/build
-.PHONY : actionlib_generate_messages_py/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetEndEffectorOffset.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetEndEffectorOffset.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetEndEffectorOffset.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_SetEndEffectorOffset: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetEndEffectorOffset.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_SetEndEffectorOffset
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_SetEndEffectorOffset/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetEndEffectorOffset.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetEndEffectorOffset.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_SetEndEffectorOffset/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionFeedback.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionFeedback.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionFeedback.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_SetFingersPositionFeedback: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionFeedback.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionFeedback
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_SetFingersPositionFeedback/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionFeedback.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionFeedback.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionFeedback/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_AddPoseToCartesianTrajectory.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_AddPoseToCartesianTrajectory.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_AddPoseToCartesianTrajectory.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_AddPoseToCartesianTrajectory: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_AddPoseToCartesianTrajectory.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_AddPoseToCartesianTrajectory
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_AddPoseToCartesianTrajectory/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_AddPoseToCartesianTrajectory.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_AddPoseToCartesianTrajectory.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_AddPoseToCartesianTrajectory/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionGoal.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionGoal.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionGoal.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_SetFingersPositionGoal: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionGoal.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionGoal
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_SetFingersPositionGoal/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionGoal.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionGoal.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionGoal/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseAction.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseAction.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseAction.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_ArmPoseAction: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseAction.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseAction
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_ArmPoseAction/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseAction.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseAction.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseAction/fast
-
-# Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionResult.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionResult.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionResult.dir/rule
-
-# Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_ArmPoseActionResult: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionResult.dir/rule
-
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseActionResult
-
-# fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_ArmPoseActionResult/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionResult.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionResult.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseActionResult/fast
-
-# Convenience name for target.
 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionAction.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionAction.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionAction.dir/rule
 .PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionAction.dir/rule
 
 # Convenience name for target.
@@ -1032,132 +252,372 @@ _kinova_msgs_generate_messages_check_deps_SetFingersPositionAction: kinova-ros/k
 
 # fast build rule for target.
 _kinova_msgs_generate_messages_check_deps_SetFingersPositionAction/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionAction.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionAction.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionAction.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionAction.dir/build
 .PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionAction/fast
 
 # Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointVelocity.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointVelocity.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointVelocity.dir/rule
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionResult.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionResult.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionResult.dir/rule
 
 # Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_JointVelocity: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointVelocity.dir/rule
+_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionResult: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionResult.dir/rule
 
-.PHONY : _kinova_msgs_generate_messages_check_deps_JointVelocity
+.PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionActionResult
 
 # fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_JointVelocity/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointVelocity.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointVelocity.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_JointVelocity/fast
+_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionResult/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionResult.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionResult.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionActionResult/fast
 
 # Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionGoal.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionGoal.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionGoal.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionGoal: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionGoal.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_cpp
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionGoal
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionGoal/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionGoal.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionGoal.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionGoal/fast
 
 # Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseGoal.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseGoal.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseGoal.dir/rule
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesResult.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesResult.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesResult.dir/rule
 
 # Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_ArmPoseGoal: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseGoal.dir/rule
+_kinova_msgs_generate_messages_check_deps_ArmJointAnglesResult: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesResult.dir/rule
 
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseGoal
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesResult
 
 # fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_ArmPoseGoal/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseGoal.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseGoal.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseGoal/fast
+_kinova_msgs_generate_messages_check_deps_ArmJointAnglesResult/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesResult.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesResult.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesResult/fast
 
 # Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionFeedback.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionFeedback.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionFeedback.dir/rule
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointAngles.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointAngles.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointAngles.dir/rule
 
 # Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionFeedback: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionFeedback.dir/rule
+_kinova_msgs_generate_messages_check_deps_JointAngles: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointAngles.dir/rule
 
-.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionFeedback
+.PHONY : _kinova_msgs_generate_messages_check_deps_JointAngles
 
 # fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionFeedback/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionFeedback.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionFeedback.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionFeedback/fast
+_kinova_msgs_generate_messages_check_deps_JointAngles/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointAngles.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointAngles.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_JointAngles/fast
 
 # Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseResult.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseResult.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseResult.dir/rule
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetTorqueControlParameters.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetTorqueControlParameters.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetTorqueControlParameters.dir/rule
 
 # Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_ArmPoseResult: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseResult.dir/rule
+_kinova_msgs_generate_messages_check_deps_SetTorqueControlParameters: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetTorqueControlParameters.dir/rule
 
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseResult
+.PHONY : _kinova_msgs_generate_messages_check_deps_SetTorqueControlParameters
 
 # fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_ArmPoseResult/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseResult.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseResult.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseResult/fast
+_kinova_msgs_generate_messages_check_deps_SetTorqueControlParameters/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetTorqueControlParameters.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetTorqueControlParameters.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_SetTorqueControlParameters/fast
 
 # Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Stop.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Stop.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Stop.dir/rule
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_CartesianForce.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_CartesianForce.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_CartesianForce.dir/rule
 
 # Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_Stop: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Stop.dir/rule
+_kinova_msgs_generate_messages_check_deps_CartesianForce: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_CartesianForce.dir/rule
 
-.PHONY : _kinova_msgs_generate_messages_check_deps_Stop
+.PHONY : _kinova_msgs_generate_messages_check_deps_CartesianForce
 
 # fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_Stop/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Stop.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Stop.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_Stop/fast
+_kinova_msgs_generate_messages_check_deps_CartesianForce/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_CartesianForce.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_CartesianForce.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_CartesianForce/fast
 
 # Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetTorqueControlMode.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetTorqueControlMode.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetTorqueControlMode.dir/rule
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesGoal.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesGoal.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesGoal.dir/rule
 
 # Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_SetTorqueControlMode: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetTorqueControlMode.dir/rule
+_kinova_msgs_generate_messages_check_deps_ArmJointAnglesGoal: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesGoal.dir/rule
 
-.PHONY : _kinova_msgs_generate_messages_check_deps_SetTorqueControlMode
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesGoal
 
 # fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_SetTorqueControlMode/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetTorqueControlMode.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetTorqueControlMode.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_SetTorqueControlMode/fast
+_kinova_msgs_generate_messages_check_deps_ArmJointAnglesGoal/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesGoal.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesGoal.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesGoal/fast
 
 # Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionFeedback.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionFeedback.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionFeedback.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionFeedback: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionFeedback.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_lisp
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionFeedback
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionFeedback/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionFeedback.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionFeedback.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionFeedback/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_geneus.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_geneus.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_geneus.dir/rule
+
+# Convenience name for target.
+kinova_msgs_geneus: kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_geneus.dir/rule
+
+.PHONY : kinova_msgs_geneus
+
+# fast build rule for target.
+kinova_msgs_geneus/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_geneus.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_geneus.dir/build
+.PHONY : kinova_msgs_geneus/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseGoal.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseGoal.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseGoal.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseGoal: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseGoal.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseGoal
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseGoal/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseGoal.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseGoal.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseGoal/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_eus.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_eus.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+kinova_msgs_generate_messages_eus: kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_eus.dir/rule
+
+.PHONY : kinova_msgs_generate_messages_eus
+
+# fast build rule for target.
+kinova_msgs_generate_messages_eus/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_eus.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_eus.dir/build
+.PHONY : kinova_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionResult.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionResult.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionResult.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_SetFingersPositionResult: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionResult.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionResult
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_SetFingersPositionResult/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionResult.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionResult.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionResult/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_eus.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_eus: kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+
+.PHONY : actionlib_generate_messages_eus
+
+# fast build rule for target.
+actionlib_generate_messages_eus/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_eus.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_eus.dir/build
+.PHONY : actionlib_generate_messages_eus/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointTorque.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointTorque.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointTorque.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_JointTorque: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointTorque.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_JointTorque
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_JointTorque/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointTorque.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointTorque.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_JointTorque/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionGoal.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionGoal.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionGoal.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionGoal: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionGoal.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionGoal
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionGoal/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionGoal.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionGoal.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionGoal/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_py.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_py.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_py: kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+.PHONY : roscpp_generate_messages_py
+
+# fast build rule for target.
+roscpp_generate_messages_py/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_py.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_py.dir/build
+.PHONY : roscpp_generate_messages_py/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Start.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Start.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Start.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_Start: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Start.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_Start
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_Start/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Start.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Start.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_Start/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseFeedback.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseFeedback.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseFeedback.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseFeedback: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseFeedback.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseFeedback
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseFeedback/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseFeedback.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseFeedback.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseFeedback/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_nodejs: kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+
+.PHONY : actionlib_generate_messages_nodejs
+
+# fast build rule for target.
+actionlib_generate_messages_nodejs/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
+.PHONY : actionlib_generate_messages_nodejs/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesFeedback.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesFeedback.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesFeedback.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_ArmJointAnglesFeedback: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesFeedback.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesFeedback
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_ArmJointAnglesFeedback/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesFeedback.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesFeedback.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesFeedback/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_FingerPosition: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_FingerPosition
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_FingerPosition/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_FingerPosition.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_FingerPosition/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesAction.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesAction.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesAction.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_ArmJointAnglesAction: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesAction.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesAction
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_ArmJointAnglesAction/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesAction.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesAction.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesAction/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_nodejs: kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_nodejs/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_RunCOMParametersEstimation.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_RunCOMParametersEstimation.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_RunCOMParametersEstimation.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_RunCOMParametersEstimation: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_RunCOMParametersEstimation.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_RunCOMParametersEstimation
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_RunCOMParametersEstimation/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_RunCOMParametersEstimation.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_RunCOMParametersEstimation.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_RunCOMParametersEstimation/fast
 
 # Convenience name for target.
 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_KinovaPose.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_KinovaPose.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_KinovaPose.dir/rule
 .PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_KinovaPose.dir/rule
 
 # Convenience name for target.
@@ -1167,57 +627,147 @@ _kinova_msgs_generate_messages_check_deps_KinovaPose: kinova-ros/kinova_msgs/CMa
 
 # fast build rule for target.
 _kinova_msgs_generate_messages_check_deps_KinovaPose/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_KinovaPose.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_KinovaPose.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_KinovaPose.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_KinovaPose.dir/build
 .PHONY : _kinova_msgs_generate_messages_check_deps_KinovaPose/fast
 
 # Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ZeroTorques.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ZeroTorques.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ZeroTorques.dir/rule
+kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_ZeroTorques: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ZeroTorques.dir/rule
+rosgraph_msgs_generate_messages_lisp: kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : _kinova_msgs_generate_messages_check_deps_ZeroTorques
+.PHONY : rosgraph_msgs_generate_messages_lisp
 
 # fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_ZeroTorques/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ZeroTorques.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ZeroTorques.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_ZeroTorques/fast
+rosgraph_msgs_generate_messages_lisp/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseResult.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseResult.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseResult.dir/rule
+kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseResult: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseResult.dir/rule
+rosgraph_msgs_generate_messages_py: kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
-.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseResult
+.PHONY : rosgraph_msgs_generate_messages_py
 
 # fast build rule for target.
-_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseResult/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseResult.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseResult.dir/build
-.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseResult/fast
+rosgraph_msgs_generate_messages_py/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-.PHONY : kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_eus: kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+roscpp_generate_messages_nodejs: kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_eus
+.PHONY : roscpp_generate_messages_nodejs
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_eus/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-.PHONY : rosgraph_msgs_generate_messages_eus/fast
+roscpp_generate_messages_nodejs/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+.PHONY : roscpp_generate_messages_nodejs/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages.dir/rule
+
+# Convenience name for target.
+kinova_msgs_generate_messages: kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages.dir/rule
+
+.PHONY : kinova_msgs_generate_messages
+
+# fast build rule for target.
+kinova_msgs_generate_messages/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages.dir/build
+.PHONY : kinova_msgs_generate_messages/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_lisp: kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+
+.PHONY : actionlib_generate_messages_lisp
+
+# fast build rule for target.
+actionlib_generate_messages_lisp/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_lisp.dir/build
+.PHONY : actionlib_generate_messages_lisp/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointVelocity.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointVelocity.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointVelocity.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_JointVelocity: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointVelocity.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_JointVelocity
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_JointVelocity/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointVelocity.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_JointVelocity.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_JointVelocity/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_lisp: kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+.PHONY : roscpp_generate_messages_lisp
+
+# fast build rule for target.
+roscpp_generate_messages_lisp/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionGoal.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionGoal.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionGoal.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionGoal: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionGoal.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionActionGoal
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionGoal/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionGoal.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionGoal.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionActionGoal/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_cpp: kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+.PHONY : roscpp_generate_messages_cpp
+
+# fast build rule for target.
+roscpp_generate_messages_cpp/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
 
 # Convenience name for target.
 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionFeedback.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionFeedback.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionFeedback.dir/rule
 .PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionFeedback.dir/rule
 
 # Convenience name for target.
@@ -1227,12 +777,252 @@ _kinova_msgs_generate_messages_check_deps_ArmPoseActionFeedback: kinova-ros/kino
 
 # fast build rule for target.
 _kinova_msgs_generate_messages_check_deps_ArmPoseActionFeedback/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionFeedback.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionFeedback.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionFeedback.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionFeedback.dir/build
 .PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseActionFeedback/fast
 
 # Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseResult.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseResult.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseResult.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseResult: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseResult.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseResult
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseResult/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseResult.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseResult.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseResult/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_eus: kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_eus
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_eus/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+.PHONY : rosgraph_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_gencpp.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_gencpp.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_gencpp.dir/rule
+
+# Convenience name for target.
+kinova_msgs_gencpp: kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_gencpp.dir/rule
+
+.PHONY : kinova_msgs_gencpp
+
+# fast build rule for target.
+kinova_msgs_gencpp/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_gencpp.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_gencpp.dir/build
+.PHONY : kinova_msgs_gencpp/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetNullSpaceModeState.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetNullSpaceModeState.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetNullSpaceModeState.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_SetNullSpaceModeState: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetNullSpaceModeState.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_SetNullSpaceModeState
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_SetNullSpaceModeState/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetNullSpaceModeState.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetNullSpaceModeState.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_SetNullSpaceModeState/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_nodejs.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+kinova_msgs_generate_messages_nodejs: kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : kinova_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+kinova_msgs_generate_messages_nodejs/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_nodejs.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_nodejs.dir/build
+.PHONY : kinova_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_py.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_py.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_py.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_py: kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_py.dir/rule
+
+.PHONY : actionlib_generate_messages_py
+
+# fast build rule for target.
+actionlib_generate_messages_py/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_py.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_py.dir/build
+.PHONY : actionlib_generate_messages_py/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionResult.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionResult.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionResult.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionResult: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionResult.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionResult
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionResult/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionResult.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionResult.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionResult/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionResult.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionResult.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionResult.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionResult: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionResult.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionResult
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionResult/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionResult.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionResult.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionResult/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionGoal.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionGoal.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionGoal.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_ArmPoseActionGoal: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionGoal.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseActionGoal
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_ArmPoseActionGoal/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionGoal.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionGoal.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseActionGoal/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseFeedback.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseFeedback.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseFeedback.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_ArmPoseFeedback: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseFeedback.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseFeedback
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_ArmPoseFeedback/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseFeedback.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseFeedback.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseFeedback/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_eus: kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+
+.PHONY : roscpp_generate_messages_eus
+
+# fast build rule for target.
+roscpp_generate_messages_eus/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_eus.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/roscpp_generate_messages_eus.dir/build
+.PHONY : roscpp_generate_messages_eus/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_HomeArm.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_HomeArm.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_HomeArm.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_HomeArm: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_HomeArm.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_HomeArm
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_HomeArm/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_HomeArm.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_HomeArm.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_HomeArm/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseAction.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseAction.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseAction.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseAction: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseAction.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseAction
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseAction/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseAction.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseAction.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseAction/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionFeedback.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionFeedback.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionFeedback.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionFeedback: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionFeedback.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionFeedback
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionFeedback/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionFeedback.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionFeedback.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionFeedback/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseGoal.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseGoal.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseGoal.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_ArmPoseGoal: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseGoal.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseGoal
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_ArmPoseGoal/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseGoal.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseGoal.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseGoal/fast
+
+# Convenience name for target.
 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ClearTrajectories.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ClearTrajectories.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ClearTrajectories.dir/rule
 .PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ClearTrajectories.dir/rule
 
 # Convenience name for target.
@@ -1242,12 +1032,12 @@ _kinova_msgs_generate_messages_check_deps_ClearTrajectories: kinova-ros/kinova_m
 
 # fast build rule for target.
 _kinova_msgs_generate_messages_check_deps_ClearTrajectories/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ClearTrajectories.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ClearTrajectories.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ClearTrajectories.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ClearTrajectories.dir/build
 .PHONY : _kinova_msgs_generate_messages_check_deps_ClearTrajectories/fast
 
 # Convenience name for target.
 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetForceControlParams.dir/rule:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetForceControlParams.dir/rule
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetForceControlParams.dir/rule
 .PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetForceControlParams.dir/rule
 
 # Convenience name for target.
@@ -1257,8 +1047,218 @@ _kinova_msgs_generate_messages_check_deps_SetForceControlParams: kinova-ros/kino
 
 # fast build rule for target.
 _kinova_msgs_generate_messages_check_deps_SetForceControlParams/fast:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetForceControlParams.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetForceControlParams.dir/build
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetForceControlParams.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetForceControlParams.dir/build
 .PHONY : _kinova_msgs_generate_messages_check_deps_SetForceControlParams/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_PoseVelocity.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_PoseVelocity.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_PoseVelocity.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_PoseVelocity: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_PoseVelocity.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_PoseVelocity
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_PoseVelocity/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_PoseVelocity.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_PoseVelocity.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_PoseVelocity/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Stop.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Stop.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Stop.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_Stop: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Stop.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_Stop
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_Stop/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Stop.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_Stop.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_Stop/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseResult.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseResult.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseResult.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_ArmPoseResult: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseResult.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseResult
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_ArmPoseResult/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseResult.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseResult.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseResult/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetTorqueControlMode.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetTorqueControlMode.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetTorqueControlMode.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_SetTorqueControlMode: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetTorqueControlMode.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_SetTorqueControlMode
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_SetTorqueControlMode/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetTorqueControlMode.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetTorqueControlMode.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_SetTorqueControlMode/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetEndEffectorOffset.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetEndEffectorOffset.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetEndEffectorOffset.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_SetEndEffectorOffset: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetEndEffectorOffset.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_SetEndEffectorOffset
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_SetEndEffectorOffset/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetEndEffectorOffset.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetEndEffectorOffset.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_SetEndEffectorOffset/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionFeedback.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionFeedback.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionFeedback.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_SetFingersPositionFeedback: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionFeedback.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionFeedback
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_SetFingersPositionFeedback/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionFeedback.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionFeedback.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionFeedback/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ZeroTorques.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ZeroTorques.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ZeroTorques.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_ZeroTorques: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ZeroTorques.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_ZeroTorques
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_ZeroTorques/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ZeroTorques.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ZeroTorques.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_ZeroTorques/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_cpp.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_cpp.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+kinova_msgs_generate_messages_cpp: kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : kinova_msgs_generate_messages_cpp
+
+# fast build rule for target.
+kinova_msgs_generate_messages_cpp/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_cpp.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/kinova_msgs_generate_messages_cpp.dir/build
+.PHONY : kinova_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+actionlib_generate_messages_cpp: kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+
+.PHONY : actionlib_generate_messages_cpp
+
+# fast build rule for target.
+actionlib_generate_messages_cpp/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/actionlib_generate_messages_cpp.dir/build
+.PHONY : actionlib_generate_messages_cpp/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionFeedback.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionFeedback.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionFeedback.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionFeedback: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionFeedback.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionActionFeedback
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionFeedback/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionFeedback.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionActionFeedback.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionActionFeedback/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseAction.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseAction.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseAction.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_ArmPoseAction: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseAction.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseAction
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_ArmPoseAction/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseAction.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseAction.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseAction/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionGoal.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionGoal.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionGoal.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_SetFingersPositionGoal: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionGoal.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionGoal
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_SetFingersPositionGoal/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionGoal.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_SetFingersPositionGoal.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_SetFingersPositionGoal/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_AddPoseToCartesianTrajectory.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_AddPoseToCartesianTrajectory.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_AddPoseToCartesianTrajectory.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_AddPoseToCartesianTrajectory: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_AddPoseToCartesianTrajectory.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_AddPoseToCartesianTrajectory
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_AddPoseToCartesianTrajectory/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_AddPoseToCartesianTrajectory.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_AddPoseToCartesianTrajectory.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_AddPoseToCartesianTrajectory/fast
+
+# Convenience name for target.
+kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionResult.dir/rule:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f CMakeFiles/Makefile2 kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionResult.dir/rule
+.PHONY : kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionResult.dir/rule
+
+# Convenience name for target.
+_kinova_msgs_generate_messages_check_deps_ArmPoseActionResult: kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionResult.dir/rule
+
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseActionResult
+
+# fast build rule for target.
+_kinova_msgs_generate_messages_check_deps_ArmPoseActionResult/fast:
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(MAKE) -f kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionResult.dir/build.make kinova-ros/kinova_msgs/CMakeFiles/_kinova_msgs_generate_messages_check_deps_ArmPoseActionResult.dir/build
+.PHONY : _kinova_msgs_generate_messages_check_deps_ArmPoseActionResult/fast
 
 # Help Target
 help:
@@ -1275,77 +1275,77 @@ help:
 	@echo "... kinova_msgs_gennodejs"
 	@echo "... kinova_msgs_genlisp"
 	@echo "... kinova_msgs_generate_messages_lisp"
-	@echo "... _kinova_msgs_generate_messages_check_deps_PoseVelocity"
-	@echo "... _kinova_msgs_generate_messages_check_deps_ArmPoseActionGoal"
-	@echo "... _kinova_msgs_generate_messages_check_deps_JointAngles"
-	@echo "... _kinova_msgs_generate_messages_check_deps_ArmPoseFeedback"
-	@echo "... _kinova_msgs_generate_messages_check_deps_FingerPosition"
+	@echo "... _kinova_msgs_generate_messages_check_deps_SetFingersPositionAction"
 	@echo "... _kinova_msgs_generate_messages_check_deps_SetFingersPositionActionResult"
+	@echo "... _kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionGoal"
+	@echo "... _kinova_msgs_generate_messages_check_deps_ArmJointAnglesResult"
+	@echo "... _kinova_msgs_generate_messages_check_deps_JointAngles"
+	@echo "... install/strip"
+	@echo "... _kinova_msgs_generate_messages_check_deps_SetTorqueControlParameters"
+	@echo "... _kinova_msgs_generate_messages_check_deps_CartesianForce"
+	@echo "... _kinova_msgs_generate_messages_check_deps_ArmJointAnglesGoal"
+	@echo "... _kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionFeedback"
 	@echo "... rebuild_cache"
 	@echo "... kinova_msgs_geneus"
 	@echo "... _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseGoal"
-	@echo "... _kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionResult"
-	@echo "... _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionResult"
-	@echo "... _kinova_msgs_generate_messages_check_deps_Start"
-	@echo "... _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseAction"
-	@echo "... _kinova_msgs_generate_messages_check_deps_ArmJointAnglesResult"
-	@echo "... install/strip"
-	@echo "... _kinova_msgs_generate_messages_check_deps_SetTorqueControlParameters"
 	@echo "... kinova_msgs_generate_messages_eus"
 	@echo "... _kinova_msgs_generate_messages_check_deps_SetFingersPositionResult"
+	@echo "... actionlib_generate_messages_eus"
+	@echo "... _kinova_msgs_generate_messages_check_deps_JointTorque"
+	@echo "... _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionGoal"
+	@echo "... roscpp_generate_messages_py"
+	@echo "... _kinova_msgs_generate_messages_check_deps_Start"
+	@echo "... _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseFeedback"
+	@echo "... actionlib_generate_messages_nodejs"
+	@echo "... _kinova_msgs_generate_messages_check_deps_ArmJointAnglesFeedback"
+	@echo "... _kinova_msgs_generate_messages_check_deps_FingerPosition"
 	@echo "... _kinova_msgs_generate_messages_check_deps_ArmJointAnglesAction"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... _kinova_msgs_generate_messages_check_deps_RunCOMParametersEstimation"
+	@echo "... _kinova_msgs_generate_messages_check_deps_KinovaPose"
+	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... kinova_msgs_generate_messages"
-	@echo "... _kinova_msgs_generate_messages_check_deps_ArmJointAnglesGoal"
-	@echo "... _kinova_msgs_generate_messages_check_deps_CartesianForce"
-	@echo "... actionlib_generate_messages_nodejs"
-	@echo "... _kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionGoal"
-	@echo "... _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseFeedback"
-	@echo "... _kinova_msgs_generate_messages_check_deps_ArmJointAnglesFeedback"
 	@echo "... actionlib_generate_messages_lisp"
-	@echo "... actionlib_generate_messages_eus"
-	@echo "... _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionGoal"
-	@echo "... _kinova_msgs_generate_messages_check_deps_JointTorque"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... kinova_msgs_generate_messages_cpp"
-	@echo "... _kinova_msgs_generate_messages_check_deps_SetFingersPositionActionFeedback"
-	@echo "... actionlib_generate_messages_cpp"
+	@echo "... _kinova_msgs_generate_messages_check_deps_JointVelocity"
 	@echo "... roscpp_generate_messages_lisp"
-	@echo "... _kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionFeedback"
-	@echo "... list_install_components"
-	@echo "... _kinova_msgs_generate_messages_check_deps_HomeArm"
-	@echo "... roscpp_generate_messages_eus"
 	@echo "... _kinova_msgs_generate_messages_check_deps_SetFingersPositionActionGoal"
 	@echo "... roscpp_generate_messages_cpp"
+	@echo "... _kinova_msgs_generate_messages_check_deps_ArmPoseActionFeedback"
+	@echo "... _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseResult"
+	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... kinova_msgs_gencpp"
 	@echo "... _kinova_msgs_generate_messages_check_deps_SetNullSpaceModeState"
 	@echo "... kinova_msgs_generate_messages_nodejs"
 	@echo "... actionlib_generate_messages_py"
-	@echo "... _kinova_msgs_generate_messages_check_deps_SetEndEffectorOffset"
-	@echo "... _kinova_msgs_generate_messages_check_deps_SetFingersPositionFeedback"
-	@echo "... _kinova_msgs_generate_messages_check_deps_AddPoseToCartesianTrajectory"
-	@echo "... _kinova_msgs_generate_messages_check_deps_SetFingersPositionGoal"
-	@echo "... _kinova_msgs_generate_messages_check_deps_ArmPoseAction"
-	@echo "... _kinova_msgs_generate_messages_check_deps_ArmPoseActionResult"
-	@echo "... _kinova_msgs_generate_messages_check_deps_SetFingersPositionAction"
-	@echo "... _kinova_msgs_generate_messages_check_deps_JointVelocity"
+	@echo "... _kinova_msgs_generate_messages_check_deps_ArmJointAnglesActionResult"
+	@echo "... _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionResult"
+	@echo "... _kinova_msgs_generate_messages_check_deps_ArmPoseActionGoal"
+	@echo "... _kinova_msgs_generate_messages_check_deps_ArmPoseFeedback"
+	@echo "... list_install_components"
+	@echo "... roscpp_generate_messages_eus"
+	@echo "... _kinova_msgs_generate_messages_check_deps_HomeArm"
+	@echo "... _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseAction"
+	@echo "... _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionFeedback"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... _kinova_msgs_generate_messages_check_deps_ArmPoseGoal"
-	@echo "... _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseActionFeedback"
-	@echo "... _kinova_msgs_generate_messages_check_deps_ArmPoseResult"
-	@echo "... _kinova_msgs_generate_messages_check_deps_Stop"
-	@echo "... _kinova_msgs_generate_messages_check_deps_SetTorqueControlMode"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... _kinova_msgs_generate_messages_check_deps_KinovaPose"
-	@echo "... _kinova_msgs_generate_messages_check_deps_ZeroTorques"
-	@echo "... _kinova_msgs_generate_messages_check_deps_Arm_KinovaPoseResult"
-	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... _kinova_msgs_generate_messages_check_deps_ArmPoseActionFeedback"
 	@echo "... _kinova_msgs_generate_messages_check_deps_ClearTrajectories"
 	@echo "... _kinova_msgs_generate_messages_check_deps_SetForceControlParams"
+	@echo "... _kinova_msgs_generate_messages_check_deps_PoseVelocity"
+	@echo "... _kinova_msgs_generate_messages_check_deps_Stop"
+	@echo "... _kinova_msgs_generate_messages_check_deps_ArmPoseResult"
+	@echo "... _kinova_msgs_generate_messages_check_deps_SetTorqueControlMode"
+	@echo "... _kinova_msgs_generate_messages_check_deps_SetEndEffectorOffset"
+	@echo "... _kinova_msgs_generate_messages_check_deps_SetFingersPositionFeedback"
+	@echo "... _kinova_msgs_generate_messages_check_deps_ZeroTorques"
+	@echo "... kinova_msgs_generate_messages_cpp"
+	@echo "... actionlib_generate_messages_cpp"
+	@echo "... _kinova_msgs_generate_messages_check_deps_SetFingersPositionActionFeedback"
+	@echo "... _kinova_msgs_generate_messages_check_deps_ArmPoseAction"
+	@echo "... _kinova_msgs_generate_messages_check_deps_SetFingersPositionGoal"
+	@echo "... _kinova_msgs_generate_messages_check_deps_AddPoseToCartesianTrajectory"
+	@echo "... _kinova_msgs_generate_messages_check_deps_ArmPoseActionResult"
 .PHONY : help
 
 
@@ -1357,6 +1357,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/jerry/Desktop/therbligs_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/hcilab/Documents/jieru/NRI-authoring-Backend/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

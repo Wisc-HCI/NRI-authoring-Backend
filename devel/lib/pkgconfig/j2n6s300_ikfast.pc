@@ -1,8 +1,8 @@
-prefix=/home/jerry/Desktop/therbligs_ws/devel
+prefix=/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel
 
 Name: j2n6s300_ikfast
 Description: Description of j2n6s300_ikfast
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/jerry/Desktop/therbligs_ws/devel/lib 
+Libs: -L/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib 
 Requires: moveit_core pluginlib roscpp tf_conversions

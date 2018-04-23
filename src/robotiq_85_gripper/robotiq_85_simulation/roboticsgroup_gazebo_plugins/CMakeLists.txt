@@ -7,7 +7,7 @@ find_package(catkin REQUIRED COMPONENTS
   gazebo_ros
   control_toolbox
 )
-
+add_compile_options(-std=c++11)
 # Depend on system install of Gazebo
 find_package(gazebo REQUIRED)
 find_package(Boost REQUIRED)

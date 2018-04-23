@@ -14,20 +14,20 @@ fi
 
 echo_and_run() { echo "+ $@" ; "$@" ; }
 
-echo_and_run cd "/home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_demo"
+echo_and_run cd "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_demo"
 
 # ensure that Python install destination exists
-echo_and_run mkdir -p "$DESTDIR/home/jerry/Desktop/therbligs_ws/install/lib/python2.7/dist-packages"
+echo_and_run mkdir -p "$DESTDIR/home/hcilab/Documents/jieru/NRI-authoring-Backend/install/lib/python2.7/dist-packages"
 
 # Note that PYTHONPATH is pulled from the environment to support installing
 # into one location when some dependencies were installed in another
 # location, #123.
 echo_and_run /usr/bin/env \
-    PYTHONPATH="/home/jerry/Desktop/therbligs_ws/install/lib/python2.7/dist-packages:/home/jerry/Desktop/therbligs_ws/build/lib/python2.7/dist-packages:$PYTHONPATH" \
-    CATKIN_BINARY_DIR="/home/jerry/Desktop/therbligs_ws/build" \
+    PYTHONPATH="/home/hcilab/Documents/jieru/NRI-authoring-Backend/install/lib/python2.7/dist-packages:/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/lib/python2.7/dist-packages:$PYTHONPATH" \
+    CATKIN_BINARY_DIR="/home/hcilab/Documents/jieru/NRI-authoring-Backend/build" \
     "/usr/bin/python" \
-    "/home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_demo/setup.py" \
-    build --build-base "/home/jerry/Desktop/therbligs_ws/build/kinova-ros/kinova_demo" \
+    "/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_demo/setup.py" \
+    build --build-base "/home/hcilab/Documents/jieru/NRI-authoring-Backend/build/kinova-ros/kinova_demo" \
     install \
     $DESTDIR_ARG \
-    --install-layout=deb --prefix="/home/jerry/Desktop/therbligs_ws/install" --install-scripts="/home/jerry/Desktop/therbligs_ws/install/bin"
+    --install-layout=deb --prefix="/home/hcilab/Documents/jieru/NRI-authoring-Backend/install" --install-scripts="/home/hcilab/Documents/jieru/NRI-authoring-Backend/install/bin"

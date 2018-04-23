@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/m1n6s300_mico_arm_moveit_ikfast_plugin.dir/src/m1n6s300_mico_arm_ikfast_moveit_plugin.cpp.o"
-  "/home/jerry/Desktop/therbligs_ws/devel/lib/libm1n6s300_mico_arm_moveit_ikfast_plugin.pdb"
-  "/home/jerry/Desktop/therbligs_ws/devel/lib/libm1n6s300_mico_arm_moveit_ikfast_plugin.so"
+  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libm1n6s300_mico_arm_moveit_ikfast_plugin.pdb"
+  "/home/hcilab/Documents/jieru/NRI-authoring-Backend/devel/lib/libm1n6s300_mico_arm_moveit_ikfast_plugin.so"
 )
 
 # Per-language clean rules from dependency scanning.

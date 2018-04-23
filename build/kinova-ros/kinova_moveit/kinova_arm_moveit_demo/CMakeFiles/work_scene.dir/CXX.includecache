@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/jerry/Desktop/therbligs_ws/src/kinova-ros/kinova_moveit/kinova_arm_moveit_demo/src/work_scene.cpp
+/home/hcilab/Documents/jieru/NRI-authoring-Backend/src/kinova-ros/kinova_moveit/kinova_arm_moveit_demo/src/work_scene.cpp
 ros/ros.h
 -
 geometry_msgs/Pose.h

@@ -18,7 +18,7 @@ gnome-terminal -e "bash -c 'roslaunch m1n6s300_moveit_config m1n6s300_demo.launc
 sleep 10
 
 # start the backend mico_master, litern for the connection from the from end
-gnome-terminal -e "bash -c 'cd src/wpi_jaco/mico_planning/src;python mico_server.py 9999;exec $SHELL'"
+gnome-terminal -e "bash -c 'python mico_server.py 9999;exec $SHELL'"
 sleep 10
 
 # uncomment the following if want to call Get Position from frontend via rosbridge
