@@ -35,8 +35,6 @@ def save_reply(actionType, success):
     with open("reply.txt", "w") as reply:
         reply.write(reply_str)
 
-
-
 ###
 # Create a target pose for contains the XYZPosition and orientation of the object
 # If the orientation is empty, we keep the orientation of the current pose, and
@@ -45,30 +43,41 @@ def save_reply(actionType, success):
 def createTarget(XYZPosition, orientation):
 
     xyzPos = map(float, [pos.strip() for pos in XYZPosition.split(',')])
-    LOG.INFO("orientation : ", orientation)
-    if (len(orientation) == 0):
+    orientationPos = map(float, [pos.strip() for pos in orientation.split(',')])
+    LOG.INFO("orientation : ", orientation)#len(orientation))
+    '''
+    if (len(orientation) < 5):
         # there is not orientation specified
         current_pose = rospy.wait_for_message('/m1n6s300_driver/out/cartesian_command',KinovaPose)
-        
         orientationPos = [(float)(current_pose.ThetaX), (float)(current_pose.ThetaY), (float)(current_pose.ThetaZ)]
+        print "position before:", current_pose
+        #print "orinetation: ", orientationPos
         LOG.INFO("No orientation found. Using the current pose for target orientation.")
     else:
         orientationPos = map(float, [pos.strip() for pos in orientation.split(',')])
-        '''        
+               
         if (len(orientaionPos) != 3):
             LOG.ERROR("Input target orientaion position should have a length of 3.")
             return None
            '''
+           
     # convert three euler angles to four quaternions for MoveIt
-    quaternion = tf.transformations.quaternion_from_euler(float(orientationPos[0]), float(orientationPos[1]), float(orientationPos[2]))
+    #quaternion = tf.transformations.quaternion_from_euler(float(orientationPos[0]), float(orientationPos[1]), float(orientationPos[2]))
+    # populate values for the pose_target
     pose_target = geometry_msgs.msg.Pose()
+    
     pose_target.position.x = xyzPos[0]
     pose_target.position.y = xyzPos[1]
     pose_target.position.z = xyzPos[2]
-    pose_target.orientation.x = quaternion[0]
-    pose_target.orientation.y = quaternion[1]
-    pose_target.orientation.z = quaternion[2]
-    pose_target.orientation.w = quaternion[3]
+    '''
+    pose_target.position.x = (current_pose.X)
+    pose_target.position.y = (current_pose.Y)
+    pose_target.position.z = (current_pose.Z+0.02)'''
+    pose_target.orientation.x = orientationPos[0]
+    pose_target.orientation.y = orientationPos[1]
+    pose_target.orientation.z = orientationPos[2]
+    pose_target.orientation.w = orientationPos[3]
+    #print pose_target
 
     return pose_target
 
@@ -175,7 +184,6 @@ def execute_plan(acHan, json_plan_file="plan.json"):
                         ret = acHan.Hold(pose_target)
                         if not ret:
                             LOG.ERROR("Hold failed")
-
             # end VREP simulation
             if acHan.simulator != None:
                 acHan.simulator.end_simulation()

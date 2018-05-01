@@ -9,13 +9,14 @@
 from mico_planner import ActionHandler
 import rospy
 from std_msgs.msg import String
+import moveit_commander
+from geometry_msgs.msg import PoseStamped
 
 ###
 # Create a string of object position from the geometry_msg pose
 ###
 def unpackPosition(pose):
     return str(pose.position.x) + " " + str(pose.position.y) + " " + str(pose.position.z) + " " + str(pose.orientation.x) + " " + str(pose.orientation.y) + " " + str(pose.orientation.z) + " " + str(pose.orientation.w)
-
 
 # loop for puslishing end-effector position as a std_msgs to topic end_effector_position
 def pubEndEffectorPosition(acHander):
@@ -31,7 +32,7 @@ def pubEndEffectorPosition(acHander):
 if __name__ == '__main__':
   
     # Build the action handler
-    acHan = ActionHandler("mico_arm", "position_publisher", False)
+    acHan = ActionHandler("arm", "position_publisher", False)
     try:
 		pubEndEffectorPosition(acHan)
     except rospy.ROSInterruptException:

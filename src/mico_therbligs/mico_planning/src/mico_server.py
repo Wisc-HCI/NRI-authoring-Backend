@@ -38,7 +38,7 @@ class mico_server_handler(BaseHTTPRequestHandler):
 
         elif self.path == '/LaunchROS':
             print ("Routing to: launchROS")
-            launch_ROS_Process = Popen(['./launch_no_robot.sh'],stdout=PIPE, stderr=PIPE)
+            launch_ROS_Process = Popen(['./launch_with_robot.sh'],stdout=PIPE, stderr=PIPE)
             stdout, stderr = launch_ROS_Process.communicate() 
             reply_text = self.create_reply('LaunchROS', True)
 
@@ -69,7 +69,7 @@ class mico_server_handler(BaseHTTPRequestHandler):
         else:
             print ("Unknown routing path.")
                 
-		# reply to the front-end
+		    # reply to the front-end
         self._set_response()
         self.wfile.write(reply_text)
 

@@ -44,7 +44,7 @@ class ActionHandler:
   		## arm.  This interface can be used to plan and execute motions on the left
   		## arm.
   		self.group = moveit_commander.MoveGroupCommander(group_name)#default : "mico_arm"
-
+      #self.group.set_pose_reference_frame(root)
 		  ## We create this DisplayTrajectory publisher which is used below to publish
   		## trajectories for RVIZ to visualize.
   		self.display_trajectory_publisher = rospy.Publisher('/move_group/display_planned_path', moveit_msgs.msg.DisplayTrajectory, queue_size=20)
@@ -56,7 +56,7 @@ class ActionHandler:
   		  self.simulator = mico_simulator.mico_simulator('mico_sim')
   		else:
   		  self.simulator = None
-  		print "starting state... ",self.current_joints(),"\nstarting pose...",self.current_pose()
+  		print "starting state... ",self.joints,"\nstarting pose...",self.pose
 
 ####################
 # ARM STATE FUNCTIONS
