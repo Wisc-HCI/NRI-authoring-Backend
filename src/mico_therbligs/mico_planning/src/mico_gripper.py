@@ -59,5 +59,5 @@ class mico_gripper:
         self.gripper_cmd.force = 100.0
         self.gripper_publisher.publish(self.gripper_cmd)
         # here we wait 6 seconds to wait the part to finish grasp operation
-        rospy.sleep(6)
+        rospy.sleep(3)
         return True

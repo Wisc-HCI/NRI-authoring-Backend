@@ -44,35 +44,16 @@ def createTarget(XYZPosition, orientation):
 
     xyzPos = map(float, [pos.strip() for pos in XYZPosition.split(',')])
     orientationPos = map(float, [pos.strip() for pos in orientation.split(',')])
-    LOG.INFO("orientation : ", orientation)#len(orientation))
-    '''
-    if (len(orientation) < 5):
-        # there is not orientation specified
-        current_pose = rospy.wait_for_message('/m1n6s300_driver/out/cartesian_command',KinovaPose)
-        orientationPos = [(float)(current_pose.ThetaX), (float)(current_pose.ThetaY), (float)(current_pose.ThetaZ)]
-        print "position before:", current_pose
-        #print "orinetation: ", orientationPos
-        LOG.INFO("No orientation found. Using the current pose for target orientation.")
-    else:
-        orientationPos = map(float, [pos.strip() for pos in orientation.split(',')])
-               
-        if (len(orientaionPos) != 3):
-            LOG.ERROR("Input target orientaion position should have a length of 3.")
-            return None
-           '''
-           
-    # convert three euler angles to four quaternions for MoveIt
-    #quaternion = tf.transformations.quaternion_from_euler(float(orientationPos[0]), float(orientationPos[1]), float(orientationPos[2]))
+    # currently we will expect exactly three coordinates for xyz and four quaternions for orientation
+    if (len(xyzPos) != 3):
+        print ("The length of xyz coordinates is not equal to 3.")
+    if (len(orientationPos) != 4):
+        print ("The length of orientation is not equal to 4.")
     # populate values for the pose_target
     pose_target = geometry_msgs.msg.Pose()
-    
     pose_target.position.x = xyzPos[0]
     pose_target.position.y = xyzPos[1]
     pose_target.position.z = xyzPos[2]
-    '''
-    pose_target.position.x = (current_pose.X)
-    pose_target.position.y = (current_pose.Y)
-    pose_target.position.z = (current_pose.Z+0.02)'''
     pose_target.orientation.x = orientationPos[0]
     pose_target.orientation.y = orientationPos[1]
     pose_target.orientation.z = orientationPos[2]
@@ -204,8 +185,6 @@ def execute_plan(acHan, json_plan_file="plan.json"):
             LOG.INFO('USAGE ERROR: Invalid Action Type\n')
     else:
         LOG.ERROR("Thebligs json does not exists")
-
-
 
 def main():
     # check if simulation is enabled

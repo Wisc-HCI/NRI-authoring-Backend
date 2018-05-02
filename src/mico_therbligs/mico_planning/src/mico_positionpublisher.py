@@ -30,7 +30,6 @@ def pubEndEffectorPosition(acHander):
 		rate.sleep()
 
 if __name__ == '__main__':
-  
     # Build the action handler
     acHan = ActionHandler("arm", "position_publisher", False)
     try:

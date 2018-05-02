@@ -5,8 +5,8 @@
 echo "Launching backend ROS with real robot..." 
 
 # launch the ROS launch file for robotiq_85_gripper
-#gnome-terminal -e "bash -c 'roslaunch robotiq_85_bringup robotiq_85.launch run_test:=false;exec $SHELL'"
-#sleep 5
+gnome-terminal -e "bash -c 'roslaunch robotiq_85_bringup robotiq_85.launch run_test:=false;exec $SHELL'"
+sleep 5
 
 #gnome-terminal -e "bash -c 'python initialize.py;exec $SHELL'"
 #sleep 5
@@ -21,11 +21,8 @@ sleep 10
 
 # start the backend mico_master, litern for the connection from the from end
 gnome-terminal -e "bash -c 'python mico_server.py 9999;exec $SHELL'"
-#sleep 10
 
 # uncomment the following if want to call Get Position from frontend via rosbridge
 # launch the rosbridge server
 gnome-terminal -e "bash -c 'roslaunch rosbridge_server rosbridge_websocket.launch;exec $SHELL'"
-#sleep 5
 gnome-terminal -e "bash -c 'python mico_positionpublisher.py;exec $SHELL'"
-#sleep 5
