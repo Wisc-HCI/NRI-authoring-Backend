@@ -1,15 +1,11 @@
 mico_planning is the folder contains the entire code base of the backend implementation of the
 NRI-Authoring enviroment. The following is a list of documentation on each file.
 
-## mico_client.py:
-    The scripts creates a local socket get connected to the mico master, sends over a mocked therbligs json for execution.
-    This file is only used for testing purpose on the backend.
-
 ## mico_parser.py:
     The class is used by the mico master parse the json-format message sent from the front-end or mico_client.
 The exact json format is defined by the front-end.
 
-## mico_planner.py:
+## [mico_planner.py](https://github.com/JerryHu1994/NRI-authoring-Backend/blob/master/src/mico_therbligs/mico_planning/src/mico_planner.py):
     The mico planner is the class representing the Kinova mico_arm. Mico_planner connects with MoveIt package
 to generate trajectory(joint positions) for the mico arm. Mico_planner connects with the
 robotiq_85_gripper module to control the gripper installed on the mico_hand. Mico_planner is also
