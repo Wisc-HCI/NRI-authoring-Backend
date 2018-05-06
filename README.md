@@ -85,19 +85,17 @@ sudo reboot
   3. Connect laptop with robotiq_85_gripper with USB calbe on MICO's another port
 
 ### Use NRI-authoring-Backend with Real MICO arm
-  Run:
+  First we need to start the python server for the backend:
   ```
-  ./launch_with_robot.sh
+  cd src/mico_therbligs/mico_planning/src
+  python mico_server.py 9999
   ```
-  This script will bring up the main backend master for executing the therbligs, MoveIt for motion planning, establish the connection with KINOVA MICO, and a robot position publisher node to the front-end through ROS-bridge.
+  The user could start click LaunchROS button from the front-end, which essentially called a script on the backend.
+  This script will bring up tthe Kinova-ROS package, Robotiq package, MoveIt for motion planning, ROS-bridge and a robot position publisher node to the front-end through ROS-bridge.
 
 
 ### Use NRI-authoring-Backend with simulation
-  Run:
-  ```
-  ./launch_no_robot.sh
-  ```
-  This script will bring up the main backend master for executing the therbligs, MoveIt for motion planning, a robot position publisher node to the front-end through ROS-bridge and VREP simulation.
+  This section is still under development.
 
 ### Use forcecontrol
   The forcecontrol switch is already been implemented by Kinova-ros.
