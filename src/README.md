@@ -1,9 +1,9 @@
 This is the folder containing the source code of the project.
 
-vrep_ros_bridge:
-  The main application of the plugin is to provide a communication interface between V-Rep and (ROS). The aim is to control the V-Rep simulation externally using ROS messages and ROS services.
-   Link: http://wiki.ros.org/vrep_ros_bridge
- 
-wpi_jaco:
-  The package contains ROS packages and nodes that can be used to communicate with the Kinova's JACO, JACO2, and MICO robot arms.
-  Link: http://wiki.ros.org/wpi_jaco
+[kinova-ros](https://github.com/Kinovarobotics/kinova-ros): Official ROS package for Kinova MICO arm control.
+
+[robotiq_85_gripper](https://github.com/waypointrobotics/robotiq_85_gripper): Official ROS package for the current robotiq gripper integrated with MICO arm.
+
+[mico_therbligs](https://github.com/JerryHu1994/NRI-authoring-Backend/tree/master/src/mico_therbligs): The ROS pacakge contains the implementation of NRI-authoring-Backend.
+
+rail_manipulation_msgs: Needed for building the ROS workspace.
