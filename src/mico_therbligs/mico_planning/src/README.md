@@ -1,7 +1,7 @@
 mico_planning is the folder contains the entire code base of the backend implementation of the
 NRI-Authoring enviroment. The following is a list of documentation on each file.
 
-## mico_parser.py:
+## [mico_parser.py](https://github.com/JerryHu1994/NRI-authoring-Backend/blob/master/src/mico_therbligs/mico_planning/src/mico_parser.py):
     The class is used by the mico master parse the json-format message sent from the front-end or mico_client.
 The exact json format is defined by the front-end.
 
@@ -11,23 +11,36 @@ to generate trajectory(joint positions) for the mico arm. Mico_planner connects 
 robotiq_85_gripper module to control the gripper installed on the mico_hand. Mico_planner is also
 responsible for handling the simulation in VREP.
 
-    The list of robotic behaviors implemented in this class includes:
+    The list of therbligs implemented in this class includes:
   1. Transport_Empty: The planner is given X,Y,Z position and orientation of the target end-effector, MoveIt commander it used to generate the optimal trajectory for the arm, and the plan is executed.
-  2. Grasp: The gripper will be set to grasp the object with specific effort.
+  2. Grasp: The gripper will be set to grasp the object to a specified position.
   3. Transport_Loaded: The planner is given X,Y,Z position and orientation of the target end-effector, MoveIt commander it used to generate the optimal trajectory for the arm, and the plan is executed. The object is grasped along the way is is transported.
-  4. Transport_Home: The planner returns to the home position, given the generated optimal trajectory given the current position.
-  5. Read_Position: The planner calls get_current_pose().pose to get the current end-effector X,Y,Z position as well as the orientation. The position information is sent to the front-end through the mico master. 
+  4. Release: The gripper will be set to release the object to a specified position.
+  5. Rest: The planner moves arm to a position and rest. Typically this would be the end of a therbligs plan.
+  6. Hold: Hold the robot arm for seconds.
 
-## mico_master.py:
-    Mico master is the main thread running as the backend part. The master initializes the mico_planner, listens for the connection from the front-end.
-Once it receives a json query from the client, mico_master use mico_parser to parse the infomation from the json,
-executes the corresponding instruction, and construct a reply json back to the front-end port.
+## [mico_master.py](https://github.com/JerryHu1994/NRI-authoring-Backend/blob/master/src/mico_therbligs/mico_planning/src/mico_master.py):
+    Mico master is the main thread running as the backend part. The master initializes the mico_planner, listens for the connection from the front-end. Once it receives a json query from the client, mico_master use mico_parser to parse the infomation from the json, executes the corresponding instruction, and construct a reply json back to the front-end port.
 
-## mico_positionpublisher.py:
+## [mico_server.py](https://github.com/JerryHu1994/NRI-authoring-Backend/blob/master/src/mico_therbligs/mico_planning/src/mico_server.py)
+    Mico server is an http server for thje backend which communicates the node server in the front-end. It creates routing and handling for different HTTP requests sent from the front-end. It is an interface between front-end and ROS implementation.
+    The routing path includes:
+    1. CheckROSLive
+    2. LaunchROS
+    3. ExecutePlan
+    4. Exit
+  
+## [mico_gripper.py](https://github.com/JerryHu1994/NRI-authoring-Backend/blob/master/src/mico_therbligs/mico_planning/src/mico_gripper.py)
+    Mico gripper is a wrapper around the robotiq gripper package for this package use. An example of gripper code could be found inside the [official robotiq package](https://github.com/JerryHu1994/NRI-authoring-Backend/blob/master/src/robotiq_85_gripper/robotiq_85_driver/src/robotiq_85/robotiq_85_gripper_test.py).
+
+## [mico_positionpublisher.py](https://github.com/JerryHu1994/NRI-authoring-Backend/blob/master/src/mico_therbligs/mico_planning/src/mico_positionpublisher.py):
     Mico_positionpublisher publishes a geometry_msg to the rostopic named "end_effector_position", so that
 the front-end could directly fetch the end_effector_position through ROS-bridge.
 
-## mico_simulator.py:
+## [launch_with_robot.sh](https://github.com/JerryHu1994/NRI-authoring-Backend/blob/master/src/mico_therbligs/mico_planning/src/launch_with_robot.sh)
+    This script is used to launch entire ROS backend, including Kinova-ros, Robotiq, MoveIT and Rosbridge. This script will be called from UI.
+
+## [mico_simulator.py](https://github.com/JerryHu1994/NRI-authoring-Backend/blob/master/src/mico_therbligs/mico_planning/src/mico_simulator.py):
     Mico_simulator connects to the VREP through remoteAPI call. The main two simulation it provides is to
 move the mico_arm and mico_hand.
 
