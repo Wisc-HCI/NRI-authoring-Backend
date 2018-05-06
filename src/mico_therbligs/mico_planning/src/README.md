@@ -1,4 +1,4 @@
-mico_planning is the folder contains the entire code base of the backend implementation of the
+mico_planning package is the folder contains the entire code base of the backend implementation of the
 NRI-Authoring enviroment. The following is a list of documentation on each file.
 
 ## [mico_parser.py](https://github.com/JerryHu1994/NRI-authoring-Backend/blob/master/src/mico_therbligs/mico_planning/src/mico_parser.py):
