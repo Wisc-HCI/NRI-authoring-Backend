@@ -24,7 +24,6 @@ from moveit_msgs.msg import RobotTrajectory
 from trajectory_msgs.msg import JointTrajectoryPoint
 from kinova_msgs.msg import KinovaPose
 
-
 ###
 # Save the mico_server HTTP reply string to reply.txt
 ###
@@ -100,6 +99,7 @@ def execute_plan(acHan, json_plan_file="plan.json"):
         elif actionType == 'launchROS':
             LOG.INFO("Launch ROS scripts...\n")
             save_reply(actionType, True)
+
         # execute a plan
         elif actionType == 'ExecutePlan':
             LOG.INFO("Executing the therbligs plan...\n")
@@ -175,17 +175,20 @@ def execute_plan(acHan, json_plan_file="plan.json"):
             LOG.INFO("Getting the position...\n")
             currPose = acHan.Read_Position()
             save_reply(actionType, True)
+
         # exit ros
         elif actionType == 'Exit':
             LOG.INFO("Exiting...\n")
             save_reply(actionType, True)
             loop = False
             end()
+
         elif actionType == None:
             LOG.INFO('USAGE ERROR: Invalid Action Type\n')
     else:
         LOG.ERROR("Thebligs json does not exists")
 
+# main function of the mico master
 def main():
     # check if simulation is enabled
     if len(sys.argv) < 3:
@@ -196,7 +199,6 @@ def main():
     json_plan_file = sys.argv[1]
     # Build the action handler
     acHan = ActionHandler("arm", "mico_master", sim_flag)
-
     execute_plan(acHan, json_plan_file)
 
 ###

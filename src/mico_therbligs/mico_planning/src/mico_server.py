@@ -3,6 +3,9 @@
 # University of Wisconsin-Madison
 # Author: Jieru Hu
 ##################################
+# The mico_server_handler is used for routing and handling different HTTP requests.
+# The routing path includes: CheckROSLive, LaunchROS, ExecutePlan, Exit
+
 
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 import json
@@ -10,6 +13,7 @@ from subprocess import Popen, PIPE
 import sys
 import log as LOG
 
+# server handler extends the BaseHTTPRequestHandler
 class mico_server_handler(BaseHTTPRequestHandler):
     def _set_response(self):
         self.send_response(200)
@@ -26,6 +30,7 @@ class mico_server_handler(BaseHTTPRequestHandler):
         post_data = self.rfile.read(content_length) # <--- Gets the data itself
         print "POST: path", str(self.path), "header:", str(self.headers)
 
+        # handle CheckROSLive request
         if self.path == '/CheckROSLive':
             print ("Routing to: CheckROSLive")
             check_ROS_Process = Popen(['rostopic', 'list'], stdout=PIPE, stderr=PIPE)
@@ -35,21 +40,22 @@ class mico_server_handler(BaseHTTPRequestHandler):
                 reply_text = self.create_reply('CheckROSLive', False)
             else:
                 reply_text = self.create_reply('CheckROSLive', True)
-
+        # handle LaunchROS request
         elif self.path == '/LaunchROS':
             print ("Routing to: launchROS")
             launch_ROS_Process = Popen(['./launch_with_robot.sh'],stdout=PIPE, stderr=PIPE)
-            stdout, stderr = launch_ROS_Process.communicate() 
+            launch_ROS_Process.wait()
             reply_text = self.create_reply('LaunchROS', True)
 
+        # handle ExecutePlan request
         elif self.path == '/ExecutePlan':
             print ("Routing to: ExecutePlan")
             sim = False
             sim_flag = "sim" if sim else "nosim"
             #launcher the mico master for execution
-            mico_process = Popen('python mico_master.py plan.json {}'.format(sim_flag), shell=True)
-            mico_process.wait()
-            
+            execute_process = Popen('python mico_master.py plan.json {}'.format(sim_flag), shell=True)
+            execute_process.wait()
+
             jsonData = json.loads(post_data)
             with open("plan.json", "w") as outfile:
                 json.dump(jsonData, outfile)
@@ -60,19 +66,20 @@ class mico_server_handler(BaseHTTPRequestHandler):
             except IOError as err:
 			    print "IO Error"
 
+        # handle Exit request
         elif self.path == '/Exit':
             print ("Routing to: Exit")
             Exit_ROS_Process = Popen(['rosnode', 'kill', '-a'], stdout=PIPE, stderr=PIPE)
-            stdout, stderr = Exit_ROS_Process.communicate()
+            Exit_ROS_Process.wait()
             reply_text = self.create_reply('Exit', True)
 
         else:
             print ("Unknown routing path.")
-                
 		    # reply to the front-end
         self._set_response()
         self.wfile.write(reply_text)
 
+    # create reply text for the incomming requests
     def create_reply(self, actionType, success):
         # send the reply string
         success_flag = "success" if success else "failed"

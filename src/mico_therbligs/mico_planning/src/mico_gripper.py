@@ -48,6 +48,7 @@ class mico_gripper:
         self.gripper_cmd.speed = speed
         self.gripper_publisher.publish(self.gripper_cmd)
 
+    # set the gripper to a position
     def set_gripper_position(self, position):
         '''
         if not self.gripper_stat.is_ready:

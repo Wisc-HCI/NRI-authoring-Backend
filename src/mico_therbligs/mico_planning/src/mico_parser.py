@@ -9,6 +9,7 @@
 
 import json
 
+# object does parsing of the json sent from front-end
 class ActionParser:
 
 	# Constructor of the ActionParser

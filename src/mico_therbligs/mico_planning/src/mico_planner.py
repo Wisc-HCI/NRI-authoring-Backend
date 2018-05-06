@@ -23,6 +23,7 @@ from std_msgs.msg import String
 # include simulation here
 import mico_simulator
 
+# object handles the movement of the mico.
 class ActionHandler:
 
     ################
@@ -44,8 +45,9 @@ class ActionHandler:
   		## arm.  This interface can be used to plan and execute motions on the left
   		## arm.
   		self.group = moveit_commander.MoveGroupCommander(group_name)#default : "mico_arm"
-      #self.group.set_pose_reference_frame(root)
-		  ## We create this DisplayTrajectory publisher which is used below to publish
+        #self.group.set_pose_reference_frame(root)
+		
+        ## We create this DisplayTrajectory publisher which is used below to publish
   		## trajectories for RVIZ to visualize.
   		self.display_trajectory_publisher = rospy.Publisher('/move_group/display_planned_path', moveit_msgs.msg.DisplayTrajectory, queue_size=20)
   		self.joints = self.current_joints()
