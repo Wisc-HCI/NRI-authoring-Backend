@@ -43,7 +43,7 @@ This script is used to launch entire ROS backend, including Kinova-ros, Robotiq,
 Mico_simulator connects to the VREP through remoteAPI call. The main two simulation it provides is to
 move the mico_arm and mico_hand.
 
-## vrep.py;vrepConst.py;remotePai.so:
+## vrep.py;vrepConst.py;remoteApi.so:
     These files are imported from the VREP package. Don't touch them at ay time.'
 
 ## jsons/
