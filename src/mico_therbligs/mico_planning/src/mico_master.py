@@ -7,22 +7,22 @@
 # Once it receives a json query from the client, mico_master use mico_parser to parse the infomation from the json,
 # executes the corresponding instruction, and construct a reply json back to the front-end port.
 ##################################
+# python specific
 import socket
 import sys
 import os
-import sys
 import json
 import tf
+# package defined by us
 import log as LOG
-
 from mico_parser import ActionParser
 from mico_planner import ActionHandler
+# ROS and moveit package
 import rospy
 from moveit_commander import RobotCommander, os, PlanningSceneInterface, roscpp_initialize, roscpp_shutdown
 import geometry_msgs.msg
 from moveit_msgs.msg import RobotTrajectory
 from trajectory_msgs.msg import JointTrajectoryPoint
-from kinova_msgs.msg import KinovaPose
 
 ###
 # Save the mico_server HTTP reply string to reply.txt
@@ -192,7 +192,7 @@ def execute_plan(acHan, json_plan_file="plan.json"):
 def main():
     # check if simulation is enabled
     if len(sys.argv) < 3:
-        print ("Usage: python mico_master.py jsonfile sim")
+        print ("Usage: python mico_master.py plan.json sim")
         exit(1)
 
     sim_flag = True if sys.argv[2] == "sim" else False

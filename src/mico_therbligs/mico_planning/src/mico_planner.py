@@ -16,11 +16,10 @@ import moveit_msgs.msg
 import geometry_msgs.msg
 import time
 from sensor_msgs.msg import JointState
-#from mico_gripperControl import MicoGripperControl
 from mico_gripper import mico_gripper
 from std_msgs.msg import String
 
-# include simulation here
+# include simulation here, currently not using it
 import mico_simulator
 
 # object handles the movement of the mico.
@@ -50,7 +49,9 @@ class ActionHandler:
         ## We create this DisplayTrajectory publisher which is used below to publish
   		## trajectories for RVIZ to visualize.
   		self.display_trajectory_publisher = rospy.Publisher('/move_group/display_planned_path', moveit_msgs.msg.DisplayTrajectory, queue_size=20)
-  		self.joints = self.current_joints()
+  		# store current joint positions
+        self.joints = self.current_joints()
+        # store current pose position
   		self.pose = self.current_pose()
   		# initialize the robotiq 85 gripper on mico hand
   		self.gripper = mico_gripper()
@@ -132,6 +133,12 @@ class ActionHandler:
     def set_target_position(self, pose):
         self.group.set_pose_target(pose) 
 
+    ###############
+    # Plan motion based on a goal joint position
+    #
+    # Arguments: array of the goal joint position
+    #
+    # Return : Returns a the plan
     def set_target_joints(self, joints):
         self.group.set_joint_value_target(group_variable_values)
 

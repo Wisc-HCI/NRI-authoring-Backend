@@ -1,6 +1,8 @@
 #!/bin/sh
 # make sure gnome-terminal is installed
 # This script launches the backend for therbligs and VREP simulation for the KINOVA MICO arm movement.
+# Important: This script needs to be carefully updated before use.
+
 
 echo "Launching backend ROS with no robot connection..." 
 

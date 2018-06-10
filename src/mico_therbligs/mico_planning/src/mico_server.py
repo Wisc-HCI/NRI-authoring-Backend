@@ -2,10 +2,10 @@
 ##################################
 # University of Wisconsin-Madison
 # Author: Jieru Hu
-##################################
+##################################################################################
 # The mico_server_handler is used for routing and handling different HTTP requests.
 # The routing path includes: CheckROSLive, LaunchROS, ExecutePlan, Exit
-
+##################################################################################
 
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 import json
@@ -40,6 +40,7 @@ class mico_server_handler(BaseHTTPRequestHandler):
                 reply_text = self.create_reply('CheckROSLive', False)
             else:
                 reply_text = self.create_reply('CheckROSLive', True)
+
         # handle LaunchROS request
         elif self.path == '/LaunchROS':
             print ("Routing to: launchROS")
