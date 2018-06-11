@@ -23,11 +23,11 @@ Mico master is the main thread running as the backend part. It is given a json p
 
 ## [mico_server.py](https://github.com/JerryHu1994/NRI-authoring-Backend/blob/master/src/mico_therbligs/mico_planning/src/mico_server.py)
 Mico server is an http server spinning on the backend, which communicates with the node server in the front-end. It creates routing and handling for different HTTP requests sent from the front-end. It is an interface between front-end UI and backend ROS implementation.
-    The routing path includes:
-    1. CheckROSLive
-    2. LaunchROS
-    3. ExecutePlan
-    4. Exit
+The routing path includes:
+1. CheckROSLive
+2. LaunchROS
+3. ExecutePlan
+4. Exit
   
 ## [mico_gripper.py](https://github.com/JerryHu1994/NRI-authoring-Backend/blob/master/src/mico_therbligs/mico_planning/src/mico_gripper.py)
 Mico gripper is a wrapper around the robotiq gripper package for this package use. An example of gripper code could be found inside the [official robotiq package](https://github.com/JerryHu1994/NRI-authoring-Backend/blob/master/src/robotiq_85_gripper/robotiq_85_driver/src/robotiq_85/robotiq_85_gripper_test.py).
