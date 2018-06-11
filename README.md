@@ -5,7 +5,7 @@
 This is the github repository of the backend part of the NRI-Authoring Environment, developed in Wisconsin HCI lab. The backend part is integrated with [Kinova-ros package](https://github.com/Kinovarobotics/kinova-ros) and [robotiq_85_gripper](https://github.com/waypointrobotics/robotiq_85_gripper). 
 - Kinova-ros is the official ROS package for robot control. It launches ROS nodes to communicate with Kinova's MICO arm and also provides config files for MICO arm to do motion planning with Moveit Framework in ROS. 
 - Robotiq_85_gripper is the official package to control the current gripper. 
-- We developed our [implementation of the therbligs](https://github.com/JerryHu1994/NRI-authoring-Backend/tree/master/src/mico_therbligs) in ROS. 
+- We developed our [implementation of the therbligs](https://github.com/JerryHu1994/NRI-authoring-Backend/tree/master/src/mico_therbligs) in ROS. An overview system diagram of the code can be found [here](https://raw.githubusercontent.com/JerryHu1994/NRI-authoring-Backend/master/diagram.png).
 - Our team also created a front-end Web UI to interact with this backend code. The related frontend UI work could be found [here](https://github.com/Wisc-HCI/nri-authoring-environment). 
 - Our entire authoring system diagram could be found at [here](https://drive.google.com/file/d/1kFAraRG7uNckDeX9NCUA1vOekMJZl78d/view?usp=sharing).
 
