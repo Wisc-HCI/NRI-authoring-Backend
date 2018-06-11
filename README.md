@@ -96,7 +96,7 @@ sudo reboot
   python mico_server.py 9999
   ```
   The user could start click LaunchROS button from the front-end, which essentially called a script on the backend.
-  This script will bring up tthe Kinova-ROS package, Robotiq package, MoveIt for motion planning, ROS-bridge and a robot position publisher node to the front-end through ROS-bridge.
+  This script will bring up the Kinova-ROS package, Robotiq package, MoveIt for motion planning, ROS-bridge and a robot position publisher node to the front-end through ROS-bridge.
 
 
 ### Use NRI-authoring-Backend with simulation
