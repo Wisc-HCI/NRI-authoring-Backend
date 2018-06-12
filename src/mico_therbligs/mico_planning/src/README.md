@@ -1,5 +1,5 @@
 # NRI-authoring-Backend Codebase System Diagram
-![Alt text](https://github.com/JerryHu1994/NRI-authoring-Backend/blob/master/diagram.png?raw=true "NRI-authoring-Backend Diagram")
+![Alt text](https://github.com/JerryHu1994/NRI-authoring-Backend/blob/master/backend-diagram.png?raw=true "NRI-authoring-Backend Diagram")
 
 mico_planning package is the folder contains the entire code base of the backend implementation of the
 NRI-Authoring enviroment. The following is a list of documentation on each file.
