@@ -57,7 +57,6 @@ def createTarget(XYZPosition, orientation):
     pose_target.orientation.y = orientationPos[1]
     pose_target.orientation.z = orientationPos[2]
     pose_target.orientation.w = orientationPos[3]
-    #print pose_target
 
     return pose_target
 

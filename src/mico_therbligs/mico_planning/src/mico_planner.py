@@ -56,9 +56,9 @@ class ActionHandler:
   		# initialize the robotiq 85 gripper on mico hand
   		self.gripper = mico_gripper()
   		if (sim_flag):
-  		  self.simulator = mico_simulator.mico_simulator('mico_sim')
+  		    self.simulator = mico_simulator.mico_simulator('mico_sim')
   		else:
-  		  self.simulator = None
+  		    self.simulator = None
   		print "starting state... ",self.joints,"\nstarting pose...",self.pose
 
 ####################
@@ -100,7 +100,7 @@ class ActionHandler:
     #
     # Return : Returns the current planning frame
     def planning_frame(self):
-			return self.group.get_planning_frame()
+		return self.group.get_planning_frame()
 
 
 ####################
