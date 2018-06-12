@@ -90,7 +90,7 @@ sudo reboot
   3. Connect laptop with robotiq_85_gripper with USB calbe on MICO's another port
 
 ### Use NRI-authoring-Backend with Real MICO arm
-  First we need to start the python server for the backend:
+  First we need to start the python server for the backend (this is the only command to launch the backend):
   ```
   cd src/mico_therbligs/mico_planning/src
   python mico_server.py 9999
@@ -100,7 +100,7 @@ sudo reboot
 
 
 ### Use NRI-authoring-Backend with simulation
-  This section is still under development.
+  This section is still under development. Ignore for now.
 
 ### Use forcecontrol
   The forcecontrol switch is already been implemented by Kinova-ros.
