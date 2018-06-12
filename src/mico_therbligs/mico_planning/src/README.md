@@ -14,7 +14,7 @@ robotiq_85_gripper module to control the gripper installed on the mico_hand. Mic
 responsible for handling the simulation in VREP.
 
 The list of therbligs implemented in this class includes:
-  1. Transport_Empty: The planner is given X,Y,Z position and orientation of the target end-effector, MoveIt commander it used to generate the optimal trajectory for the arm, and the plan is executed.
+  1. Transport_Empty: The planner is given X,Y,Z position and orientation of the target end-effector, MoveIt commander is used to generate the optimal trajectory for the arm, and the plan is executed.
   2. Grasp: The gripper will be set to grasp the object to a specified position.
   3. Transport_Loaded: The planner is given X,Y,Z position and orientation of the target end-effector, MoveIt commander it used to generate the optimal trajectory for the arm, and the plan is executed. The object is grasped along the way is is transported.
   4. Release: The gripper will be set to release the object to a specified position.
@@ -22,7 +22,7 @@ The list of therbligs implemented in this class includes:
   6. Hold: Hold the robot arm for seconds.
 
 ## [mico_master.py](https://github.com/JerryHu1994/NRI-authoring-Backend/blob/master/src/mico_therbligs/mico_planning/src/mico_master.py):
-Mico master is the main thread running as the backend part. It is given a json plan contains a list of therbligs to execute. It uses mico_parser to parse the information from json and calls functions from mico_planner to execute therbligs on the real robot. It is run once the mico_server received a ExecutePlan message.
+Mico master is the main thread running as the backend part. It is given a json plan contains a list of therbligs to execute. It uses mico_parser to parse the information from json and calls functions from mico_planner to execute therbligs on the real robot. The mico master script is called once the mico_server receives an ExecutePlan message.
 
 ## [mico_server.py](https://github.com/JerryHu1994/NRI-authoring-Backend/blob/master/src/mico_therbligs/mico_planning/src/mico_server.py)
 Mico server is an http server spinning on the backend, which communicates with the node server in the front-end. It creates routing and handling for different HTTP requests sent from the front-end. It is an interface between front-end UI and backend ROS implementation.
