@@ -6,7 +6,6 @@
 import rospy
 from robotiq_85_msgs.msg import GripperCmd, GripperStat
 import log as LOG
-import time
 
 # object controls the movements of the robotiq_85_gripper
 class mico_gripper:
@@ -31,30 +30,15 @@ class mico_gripper:
         self.gripper_stat = stat
 
     def set_gripper_force(self, force):
-        '''
-        if not self.gripper_stat.is_ready:
-            LOG.ERROR("The gripper is not ready.")
-            return
-            '''
         self.gripper_cmd.force = force
         self.gripper_publisher.publish(self.gripper_cmd)
 
     def set_gripper_speed(self, speed):
-        '''
-        if not self.gripper_stat.is_ready:
-            LOG.ERROR("The gripper is not ready.")
-            return
-        '''
         self.gripper_cmd.speed = speed
         self.gripper_publisher.publish(self.gripper_cmd)
 
     # set the gripper to a position
     def set_gripper_position(self, position):
-        '''
-        if not self.gripper_stat.is_ready:
-            LOG.ERROR("The gripper is not ready.")
-            return False
-        '''
         self.gripper_cmd.position = position
         self.gripper_cmd.speed = 0.02
         self.gripper_cmd.force = 100.0

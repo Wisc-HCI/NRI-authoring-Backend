@@ -2,7 +2,12 @@
 
 ** Work in Progress **
 
-This is the github repository of the backend part of the NRI-Authoring Environment, developed in Wisconsin HCI lab. The backend part is integrated with [Kinova-ros package](https://github.com/Kinovarobotics/kinova-ros) and [robotiq_85_gripper](https://github.com/waypointrobotics/robotiq_85_gripper). Kinova-ros is the official ROS package for robot control. It launches ROS nodes to communicate with Kinova's MICO arm and also provides config files for MICO arm to do motion planning with Moveit Framework in ROS. Robotiq_85_gripper is the official package to control the current gripper. Our team also created a front-end Web UI to interact with this backend code. The related frontend UI work could be found [here](https://github.com/Wisc-HCI/nri-authoring-environment). Our entire authoring system diagram could be found at [here](https://drive.google.com/file/d/1kFAraRG7uNckDeX9NCUA1vOekMJZl78d/view?usp=sharing).
+This is the github repository of the backend part of the NRI-Authoring Environment, developed in Wisconsin HCI lab. The backend part is integrated with [Kinova-ros package](https://github.com/Kinovarobotics/kinova-ros) and [robotiq_85_gripper](https://github.com/waypointrobotics/robotiq_85_gripper). 
+- Kinova-ros is the official ROS package for robot control. It launches ROS nodes to communicate with Kinova's MICO arm and also provides config files for MICO arm to do motion planning with Moveit Framework in ROS. 
+- Robotiq_85_gripper is the official package to control the current gripper. 
+- We developed our [implementation of the therbligs](https://github.com/JerryHu1994/NRI-authoring-Backend/tree/master/src/mico_therbligs) in ROS. An overview system diagram of the code can be found [here](https://raw.githubusercontent.com/JerryHu1994/NRI-authoring-Backend/master/diagram.png).
+- Our team also created a front-end Web UI to interact with this backend code. The related frontend UI work could be found [here](https://github.com/Wisc-HCI/nri-authoring-environment). 
+- Our entire authoring system diagram could be found at [here](https://drive.google.com/file/d/1kFAraRG7uNckDeX9NCUA1vOekMJZl78d/view?usp=sharing).
 
 ## Getting Started
 This package is only tested with Ubuntu 16.04 with ROS Kinetic. Follow the instructions to install the repository to your local machine. For problems encountered, fell free to contact [me](#author).
@@ -85,17 +90,17 @@ sudo reboot
   3. Connect laptop with robotiq_85_gripper with USB calbe on MICO's another port
 
 ### Use NRI-authoring-Backend with Real MICO arm
-  First we need to start the python server for the backend:
+  First we need to start the python server for the backend (this is the only command to launch the backend):
   ```
   cd src/mico_therbligs/mico_planning/src
   python mico_server.py 9999
   ```
   The user could start click LaunchROS button from the front-end, which essentially called a script on the backend.
-  This script will bring up tthe Kinova-ROS package, Robotiq package, MoveIt for motion planning, ROS-bridge and a robot position publisher node to the front-end through ROS-bridge.
+  This script will bring up the Kinova-ROS package, Robotiq package, MoveIt for motion planning, ROS-bridge and a robot position publisher node to the front-end through ROS-bridge.
 
 
 ### Use NRI-authoring-Backend with simulation
-  This section is still under development.
+  This section is still under development. Ignore for now.
 
 ### Use forcecontrol
   The forcecontrol switch is already been implemented by Kinova-ros.

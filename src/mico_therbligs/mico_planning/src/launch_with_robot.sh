@@ -7,12 +7,12 @@
 
 echo "Launching backend ROS with real robot..." 
 
+########
+# For a different robot, change roslaunch to the launch file for the specific robot
+########
 # launch the ROS launch file for robotiq_85_gripper
 gnome-terminal -e "bash -c 'roslaunch robotiq_85_bringup robotiq_85.launch run_test:=false;exec $SHELL'"
 sleep 5
-
-#gnome-terminal -e "bash -c 'python initialize.py;exec $SHELL'"
-#sleep 5
 
 # launch the kinova_node to control the MICO arm
 gnome-terminal -e "bash -c 'roslaunch kinova_bringup kinova_robot.launch kinova_robotType:=m1n6s300 use_urdf:=true;exec $SHELL'"
